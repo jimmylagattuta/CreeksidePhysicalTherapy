@@ -31,7 +31,7 @@ Rails.application.configure do
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   config.asset_host = "http://laorthos.com"
   config.assets.compile = false
-  config.hosts << "default-company-12d6d06d6fbb.herokuapp.com"
+  config.hosts << "creekside-physical-therapy-3c43d5dad481.herokuapp.com"
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for Apache
@@ -75,13 +75,13 @@ Rails.application.configure do
   # Use a different logger for distributed setups.
   # require "syslog/logger"
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new "app-name")
-  config.action_mailer.asset_host = "https://default-company-12d6d06d6fbb.herokuapp.com"
+  config.action_mailer.asset_host = "https://creekside-physical-therapy-3c43d5dad481.herokuapp.com"
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: 'smtp.gmail.com',
     port: 587,
-    domain: 'default-company-12d6d06d6fbb.herokuapp.com',
+    domain: 'creekside-physical-therapy-3c43d5dad481.herokuapp.com',
     user_name: 'unitymskwebsites@gmail.com',
     password: ENV["REACT_APP_GMAIL_PASSWORD"],
     authentication: 'plain',
