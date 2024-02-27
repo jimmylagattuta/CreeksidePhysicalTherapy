@@ -13,7 +13,7 @@ Rails.application.configure do
 
   # Show full error reports.
   config.consider_all_requests_local = true
-  config.hosts << "default-company-12d6d06d6fbb.herokuapp.com"
+  config.hosts << "creekside-physical-therapy-3c43d5dad481.herokuapp.com"
 
   # Enable server timing
   config.server_timing = true
@@ -46,13 +46,13 @@ Rails.application.configure do
   # Highlight code that triggered database queries in logs.
   config.active_record.verbose_query_logs = true
 
-  config.action_mailer.asset_host = "https://default-company-12d6d06d6fbb.herokuapp.com"
+  config.action_mailer.asset_host = "https://creekside-physical-therapy-3c43d5dad481.herokuapp.com"
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: 'smtp.gmail.com',
     port: 587,
-    domain: 'default-company-12d6d06d6fbb.herokuapp.com',
+    domain: 'creekside-physical-therapy-3c43d5dad481.herokuapp.com',
     user_name: 'unitymskwebsites@gmail.com',
     password: ENV["REACT_APP_GMAIL_PASSWORD"],
     authentication: 'plain',
