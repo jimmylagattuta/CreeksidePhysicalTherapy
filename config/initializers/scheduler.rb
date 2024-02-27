@@ -14,7 +14,7 @@ if ENV['RUN_SCHEDULER'] == 'true' && defined?(Sidekiq)
     puts "Connected to Redis: #{redis.inspect}"
 
     # Clear the cache for each place name
-    place_names = ["Default Company ", "Default Company  - La Grange", "Default Company  - Chicago"]
+    place_names = ["Creekside Physical Therapy ", "Creekside Physical Therapy  - La Grange", "Creekside Physical Therapy  - Chicago"]
     place_names.each do |place_name|
       place_id = find_place_id(place_name)
       if place_id

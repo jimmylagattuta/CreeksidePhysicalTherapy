@@ -1,13 +1,13 @@
 class Api::V1::JobsController < ApplicationController
   def index
-    render json: "Default Company " * 1000
+    render json: "Creekside Physical Therapy " * 1000
   end
 
   def pull_google_places_cache
     puts "Reached pull_google_places_cache action" # Add this line for debugging
     csrf_token = form_authenticity_token
     puts "CSRF token: #{csrf_token}" # Add this line for debugging
-    place_names = ["Default Company ", "Default Company  - Default City", "Default Company  - Default City"]
+    place_names = ["Creekside Physical Therapy ", "Creekside Physical Therapy  - Default City", "Creekside Physical Therapy  - Default City"]
     reviews = []
 
     place_names.each do |place_name|

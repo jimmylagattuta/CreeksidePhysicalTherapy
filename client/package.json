@@ -10,6 +10,7 @@
         "eslint-config-react-app": "^7.0.1",
         "final-form": "^4.20.10",
         "google-map-react": "^2.2.1",
+        "heroku-deploy": "file:..",
         "react": "^18.2.0",
         "react-bootstrap": "^2.7.4",
         "react-dom": "^18.2.0",

@@ -27,7 +27,7 @@ const TeamComponent = () => {
                     Follow Us
                 </h2>
                 <div className='team-icon-container'>
-                    <a aria-label="Link to go to Default Company 's Facebook page." style={{ color: 'white' }} href='https://www.facebook.com' target='_blank' rel='noopener noreferrer'>
+                    <a aria-label="Link to go to Creekside Physical Therapy 's Facebook page." style={{ color: 'white' }} href='https://www.facebook.com' target='_blank' rel='noopener noreferrer'>
                         <i className='fab fa-facebook fa-3x'></i>
                     </a>
                 </div>

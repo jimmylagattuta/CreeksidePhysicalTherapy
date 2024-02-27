@@ -10,7 +10,7 @@ const Footer = () => {
                         <Link
                             to='/'
                         >
-                            <div className='footer-word-wrap'>Default Company </div>
+                            <div className='footer-word-wrap'>Creekside Physical Therapy </div>
                         </Link>
                     </div>
                     <div className='footer-item'>

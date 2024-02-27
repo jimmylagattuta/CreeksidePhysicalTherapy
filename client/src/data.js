@@ -407,9 +407,9 @@ export const aboutObjOther = [
   
 export const aboutObjPortal = [
     {
-        nameOne: "Default Company Patient Portal",
+        nameOne: "Creekside Physical Therapy Patient Portal",
         descriptionOne: [
-            "Default Company is pleased to introduce the Default Company Patient Portal! The Patient Portal is an electronic system that will allow you, our patients, to communicate your medical needs with our office staff and providers through a secure online system at your convenience.",
+            "Creekside Physical Therapy is pleased to introduce the Creekside Physical Therapy Patient Portal! The Patient Portal is an electronic system that will allow you, our patients, to communicate your medical needs with our office staff and providers through a secure online system at your convenience.",
             "To join the Patient Portal, call the office and provide our staff with your email address then click on the button link above."
         ],
         descriptionOneBullettedList: [
@@ -502,7 +502,7 @@ export const aboutTerms = [
     {
         subtitle: null,
         body: [
-            "Default Company's website is offered to you conditioned on your acceptance without modification of the terms, conditions, and notices contained herein. Your use of this practice website constitutes your agreement to all such terms, conditions, and notices.",
+            "Creekside Physical Therapy's website is offered to you conditioned on your acceptance without modification of the terms, conditions, and notices contained herein. Your use of this practice website constitutes your agreement to all such terms, conditions, and notices.",
         ],
     },
     {
@@ -844,7 +844,7 @@ export const aboutExtra = [
             {
                 subtitle: 'Do you take my insurance?',
                 body: [
-                    'Default Company is enrolled with all major insurance plans.',
+                    'Creekside Physical Therapy is enrolled with all major insurance plans.',
                 ],
             },
             {
@@ -861,19 +861,19 @@ export const aboutExtra = [
             {
                 subtitle: 'Do you have weekend or evening hours?',
                 body: [
-                    'Default Company does have some early evening hours, but does not have weekend hours available.',
+                    'Creekside Physical Therapy does have some early evening hours, but does not have weekend hours available.',
                 ],
             },
             {
                 subtitle: 'Do you have parking available?',
                 body: [
-                    'Yes, all of Default Company’s offices have easily accessible free parking available.',
+                    'Yes, all of Creekside Physical Therapy’s offices have easily accessible free parking available.',
                 ],
             },
             {
                 subtitle: 'Do you do minimally invasive surgery?',
                 body: [
-                    'Yes, the Physicians at Default Company do minimally invasive surgery.',
+                    'Yes, the Physicians at Creekside Physical Therapy do minimally invasive surgery.',
                 ],
             },
             {
@@ -922,7 +922,7 @@ export const aboutExtra = [
             {
                 subtitle: 'After Hours Information:',
                 body: [
-                    'Default Company offers 24 hour on call services for emergencies involving our patients. To contact the on call physician regarding your emergency call our office and you will be connected to an operator who can page the on call physician. Office appointments cannot be made and medications cannot be prescribed after hours. For life threatening emergencies go to your nearest emergency room or call 911.',
+                    'Creekside Physical Therapy offers 24 hour on call services for emergencies involving our patients. To contact the on call physician regarding your emergency call our office and you will be connected to an operator who can page the on call physician. Office appointments cannot be made and medications cannot be prescribed after hours. For life threatening emergencies go to your nearest emergency room or call 911.',
                 ],
             },
             {
@@ -979,9 +979,9 @@ export const aboutExtra = [
         name: 'Patient Education',
         title: 'Patient Education',
         body: [
-            'Using the very latest techniques and tools available, Default Company treat patients with the highest quality, most cost-effective, and compassionate care available. Our goal is to exceed our patients’ expectations.',
+            'Using the very latest techniques and tools available, Creekside Physical Therapy treat patients with the highest quality, most cost-effective, and compassionate care available. Our goal is to exceed our patients’ expectations.',
             'The aim of this page is to provide some quick links to some of the more widely searched orthopedic surgeries. Please note, someof the links will take you to a new website.',
-            'For more information or to schedule an appointment with Default Company, please contact us today.',
+            'For more information or to schedule an appointment with Creekside Physical Therapy, please contact us today.',
         ],
         itemOne: {
             subtitle: 'Featured Conditions and Procedures',
@@ -1025,7 +1025,7 @@ export const aboutExtra = [
         content: [
             {
                 body: [
-                    'The physicians of Default Company have been the leading Orthopedic Doctors for injured City of Chicago workers for many years. We frequently treat police officers and firefighters injured in the line of duty and take great pride in our excellent record of restoring injured city workers to full health and function. We provide the same level of excellence in treatment of all injured workers which has resulted in outstanding outcomes.',
+                    'The physicians of Creekside Physical Therapy have been the leading Orthopedic Doctors for injured City of Chicago workers for many years. We frequently treat police officers and firefighters injured in the line of duty and take great pride in our excellent record of restoring injured city workers to full health and function. We provide the same level of excellence in treatment of all injured workers which has resulted in outstanding outcomes.',
                     'Independent Medical Evaluation Appointments',
                     'To schedule an independent medical evaluation appointment with our physicians for a work-related injury, simply call the most convenient office location listed on this website and inform the receptionist that you need to be evaluated for a work-related injury or request your appointment online.',
                     'Please bring the following completed form to your appointment:',
@@ -1053,7 +1053,7 @@ export const aboutExtra = [
                     'An Independent Medical Evaluation (IME) is often required to answer specific medical questions, including relationships of diagnosis to specific injury, accident or illness, further treatment recommendations, extent of permanent impairment or disability, and other information as needed. Our practicing physician consultants possess a broad range of credentials, and board certifications in their respective specialties. We make every effort to schedule and complete the IME as soon as possible. After completion, we process and send a comprehensive report within a 24 hour period.',
                     'We provide emergency surgery and treatment for the most serious work-related injuries and facilitate treatment including occupational therapy and physical therapy for common conditions such as tendonitis, carpal tunnel syndrome, knee pain, and back pain.',
                     'We also offer comprehensive physical and occupational therapy as well as new state of the art non-surgical treatment including Platelet Rich Plasma injections.',
-                    'Default Company strive to ensure expeditious scheduling of appointments for injured workers, typically within twenty-four hours. Our physician forms and reports are available within one business day, with quick reports available the day of service. We will complete any employer work status forms at the time of visit.',
+                    'Creekside Physical Therapy strive to ensure expeditious scheduling of appointments for injured workers, typically within twenty-four hours. Our physician forms and reports are available within one business day, with quick reports available the day of service. We will complete any employer work status forms at the time of visit.',
                     'Any necessary diagnostic tests will be arranged by our office staff, and we will take care of any required Workers Compensation authorization procedures. We work closely with nurse case managers and will provide any necessary documentation to the injured worker at the time of visit.',
                 ],
             },
