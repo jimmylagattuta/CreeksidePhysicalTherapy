@@ -23,7 +23,7 @@
         "web-vitals": "^2.1.4"
     },
     "engines": {
-        "node": "8.19.3"
+        "node": "19.0.0"
     },
     "scripts": {
         "analyze": "source-map-explorer 'build/static/js/*.js'",
