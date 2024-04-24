@@ -106,7 +106,7 @@ const Navbar = () => {
                                 className='navbar-logo'
                             />
                             <div>
-                                <h2 className="animate-charcter">Company Default</h2>
+                                <h2 className="animate-charcter">Creekside Physical Therapy</h2>
                             </div>
                         </div>
                     </Link>
