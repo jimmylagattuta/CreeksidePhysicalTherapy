@@ -306,7 +306,7 @@ export const services = [
             "Education on proper body mechanics and lifestyle changes is also provided to prevent future occurrences and maintain a healthy, pain-free back."
         ],
         link: '/services',
-    }
+    },
     // Heel Pain Management
     {
         image: 'https://i.imgur.com/2Q4xrFD.webp',
