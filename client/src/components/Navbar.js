@@ -101,7 +101,7 @@ const Navbar = () => {
                     <Link to='/' className='logo-link-navbar' style={{ textDecorationLine: 'none' }}>
                         <div className='logo-and-title'>
                             <img
-                                src='https://i.imgur.com/1M8ZlnK.webp'
+                                src='https://i.imgur.com/QuXDpPX.webp'
                                 alt='Default Company'
                                 className='navbar-logo'
                             />

@@ -5,27 +5,27 @@ default: &default
 
 development:
   <<: *default
-  database: orthosdefaultcompanydatabase
-  username: defaultcompanyadmin@orthosdefaultcompanyserver
+  database: cptdatabase
+  username: cptadmin@cptserver
   password: <%= ENV["REACT_APP_DATABASE_PASSWORD"] %>
-  host: orthosdefaultcompanyserver.postgres.database.azure.com
+  host: cptserver.postgres.database.azure.com
   port: 5432
   sslmode: require
 
 test:
   <<: *default
-  database: orthosdefaultcompanydatabase
-  username: defaultcompanyadmin@orthosdefaultcompanyserver
+  database: cptdatabase
+  username: cptadmin@cptserver
   password: <%= ENV["REACT_APP_DATABASE_PASSWORD"] %>
-  host: orthosdefaultcompanyserver.postgres.database.azure.com
+  host: cptserver.postgres.database.azure.com
   port: 5432
   sslmode: require
 
 production:
   <<: *default
-  database: orthosdefaultcompanydatabase
-  username: defaultcompanyadmin@orthosdefaultcompanyserver
+  database: cptdatabase
+  username: cptadmin@cptserver
   password: <%= ENV["REACT_APP_DATABASE_PASSWORD"] %>
-  host: orthosdefaultcompanyserver.postgres.database.azure.com
+  host: cptserver.postgres.database.azure.com
   port: 5432
   sslmode: require
