@@ -3,16 +3,16 @@ class OfficeMailer < ApplicationMailer
 
   def contact_us_email(form_data, cc_emails)
     @form_data = form_data # Make the form data accessible in the email view template
-    mail(to: 'unitymskwebsites@gmail.com', cc: cc_emails, subject: 'Default Company: New Contact Form Submission')
+    mail(to: 'unitymskwebsites@gmail.com', cc: cc_emails, subject: 'CPT: New Contact Form Submission')
   end
 
   def request_appointment_email(form_data, cc_emails)
     @form_data = form_data # Make the form data accessible in the email view template
-    mail(to: 'unitymskwebsites@gmail.com', cc: cc_emails, subject: 'Default Company: New Request Appointment Form Submission')
+    mail(to: 'unitymskwebsites@gmail.com', cc: cc_emails, subject: 'CPT: New Request Appointment Form Submission')
   end
 
   def alert_no_reviews_email
-    mail(to: 'jimmy.lagattuta@gmail.com', subject: 'Alert: No Reviews Found')
+    mail(to: 'jimmy.lagattuta@gmail.com', subject: 'Alert CTP: No Reviews Found')
   end
 
   def error_email(type, description)

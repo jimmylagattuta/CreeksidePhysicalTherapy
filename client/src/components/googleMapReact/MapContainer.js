@@ -313,7 +313,7 @@ const MapContainer = () => {
     const resetSelection = () => {
         console.log('resetSelection setZoomed(zoomLevel)');
         setZoomed(zoomLevel);
-        setCentered({ lat: 41.794820, lng: -87.790060 });
+        setCentered({ lat: 45.4438, lng: -122.7333 });
         setMarkerSelected(null);
         handleInfoWindowClose();
     };
@@ -329,7 +329,7 @@ const MapContainer = () => {
             {offices.length > 0 && (
                 <GoogleMapReact
                     defaultZoom={11}
-                    defaultCenter={{ lat: 41.794820, lng: -87.790060 }}
+                    defaultCenter={{ lat: 45.4438, lng: -122.7333 }}
                     center={centered}
                     zoom={zoomed}
                     bootstrapURLKeys={{

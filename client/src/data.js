@@ -981,46 +981,22 @@ export const aboutExtra = [
 ];
 export const locations = [
     {
-        name: 'Cityville',
+        name: 'Cedar Mill Clinic',
         component: 'Locations',
         link: '/locations',
     },
     {
-        name: 'Metropolis',
+        name: 'Tigard Clinic',
         component: 'Locations',
         link: '/locations',
     },
     {
-        name: 'Springfield',
-        component: 'Locations',
-        link: '/locations',
-    },
-    {
-        name: 'Laketown',
-        component: 'Locations',
-        link: '/locations',
-    },
-    {
-        name: 'Hilldale',
-        component: 'Locations',
-        link: '/locations',
-    },
-    {
-        name: 'Rivercity',
-        component: 'Locations',
-        link: '/locations',
-    },
-    {
-        name: 'Greenville',
-        component: 'Locations',
-        link: '/locations',
-    },
-    {
-        name: 'Eastwood',
+        name: 'Locust Clinic',
         component: 'Locations',
         link: '/locations',
     }
 ];
+
 export const navMenu = [
     { menu: 'Home', link: '/' },
     {
@@ -1050,121 +1026,59 @@ export const navMenu = [
             'Hip'
         ],
     },
-    { menu: 'Locations', link: '/locations' },
+    {
+        menu: 'Locations',
+        link: '/locations',
+        subMenuItems: [
+            'Cedar Mill Clinic',
+            'Tigard Clinic',
+            'Locust Clinic'
+        ]
+    },
     { menu: 'Careers', link: 'https://ats.rippling.com/default-company/jobs' }
 
 ];
 
 export const officesData = [
     {
-        id: 1,
-        city: 'Cityville',
-        addressOne: '100 Main Street',
-        addressTwo: 'Cityville, IL 60000',
-        phone: '555-0100',
-        fax: '555-0101',
+        id: 15,
+        city: 'Cedar Mill Clinic',
+        addressOne: '12400 NW Cornell Rd, Ste. #200',
+        addressTwo: 'Portland, Oregon 97229',
+        phone: '971-300-0690',
+        fax: '503-245-2445',
         image: 'https://i.imgur.com/r6Cclyu.jpg',
         coordinates: {
-            lat: 40.0000,
-            lng: -89.0000,
+            lat: 45.5252959, // Update with actual coordinates
+            lng: -122.8050949, // Update with actual coordinates
         },
         show: false,
     },
     {
-        id: 2,
-        city: 'Metropolis',
-        addressOne: '200 Central Ave',
-        addressTwo: 'Metropolis, IL 60001',
-        phone: '555-0200',
-        fax: '555-0201',
+        id: 16,
+        city: 'Tigard Clinic',
+        addressOne: '9115 SW Oleson Rd, Ste. #206',
+        addressTwo: 'Portland, Oregon 97223',
+        phone: '971-300-0680',
+        fax: '503-245-2445',
         image: 'https://i.imgur.com/r6Cclyu.jpg',
         coordinates: {
-            lat: 40.5000,
-            lng: -89.5000,
+            lat: 45.454624, // Update with actual coordinates
+            lng: -122.7734863, // Update with actual coordinates
         },
         show: false,
     },
     {
-        id: 3,
-        city: 'Springfield',
-        addressOne: '300 Capitol Plaza',
-        addressTwo: 'Springfield, IL 60002',
-        phone: '555-0300',
-        fax: '555-0301',
+        id: 17,
+        city: 'Locust Clinic',
+        addressOne: '9445 S Locust St.',
+        addressTwo: 'Tigard, Oregon, 97223',
+        phone: '503-595-8806',
+        fax: '503-352-1314',
         image: 'https://i.imgur.com/r6Cclyu.jpg',
         coordinates: {
-            lat: 39.8000,
-            lng: -89.6500,
-        },
-        show: false,
-    },
-    {
-        id: 4,
-        city: 'Laketown',
-        addressOne: '400 Lakeview Drive',
-        addressTwo: 'Laketown, IL 60003',
-        phone: '555-0400',
-        fax: '555-0401',
-        image: 'https://i.imgur.com/r6Cclyu.jpg',
-        coordinates: {
-            lat: 40.2500,
-            lng: -89.7500,
-        },
-        show: false,
-    },
-    {
-        id: 5,
-        city: 'Hilldale',
-        addressOne: '500 Hill Street',
-        addressTwo: 'Hilldale, IL 60004',
-        phone: '555-0500',
-        fax: '555-0501',
-        image: 'https://i.imgur.com/r6Cclyu.jpg',
-        coordinates: {
-            lat: 39.9000,
-            lng: -88.9500,
-        },
-        show: false,
-    },
-    {
-        id: 6,
-        city: 'Rivercity',
-        addressOne: '600 River Road',
-        addressTwo: 'Rivercity, IL 60005',
-        phone: '555-0600',
-        fax: '555-0601',
-        image: 'https://i.imgur.com/r6Cclyu.jpg',
-        coordinates: {
-            lat: 40.3000,
-            lng: -89.3000,
-        },
-        show: false,
-    },
-    {
-        id: 7,
-        city: 'Greenville',
-        addressOne: '700 Green Blvd',
-        addressTwo: 'Greenville, IL 60006',
-        phone: '555-0700',
-        fax: '555-0701',
-        image: 'https://i.imgur.com/r6Cclyu.jpg',
-        coordinates: {
-            lat: 40.1000,
-            lng: -88.8000,
-        },
-        show: false,
-    },
-    {
-        id: 8,
-        city: 'Eastwood',
-        addressOne: '800 Eastwood Lane',
-        addressTwo: 'Eastwood, IL 60007',
-        phone: '555-0800',
-        fax: '555-0801',
-        image: 'https://i.imgur.com/r6Cclyu.jpg',
-        coordinates: {
-            lat: 39.7500,
-            lng: -89.2500,
+            lat: 45.4472672, // Update with actual coordinates
+            lng: -122.7740161, // Update with actual coordinates
         },
         show: false,
     }
