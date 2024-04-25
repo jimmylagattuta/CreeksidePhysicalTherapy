@@ -153,221 +153,340 @@ export const physicians = [
 ];
 
 export const services = [
+    // Foot & Ankle Rehabilitation
     {
         image: 'https://i.imgur.com/2Q4xrFD.webp',
-        name: 'Physical Therapy',
-        firstTitle: 'Physical Therapy',
+        name: 'Foot & Ankle Rehabilitation',
+        firstTitle: 'Foot & Ankle Rehabilitation',
         description: [
-            "The Company Default physical and occupational therapists are committed to providing quality care and service to our patients. Our goal is to provide exceptional, comprehensive, and progressive patient centered rehabilitation. Our facility is located adjacent to our medical office, allowing our qualified staff to work directly with your medical provider to establish and adapt your treatment plan according to your needs."
+            "Our Portland Physical Therapists specialize in rehabilitating painful foot and ankle issues, offering individualized rehabilitation to help you kick pain to the curb and resume an active lifestyle."
         ],
-        secondTitle: 'In Depth Look',
+        secondTitle: 'Conditions We Treat',
         descriptionTwo: [
-            "Physical therapy is a fundamental component of rehabilitation, focusing on improving physical function and mobility through exercises and manual techniques. It plays a vital role in enhancing an individual's ability to move and function effectively. Whether recovering from an injury, surgery, or a health condition, physical therapy helps individuals regain strength, flexibility, and overall physical well-being. It is a key element in promoting independence and resilience, guiding individuals towards a more self-reliant and healthier future."
+            "We treat a range of conditions including sprains, Achilles tendonitis, plantar fasciitis, broken bones, arthritis, and more, utilizing the latest techniques to ensure effective recovery."
         ],
-        threeTitle: 'Applying Physical Therapy',
+        thirdTitle: 'Specialized Treatments',
         descriptionThree: [
-            "Applying physical therapy in the field of orthopedics is a specialized endeavor, finely tuned to address musculoskeletal challenges with precision and expertise. Orthopedic physical therapists work closely with patients to design tailored treatment plans that optimize recovery from injuries, surgeries, or chronic conditions related to bones, joints, and muscles. Their multifaceted approach encompasses a thorough evaluation, including diagnostic tests and medical history analysis, to create a roadmap for rehabilitation. Through a combination of targeted exercises, manual techniques, and patient education, orthopedic physical therapists help individuals regain strength, flexibility, and function while reducing pain and improving overall musculoskeletal health. With a focus on personalized care and a commitment to patient well-being, orthopedic physical therapy serves as a cornerstone in the journey towards a pain-free, active, and fulfilling life."
+            "Our approach includes personalized treatments such as IASTM, ASTYM, targeted exercises, and patient education to optimize recovery and prevent future injuries."
         ],
-        fifthTitle: 'How To Prevent the Need for Treatment',
-        descriptionFive: [
-            "Connecting preventive measures to orthopedic physical therapy is a holistic approach to musculoskeletal well-being. By embracing proactive strategies to maintain bone and joint health, individuals can reduce the likelihood of orthopedic issues and potentially minimize the need for intensive treatment. Regular engagement in exercises that target strength, flexibility, and balance forms a solid foundation for musculoskeletal resilience. Orthopedic physical therapists can provide guidance on tailored exercise routines and techniques to prevent injuries and degenerative conditions. Moreover, they can offer valuable insights into proper body mechanics, helping individuals avoid strains and injuries in their daily activities. Routine check-ups with orthopedic specialists, often facilitated through physical therapy clinics, enable early detection and intervention when necessary. By integrating preventive measures with orthopedic physical therapy, individuals can take a proactive stance in preserving their musculoskeletal health and reducing the potential need for extensive treatment."
+        fourthTitle: 'Preventive Care',
+        descriptionFour: [
+            "We emphasize the importance of preventive care through exercises that improve strength, flexibility, and balance, helping to mitigate the risks of future foot and ankle conditions."
         ],
         link: '/services',
     },
+    // Orthopedic Rehabilitation
     {
-        image: 'https://i.imgur.com/H5SJHUM.webp',
-        name: 'Sports Medicine',
-        firstTitle: 'Sports Medicine',
+        image: 'https://i.imgur.com/2Q4xrFD.webp',
+        name: 'Orthopedic Rehabilitation',
+        firstTitle: 'Orthopedic Rehabilitation',
         description: [
-            "Sports medicine is a division of medicine that deals with physical fitness and the treatment and prevention of injuries related to sports and exercise. And no, sports medicine is not just for professional athletes! If you are injured while exercising or playing a sport, we know you want to heal and get back to normal as soon as possible. That’s what sports medicine is for. The following are some conditions and injuries that sports medicine can help you address:"
+            "Our team offers comprehensive physical therapy for a variety of orthopedic injuries, including low back pain, shoulder pain, knee pain, and more, providing hands-on techniques and empowering you with exercise programs."
         ],
-        secondTitle: 'What is Sports Medicine?',
+        secondTitle: 'Orthopedic Conditions We Treat',
         descriptionTwo: [
-            "Sports medicine is the science of athletic vitality, a dynamic fusion of medical expertise and athletic finesse. It's where health meets performance, where specialists empower athletes to push boundaries while safeguarding against the rigors of physical pursuit. In this field, injuries are seen as opportunities for comeback stories, where personalized strategies, cutting-edge treatments, and biomechanical wizardry transform setbacks into triumphs. Sports medicine is the art of sculpting resilience and maximizing potential in the world of sports and physical excellence."
+            "We treat a broad spectrum of musculoskeletal issues from acute injuries to chronic conditions, utilizing personalized therapy plans designed to relieve pain and restore function."
         ],
-        thirdTitle: 'Addressing Sports Medicine Concerns',
+        thirdTitle: 'Specialized Orthopedic Treatments',
         descriptionThree: [
-            "Within the realm of treating sports medicine, it involves the intricate management of the human body's athletic capabilities. This field seamlessly melds cutting-edge medical science with the artistry of recovery, where tailored strategies are designed to rejuvenate athletes and enthusiasts alike. In this sphere, injuries cease to be mere setbacks; they become stepping stones to resilience, and each treatment becomes a brushstroke on the canvas of performance. Treating sports medicine strikes a delicate balance between science and the celebration of human potential, crafting comebacks and sculpting champions in the arena of physical excellence."
+            "Our treatment approaches are tailored to meet the specific needs of each patient, involving manual therapy, therapeutic exercises, and patient education to achieve the best outcomes."
         ],
-        fourthTitle: 'Proactive Measures Against Sports Medicine Needs',
+        fourthTitle: 'Preventive Orthopedic Care',
         descriptionFour: [
-            "Preventing the need for sports medicine involves a comprehensive strategy, combining proactive training, technique refinement, and body maintenance. It's about safeguarding physical well-being, minimizing the demand for intervention, and preserving the artistry of athleticism."
-        ],
-
-        link: '/sportsMedicine',
-        link: '/services',
-    },
-    {
-        image: 'https://i.imgur.com/HOI4xoX.webp',
-        name: 'Joint Replacement',
-        firstTitle: 'Joint Replacement',
-        description: [
-            'The physicians of Default Company have extensive experience and expertise in joint replacement and reconstruction for painful joint problems due to arthritic or inflammatory conditions. Our orthopedic surgeons apply state of the art techniques in the replacement and reconstruction of the knee, hip, elbow, shoulder, and ankle, as well as the small joints of the hands and feet. Our physicians work with a team of nurses, physician assistants, and therapists in order to eliminate pain and restore full function.',
-        ],
-        secondTitle: 'Describing Restoration and Restoration',
-        descriptionTwo: [
-            "Joint replacement and joint restoration are medical interventions aimed at addressing musculoskeletal issues. Joint replacement involves the surgical removal of a damaged or arthritic joint and its replacement with an artificial implant. This procedure is typically performed when joint function is significantly compromised. On the other hand, joint restoration focuses on preserving the natural joint whenever possible. It may include procedures like arthroscopy, cartilage repair, or ligament reconstruction to repair damaged joint components. The choice between replacement and restoration depends on the severity of the joint condition and the patient's specific needs. Both approaches aim to alleviate pain, improve mobility, and enhance the patient's overall quality of life."
-        ],
-        thirdTitle: 'Treatment Options',
-        descriptionThree: [
-            "The treatment of joint replacement involves the surgical removal of a damaged or arthritic joint, followed by the placement of an artificial implant. This procedure is typically recommended when joint function is significantly compromised, and it aims to alleviate pain and restore mobility.",
-            "Joint restoration, on the other hand, focuses on preserving the natural joint whenever possible. It may involve various surgical techniques like arthroscopy, cartilage repair, or ligament reconstruction to repair damaged joint components. The choice between replacement and restoration depends on the severity of the joint condition and the patient's specific needs.",
-            "Both approaches are designed to improve joint function, alleviate pain, and enhance the patient's overall quality of life by addressing musculoskeletal issues effectively."
-        ],
-        fourthTitle: 'Preventing the Need for Treatment',
-        descriptionFour: [
-            "Preventing the need for joint replacement and joint restoration involves a preventive approach to sustain overall joint well-being. This includes adopting a healthy lifestyle, incorporating regular exercise to strengthen joints and the surrounding structures, and maintaining a healthy body weight to reduce stress on these vital structures. Avoiding activities that place excessive strain on the joints and practicing proper ergonomics during daily tasks also contribute to prevention. Regular check-ups with a healthcare provider can help identify and address joint issues early. Overall, prioritizing joint health through a combination of preventive measures can help reduce the likelihood of requiring joint replacement or restoration procedures in the future."
-        ],
-        link: '/jointReplacementAndJointRestoration',
-        link: '/services',
-    },
-    {
-        image: 'https://i.imgur.com/GW7GxIh.webp',
-        name: 'Foot and Ankle',
-        firstTitle: 'Foot & Ankle Specialsists',
-        description: [
-            'The physicians at Default Company treat a variety of foot and ankle injuries and conditions, including those related to trauma, fractures, arthritis, plantar fasciitis, sports injuries, infections, and bunions. Some of the services provided include diabetic footcare, fracture care, ligament tendon repair, bunion correction, as well as forefoot, midfoot, and hindfoot reconstructions and ankle replacements.',
-        ],
-        secondTitle: 'Looking Closer at the Foot and Ankle',
-        descriptionTwo: [
-            "Foot and ankle injuries are significant concerns in the realm of musculoskeletal health. These injuries encompass a wide spectrum, from common sprains to complex fractures, and can have a profound impact on mobility and overall well-being. Effective treatment involves a thorough diagnosis, often utilizing advanced imaging techniques, followed by appropriate interventions such as immobilization, physical therapy, or in some cases, surgical procedures. Prompt and precise care is essential to minimize complications and facilitate a full recovery. Foot and ankle injuries should be taken seriously, as they directly affect our ability to walk, stand, and engage in daily activities."
-        ],
-        thirdTitle: 'Treatment of Foot and Ankle Injuries',
-        descriptionThree: [
-            'We use our feet and ankles any time we walk, stand up or participate in nearly any sport. That’s why having a foot or ankle injury can be very debilitating to your everyday life. You even need properly functioning feet and ankles to drive safely, and giving up the keys is not a pleasant prospect!',
-            "Default Company's Doctors can help you identify problems in your feet and ankles, and work with you on preventing new or further injuries. We may suggest you get ergonomically correct shoes or socks to help you walk more naturally. We may also give you advice on what types of physical activities may be aggravating an existing condition.",
-            'A common cause of foot and ankle injuries is running on overly flat or overly uneven terrain without the proper foot support. If the idea of not being able to run any more is not a comforting prospect for you, then you should definitely come see us to correct any pain or inflammation in a your feet or ankles before they lead to more serious damage. Default Company may also suggest you switch to exercises or machines at the gym that put less pressure on your lower joints, such as swimming or using the elliptical instead of the treadmill.',
-        ],
-        fourthTitle: 'Prevention of Foot and Ankle Injuries',
-        descriptionFour: [
-            "Preventing foot and ankle injuries involves a proactive approach focused on safeguarding these crucial weight-bearing structures. This includes wearing proper footwear that provides support and cushioning, especially during physical activities. Strengthening exercises that target the muscles around the foot and ankle can enhance stability and reduce injury risk. Maintaining a healthy body weight helps alleviate excessive stress on these areas. Additionally, being mindful of one's surroundings to avoid hazards or uneven surfaces can also play a role in injury prevention. By prioritizing these preventive measures, individuals can take proactive steps to safeguard the health and function of their feet and ankles, allowing for a more active and pain-free lifestyle."
-        ],
-
-        link: '/services',
-    },
-    {
-        image: "https://i.imgur.com/2aSQ0mV.webp",
-        name: "Elbow and Shoulder",
-        firstTitle: "Comprehensive Elbow and Shoulder Care",
-        description: [
-            "Expert care for a range of elbow and shoulder conditions, including Cubital Tunnel Syndrome, Frozen Shoulder, and Rotator Cuff Injuries.",
-            "Elbow and shoulder conditions can significantly impact daily life, given the crucial role these joints play in our activities. Whether you're dealing with acute injuries or chronic conditions, our specialists can provide personalized care to alleviate pain and restore function. From advanced surgical interventions to non-operative management, our goal is to help you regain mobility and enhance your overall quality of life."
-        ],
-        secondTitle: "Examining Elbow and Shoulder Health",
-        descriptionTwo: [
-            "Elbow and shoulder health is integral to our ability to perform everyday activities. These joints are involved in various movements, and issues like Cubital Tunnel Syndrome and Rotator Cuff Injuries can hinder mobility. Accurate diagnosis, often involving advanced imaging techniques, is crucial for effective treatment. Our specialists assess each patient's condition meticulously, considering both the immediate symptoms and long-term joint health. Elbow and shoulder injuries require prompt attention to prevent complications and ensure a full recovery."
-        ],
-        thirdTitle: "Treatment of Elbow and Shoulder Conditions",
-        descriptionThree: [
-            "If you're experiencing discomfort or have concerns about your elbow or shoulder health, our team can assist in identifying the root cause and developing a customized treatment plan. We prioritize patient education, offering insights into ergonomics, suitable footwear, and lifestyle adjustments to prevent further injuries and improve long-term joint health.",
-            "Trust our experts for comprehensive elbow and shoulder care tailored to your unique needs. From diagnosis to rehabilitation, we work closely with patients to facilitate a safe return to their daily activities. Our commitment extends to providing specialized care for athletes dealing with sports-related elbow and shoulder issues."
-        ],
-        fourthTitle: "Preventing Elbow and Shoulder Injuries",
-        descriptionFour: [
-            "Preventing elbow and shoulder injuries involves proactive measures focused on maintaining joint health. This includes practicing proper ergonomics, avoiding overexertion during physical activities, and incorporating targeted exercises to"
-        ],
-        link: '/services'
-    },
-    {
-        image: "https://i.imgur.com/qgU33O2.jpg",
-        width: "267px",
-        height: "200px",
-        name: "Hand and Wrist",
-        firstTitle: "Hand and Wrist Specialists",
-        description: [
-            "The physicians at Default Company provide expert care for a wide range of hand and wrist conditions, including fractures, arthritis, ligament injuries, and nerve disorders. Our comprehensive services cover both non-operative management and advanced surgical interventions, aiming to alleviate pain and restore optimal function to these intricate and essential upper extremity structures."
-        ],
-        secondTitle: "Examining Hand and Wrist Health",
-        descriptionTwo: [
-            "Hand and wrist health is vital for daily activities, and conditions such as fractures, ligament injuries, and nerve disorders can significantly impact functionality. Accurate diagnosis is essential for effective treatment, and our specialists utilize advanced imaging techniques to assess each patient's condition thoroughly. Whether you're dealing with acute injuries or chronic disorders, our team is dedicated to providing personalized care to improve your quality of life and facilitate a swift recovery."
-        ],
-        thirdTitle: "Treatment of Hand and Wrist Conditions",
-        descriptionThree: [
-            "If you're experiencing discomfort or have concerns about your hand or wrist health, our team can assist in identifying the root cause and developing a customized treatment plan. Our services include non-operative management, such as physical therapy and medication, as well as advanced surgical procedures for conditions that require intervention. Trust our experts for comprehensive hand and wrist care tailored to your unique needs, from diagnosis to rehabilitation."
-        ],
-        fourthTitle: "Prevention of Hand and Wrist Injuries",
-        descriptionFour: [
-            "Preventing hand and wrist injuries involves adopting proactive measures to maintain joint health. This includes practicing proper ergonomics, using protective gear during activities that pose a risk, and incorporating exercises to enhance strength and flexibility. Patient education is a crucial component, raising awareness about injury prevention and promoting overall hand and wrist well-being. By prioritizing these preventive measures, individuals can take active steps to safeguard the health and function of their hands and wrists, ensuring a more active and pain-free lifestyle."
-        ],
-        link: "/services",
-    },
-    {
-        image: "https://i.imgur.com/zk2djf3.webp",
-        width: "267px",
-        height: "200px",
-        name: "Spine",
-        firstTitle: "Spine Specialists",
-        description: [
-            "The physicians at Default Company specialize in comprehensive spine care, addressing a wide range of conditions that affect the spinal column. From degenerative disorders and herniated discs to spinal fractures and scoliosis, our team provides expert diagnosis and personalized treatment plans to alleviate pain and improve spinal function.",
-            "Spine health is integral to overall well-being, and our specialists are dedicated to providing advanced and compassionate care. Accurate diagnosis, often involving imaging studies, allows us to tailor treatment approaches, including both non-operative management and surgical interventions. Our goal is to empower patients with the knowledge and tools they need to make informed decisions about their spinal health."
-        ],
-        secondTitle: "Examining Spine Health",
-        descriptionTwo: [
-            "Maintaining a healthy spine is crucial for everyday activities and overall quality of life. Conditions such as degenerative disc disease, spinal stenosis, and scoliosis can impact mobility and cause chronic pain. Our specialists conduct thorough assessments to identify the underlying causes of spinal issues, developing customized treatment plans that may include physical therapy, medication, or surgical intervention when necessary."
-        ],
-        thirdTitle: "Treatment of Spinal Conditions",
-        descriptionThree: [
-            "If you're experiencing spine-related discomfort or have concerns about your spinal health, our team can assist in identifying the root cause and developing a tailored treatment plan. Our services encompass both conservative approaches and state-of-the-art surgical techniques. Trust our experts for comprehensive spine care designed to address your unique needs and support your journey to improved spinal health.",
-        ],
-        fourthTitle: "Prevention of Spinal Injuries",
-        descriptionFour: [
-            "Preventing spinal injuries involves adopting proactive measures to maintain spinal health. This includes practicing proper ergonomics, incorporating exercises that strengthen the core and back muscles, and avoiding activities that put excessive strain on the spine. Patient education is a key component of our approach, providing individuals with the knowledge and tools to make lifestyle choices that support a healthy spine and overall well-being.",
-        ],
-        link: "/services",
-    },
-    {
-        image: 'https://i.imgur.com/kNfSdcm.webp',
-        name: 'Knee',
-        firstTitle: 'Comprehensive Knee Care',
-        description: [
-            'Our knee specialists offer expert care for a variety of conditions, ranging from common injuries to complex issues. We address concerns such as Anterior Cruciate Ligament (ACL) Tears, Avascular Necrosis, and Osteoarthritis, tailoring our approach to each patient.',
-            "Knee conditions can significantly impact mobility and daily activities. Whether you're dealing with fractures, bursitis, or ligament tears, our team provides personalized care, utilizing advanced diagnostic methods and offering a range of treatments, from conservative options to surgical interventions."
-        ],
-        secondTitle: 'Examining Knee Health',
-        descriptionTwo: [
-            "Maintaining optimal knee health is crucial for overall well-being. Our specialists conduct thorough evaluations to diagnose conditions accurately. Conditions like Patella Tendon Rupture, Tibial Fractures, and Shin Splints are carefully assessed to develop a tailored treatment plan.",
-            "We prioritize patient education, providing insights into preventive measures, suitable footwear, and exercises to enhance knee strength. Whether you're an athlete dealing with sports-related injuries or facing degenerative issues, our team is dedicated to helping you regain function and lead an active life."
-        ],
-        thirdTitle: 'Treatment of Knee Conditions',
-        descriptionThree: [
-            "If you're experiencing knee discomfort or have concerns about your knee health, our team can assist in identifying the root cause and developing a customized treatment plan. From ACL Reconstruction to Total Knee Replacement, we offer comprehensive care to address various knee conditions.",
-            'Our commitment extends to rehabilitation, ensuring a safe return to daily activities. We work closely with patients, providing guidance on post-treatment care and preventive measures to minimize the risk of future injuries.'
-        ],
-        fourthTitle: 'Preventing Knee Injuries',
-        descriptionFour: [
-            "Preventing knee injuries involves a proactive approach focused on maintaining joint health. Our specialists offer guidance on ergonomics, suitable footwear, and exercises to strengthen the knee. Whether you're an athlete or looking to prevent degenerative issues, we empower individuals to take proactive steps towards knee health."
+            "We focus on injury prevention and health promotion through strengthening, flexibility, and ergonomic training to help you maintain optimal musculoskeletal health."
         ],
         link: '/services',
     },
+    // Sports Injury Rehabilitation
     {
-        image: 'https://i.imgur.com/csNmaeJl.webp',
-        width: '267px',
-        height: '200px',
-        name: 'Hip',
-        firstTitle: 'Hip Injury Specialists',
+        image: 'https://i.imgur.com/2Q4xrFD.webp',
+        name: 'Sports Injury Rehabilitation',
+        firstTitle: 'Sports Injury Rehabilitation',
         description: [
-            'The physicians at Default Company specialize in the diagnosis and treatment of a variety of hip injuries and conditions. Whether the condition is the result of wear and tear of the hip, a sports injury or traumatic condition, our Orthopedic Doctors apply the latest techniques to return our patients to their active lifestyles. Our surgeons perform an extensive variety of techniques including hip fracture care and hip replacement surgery.',
+            "Tailored to athletes and active individuals, our services address sports-related injuries to the foot, ankle, and lower leg, ensuring a safe return to sport."
         ],
-        secondTitle: 'A Detailed Look',
+        secondTitle: 'Types of Sports Injuries',
         descriptionTwo: [
-            "Hip injuries encompass a range of conditions affecting the hip joint. These can include fractures, strains, bursitis, and more. Such injuries can significantly impact mobility and comfort. Treatment often involves medical evaluation, rehabilitation, and, in some cases, surgical intervention to restore function and alleviate discomfort."
+            "From sprains and fractures to chronic conditions, our specialized physical therapy programs are designed to manage and recover from a wide range of sports injuries."
         ],
-        thirdTitle: 'Treatment of Hip Injuries',
+        thirdTitle: 'Advanced Sports Treatments',
         descriptionThree: [
-            'Effective treatment for hip injuries involves a thorough assessment by our orthopedic specialists. From fractures to osteoarthritis and soft tissue injuries, we tailor our approach based on the specific condition. For less severe cases, conservative methods like physical therapy and pain management may be recommended. In complex situations, surgical interventions such as hip arthroscopy or total hip replacement are considered. Our skilled surgeons prioritize precision to restore hip function and reduce pain. A personalized rehabilitation plan follows treatment, aiming to enhance strength, flexibility, and overall hip health.'
+            "Utilizing advanced therapeutic techniques including motion analysis and sport-specific training, we help athletes regain strength, function, and confidence."
         ],
-        fourthTitle: 'How to Prevent',
+        fourthTitle: 'Sport-Specific Preventive Advice',
         descriptionFour: [
-            "Regular exercise, particularly those focusing on hip flexibility and strength, becomes the cornerstone of injury prevention. Equally important is maintaining a healthy body weight, which alleviates excess stress on the hip joint. Proper biomechanics, like balanced posture and gait, play a crucial role in injury avoidance. Additionally, investing in quality footwear and addressing any underlying medical conditions that affect hip health are vital steps. By treating our hips with the care and attention they deserve, we lay the foundation for a life of fluid, pain-free movement and graceful aging."
+            "We provide guidance on proper training routines, warm-up exercises, and equipment to prevent injuries and enhance athletic performance."
         ],
-        fifthTitle: 'Hip Fracture',
-        descriptionFive: [
-            'A hip fracture is one of the most serious types of bone fractures, and it can happen in people both young and old. Teenagers are especially prone to pelvis fractures because their bodies are still growing. Hip injuries from playing sports or severe traumas, such as from car crashes, can cause fractures in the pelvis in teens. This can limit their ability to remain active and live a normal life, and will require advanced treatment.',
-            'The elderly are also prone to hip fractures. Those with osteoporosis – an age-related loss of bone integrity – are especially prone to this type of fracture, which can occur by simply falling and landing awkwardly on their side.',
+        link: '/services',
+    },
+    // Running Injuries Treatment
+    {
+        image: 'https://i.imgur.com/2Q4xrFD.webp',
+        name: 'Running Injuries Treatment',
+        firstTitle: 'Running Injuries Treatment',
+        description: [
+            "Focused treatment and rehabilitation services for common running injuries, helping runners maintain performance and prevent future issues."
         ],
-        link: '/services'
+        secondTitle: 'Effective Running Injury Management',
+        descriptionTwo: [
+            "We treat conditions such as Achilles tendinitis, shin splints, and stress fractures with targeted, evidence-based approaches."
+        ],
+        thirdTitle: 'Specialized Running Injury Therapies',
+        descriptionThree: [
+            "Our treatments include biomechanical analysis, personalized exercise programs, and manual therapy to address specific running injuries."
+        ],
+        fourthTitle: 'Preventive Measures for Runners',
+        descriptionFour: [
+            "Educational workshops and training advice are provided to help runners optimize their training routines and reduce the risk of injuries."
+        ],
+        link: '/services',
+    },
+    // Neuroma and Nerve Pain Treatment
+    {
+        image: 'https://i.imgur.com/2Q4xrFD.webp',
+        name: 'Neuroma and Nerve Pain Treatment',
+        firstTitle: 'Neuroma and Nerve Pain Treatment',
+        description: [
+            "Specializing in the treatment of Morton’s Neuroma and other nerve pain conditions, our clinic utilizes advanced techniques such as IASTM or ASTYM, complemented by customized exercise programs. These interventions are designed to relieve pressure on nerves and reduce pain."
+        ],
+        secondTitle: 'Comprehensive Nerve Pain Management',
+        descriptionTwo: [
+            "Our approach not only focuses on immediate pain relief but also on long-term management strategies to prevent recurrence, including patient education and lifestyle modifications."
+        ],
+        thirdTitle: 'Advanced Therapeutic Options',
+        descriptionThree: [
+            "We offer ultrasound-guided interventions and other minimally invasive procedures that target the underlying causes of nerve pain, ensuring effective and lasting relief."
+        ],
+        fourthTitle: 'Preventive Care and Education',
+        descriptionFour: [
+            "Preventive strategies are integral to our treatment protocol, aimed at reducing the risk of further nerve damage and enhancing overall nerve health."
+        ],
+        link: '/services',
+    },
+    // Neck Pain Treatment
+    {
+        image: 'https://i.imgur.com/2Q4xrFD.webp',
+        name: 'Neck Pain Treatment',
+        firstTitle: 'Neck Pain Treatment',
+        description: [
+            "Our clinic addresses a variety of neck conditions, from whiplash to chronic strain. We use a combination of manual therapy, posture correction, and strength training to enhance neck mobility and alleviate pain."
+        ],
+        secondTitle: 'Targeted Therapies for Neck Pain',
+        descriptionTwo: [
+            "Treatments are personalized, involving techniques such as cervical traction, ergonomic adjustments, and specific exercises tailored to each patient's condition."
+        ],
+        thirdTitle: 'Innovative Pain Management Techniques',
+        descriptionThree: [
+            "We incorporate the latest in pain management technology, including TENS and laser therapy, to provide relief from acute and chronic neck pain."
+        ],
+        fourthTitle: 'Educational Outreach and Preventive Measures',
+        descriptionFour: [
+            "Patient education on daily habits and preventive exercises plays a crucial role in our treatment plans, helping patients manage and prevent future episodes of neck pain."
+        ],
+        link: '/services',
+    }
+    // Low Back & Sciatica Treatment
+    {
+        image: 'https://i.imgur.com/2Q4xrFD.webp',
+        name: 'Low Back & Sciatica Treatment',
+        firstTitle: 'Low Back & Sciatica Treatment',
+        description: [
+            "Our approach to low back pain and sciatica involves comprehensive care that addresses both the symptoms and underlying causes. We use techniques such as spinal manipulation, core strengthening, and flexibility exercises to improve spinal health."
+        ],
+        secondTitle: 'Customized Sciatica Relief Plans',
+        descriptionTwo: [
+            "Each treatment plan is customized to the individual, focusing on reducing sciatic nerve pain through targeted physical therapy and non-invasive procedures."
+        ],
+        thirdTitle: 'State-of-the-Art Pain Relief Methods',
+        descriptionThree: [
+            "Advanced treatments, including heat therapy, electrical stimulation, and acupuncture, are utilized depending on the severity and specific needs of the patient."
+        ],
+        fourthTitle: 'Long-term Wellness and Prevention',
+        descriptionFour: [
+            "Education on proper body mechanics and lifestyle changes is also provided to prevent future occurrences and maintain a healthy, pain-free back."
+        ],
+        link: '/services',
+    }
+    // Heel Pain Management
+    {
+        image: 'https://i.imgur.com/2Q4xrFD.webp',
+        name: 'Heel Pain Management',
+        firstTitle: 'Heel Pain Management',
+        description: [
+            "Focused on alleviating heel pain through specialized treatments and comprehensive care, our clinic provides expert management for conditions such as plantar fasciitis and heel spurs."
+        ],
+        secondTitle: 'Common Causes and Treatments',
+        descriptionTwo: [
+            "Our approach includes diagnosing the specific causes of heel pain, which can range from overuse injuries to biomechanical issues, and tailoring treatments accordingly. Effective therapies may include shockwave therapy, custom orthotics, and targeted physical therapy exercises."
+        ],
+        thirdTitle: 'Advanced Heel Pain Therapies',
+        descriptionThree: [
+            "We employ the latest advancements in medical treatments for heel pain, such as laser therapy, ultrasound-guided corticosteroid injections, and minimally invasive surgical options when necessary."
+        ],
+        fourthTitle: 'Preventive Strategies for Heel Health',
+        descriptionFour: [
+            "To prevent the recurrence of heel pain, we provide patients with education on proper footwear, lifestyle modifications, and exercises designed to strengthen foot muscles and improve flexibility."
+        ],
+        link: '/services',
+    },
+    // Knee & Hip Rehabilitation
+    {
+        image: 'https://i.imgur.com/2Q4xrFD.webp',
+        name: 'Knee & Hip Rehabilitation',
+        firstTitle: 'Knee & Hip Rehabilitation',
+        description: [
+            "Our clinic offers specialized care for knee and hip conditions, providing comprehensive treatment plans to manage pain and improve mobility."
+        ],
+        secondTitle: 'Conditions Treated',
+        descriptionTwo: [
+            "We handle everything from acute injuries like meniscus tears to chronic conditions such as osteoarthritis, using evidence-based treatments tailored to each patient's needs."
+        ],
+        thirdTitle: 'Advanced Treatment Options',
+        descriptionThree: [
+            "Our approach includes a combination of manual therapy, strength training, and cutting-edge modalities to foster recovery and functional improvement."
+        ],
+        fourthTitle: 'Preventive Care for Knee & Hip',
+        descriptionFour: [
+            "Preventive strategies including biomechanical assessments and patient education are integral to our service, helping reduce the risk of future injuries and degeneration."
+        ],
+        link: '/services',
+    },
+    // Hand & Elbow Rehabilitation
+    {
+        image: 'https://i.imgur.com/2Q4xrFD.webp',
+        name: 'Hand & Elbow Rehabilitation',
+        firstTitle: 'Hand & Elbow Rehabilitation',
+        description: [
+            "Targeted rehabilitation services for hand and elbow injuries, employing a range of therapeutic techniques to restore function and reduce pain."
+        ],
+        secondTitle: 'Types of Hand & Elbow Injuries',
+        descriptionTwo: [
+            "We treat conditions such as tennis elbow, carpal tunnel syndrome, and various sprains and fractures, ensuring comprehensive care and support."
+        ],
+        thirdTitle: 'Specialized Therapies',
+        descriptionThree: [
+            "Our clinic utilizes manual therapies, therapeutic exercises, and modalities like ultrasound and electrical stimulation to promote healing and prevent re-injury."
+        ],
+        fourthTitle: 'Preventive Advice',
+        descriptionFour: [
+            "We also offer guidance on ergonomics and preventive exercises to help patients maintain hand and elbow health in daily activities and professional environments."
+        ],
+        link: '/services',
+    },
+    // Workplace Injury Rehabilitation
+    {
+        image: 'https://i.imgur.com/2Q4xrFD.webp',
+        name: 'Workplace Injury Rehabilitation',
+        firstTitle: 'Workplace Injury Rehabilitation',
+        description: [
+            "Comprehensive rehabilitation services designed to assist patients in recovering from injuries sustained at work, helping them return to their professional activities safely."
+        ],
+        secondTitle: 'Common Workplace Injuries',
+        descriptionTwo: [
+            "Our program addresses a wide range of workplace injuries, from repetitive strain injuries to acute trauma, providing tailored therapies and recovery plans."
+        ],
+        thirdTitle: 'Rehabilitation Techniques',
+        descriptionThree: [
+            "We use a multidisciplinary approach, including physical therapy, occupational therapy, and functional retraining to ensure a successful return to work."
+        ],
+        fourthTitle: 'Injury Prevention at Work',
+        descriptionFour: [
+            "Our services extend to injury prevention training and ergonomic assessments to help prevent future injuries in the workplace."
+        ],
+        link: '/services',
+    },
+    // Comprehensive Sports Rehabilitation
+    {
+        image: 'https://i.imgur.com/2Q4xrFD.webp',
+        name: 'Comprehensive Sports Rehabilitation',
+        firstTitle: 'Comprehensive Sports Rehabilitation',
+        description: [
+            "Dedicated to helping athletes of all levels recover from sports injuries, our clinic offers customized rehabilitation plans that focus on quick and effective recovery."
+        ],
+        secondTitle: 'Sport-Specific Treatments',
+        descriptionTwo: [
+            "We treat a variety of sports injuries, from minor strains to severe ligament tears, using specialized treatments tailored to the specific demands of different sports."
+        ],
+        thirdTitle: 'Advanced Recovery Techniques',
+        descriptionThree: [
+            "Our sports rehabilitation includes advanced techniques such as cryotherapy, laser therapy, and sport-specific training regimens."
+        ],
+        fourthTitle: 'Preventive Sports Medicine',
+        descriptionFour: [
+            "We also provide comprehensive education on injury prevention, strength training, and conditioning to keep athletes at peak performance."
+        ],
+        link: '/services',
+    },
+    // General Physical Therapy
+    {
+        image: 'https://i.imgur.com/2Q4xrFD.webp',
+        name: 'General Physical Therapy',
+        firstTitle: 'General Physical Therapy',
+        description: [
+            "Our clinic provides a wide array of physical therapy services to address various musculoskeletal issues, aiming to improve mobility and enhance quality of life."
+        ],
+        secondTitle: 'Broad Range of Conditions',
+        descriptionTwo: [
+            "From post-surgical recovery to chronic pain management, our experienced therapists offer personalized care tailored to each patient's unique circumstances."
+        ],
+        thirdTitle: 'Therapeutic Modalities',
+        descriptionThree: [
+            "We utilize a variety of modalities including manual therapy, heat and ice therapy, and electrical stimulation to achieve optimal results."
+        ],
+        fourthTitle: 'Lifestyle and Wellness',
+        descriptionFour: [
+            "Our approach extends beyond treatment, focusing on lifestyle changes and wellness strategies to prevent future health issues."
+        ],
+        link: '/services',
+    },
+    // Shoulder Pain & Instability Rehabilitation
+    {
+        image: 'https://i.imgur.com/2Q4xrFD.webp',
+        name: 'Shoulder Pain & Instability Rehabilitation',
+        firstTitle: 'Shoulder Pain & Instability Rehabilitation',
+        description: [
+            "Dedicated rehabilitation services for shoulder pain and instability, employing cutting-edge techniques to restore mobility and reduce pain."
+        ],
+        secondTitle: 'Treatment of Shoulder Conditions',
+        descriptionTwo: [
+            "We address a variety of shoulder issues, including rotator cuff injuries, dislocations, and arthritis with personalized rehabilitation plans."
+        ],
+        thirdTitle: 'Advanced Shoulder Treatment Options',
+        descriptionThree: [
+            "Our clinic uses advanced therapies like manual therapy, strength training, and stability exercises tailored to shoulder rehabilitation."
+        ],
+        fourthTitle: 'Preventive Measures for Shoulder Health',
+        descriptionFour: [
+            "Education and exercises designed to prevent future shoulder injuries are an integral part of our treatment approach."
+        ],
+        link: '/services',
+    },
+    // Fractures & Arthritis Rehabilitation
+    {
+        image: 'https://i.imgur.com/2Q4xrFD.webp',
+        name: 'Fractures & Arthritis Rehabilitation',
+        firstTitle: 'Fractures & Arthritis Rehabilitation',
+        description: [
+            "Our comprehensive treatment plans for fractures and arthritis aim to improve joint function and alleviate pain."
+        ],
+        secondTitle: 'Handling Fractures and Arthritis',
+        descriptionTwo: [
+            "We treat various types of fractures and arthritis through a blend of physical therapy, medication, and lifestyle modification."
+        ],
+        thirdTitle: 'Specialized Care for Fractures and Arthritis',
+        descriptionThree: [
+            "Our personalized care plans include specific exercises, joint protection techniques, and pain management strategies."
+        ],
+        fourthTitle: 'Prevention and Management',
+        descriptionFour: [
+            "We focus on strengthening and preventive care to enhance joint health and prevent the recurrence of injuries and arthritis symptoms."
+        ],
+        link: '/services',
     }
 ];
+
+
+
 export const aboutObj = [
     {
         nameOne: "Insurance Information",
@@ -613,207 +732,246 @@ export const expertiseBlocks = [
         image: 'https://i.imgur.com/2Q4xrFDl.webp',
         width: '267px',
         height: '200px',
-        name: 'Physical Therapy',
-        firstTitle: 'Physical Therapy',
+        name: 'Foot & Ankle Rehabilitation',
+        firstTitle: 'Foot & Ankle Rehabilitation',
         description: [
-            "The Company Default physical and occupational therapists are committed to providing quality care and service to our patients. Our goal is to provide exceptional, comprehensive, and progressive patient centered rehabilitation. Our facility is located adjacent to our medical office, allowing our qualified staff to work directly with your medical provider to establish and adapt your treatment plan according to your needs.",
-            "Physical therapy is a fundamental component of rehabilitation, focusing on improving physical function and mobility through exercises and manual techniques. It plays a vital role in enhancing an individual's ability to move and function effectively. Whether recovering from an injury, surgery, or a health condition, physical therapy helps individuals regain strength, flexibility, and overall physical well-being. It is a key element in promoting independence and resilience, guiding individuals towards a more self-reliant and healthier future.",
-            "Applying physical therapy in the field of orthopedics is a specialized endeavor, finely tuned to address musculoskeletal challenges with precision and expertise. Orthopedic physical therapists work closely with patients to design tailored treatment plans that optimize recovery from injuries, surgeries, or chronic conditions related to bones, joints, and muscles. Their multifaceted approach encompasses a thorough evaluation, including diagnostic tests and medical history analysis, to create a roadmap for rehabilitation. Through a combination of targeted exercises, manual techniques, and patient education, orthopedic physical therapists help individuals regain strength, flexibility, and function while reducing pain and improving overall musculoskeletal health. With a focus on personalized care and a commitment to patient well-being, orthopedic physical therapy serves as a cornerstone in the journey towards a pain-free, active, and fulfilling life.",
-            "Connecting preventive measures to orthopedic physical therapy is a holistic approach to musculoskeletal well-being. By embracing proactive strategies to maintain bone and joint health, individuals can reduce the likelihood of orthopedic issues and potentially minimize the need for intensive treatment. Regular engagement in exercises that target strength, flexibility, and balance forms a solid foundation for musculoskeletal resilience. Orthopedic physical therapists can provide guidance on tailored exercise routines and techniques to prevent injuries and degenerative conditions. Moreover, they can offer valuable insights into proper body mechanics, helping individuals avoid strains and injuries in their daily activities. Routine check-ups with orthopedic specialists, often facilitated through physical therapy clinics, enable early detection and intervention when necessary. By integrating preventive measures with orthopedic physical therapy, individuals can take a proactive stance in preserving their musculoskeletal health and reducing the potential need for extensive treatment."
+            "Our team of experts provides comprehensive care for foot and ankle conditions, dedicated to improving your mobility and reducing pain through a variety of effective treatments.",
+            "We manage a wide range of foot and ankle conditions, employing both traditional and innovative therapies to tailor a recovery plan that's right for you.",
+            "Our treatments are designed to address the root causes of pain and immobility, ensuring a recovery process that not only heals but also educates on maintaining foot and ankle health.",
+            "We also focus on preventive strategies to enhance the overall resilience of your musculoskeletal system, helping you stay active and pain-free."
         ],
         imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
         component: 'Services',
         link: '/services',
-        spanString: 'Physical Therapy'
+        spanString: 'Foot & Ankle Rehabilitation'
     },
     {
-        image: 'https://i.imgur.com/H5SJHUMl.webp',
+        image: 'https://i.imgur.com/2Q4xrFDl.webp',
         width: '267px',
         height: '200px',
-        name: 'Sports Medicine',
-        firstTitle: 'Title 2',
+        name: 'Orthopedic Rehabilitation',
+        firstTitle: 'Orthopedic Rehabilitation',
         description: [
-            "Sports medicine is a division of medicine that deals with physical fitness and the treatment and prevention of injuries related to sports and exercise. And no, sports medicine is not just for professional athletes! If you are injured while exercising or playing a sport, we know you want to heal and get back to normal as soon as possible. That’s what sports medicine is for. The following are some conditions and injuries that sports medicine can help you address:",
+            "Our expertise in orthopedic rehabilitation spans from treating acute injuries like fractures to managing chronic conditions such as arthritis. Our approach involves a thorough assessment and tailored treatments to enhance recovery and prevent future injuries.",
+            "We employ a variety of therapeutic interventions including manual therapy, exercise prescription, and patient education to ensure optimal recovery and improve quality of life.",
+            "Preventive care and ongoing support are integral to our service, ensuring patients not only recover from their current conditions but also prevent new injuries through lifestyle and activity modifications."
         ],
-
-        link: '/serviceCare',
-        imageTwo: 'https://i.imgur.com/H5SJHUM.webp',
+        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
         component: 'Services',
         link: '/services',
-        spanString: 'Sports Medicine'
+        spanString: 'Orthopedic Rehabilitation'
     },
     {
-        image: 'https://i.imgur.com/HOI4xoXl.webp',
+        image: 'https://i.imgur.com/2Q4xrFDl.webp',
         width: '267px',
         height: '200px',
-        name: 'Joint Replacement',
-        firstTitle: 'Joint Replacement',
+        name: 'Sports Injury Rehabilitation',
+        firstTitle: 'Sports Injury Rehabilitation',
         description: [
-            'The physicians of Default Company have extensive experience and expertise in joint replacement and reconstruction for painful joint problems due to arthritic or inflammatory conditions. Our Chicago orthopedic surgeons apply state of the art techniques in the replacement and reconstruction of the knee, hip, elbow, shoulder, and ankle, as well as the small joints of the hands and feet. Our physicians work with a team of nurses, physician assistants, and therapists in order to eliminate pain and restore full function.',
+            "We specialize in treating athletes and active individuals, offering rehabilitation services that cater specifically to sports-related injuries. Our goal is to facilitate a swift and effective return to sport while minimizing the risk of re-injury.",
+            "Our programs are custom-designed for each athlete, considering their specific sport and injury. This includes dynamic assessment and the integration of sport-specific movements into the recovery process.",
+            "Prevention is key to our approach. We provide athletes with the tools and knowledge to strengthen and protect their bodies against the demands of their sports."
         ],
-        secondTitle: 'The value of healthy joints',
-        descriptionTwo: [
-            'You would be surprised how often you use your joints in everyday life – and you tend to use all of them, even if you don’t realize it. We want you to be able to do all the things you could do before, and even more. You should be able to walk without assistance; plant in the garden; cook your favorite meals; and hike in the woods if that’s what you desire.',
-            'All these activities also employ the joints in the hands, which are some of the smallest yet most important joints in the body. You need to them hold cooking utensils, garden shears, and even to write or type.',
-            'We help make sure that after your procedure you have as little pain as possible. We want you to be able to get back to your favorite activities sooner than you can make a list of them.',
-        ],
-        thirdTitle: null,
-        descriptionThree: null,
-        link: '/serviceCare',
-        imageTwo: 'https://i.imgur.com/HOI4xoX.webp',
+        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
         component: 'Services',
         link: '/services',
-        spanString: 'Joint Replacement'
+        spanString: 'Sports Injury Rehabilitation'
     },
     {
-        image: 'https://i.imgur.com/GW7GxIhl.webp',
+        image: 'https://i.imgur.com/2Q4xrFDl.webp',
         width: '267px',
         height: '200px',
-        name: 'Foot and Ankle',
-        firstTitle: 'Foot and Ankle Specialists',
+        name: 'Running Injury Treatment',
+        firstTitle: 'Running Injury Treatment',
         description: [
-            "Treating conditions including trauma, fractures, arthritis, plantar fasciitis, sports injuries, infections, and bunions."
+            "Our team specializes in the rehabilitation of running injuries, utilizing state-of-the-art diagnostic and treatment methods to ensure a fast and safe return to running.",
+            "We provide a thorough biomechanical analysis and develop a personalized rehabilitation plan that addresses the specific needs of runners.",
+            "Preventive care is crucial for runners; therefore, we educate our patients on proper running mechanics, shoe selection, and training modifications to prevent injuries."
         ],
-        descriptionOne: [
-            'The physicians at Company Default treat a variety of foot and ankle injuries and conditions, including those related to trauma, fractures, arthritis, plantar fasciitis, sports injuries, infections, and bunions. Some of the services provided include diabetic footcare, fracture care, ligament tendon repair, bunion correction, as well as forefoot, midfoot, and hindfoot reconstructions and ankle replacements.',
-        ],
-        descriptionTwo: [
-            'We use our feet and ankles any time we walk, stand up or participate in nearly any sport. That’s why having a foot or ankle injury can be very debilitating to your everyday life. You even need properly functioning feet and ankles to drive safely, and giving up the keys is not a pleasant prospect!',
-            'Default Company’s Doctors can help you identify problems in your feet and ankles, and work with you on preventing new or further injuries. We may suggest you get ergonomically correct shoes or socks to help you walk more naturally. We may also give you advice on what types of physical activities may be aggravating an existing condition.',
-            'A common cause of foot and ankle injuries is running on overly flat or overly uneven terrain without the proper foot support. If the idea of not being able to run any more is not a comforting prospect for you, then you should definitely come see us to correct any pain or inflammation in a your feet or ankles before they lead to more serious damage. Company Default may also suggest you switch to exercises or machines at the gym that put less pressure on your lower joints, such as swimming or using the elliptical instead of the treadmill.',
-        ],
-        link: '/serviceCare',
-        imageTwo: 'https://i.imgur.com/GW7GxIh.webp',
+        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
         component: 'Services',
         link: '/services',
-        spanString: 'Foot and Ankle'
+        spanString: 'Running Injury Treatment'
     },
     {
-        image: "https://i.imgur.com/2aSQ0mVl.webp",
-        width: "267px",
-        height: "200px",
-        name: "Elbow and Shoulder",
-        firstTitle: "Comprehensive Elbow and Shoulder Care",
-        description: [
-            "Expert care for a range of elbow and shoulder conditions, including Cubital Tunnel Syndrome, Frozen Shoulder, and Rotator Cuff Injuries."
-        ],
-        descriptionOne: [
-            "Our team specializes in providing comprehensive care for various elbow and shoulder conditions. From Cubital Tunnel Syndrome to Rotator Cuff Injuries, we offer a personalized approach to diagnosis and treatment. Services include Arthroscopic Debridement, Cubital Tunnel Release, and other advanced procedures tailored to each patient's needs.",
-        ],
-        descriptionTwo: [
-            "Elbow and shoulder conditions can significantly impact daily life, given the crucial role these joints play in our activities. Whether you're dealing with acute injuries or chronic conditions, our specialists can provide personalized care to alleviate pain and restore function. From advanced surgical interventions to non-operative management, our goal is to help you regain mobility and enhance your overall quality of life.",
-            "If you're experiencing discomfort or have concerns about your elbow or shoulder health, our team can assist in identifying the root cause and developing a customized treatment plan. We prioritize patient education, offering insights into ergonomics, suitable footwear, and lifestyle adjustments to prevent further injuries and improve long-term joint health.",
-            "Trust our experts for comprehensive elbow and shoulder care tailored to your unique needs. From diagnosis to rehabilitation, we work closely with patients to facilitate a safe return to their daily activities. Our commitment extends to providing specialized care for athletes dealing with sports-related elbow and shoulder issues.",
-        ],
-        link: "/serviceCare",
-        imageTwo: "https://i.imgur.com/2aSQ0mV.webp",
-        component: "Services",
-        spanString: "Elbow and Shoulder"
-    },
-    {
-        image: "https://i.imgur.com/qgU33O2l.webp",
-        width: "267px",
-        height: "200px",
-        name: "Hand and Wrist",
-        firstTitle: "Hand and Wrist Specialists",
-        description: [
-            "The physicians at Default Company provide expert care for a wide range of hand and wrist conditions, including fractures, arthritis, ligament injuries, and nerve disorders. Our comprehensive services cover both non-operative management and advanced surgical interventions, aiming to alleviate pain and restore optimal function to these intricate and essential upper extremity structures."
-        ],
-        secondTitle: "Examining Hand and Wrist Health",
-        descriptionTwo: [
-            "Hand and wrist health is vital for daily activities, and conditions such as fractures, ligament injuries, and nerve disorders can significantly impact functionality. Accurate diagnosis is essential for effective treatment, and our specialists utilize advanced imaging techniques to assess each patient's condition thoroughly. Whether you're dealing with acute injuries or chronic disorders, our team is dedicated to providing personalized care to improve your quality of life and facilitate a swift recovery."
-        ],
-        thirdTitle: "Treatment of Hand and Wrist Conditions",
-        descriptionThree: [
-            "If you're experiencing discomfort or have concerns about your hand or wrist health, our team can assist in identifying the root cause and developing a customized treatment plan. Our services include non-operative management, such as physical therapy and medication, as well as advanced surgical procedures for conditions that require intervention. Trust our experts for comprehensive hand and wrist care tailored to your unique needs, from diagnosis to rehabilitation."
-        ],
-        fourthTitle: "Prevention of Hand and Wrist Injuries",
-        descriptionFour: [
-            "Preventing hand and wrist injuries involves adopting proactive measures to maintain joint health. This includes practicing proper ergonomics, using protective gear during activities that pose a risk, and incorporating exercises to enhance strength and flexibility. Patient education is a crucial component, raising awareness about injury prevention and promoting overall hand and wrist well-being. By prioritizing these preventive measures, individuals can take active steps to safeguard the health and function of their hands and wrists, ensuring a more active and pain-free lifestyle."
-        ],
-        imageTwo: "https://i.imgur.com/qgU33O2.webp",
-        component: "Services",
-        link: "/services",
-        spanString: "Hand and Wrist"
-    },    
-    {
-        image: "https://i.imgur.com/zk2djf3l.webp",
-        width: "267px",
-        height: "200px",
-        name: "Spine",
-        firstTitle: "Spine Specialists",
-        description: [
-            "The physicians at Default Company specialize in comprehensive spine care, addressing a wide range of conditions that affect the spinal column. From degenerative disorders and herniated discs to spinal fractures and scoliosis, our team provides expert diagnosis and personalized treatment plans to alleviate pain and improve spinal function.",
-            "Spine health is integral to overall well-being, and our specialists are dedicated to providing advanced and compassionate care. Accurate diagnosis, often involving imaging studies, allows us to tailor treatment approaches, including both non-operative management and surgical interventions. Our goal is to empower patients with the knowledge and tools they need to make informed decisions about their spinal health."
-        ],
-        secondTitle: "Examining Spine Health",
-        descriptionTwo: [
-            "Maintaining a healthy spine is crucial for everyday activities and overall quality of life. Conditions such as degenerative disc disease, spinal stenosis, and scoliosis can impact mobility and cause chronic pain. Our specialists conduct thorough assessments to identify the underlying causes of spinal issues, developing customized treatment plans that may include physical therapy, medication, or surgical intervention when necessary."
-        ],
-        thirdTitle: "Treatment of Spinal Conditions",
-        descriptionThree: [
-            "If you're experiencing spine-related discomfort or have concerns about your spinal health, our team can assist in identifying the root cause and developing a tailored treatment plan. Our services encompass both conservative approaches and state-of-the-art surgical techniques. Trust our experts for comprehensive spine care designed to address your unique needs and support your journey to improved spinal health.",
-        ],
-        fourthTitle: "Prevention of Spinal Injuries",
-        descriptionFour: [
-            "Preventing spinal injuries involves adopting proactive measures to maintain spinal health. This includes practicing proper ergonomics, incorporating exercises that strengthen the core and back muscles, and avoiding activities that put excessive strain on the spine. Patient education is a key component of our approach, providing individuals with the knowledge and tools to make lifestyle choices that support a healthy spine and overall well-being.",
-        ],
-        link: "/services",
-        imageTwo: "https://i.imgur.com/zk2djf3.webp",
-        component: "Services",
-        link: "/services",
-        spanString: "Spine"
-    },
-    {
-        image: 'https://i.imgur.com/kNfSdcml.webp',
-        name: 'Knee',
-        firstTitle: 'Comprehensive Knee Care',
-        description: [
-            'Our knee specialists offer expert care for a variety of conditions, ranging from common injuries to complex issues. We address concerns such as Anterior Cruciate Ligament (ACL) Tears, Avascular Necrosis, and Osteoarthritis, tailoring our approach to each patient.',
-            "Knee conditions can significantly impact mobility and daily activities. Whether you're dealing with fractures, bursitis, or ligament tears, our team provides personalized care, utilizing advanced diagnostic methods and offering a range of treatments, from conservative options to surgical interventions."
-        ],
-        secondTitle: 'Examining Knee Health',
-        descriptionTwo: [
-            "Maintaining optimal knee health is crucial for overall well-being. Our specialists conduct thorough evaluations to diagnose conditions accurately. Conditions like Patella Tendon Rupture, Tibial Fractures, and Shin Splints are carefully assessed to develop a tailored treatment plan.",
-            "We prioritize patient education, providing insights into preventive measures, suitable footwear, and exercises to enhance knee strength. Whether you're an athlete dealing with sports-related injuries or facing degenerative issues, our team is dedicated to helping you regain function and lead an active life."
-        ],
-        thirdTitle: 'Treatment of Knee Conditions',
-        descriptionThree: [
-            "If you're experiencing knee discomfort or have concerns about your knee health, our team can assist in identifying the root cause and developing a customized treatment plan. From ACL Reconstruction to Total Knee Replacement, we offer comprehensive care to address various knee conditions.",
-            'Our commitment extends to rehabilitation, ensuring a safe return to daily activities. We work closely with patients, providing guidance on post-treatment care and preventive measures to minimize the risk of future injuries.'
-        ],
-        fourthTitle: 'Preventing Knee Injuries',
-        descriptionFour: [
-            "Preventing knee injuries involves a proactive approach focused on maintaining joint health. Our specialists offer guidance on ergonomics, suitable footwear, and exercises to strengthen the knee. Whether you're an athlete or looking to prevent degenerative issues, we empower individuals to take proactive steps towards knee health."
-        ],
-        link: '/services',
-        imageTwo: 'https://i.imgur.com/kNfSdcm.webp',
-        component: 'Services',
-        link: '/services',
-        spanString: 'Knee'
-    },
-    {
-        image: 'https://i.imgur.com/csNmaeJl.webp',
+        image: 'https://i.imgur.com/2Q4xrFDl.webp',
         width: '267px',
         height: '200px',
-        name: 'Hip',
-        firstTitle: 'Hip Injury Specialists',
+        name: 'Heel Pain Management',
+        firstTitle: 'Heel Pain Management',
         description: [
-            'The physicians at Default Company specialize in the diagnosis and treatment of a variety of hip injuries and conditions. Whether the condition is the result of wear and tear of the hip, a sports injury or traumatic condition, our Orthopedic Doctors apply the latest techniques to return our patients to their active lifestyles. Our surgeons perform an extensive variety of techniques including hip fracture care and hip replacement surgery.',
+            "Dedicated to managing heel pain effectively, our clinic offers comprehensive evaluations to diagnose the cause of heel pain and implement effective treatment strategies.",
+            "Our therapeutic approach may include manual therapies, customized orthotics, and specific exercises designed to alleviate heel pain and prevent its recurrence.",
+            "Educational resources and support are provided to help patients understand their condition and take active steps towards recovery and prevention."
         ],
-        secondTitle: 'Hip Fracture',
-        descriptionTwo: [
-            'A hip fracture is one of the most serious types of bone fractures, and it can happen in people both young and old. Teenagers are especially prone to pelvis fractures because their bodies are still growing. Hip injuries from playing sports or severe traumas, such as from car crashes, can cause fractures in the pelvis in teens. This can limit their ability to remain active and live a normal life, and will require advanced treatment.',
-            'The elderly are also prone to hip fractures. Those with osteoporosis – an age-related loss of bone integrity – are especially prone to this type of fracture, which can occur by simply falling and landing awkwardly on their side.',
-        ],
-
-        link: '/serviceCare',
-        imageTwo: 'https://i.imgur.com/csNmaeJ.webp',
+        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
         component: 'Services',
         link: '/services',
-        spanString: 'Hip'
-    }
+        spanString: 'Heel Pain Management'
+    },
+    {
+        image: 'https://i.imgur.com/2Q4xrFDl.webp',
+        width: '267px',
+        height: '200px',
+        name: 'Neuroma and Nerve Pain Treatment',
+        firstTitle: 'Neuroma and Nerve Pain Treatment',
+        description: [
+            "We specialize in the treatment of neuromas and nerve pain, employing advanced techniques to relieve pressure on nerves and reduce symptoms.",
+            "Our approach includes a combination of manual therapies, patient education, and lifestyle modifications to address the specific needs of patients with nerve pain.",
+            "We focus on not only treating the current symptoms but also on preventing future occurrences through comprehensive care and patient empowerment."
+        ],
+        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
+        component: 'Services',
+        link: '/services',
+        spanString: 'Neuroma and Nerve Pain Treatment'
+    },
+    {
+        image: 'https://i.imgur.com/2Q4xrFDl.webp',
+        width: '267px',
+        height: '200px',
+        name: 'Neck Pain Treatment',
+        firstTitle: 'Neck Pain Treatment',
+        description: [
+            "Our clinic excels in the management of neck pain, providing customized treatments based on an accurate diagnosis of the underlying causes.",
+            "We employ a holistic approach, combining therapeutic exercises, manual therapy, and ergonomics to offer effective relief and functional improvement.",
+            "Preventive measures and patient education play a significant role in our treatment philosophy, aiming to prevent recurrence and promote long-term neck health."
+        ],
+        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
+        component: 'Services',
+        link: '/services',
+        spanString: 'Neck Pain Treatment'
+    },
+    {
+        image: 'https://i.imgur.com/2Q4xrFDl.webp',
+        width: '267px',
+        height: '200px',
+        name: 'Low Back & Sciatica Treatment',
+        firstTitle: 'Low Back & Sciatica Treatment',
+        description: [
+            "Our team is proficient in treating low back pain and sciatica, using evidence-based practices to alleviate pain and enhance mobility.",
+            "We provide a comprehensive evaluation to each patient to determine the most effective treatment strategies, which may include manual therapy, exercise, and lifestyle adjustments.",
+            "Our focus is on both recovery and prevention, educating patients on how to maintain spinal health and avoid future episodes."
+        ],
+        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
+        component: 'Services',
+        link: '/services',
+        spanString: 'Low Back & Sciatica Treatment'
+    },
+    {
+        image: 'https://i.imgur.com/2Q4xrFDl.webp',
+        width: '267px',
+        height: '200px',
+        name: 'Knee & Hip Rehabilitation',
+        firstTitle: 'Knee & Hip Rehabilitation',
+        description: [
+            "Our clinic's approach to knee and hip rehabilitation is grounded in years of experience and success in treating both acute injuries and chronic conditions.",
+            "We focus on evidence-based treatments to enhance recovery, including joint mobilization, strengthening exercises, and pain management techniques.",
+            "Our preventive strategies involve patient education and lifestyle adjustments to maintain joint health and prevent future problems."
+        ],
+        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
+        component: 'Services',
+        link: '/services',
+        spanString: 'Knee & Hip Rehabilitation'
+    },
+    {
+        image: 'https://i.imgur.com/2Q4xrFDl.webp',
+        width: '267px',
+        height: '200px',
+        name: 'Hand & Elbow Rehabilitation',
+        firstTitle: 'Hand & Elbow Rehabilitation',
+        description: [
+            "Specialized in the rehabilitation of hand and elbow conditions, our clinic provides targeted treatments to reduce pain and restore function.",
+            "Our approach is comprehensive, combining advanced diagnostic tools with effective treatment modalities tailored to individual patient needs.",
+            "We emphasize ergonomic and preventive measures to ensure long-term health and prevent recurrence of hand and elbow issues."
+        ],
+        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
+        component: 'Services',
+        link: '/services',
+        spanString: 'Hand & Elbow Rehabilitation'
+    },
+    {
+        image: 'https://i.imgur.com/2Q4xrFDl.webp',
+        width: '267px',
+        height: '200px',
+        name: 'Workplace Injury Rehabilitation',
+        firstTitle: 'Workplace Injury Rehabilitation',
+        description: [
+            "We offer specialized services in addressing and rehabilitating workplace injuries, helping patients regain functionality and return to their professional life.",
+            "Our treatment plans are customized to address the specific demands of the patient's job and the nature of their injury.",
+            "Preventive workshops and ergonomic advice are integral parts of our services, aimed at reducing the risk of future injuries at work."
+        ],
+        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
+        component: 'Services',
+        link: '/services',
+        spanString: 'Workplace Injury Rehabilitation'
+    },
+    {
+        image: 'https://i.imgur.com/2Q4xrFDl.webp',
+        width: '267px',
+        height: '200px',
+        name: 'Comprehensive Sports Rehabilitation',
+        firstTitle: 'Comprehensive Sports Rehabilitation',
+        description: [
+            "Our clinic is renowned for its comprehensive sports rehabilitation services, providing cutting-edge treatment and recovery strategies for athletes recovering from injuries.",
+            "We tailor our rehabilitation programs to the specific needs of each athlete, incorporating the latest in sports medicine and rehabilitation technologies.",
+            "Preventive education and conditioning programs are also offered to enhance athletic performance and minimize the risk of injury."
+        ],
+        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
+        component: 'Services',
+        link: '/services',
+        spanString: 'Sports Rehabilitation'
+    },
+    {
+        image: 'https://i.imgur.com/2Q4xrFDl.webp',
+        width: '267px',
+        height: '200px',
+        name: 'General Physical Therapy',
+        firstTitle: 'General Physical Therapy',
+        description: [
+            "Our general physical therapy services are designed to address a wide range of conditions, offering tailored treatments to meet the diverse needs of our patients.",
+            "We utilize a holistic approach that combines manual therapy, exercise, and patient education to promote recovery and prevent future injuries.",
+            "Our focus on lifestyle and wellness integrates seamlessly with our therapeutic interventions, providing a comprehensive care plan for every patient."
+        ],
+        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
+        component: 'Services',
+        link: '/services',
+        spanString: 'General Physical Therapy'
+    },
+    {
+        image: 'https://i.imgur.com/2Q4xrFDl.webp',
+        width: '267px',
+        height: '200px',
+        name: 'Shoulder Pain & Instability Rehabilitation',
+        firstTitle: 'Shoulder Pain & Instability Rehabilitation',
+        description: [
+            "Our clinic excels in treating shoulder pain and instability, focusing on restoring function and reducing discomfort through personalized care plans.",
+            "We employ advanced diagnostic and therapeutic techniques, including ultrasound and MRI, alongside traditional physical therapy to offer the best outcomes.",
+            "Our preventive strategies are designed to strengthen shoulder muscles and joints, significantly reducing the risk of recurrence."
+        ],
+        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
+        component: 'Services',
+        link: '/services',
+        spanString: 'Shoulder Pain & Instability Rehabilitation'
+    },
+    {
+        image: 'https://i.imgur.com/2Q4xrFDl.webp',
+        width: '267px',
+        height: '200px',
+        name: 'Fractures & Arthritis Rehabilitation',
+        firstTitle: 'Fractures & Arthritis Rehabilitation',
+        description: [
+            "Expertise in managing fractures and arthritis is a cornerstone of our clinic, with a focus on enhancing mobility and alleviating pain through comprehensive treatment plans.",
+            "Our specialized care extends to both immediate post-injury treatment and long-term management strategies for arthritis.",
+            "We promote joint health and functionality through innovative treatment approaches and preventative care aimed at reducing joint stress and improving life quality."
+        ],
+        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
+        component: 'Services',
+        link: '/services',
+        spanString: 'Fractures & Arthritis Rehabilitation'
+    },
 ];
+
+
 export const aboutExtra = [
     {
         name: 'FAQs',
@@ -1086,15 +1244,21 @@ export const navMenu = [
         menu: 'Services',
         link: '/services',
         subMenuItems: [
-            'Physical Therapy',
-            'Sports Medicine',
-            'Joint Replacement',
-            'Foot and Ankle',
-            'Elbow and Shoulder',
-            'Hand and Wrist',
-            'Spine',
-            'Knee',
-            'Hip'
+            'Foot & Ankle Rehabilitation',
+            'Orthopedic Rehabilitation',
+            'Sports Injury Rehabilitation',
+            'Running Injury Rehabilitation',
+            'Heel Pain Management',
+            'Neuroma and Nerve Pain Treatment',
+            'Neck Pain Management',
+            'Low Back & Sciatica Treatment',
+            'Knee & Hip Rehabilitation',
+            'Hand & Elbow Rehabilitation',
+            'Workplace Injury Rehabilitation',
+            'Comprehensive Sports Rehabilitation',
+            'General Physical Therapy',
+            'Shoulder Pain & Instability Rehabilitation',
+            'Fractures & Arthritis Rehabilitation'
         ],
     },
     {
