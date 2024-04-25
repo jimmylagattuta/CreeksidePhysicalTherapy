@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { officesData } from '../../../data';
+
 import './ContactNav.css';
 
 const ContactNav = () => {
