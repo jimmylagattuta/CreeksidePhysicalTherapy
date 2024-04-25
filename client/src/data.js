@@ -284,7 +284,7 @@ export const services = [
             "Patient education on daily habits and preventive exercises plays a crucial role in our treatment plans, helping patients manage and prevent future episodes of neck pain."
         ],
         link: '/services',
-    }
+    },
     // Low Back & Sciatica Treatment
     {
         image: 'https://i.imgur.com/2Q4xrFD.webp',
