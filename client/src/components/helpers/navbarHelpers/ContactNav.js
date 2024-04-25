@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ContactNav.css';
 
-const MenuComponent = () => {
+const ContactNav = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
   const [hoveredDetails, setHoveredDetails] = useState('');
@@ -47,7 +47,6 @@ const MenuComponent = () => {
 
   const handleItemOpen = () => {
     setMenuOpen(!isMenuOpen);
-    // setMenuOpen(true);
   };
 
   const getHoveredStyle = (item) => {
@@ -70,72 +69,30 @@ const MenuComponent = () => {
       </div>
       {isMenuOpen && (
         <div className="contact-nav-menu">
-          <div className='default-company-call-directions'>
-            <a
-              id="map-icon-nav"
-              href='tel:+15550100'
-              title='Phone clickable'
-              onMouseEnter={() => handleMouseEnter('Cityville', '100 Main Street\nCityville, IL 60000\n555-0100\nFax: 555-0101', true)}
-              onMouseLeave={handleMouseLeave}
-              style={getPhoneHoveredStyle()}
-            >
-              <i id="nav-phone-call" className='fas fa-mobile-alt fa-2x'></i>
-            </a>
-            Cityville
-            <a
-              id="map-icon-nav"
-              href={`https://maps.google.com/?q=100+Main+Street,Cityville,IL+60000`}
-              onMouseEnter={() => handleMouseEnter('Cityville', '100 Main Street\nCityville, IL 60000\n555-0100\nFax: 555-0101', false)}
-              onMouseLeave={handleMouseLeave}
-              style={getAddressHoveredStyle()}
-            >
-              <i id="nav-map-go" className='fas fa-map-marked-alt fa-1x'></i>
-            </a>
-          </div>
-          <div className='default-company-call-directions'>
-            <a
-              id="map-icon-nav"
-              href='tel:+15550200'
-              title='Phone clickable'
-              onMouseEnter={() => handleMouseEnter('Metropolis', '200 Central Ave\nMetropolis, IL 60001\n555-0200\nFax: 555-0201', true)}
-              onMouseLeave={handleMouseLeave}
-              style={getPhoneHoveredStyle()}
-            >
-              <i id="nav-phone-call" className='fas fa-mobile-alt fa-2x'></i>
-            </a>
-            Metropolis
-            <a
-              id="map-icon-nav"
-              href={`https://maps.google.com/?q=200+Central+Ave,Metropolis,IL+60001`}
-              onMouseEnter={() => handleMouseEnter('Metropolis', '200 Central Ave\nMetropolis, IL 60001\n555-0200\nFax: 555-0201', false)}
-              onMouseLeave={handleMouseLeave}
-              style={getAddressHoveredStyle()}
-            >
-              <i id="nav-map-go" className='fas fa-map-marked-alt fa-1x'></i>
-            </a>
-          </div>
-          <div className='default-company-call-directions'>
-            <a
-              id="map-icon-nav"
-              href='tel:+15550300'
-              title='Phone clickable'
-              onMouseEnter={() => handleMouseEnter('Springfield', '300 Capitol Plaza\nSpringfield, IL 60002\n555-0300\nFax: 555-0301', true)}
-              onMouseLeave={handleMouseLeave}
-              style={getPhoneHoveredStyle()}
-            >
-              <i id="nav-phone-call" className='fas fa-mobile-alt fa-2x'></i>
-            </a>
-            Springfield
-            <a
-              id="map-icon-nav"
-              href={`https://maps.google.com/?q=300+Capitol+Plaza,Springfield,IL+60002`}
-              onMouseEnter={() => handleMouseEnter('Springfield', '300 Capitol Plaza\nSpringfield, IL 60002\n555-0300\nFax: 555-0301', false)}
-              onMouseLeave={handleMouseLeave}
-              style={getAddressHoveredStyle()}
-            >
-              <i id="nav-map-go" className='fas fa-map-marked-alt fa-1x'></i>
-            </a>
-          </div>
+          {officesData.map(office => (
+            <div className='default-company-call-directions' key={office.id}>
+              <a
+                id="map-icon-nav"
+                href={`tel:${office.phone}`}
+                title='Phone clickable'
+                onMouseEnter={() => handleMouseEnter(office.city, `${office.addressOne}\n${office.addressTwo}\n${office.phone}\nFax: ${office.fax}`, true)}
+                onMouseLeave={handleMouseLeave}
+                style={getPhoneHoveredStyle()}
+              >
+                <i id="nav-phone-call" className='fas fa-mobile-alt fa-2x'></i>
+              </a>
+              {office.city}
+              <a
+                id="map-icon-nav"
+                href={`https://maps.google.com/?q=${office.addressOne.replace(/\s/g, '+')},${office.addressTwo.replace(/\s/g, '+')}`}
+                onMouseEnter={() => handleMouseEnter(office.city, `${office.addressOne}\n${office.addressTwo}\n${office.phone}\nFax: ${office.fax}`, false)}
+                onMouseLeave={handleMouseLeave}
+                style={getAddressHoveredStyle()}
+              >
+                <i id="nav-map-go" className='fas fa-map-marked-alt fa-1x'></i>
+              </a>
+            </div>
+          ))}
           {hoveredDetails && (
             <div style={{ maxWidth: '140px', backgroundColor: 'rgb(0, 64, 143)', zIndex: '8', padding: '5px', lineHeight: '1.5' }}>
               <p dangerouslySetInnerHTML={{ __html: hoveredDetails }}></p>
@@ -147,4 +104,4 @@ const MenuComponent = () => {
   );
 };
 
-export default MenuComponent;
+export default ContactNav;
