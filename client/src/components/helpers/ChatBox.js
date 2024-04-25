@@ -76,7 +76,7 @@ function ChatBox(props) {
   const fetchReviews = () => {
     const url =
       process.env.NODE_ENV === 'production'
-        ? 'localhost:3001/api/v1/pull_google_places_cache'
+        ? 'https://creekside-physical-therapy-3c43d5dad481.herokuapp.com/api/v1/pull_google_places_cache'
         : 'localhost:3001/api/v1/pull_google_places_cache';
 
     const headers = {
@@ -198,8 +198,9 @@ useEffect(() => {
       recaptcha: state.recaptchaChecked,
       agreeToTerms: state.agreeToTerms,
     };
+    const baseUrl = process.env.NODE_ENV === 'production' ? 'https://creekside-physical-therapy-3c43d5dad481.herokuapp.com' : 'http://localhost:3001';
     try {
-      const response = await fetch('localhost:3001/api/v1/send-email', {
+      const response = await fetch(`${baseUrl}/api/v1/send-email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
