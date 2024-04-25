@@ -30,54 +30,125 @@ export const products = [
 ];
 export const physicians = [
     {
-        name: 'Doctor 1',
+        name: 'Brian Horak, PT, MPT, CSCS',
         bio: [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris."
+            "Brian graduated from Kent State University with a Bachelor's degree in Exercise Physiology/Kinesiology before receiving his Master's degree in Physical Therapy from Andrews University.",
+            "Since 2002, he has worked in outpatient orthopedics and sports medicine, with extensive training and continued education in orthotic assessment and fabrication. He is also a certified Astym practitioner.",
+            "Brian has developed expertise in biomechanical evaluation of common everyday activities to complex sports movements like running, throwing, and golf swing mechanics. His functional-based treatment approach for injuries involves finding the area of dysfunction and rectifying the cause through manual techniques and exercise to create optimal movement patterns.",
+            "As a life-long athlete at all levels of competition, Brian knows how important activity is to both physical and mental health. In his spare time, he enjoys biking, hiking, paddle boarding, and enjoying the Pacific Northwest with his wife, two kids, and their dog."
         ],
-        image: 'https://imgur.com/7FwA1eX.jpg',
-        imageMedium: 'https://imgur.com/7FwA1eX.jpg'
+        image: 'https://i.imgur.com/7FwA1eX.jpg',
+        imageMedium: 'https://i.imgur.com/7FwA1eX.jpg'
     },
     {
-        name: 'Doctor 2',
+        name: 'John Zdor, PT, DPT, CCWC, OCS',
         bio: [
-            "Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam.",
-            "Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat.",
-            "Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi. Aenean magna nisl, mollis quis, molestie eu, feugiat in, orci."
+            "John is passionate about movement and helping others get back to moving at their best, whether it's returning to a favorite sport or daily activity.",
+            "He received his Doctorate in Physical Therapy from Andrews University and is a board-certified Orthopedic Specialist and Clinical Athlete Certified Weightlifting Coach.",
+            "John's approach to therapy is to empower patients with the tools and skills they need to reduce their pain at home through individualized and simple movement programs designed to improve mobility and strength.",
+            "An avid rock climber, enduro mountain biker, backpacker, hiker, and Olympic weightlifter, John also enjoys spending time with his German Shorthair Pointer who loves to get out biking and hiking with him. During the winter, you'll likely find John in the kitchen baking or trying to perfect the best chicken noodle soup recipe."
+        ],
+        image: 'https://i.imgur.com/7FwA1eX.jpg',
+        imageMedium: 'https://i.imgur.com/7FwA1eX.jpg'
+    },
+    {
+        name: 'Peggy Loebner, Physical Therapist',
+        bio: [
+            "Peggy graduated in 1995 from Marquette University with a Bachelor of Science in Physical Therapy. Prior to moving to Portland, Oregon in 2005, she practiced outpatient physical therapy in Chicago, Illinois.",
+            "Her experience includes general outpatient physical therapy and sports medicine as well as post-operative rehabilitation. Peggy enjoys helping patients reach their goals with manual therapy, patient education, and individualized exercise programs. She is ASTYM certified.",
+            "In her free time, Peggy enjoys spending time with her husband and 2 children, running, reading, and coaching her kids' sports teams."
         ],
         image: 'https://i.imgur.com/EUSrDSg.jpg',
         imageMedium: 'https://i.imgur.com/EUSrDSg.jpg'
     },
     {
-        name: 'Doctor 3',
+        name: 'Chad Smurthwaite, PT, DPT',
         bio: [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.",
-            "Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam.",
-            "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum."
+            "Chad graduated from Warner Pacific University in Portland, OR with two bachelor’s degrees in Human Biology and Health and Human Kinetics in 2017, before continuing on to Eastern Washington University in Spokane, WA where he received his Doctorate in Physical Therapy in 2021.",
+            "His main goal is to enable people to return to the activities they love through a functional and holistic approach to physical therapy. He utilizes hands-on techniques and movement to help you reach your goals.",
+            "Through hands-on experience in multiple orthopedic settings, Chad is knowledgeable in treating musculoskeletal conditions throughout the entire body. He has a special interest in working with runners and other athletes that are motivated to return to sport.",
+            "As a lifelong athlete, Chad competed in both track and field and cross country at Warner Pacific University. In his spare time, he enjoys running, lifting weights, golfing, biking, and trying to keep up with his Vizsla, Luka."
         ],
-        image: 'https://imgur.com/7FwA1eX.jpg',
-        imageMedium: 'https://imgur.com/7FwA1eX.jpg'
+        image: 'https://i.imgur.com/7FwA1eX.jpg',
+        imageMedium: 'https://i.imgur.com/7FwA1eX.jpg'
     },
     {
-        name: 'Doctor 4',
+        name: 'Alex McNiven, PT, DPT',
         bio: [
-            "Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat.",
-            "Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus.",
-            "Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi. Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc."
+            "Alex graduated from the University of Oregon with degrees in Human Physiology and Psychology. Before attending DPT school, she had the opportunity to travel abroad and teach English in Thailand, which helped fuel her passion for working with kids and teens.",
+            "She then returned to Oregon to practice after receiving her Doctorate in Physical Therapy from Angelo State University in 2021.",
+            "Throughout her career in orthopedics and sports medicine, Alex has become passionate about helping others move with confidence so they can enjoy the things they want to do.",
+            "She appreciates that everyone has their own goals and aspirations, and her approach to physical therapy centers on the patients’ unique situations and interests. Her mission is to develop real connections, so she can provide an individualized approach to care that helps people return to what they love doing.",
+            "When she’s not in the clinic, Alex enjoys spending time outdoors with her husband and dog, Koda. From hiking, running, and camping to rock climbing and snowboarding, Alex enjoys any activity that allows her to adventure throughout the beautiful state of Oregon."
         ],
         image: 'https://i.imgur.com/EUSrDSg.jpg',
         imageMedium: 'https://i.imgur.com/EUSrDSg.jpg'
     },
     {
-        name: 'Doctor 5',
+        name: 'Vince Gonsalves, PT, DPT',
         bio: [
-            "Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis. In auctor lobortis lacus. Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Hendrerit mauris. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.",
-            "Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus.",
-            "Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl."
+            "After completing his BS in biology and secondary education at Idaho State University, Vince received his MS in physical therapy at University of the Pacific in 1992 and later his DPT at Shenandoah University in 2011.",
+            "He has worked in various states including California, New Mexico, and Wisconsin before settling in the Portland area, bringing 30 years of experience in orthopedic/sports/industrial practice.",
+            "Vince has specialized in upper extremity and industrial/work-place injuries for the last 12 years, enjoying working with a variety of patients to meet their individual goals with personalized care.",
+            "He is an avid cyclist, riding with the Bonk Collective bike club, and enjoys hiking and other outdoor activities. Vince is committed to assisting clients in returning to preinjury activities."
         ],
-        image: 'https://imgur.com/7FwA1eX.jpg',
-        imageMedium: 'https://imgur.com/7FwA1eX.jpg'
+        image: 'https://i.imgur.com/7FwA1eX.jpg',
+        imageMedium: 'https://i.imgur.com/7FwA1eX.jpg'
+    },
+    {
+        name: 'Hal, Physical Therapy Aide',
+        bio: [
+            "Hal received his degree in Exercise Science from Georgia State University and earned a certification as an exercise physiologist from the American College of Sports Medicine.",
+            "After a 4-month internship at Piedmont Atlanta Hospital's Rehabilitation and Fitness Center, Hal developed a passion for helping patients get stronger regardless of their fitness level, age, or any underlying medical conditions.",
+            "At Creekside, Hal hopes to ensure that patients are not only educated on how to exercise safely and effectively during rehab, but also leave physical therapy with the knowledge and tools to maintain an active lifestyle on their own.",
+            "A recent transplant to the Portland area from Atlanta, Hal enjoys exploring the outdoors and Portland's incredible restaurant scene. His interests include weight lifting, playing competitive ultimate frisbee, and taking care of his many houseplants."
+        ],
+        image: 'https://i.imgur.com/7FwA1eX.jpg',
+        imageMedium: 'https://i.imgur.com/7FwA1eX.jpg'
+    },
+    {
+        name: 'Mikayla, Physical Therapy Aide',
+        bio: [
+            "An Oregon native, Mikayla moved to the Portland area 5 years ago to attend Pacific University. She graduated in May 2019 with a bachelor’s degree in Exercise Science.",
+            "During her time at Pacific, she was a member of the Women’s soccer team. Her passion for rehab stems from her athletic and academic experiences over the years, particularly in sports strength and conditioning.",
+            "Mikayla hopes to acquire her CSCS in the future and work with athletes in a team sport setting to make them faster, stronger, and more fit to succeed in their particular sport.",
+            "In her spare time, Mikayla coaches youth soccer, enjoys running, and spending time with friends and family."
+        ],
+        image: 'https://i.imgur.com/EUSrDSg.jpg',
+        imageMedium: 'https://i.imgur.com/EUSrDSg.jpg'
+    },
+    {
+        name: 'Jacqueline, Physical Therapy Aide',
+        bio: [
+            "Jacqueline was born and raised in Oregon where she received her bachelor's degree in Kinesiology at Oregon State University.",
+            "Growing up playing softball year-round piqued her interest in physical therapy due to personal injury experience. At Creekside, she aims to help educate patients and provide exceptional patient care and communication.",
+            "Jacqueline enjoys travelling, walking her dog, and watching new movies. Her favorite travel destination is Kauai, where she spends a lot of time vacationing with family and friends.",
+            "During the summer when it's nice in Oregon she enjoys spending time at different beaches, camping, and fishing for fun."
+        ],
+        image: 'https://i.imgur.com/EUSrDSg.jpg',
+        imageMedium: 'https://i.imgur.com/EUSrDSg.jpg'
+    },
+    {
+        name: 'Dixie',
+        bio: [
+            "Dixie was born and raised in Central Oregon and attended a small private school that encouraged experiential learning.",
+            "Throughout her schooling, Dixie became fond of outdoor activities such as snowboarding, running, rock climbing, and kayaking. After graduating from high school, Dixie spent four years at the University of Oregon, earning a Bachelor of Science.",
+            "For two years, Dixie worked closely with a pediatric doctor here in the Portland area before transitioning to physical therapy. Dixie hopes to provide a positive experience for all PT patients at Creekside.",
+            "Outside of work, Dixie spends her time with her puppy Franklin exploring the PNW and watching horror movies."
+        ],
+        image: 'https://i.imgur.com/EUSrDSg.jpg',
+        imageMedium: 'https://i.imgur.com/EUSrDSg.jpg'
+    },
+    {
+        name: 'Cellina',
+        bio: [
+            "Cellina grew up in the Pacific Northwest in Portland, Oregon, and was active in sports from a young age, starting figure skating in middle school and later falling in love with climbing.",
+            "She is a former competitive rock climber who has coached multiple teams in Oregon. Cellina loves to spend time outdoors rock climbing, surfing, hiking, and snowboarding.",
+            "She graduated from Oregon State University with a Bachelor of Science in Kinesiology. After college, she spent a year in the Basque Country of Spain teaching English at an elementary school and travelling around the country.",
+            "She speaks three languages; Spanish, Japanese, and English. In her free time, Cellina likes to spend time with her family’s dogs, go on bike rides around town, and read books."
+        ],
+        image: 'https://i.imgur.com/EUSrDSg.jpg',
+        imageMedium: 'https://i.imgur.com/EUSrDSg.jpg'
     }
 ];
 
