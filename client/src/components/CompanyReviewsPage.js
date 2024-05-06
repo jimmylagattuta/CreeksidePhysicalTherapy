@@ -113,7 +113,7 @@ const CompanyReviewsPage = () => {
                     }
                 })
                 .then((data) => {
-                    console.log('data', data);
+                    // console.log('data', data);
                     if (Array.isArray(data.creekside_reviews) && Array.isArray(data.northwest_reviews)) {
                         // Update CSRF token only if it changes
                         if (data.csrf_token && data.csrf_token !== previousCsrfToken.current) {
