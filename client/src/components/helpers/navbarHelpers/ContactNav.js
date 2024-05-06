@@ -96,7 +96,7 @@ const ContactNav = () => {
             </div>
           ))}
           {hoveredDetails && (
-            <div style={{ maxWidth: '140px', backgroundColor: 'rgb(0, 64, 143)', zIndex: '8', padding: '5px', lineHeight: '1.5' }}>
+            <div style={{ maxWidth: '140px', backgroundColor: 'rgba(114, 14, 16, 20%)', zIndex: '8', padding: '5px', lineHeight: '1.5' }}>
               <p dangerouslySetInnerHTML={{ __html: hoveredDetails }}></p>
             </div>
           )}

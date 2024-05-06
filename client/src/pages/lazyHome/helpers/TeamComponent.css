@@ -2,7 +2,7 @@
 .home-team {
     align-items: center;
     /* background: url(https://i.imgur.com/77LJQ2y.webp) 0 0 no-repeat; */
-    background: rgb(0, 64, 143);
+    background: #720e10;
     background-position: 50%;
     background-size: cover;
     color: #fff;
@@ -52,7 +52,7 @@
     .home-team {
         align-items: center;
         /* background: url(https://i.imgur.com/77LJQ2y.webp) 0 0 no-repeat; */
-        background: rgb(0 64 143 / 35%);
+        background: rgb(114 14 16 / 100%);
         background-position: 50%;
         background-size: cover;
         color: #fff;

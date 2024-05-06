@@ -4,71 +4,44 @@ import './helpers/AboutUsComponent.css'
 const AboutUsComponent = () => {
     const handleLearnMoreClick = () => {
         // Replace 'your-url-here' with the actual URL you want to open
-        window.open('your-url-here', '_blank');
+        window.open('/about-us', '_blank');
     };
 
     return (
-        <div className='about-container'>
-            <div className='about-container-top'>
-                <h1 className='about-title'>Company Default</h1>
+        <div class='about-container'>
+            <div class='about-container-top'>
+                <h1 class='about-title'>Creekside Physical Therapy</h1>
                 <p className='about-description'>
-                    Company Default is committed to providing the highest quality of orthopaedic care possible. Along with the treatment of immediate or chronic problems, we strive to integrate the doctrine of prevention in all our treatment plans as a way to alleviate potential future difficulties. It is the goal of Company Default and its employees to provide high quality, sensitive care to each and every patient, family member and/or friend we come in contact with. We fully understand and furthermore take very seriously the trust our patients put in our hands. We are committed to devoting ourselves to kindness and consideration when interacting with our patients, their family members and friends. We are pleased to have you as a patient. If you have any questions, always feel free to contact our office and our trained staff will assist you in any way possible.
+                    Our Experienced Portland Physical Therapists Provide Custom Care for Foot and Ankle Issues.
+                    At Creekside Physical Therapy, we provide the individualized rehabilitation you need to return to your daily routine or resume activities like walking, running, or hiking without pain. Whether you've been suffering in silence or previously received treatment elsewhere but weren't satisfied with the results, our exceptional physical therapists and exercise specialists can help.
+
+                    Take the first step in your journey to improved foot and ankle health: Contact us now to schedule an appointment with one of our expert physical therapists.
                 </p>
             </div>
-            <div className='about-container-bottom'>
-                <img aria-label="bottom left container" className='about-container-bottom-left'
-                />
-                <div className='about-container-bottom-right'>
-                <h2 className='about-title-right'>
-                    Default Company Patient Portal
-                </h2>
-                <p className='about-description-right'>
-                    Company Default is pleased to introduce the
-                    <a className="animate-grow" href="https://default-company.myezyaccess.com/Patient/Main.aspx" target="_blank" rel="noopener noreferrer">
-                        Default Company Patient Portal!
-                    </a>
-                    The Patient Portal is an electronic system that will allow you, our patients, to communicate your medical needs with our office staff and provide
-                <p className='about-description-right'>
-                    To join the Patient Portal, call the office and provide our staff with your email address. Then, log on to Default Company’s Patient Portal to access our patient features.
-                </p>
-                </p>
-
-                <p className='about-description-right'>
-                    <ul>
-                        <li>
-                            Expedite your check-in process by completing New Patient Forms online
-                        </li>
-                    </ul>
-                </p>
-                <p className='about-description-right'>
-                    <ul>
-                        <li>
-                            Tired of waiting on hold? Schedule your appointments, order medical records, and request prescription refills electronically
-                        </li>
-                    </ul>
-                </p>
-                <p className='about-description-right'>
-                    <ul>
-                        <li>
-                            Update your medical history and pay bills from the privacy of your home
-                        </li>
-                    </ul>
-                </p>
-                <p className='about-description-right'>
-                    <ul>
-                        <li>
-                            Verify your insurance eligibility and review your benefits prior to your appointment
-                        </li>
-                    </ul>
-                </p>
-                
-                <div className='about-right-button'>
-                    {/* Add onClick event */}
-                    <button className='btn header-button-white' onClick={handleLearnMoreClick}>
-                        Learn More
-                    </button>
-                </div>
-
+            <div class='about-container-bottom'>
+                <img aria-label="bottom left container" class='about-container-bottom-left'/>
+                <div class='about-container-bottom-right'>
+                    <h2 class='about-title-right'>
+                        Portland's Foot and Ankle Rehabilitation Experts
+                    </h2>
+                    <p class='about-description-right'>
+                        Our focus on foot, ankle, and lower leg injuries ensures optimal care. We assess the entire kinetic chain and work with you to develop an individualized plan designed to help you get back to moving your best.
+                    </p>
+                    <p class='about-description-right'>
+                        We develop a custom rehabilitation plan just for you. Whether you want to walk around the block without pain or train for a triathlon, we'll create a treatment plan to get you there. Your rehab program evolves with your progress, allowing you to maximize the benefits of each session.
+                    </p>
+                    <p class='about-description-right'>
+                        We put patients first, prioritizing your well-being during each visit. Typical sessions include interventions to decrease pain, methods for managing pain at home, and exercise to strengthen and improve your confidence with movement.
+                    </p>
+                    <p class='about-description-right'>
+                        Your treatment plan will be based on current best practice interventions and customized to best fit your needs and goals. Our therapists are trained in ASTYM, Strain-Counterstrain, Mulligan techniques, as well as therapeutic exercise prescription. They will work with you to find the interventions and techniques that provide the best results for you.
+                    </p>
+                    <div class='about-right-button'>
+                        {/* Add onClick event */}
+                        <button class='btn header-button-white' onClick={handleLearnMoreClick}>
+                            Learn More
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

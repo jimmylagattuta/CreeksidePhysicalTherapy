@@ -15,31 +15,31 @@
     0% {
         filter: grayscale(100%); /* Start with full grayscale */
         --_p: 65%; /* Start at 75% */
-        --c: rgba(145, 194, 255, 0.5); /* Start with specified color */
+        --c: rgba(114, 14, 16, 0.5); /* Start with specified color */
     }
 
     25% {
         filter: grayscale(50%); /* Further reducing grayscale */
         --_p: 67.5%; /* Maintained */
-        --c: rgba(145, 194, 255, 0.55); /* Maintained */
+        --c: rgba(114, 14, 16, 0.55); /* Maintained */
     }
 
     50% {
         filter: grayscale(50%); /* Further reducing grayscale */
         --_p: 70%; /* Maintained */
-        --c: rgba(145, 194, 255, 0.6); /* Maintained */
+        --c: rgba(114, 14, 16, 0.6); /* Maintained */
     }
 
     75% {
         filter: grayscale(25%); /* Further reducing grayscale */
         --_p: 72.5%; /* Maintained */
-        --c: rgba(145, 194, 255, 0.65); /* Maintained */
+        --c: rgba(114, 14, 16, 0.65); /* Maintained */
     }
 
     100% {
         filter: grayscale(0%); /* No grayscale */
         --_p: 75%; /* Maintained */
-        --c: rgba(145, 194, 255, 0.7); /* Maintained */
+        --c: rgba(114, 14, 16, 0.7); /* Maintained */
     }
 }
 
@@ -67,7 +67,7 @@
     backdrop-filter: blur(10px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 2px 12px 0 rgba(31, 38, 135, 0.57);
+    box-shadow: 0 2px 12px 0 rgba(114, 14, 16, 0.57);
     transition: all 0.3s ease 0s;
     z-index: 10;
     margin: 10px 0px 120px 70px;

@@ -10,7 +10,7 @@
     /* Add your styles for the top section */
   }
 .navbar-div {
-  background-color: rgb(0 64 143 / 35%);
+  background-color: rgb(114 14 16 / 100%);
 }
 .navbar-container {
   display: flex;
@@ -83,7 +83,7 @@
   display: inline-block;
   padding: 10px 20px;
   margin-right: 20px;
-  background-color: rgb(0 64 143 / 35%);
+  background-color: rgb(114 14 16 / 100%);
   color: white;
   border: none;
   font-size: 16px;
@@ -120,7 +120,7 @@
   background-color: rgba(248, 247, 246, 0.3);
 }
 .nav-link-nav.active {
-  border-bottom: 2px solid rgb(0 64 143 / 35%);
+  border-bottom: 2px solid rgb(114 14 16 / 100%);
 }
 .nav-link-container:hover > .nav-link-nav {
   background-color: var(--blue-dark);
@@ -373,7 +373,7 @@
     padding: 20px 0px 10px 0px;
     margin: 0px 0px 0px 0px;
     min-width: 100%;
-    border-bottom: 1px solid rgb(0 64 143 / 35%);
+    border-bottom: 1px solid rgb(114 14 16 / 100%);
     overflow: hidden; /* Hide overflow to prevent content from overflowing */
 }
 .sub-link:hover {

@@ -21,7 +21,7 @@
     --blue-light: #004080;
     --grey-light: #dde4ed;
     --grey-dark: #64748b;
-    --violet: rgb(0 64 143 / 35%);
+    --violet: rgb(114 14 16 / 100%);
     overflow-y: visible;
 }
 
@@ -136,7 +136,7 @@ img {
 
 .fa-map-marker-alt {
     font-size: 30px;
-    color: rgb(0 64 143 / 35%);
+    color: rgb(114 14 16 / 100%);
     cursor: pointer;
     z-index: 10;
 }
@@ -161,7 +161,7 @@ img {
 }
 .pagination-arrow .fas {
     font-size: 1rem;
-    color: rgb(0 64 143 / 35%);
+    color: rgb(114 14 16 / 100%);
 }
 .pagination-arrow:disabled .fas {
     opacity: 0.7;
@@ -178,7 +178,7 @@ img {
 .map-float-title {
     font-size: 16px;
     margin: 0 0 3px 0;
-    color:rgb(0 64 143 / 35%);
+    color:rgb(114 14 16 / 100%);
 
 }
 
@@ -208,7 +208,7 @@ img {
 }
 
 .map-float-info-container.show-extra {
-    border: 2px solid rgb(0 64 143 / 35%);
+    border: 2px solid rgb(114 14 16 / 100%);
 }
 
 .map-container {
@@ -424,6 +424,7 @@ img {
     max-width: 300px;
     margin: 0px;
     color: white;
+    /* color: rgb(114, 14, 16); */
     text-shadow: black 1px 1px 6px;
 }
 
@@ -432,6 +433,7 @@ img {
     border-style: solid;
     border-color: var(--violet);
     border-width: 2px;
+    font-size: 1.4rem;
 }
 
 .header-button-yellow:hover {
@@ -522,7 +524,7 @@ img {
 }
 
 .nav-link.active {
-    border-bottom: 2px solid rgb(0 64 143 / 35%);
+    border-bottom: 2px solid rgb(114 14 16 / 100%);
 }
 
 .nav-link-container:hover > .nav-link {
@@ -581,9 +583,9 @@ img {
     font-family: sans-serif;
     z-index: 10;
     border-radius: 0px;
-    border: 2px solid rgba(0, 64, 143, 0.8);
+    border: 2px solid rgba(114, 14, 16, 0.8);
     padding: 10px;
-    box-shadow: 6px 4px rgba(0, 64, 143, 0.8);
+    box-shadow: 6px 4px rgba(114, 14, 16, 0.8);
     margin: 40px auto;
     padding: 10px 10px 10px 10px;
     text-decoration-line: none;
@@ -632,13 +634,16 @@ img {
     padding: 15px 20px 15px 20px;
     text-decoration: none;
     border-bottom: 2px solid transparent; /* Hide the original border */
-    background-image: linear-gradient(to right, rgba(0, 64, 143, 0.5), rgba(197, 206, 195, 0.5) 50%, transparent 50%);;
+    background-image: linear-gradient(to right, rgba(255, 69, 58, 0.5), rgba(255, 69, 58, 0.5) 50%, rgba(255, 255, 255, 0.5) 50%, transparent 100%)
+
+
+;;
     background-size: 200% 100%;
     background-position: 100% 0;
     transition: background-position 0.3s, font-size 0.3s; /* Add font-size transition */
     font-size: 1rem;
     color: black; /* Set initial text color */
-    border-bottom: 1px solid rgb(0 64 143 / 35%);
+    border-bottom: 1px solid rgb(114 14 16 / 100%);
 
 }
 
@@ -882,7 +887,7 @@ img {
     background-size: cover;
     background-position: right;
     background-attachment: fixed;
-    border-bottom: 5px solid rgb(0 64 143 / 35%);
+    border-bottom: 5px solid rgb(114 14 16 / 100%);
     color: #fff;
     padding: 40px;
     position: relative;
@@ -1863,7 +1868,7 @@ display: none;
 
 /* REVIEWS */
 .home-reviews {
-    border-top: 5px solid rgb(0 64 143 / 35%);
+    border-top: 5px solid rgb(114 14 16 / 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2244,7 +2249,7 @@ display: none;
         background-size: cover;
         background-position: right;
         background-attachment: fixed;
-        border-bottom: 5px solid rgb(0 64 143 / 35%);
+        border-bottom: 5px solid rgb(114 14 16 / 100%);
         color: #fff;
         padding: 10px;
         position: relative;
@@ -2551,7 +2556,7 @@ display: none;
         background-size: cover;
         background-position: right;
         background-attachment: fixed;
-        border-bottom: 5px solid rgb(0 64 143 / 35%);
+        border-bottom: 5px solid rgb(114 14 16 / 100%);
         color: #fff;
         padding: 10px;
         position: relative;

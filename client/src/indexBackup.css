@@ -17,7 +17,7 @@
     --blue-light: #004080;
     --grey-light: #dde4ed;
     --grey-dark: #64748b;
-    --violet: rgb(0 64 143 / 35%);
+    --violet: rgb(114 14 16 / 100%);
 }
 
 body {
@@ -128,7 +128,7 @@ img {
 
 .fa-map-marker-alt {
     font-size: 30px;
-    color: rgb(0 64 143 / 35%);
+    color: rgb(114 14 16 / 100%);
     cursor: pointer;
     z-index: 10;
 }
@@ -153,7 +153,7 @@ img {
 }
 .pagination-arrow .fas {
     font-size: 1rem;
-    color: rgb(0 64 143 / 35%);
+    color: rgb(114 14 16 / 100%);
 }
 .pagination-arrow:disabled .fas {
     opacity: 0.7;
@@ -170,7 +170,7 @@ img {
 .map-float-title {
     font-size: 16px;
     margin: 0 0 3px 0;
-    color:rgb(0 64 143 / 35%);
+    color:rgb(114 14 16 / 100%);
 
 }
 
@@ -200,7 +200,7 @@ img {
 }
 
 .map-float-info-container.show-extra {
-    border: 2px solid rgb(0 64 143 / 35%);
+    border: 2px solid rgb(114 14 16 / 100%);
 }
 
 .map-container {
@@ -281,7 +281,7 @@ img {
     min-height: 720px;
     /* background-color: var(--blue); */
     background-color: white;
-    /* border-bottom: 5px solid rgb(0 64 143 / 35%); */
+    /* border-bottom: 5px solid rgb(114 14 16 / 100%); */
 }
 
 .Carousel-container {
@@ -520,7 +520,7 @@ img {
 }
 
 .nav-link.active {
-    border-bottom: 2px solid rgb(0 64 143 / 35%);
+    border-bottom: 2px solid rgb(114 14 16 / 100%);
 }
 
 .nav-link-container:hover > .nav-link {
@@ -778,7 +778,7 @@ img {
     margin: 0px;
     padding: 5px 0px 0px 0px;
     font-weight: 400;
-    border-bottom: 1px solid rgb(0 64 143 / 35%); /* Set the color you want for the line */
+    border-bottom: 1px solid rgb(114 14 16 / 100%); /* Set the color you want for the line */
     padding-bottom: 15px; /* Adjust as needed to control the space between the text and the line */
     color: white;
     font-size: 3rem;
@@ -883,7 +883,7 @@ img {
     background-size: cover;
     background-position: right;
     background-attachment: fixed;
-    border-bottom: 5px solid rgb(0 64 143 / 35%);
+    border-bottom: 5px solid rgb(114 14 16 / 100%);
     color: #fff;
     padding: 40px;
     position: relative;
@@ -1949,7 +1949,7 @@ display: none;
 }
 
 .home-expertise .fas {
-    color: rgb(0 64 143 / 35%);
+    color: rgb(114 14 16 / 100%);
     font-size: 1.8rem;
 }
 
@@ -2071,7 +2071,7 @@ display: none;
 .home-team {
     align-items: center;
     /* background: url(https://i.imgur.com/77LJQ2y.webp) 0 0 no-repeat; */
-    background: rgb(0 64 143 / 35%);
+    background: rgb(114 14 16 / 100%);
     background-position: 50%;
     background-size: cover;
     color: #fff;
@@ -2102,12 +2102,12 @@ display: none;
 
 .home-locations {
     /* background: url(https://i.imgur.com/pP2cSdc.webp) 0 0 no-repeat; */
-    border-bottom: solid 5px rgb(0 64 143 / 35%);
+    border-bottom: solid 5px rgb(114 14 16 / 100%);
 }
 
 .location-icon-container {
     /* padding: 40px 0 0 0; */
-    color: rgb(0 64 143 / 35%);
+    color: rgb(114 14 16 / 100%);
     text-align: center;
     display: flex;
     justify-content: space-around;
@@ -2146,7 +2146,7 @@ display: none;
 
 /* REVIEWS */
 .home-reviews {
-    border-top: 5px solid rgb(0 64 143 / 35%);
+    border-top: 5px solid rgb(114 14 16 / 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
