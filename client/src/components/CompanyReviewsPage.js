@@ -159,7 +159,7 @@ const CompanyReviewsPage = () => {
                 let profilePhotoUrl = item.profile_photo_url || defaultProfilePhotoUrls[index % defaultProfilePhotoUrls.length];
                 // Check if the username is "CoCo DeLuxe" and replace the profile photo URL with the default if true
                 if (item.author_name === "CoCo DeLuxe") {
-                    profilePhotoUrl = defaultProfilePhotoUrls[index % defaultprofilePhotoUrls.length];
+                    profilePhotoUrl = defaultProfilePhotoUrls[index % defaultProfilePhotoUrls.length];
                 }
 
                 return (
