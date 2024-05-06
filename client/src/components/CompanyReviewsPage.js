@@ -26,22 +26,7 @@ const CompanyReviewsPage = () => {
         'Mikayla, Physical Therapy Aide',
         'Jacqueline, Physical Therapy Aide',
         'Dixie',
-        'Cellina',
-        'Dr. Ron Bowman',
-        'Dr. Alex Friedman',
-        'Dr. Clifford D. Mah',
-        'Dr. Denny Le',
-        'Dr. Jason Surratt',
-        'Dr. Manny Moy',
-        'Dr. Mia Horvath',
-        'Dr. Peter Pham',
-        'Dr. Thomas Melillo',
-        'Dr. Todd Galle',
-        'Dr. Yama Dehqanzada',
-        'Dr. Cara Beach',
-        'Dr. Lacey Beth Lockhart',
-        'Dr. Melinda Nicholes',
-        'Dr. Taylor Bunka'
+        'Cellina'
     ];
 
     const defaultProfilePhotoUrls = [
