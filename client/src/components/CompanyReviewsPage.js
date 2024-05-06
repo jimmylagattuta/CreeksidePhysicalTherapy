@@ -1,73 +1,95 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useCsrfToken } from './CsrfTokenContext';
 import './helpers/ReviewsHelpers.css';
-
-const physiciansNames = [
-    'Brian Horak, PT, MPT, CSCS',
-    'John Zdor, PT, DPT, CCWC, OCS',
-    'Peggy Loebner, Physical Therapist',
-    'Chad Smurthwaite, PT, DPT',
-    'Alex McNiven, PT, DPT',
-    'Vince Gonsalves, PT, DPT',
-    'Hal, Physical Therapy Aide',
-    'Mikayla, Physical Therapy Aide',
-    'Jacqueline, Physical Therapy Aide',
-    'Dixie',
-    'Cellina'
-];
 
 const CompanyReviewsPage = () => {
     const [reviews, setReviews] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [debug, setDebug] = useState(false); // Debug flag to toggle logs
+    const { csrfToken, setCsrfToken } = useCsrfToken();
+    const previousCsrfToken = useRef(csrfToken);
 
-    const logDebug = (message, ...optionalParams) => {
-        if (debug) {
-            console.log(message, ...optionalParams);
-        }
-    };
+    const companyAliases = [
+        'creekside physical therapy',
+        'creekside therapy',
+        'creekside'
+    ];
 
-    const isCreeksideMentioned = (text) => {
-        const creeksideRegex = /\bcreekside\b/i;
-        return creeksideRegex.test(text);
-    };
+    const doctors = [
+        'Brian Horak, PT, MPT, CSCS',
+        'John Zdor, PT, DPT, CCWC, OCS',
+        'Peggy Loebner, Physical Therapist',
+        'Chad Smurthwaite, PT, DPT',
+        'Alex McNiven, PT, DPT',
+        'Vince Gonsalves, PT, DPT',
+        'Hal, Physical Therapy Aide',
+        'Mikayla, Physical Therapy Aide',
+        'Jacqueline, Physical Therapy Aide',
+        'Dixie',
+        'Cellina'
+    ];
 
-    const isNorthwestMentioned = (text) => {
-        const northwestRegex = /\bnorthwest\b/i;
-        return northwestRegex.test(text);
-    };
+    const defaultProfilePhotoUrls = [
+        'https://lh3.googleusercontent.com/a/ACg8ocLIudbeWrIiWWZp7p9ibYtGWt7_t2sZhu3GhVETjeORZQ=s128-c0x00000000-cc-rp-mo',
+        'https://lh3.googleusercontent.com/a/ACg8ocKWoslacgKVxr6_0nu2yNq78qvJS_JmSt-o-sm0Poz1=s128-c0x00000000-cc-rp-mo',
+        'https://lh3.googleusercontent.com/a/ACg8ocIkg86HfAMs_wSjeyDfK_T6jI0hsOa7uwPSHrvQkzxz=s128-c0x00000000-cc-rp-mo',
+        'https://lh3.googleusercontent.com/a/ACg8ocJF-8tCmJylLukUi86imkat5gT8nG4xHJuweKX0g7-T6A=s128-c0x00000000-cc-rp-mo',
+        'https://lh3.googleusercontent.com/a/ACg8ocJrHYSdRq54r0T0kNF60xZGqm58qhXVIB3ogEUkGa_e=s128-c0x00000000-cc-rp-mo',
+        'https://lh3.googleusercontent.com/a/ACg8ocKWj653OujAca153BqwYSRX18G0URD-9DV89ZYyArIET1U=s128-c0x00000000-cc-rp-mo',
+        'https://lh3.googleusercontent.com/a/ACg8ocKqelNaTWLy28Vdol7ewcw8EYyT2muaWVSjckEAamoy=s128-c0x00000000-cc-rp-mo',
+        'https://lh3.googleusercontent.com/a/ACg8ocI-UUmoZ36qdH-xNh8xlrTXv3Jx6H7QGBwXeaIa8rjT=s128-c0x00000000-cc-rp-mo',
+        'https://lh3.googleusercontent.com/a/ACg8ocKPAe4Ik_kZrxRvPsJmKD3YthHHK8mHe2VDb10mPSKP=s128-c0x00000000-cc-rp-mo',
+        'https://lh3.googleusercontent.com/a/ACg8ocKZ2tCDEg6Ehy8TRlFwuuVvvdpdRnSFfeGYRNUTq1U=s128-c0x00000000-cc-rp-mo',
+        'https://lh3.googleusercontent.com/a/ACg8ocLu8PkNc-7f1HUTNd94JtS73eJhUka5AIZucTp3Hlbw=s128-c0x00000000-cc-rp-mo',
+        'https://lh3.googleusercontent.com/a/ACg8ocLfObJkOnSt9CV8D8v_u6kTqfhrE-yQPAYjosZdlzvZ=s128-c0x00000000-cc-rp-mo',
+        'https://lh3.googleusercontent.com/a/ACg8ocLUv0B3n3yJCFDAuL2h3UzH2kExs6WQRooe_A662cMB=s128-c0x00000000-cc-rp-mo-ba2',
+        'https://lh3.googleusercontent.com/a/ACg8ocJicBeMj3c-YfZSzCYTrkKfT8Z3tXIMXSNKxGwU8qim=s128-c0x00000000-cc-rp-mo',
+        'https://lh3.googleusercontent.com/a/ACg8ocLKrlJ0NBUgNt_mA6fqHxuYrVbHfYy48bb-CaVg3YQC=s128-c0x00000000-cc-rp-mo-ba3',
+        'https://lh3.googleusercontent.com/a/ACg8ocKww_NJw1NmlQPCb0AodayToyOTvLxgGtcfIOPuromk=s128-c0x00000000-cc-rp-mo',
+        'https://lh3.googleusercontent.com/a/ACg8ocIFg5G-JO49VMdkvA4N5IwxQ9XKjHP3HHTytStrVCI=s128-c0x00000000-cc-rp-mo'
+    ];
 
-    const isDoctor = (name) => {
-        return physiciansNames.some(doctor => name.toLowerCase().includes(doctor.toLowerCase()));
+    const formatDate = (dateString) => {
+        const date = new Date(dateString);
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return new Intl.DateTimeFormat('en-US', options). format(date);
     };
 
     useEffect(() => {
-        const cacheKey = 'cached_google_reviews';
+        const cacheKey = 'cached_creekside_reviews';
+
+        const isRelevantReview = (review) => {
+            const normalizedText = review.text.toLowerCase();
+            return (
+                companyAliases.some(alias => normalizedText.includes(alias)) ||
+                doctors.some(doctor => normalizedText.includes(doctor.toLowerCase().replace("dr. ", "")))
+            );
+        };
 
         const getCachedReviews = () => {
             const cachedData = localStorage.getItem(cacheKey);
             if (cachedData) {
                 const { reviews, expiry } = JSON.parse(cachedData);
                 if (expiry > Date.now()) {
-                    return JSON.parse(reviews);
+                    return reviews;
                 } else {
-                    localStorage.removeItem(cacheKey); // Remove expired cache
+                    localStorage.removeItem(cacheKey);
                 }
             }
             return null;
         };
 
         const saveToCache = (data) => {
-            const expiry = Date.now() + 7 * 24 * 60 * 60 * 1000; // Cache for 7 days
-            const cacheData = JSON.stringify({ reviews: data, expiry });
-            localStorage.setItem(cacheKey, cacheData);
+            const expiry = Date.now() + 7 * 24 * 60 * 60 * 1000;
+            const cacheData = { reviews: data, expiry };
+            localStorage.setItem(cacheKey, JSON.stringify(cacheData));
         };
 
         const fetchReviews = () => {
-            const url = process.env.NODE_ENV === 'production'
-                ? 'https://creekside-physical-therapy-3c43d5dad481.herokuapp.com/api/v1/pull_google_places_cache'
-                : 'http://localhost:3001/api/v1/pull_google_places_cache';
+            const url =
+                process.env.NODE_ENV === 'production'
+                    ? 'https://creekside-physical-therapy-3c43d5dad481.herokuapp.com/api/v1/pull_google_places_cache'
+                    : 'http://localhost:3001/api/v1/pull_google_places_cache';
 
             const headers = {
                 'Content-Type': 'application/json',
@@ -83,34 +105,27 @@ const CompanyReviewsPage = () => {
                     }
                 })
                 .then((data) => {
-                    if (Array.isArray(data.creekside_reviews) && Array.isArray(data.northwest_reviews)) {
-                        if (data.csrf_token) {
+                    if (Array.isArray(data.creekside_reviews)) {
+                        // Update CSRF token only if it changes
+                        if (data.csrf_token && data.csrf_token !== previousCsrfToken.current) {
                             setCsrfToken(data.csrf_token);
+                            previousCsrfToken.current = data.csrf_token;
                         }
 
-                        const allReviews = [...data.creekside_reviews, ...data.northwest_reviews];
+                        const filteredReviews = data.creekside_reviews.filter(
+                            (review) => isRelevantReview(review) &&
+                                !review.text.startsWith("Absolutely horrendous") &&
+                                !defaultProfilePhotoUrls.includes(review.profile_photo_url)
+                        );
 
-                        // Filter reviews
-                        const filteredReviews = allReviews.filter(review => {
-                            const text = review.text.toLowerCase();
-                            const authorName = review.author_name.toLowerCase();
-                            const hasCreekside = isCreeksideMentioned(text) || isDoctor(review.author_name);
-                            const hasNorthwest = isNorthwestMentioned(text);
-
-                            return hasCreekside || (!hasNorthwest && isDoctor(authorName));
-                        });
-
-                        // Shuffle the filteredReviews array
                         const shuffledReviews = shuffleArray(filteredReviews);
-
-                        // Take the first three reviews
                         const randomReviews = shuffledReviews.slice(0, 3);
 
                         saveToCache(randomReviews);
                         setReviews(randomReviews);
                         setLoading(false);
                     } else {
-                        throw new Error('Data.reviews is not an array');
+                        throw new Error('Data.creekside_reviews is not an array');
                     }
                 })
                 .catch((err) => {
@@ -120,14 +135,13 @@ const CompanyReviewsPage = () => {
                 });
         };
 
-        // Function to shuffle an array using the Fisher-Yates algorithm
-        function shuffleArray(array) {
+        const shuffleArray = (array) => {
             for (let i = array.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [array[i], array[j]] = [array[j], array[i]];
             }
             return array;
-        }
+        };
 
         const cachedReviews = getCachedReviews();
         if (cachedReviews) {
@@ -149,7 +163,7 @@ const CompanyReviewsPage = () => {
 
                 return (
                     <div key={index} className='single-review-container'>
-                        <div className='review-top-info'>
+                        <div class='review-top-info'>
                             <div
                                 className='user-icon'
                                 style={{
@@ -171,7 +185,7 @@ const CompanyReviewsPage = () => {
                                 className='fa fa-quote-left'
                                 aria-hidden='true'></i>
                             <i
-                                className='fa fa-quote-right'
+                                classname='fa fa-quote-right'
                                 aria-hidden='true'></i>
                             <p className='review-paragraph'>{item.text}</p>
                         </div>
@@ -183,6 +197,16 @@ const CompanyReviewsPage = () => {
                     </div>
                 );
             })}
+            {loading && (
+                <div className='loading'>
+                    <p>Loading reviews...</p>
+                </div>
+            )}
+            {error && (
+                <div className='error'>
+                    <p>Error: {error}</p>
+                </div>
+            )}
         </div>
     );
 };
