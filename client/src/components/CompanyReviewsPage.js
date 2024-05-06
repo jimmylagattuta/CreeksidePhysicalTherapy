@@ -126,7 +126,7 @@ const CompanyReviewsPage = () => {
                         setReviews(randomReviews);
                         setLoading(false);
                     } else {
-                        throw an Error('Data.creekside_reviews is not an array');
+                        console.log('Data.creekside_reviews is not an array');
                     }
                 })
                 .catch((err) => {
