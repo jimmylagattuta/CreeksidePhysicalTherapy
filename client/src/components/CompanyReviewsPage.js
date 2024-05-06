@@ -26,7 +26,22 @@ const CompanyReviewsPage = () => {
         'Mikayla, Physical Therapy Aide',
         'Jacqueline, Physical Therapy Aide',
         'Dixie',
-        'Cellina'
+        'Cellina',
+        'Dr. Ron Bowman',
+        'Dr. Alex Friedman',
+        'Dr. Clifford D. Mah',
+        'Dr. Denny Le',
+        'Dr. Jason Surratt',
+        'Dr. Manny Moy',
+        'Dr. Mia Horvath',
+        'Dr. Peter Pham',
+        'Dr. Thomas Melillo',
+        'Dr. Todd Galle',
+        'Dr. Yama Dehqanzada',
+        'Dr. Cara Beach',
+        'Dr. Lacey Beth Lockhart',
+        'Dr. Melinda Nicholes',
+        'Dr. Taylor Bunka'
     ];
 
     const defaultProfilePhotoUrls = [
@@ -63,6 +78,14 @@ const CompanyReviewsPage = () => {
             return (
                 companyAliases.some(alias => normalizedText.includes(alias.toLowerCase())) ||
                 doctors.some(doctor => normalizedText.includes(doctor.toLowerCase().replace("dr. ", "")))
+            );
+        };
+
+        const getFilteredReviews = (reviewList) => {
+            return reviewList.filter(
+                (review) => isRelevantReview(review) &&
+                    !review.text.startsWith("Absolutely horrendous") &&
+                    !defaultProfilePhotoUrls.includes(review.profile_photo_url)
             );
         };
 
@@ -105,28 +128,27 @@ const CompanyReviewsPage = () => {
                     }
                 })
                 .then((data) => {
-                  console.log('data', data);
-                    if (Array.isArray(data.creekside_reviews)) {
+                    console.log('data', data);
+                    if (Array.isArray(data.creekside_reviews) && Array.isArray(data.northwest_reviews)) {
                         // Update CSRF token only if it changes
                         if (data.csrf_token && data.csrf_token !== previousCsrfToken.current) {
                             setCsrfToken(data.csrf_token);
                             previousCsrfToken.current = data.csrf_token;
                         }
 
-                        const filteredReviews = data.creekside_reviews.filter(
-                            (review) => isRelevantReview(review) &&
-                                !review.text.startsWith("Absolutely horrendous") &&
-                                !defaultProfilePhotoUrls.includes(review.profile_photo_url)
-                        );
+                        const combinedReviews = [
+                            ...getFilteredReviews(data.creekside_reviews),
+                            ...getFilteredReviews(data.northwest_reviews)
+                        ];
 
-                        const shuffledReviews = shuffleArray(filteredReviews);
+                        const shuffledReviews = shuffleArray(combinedReviews);
                         const randomReviews = shuffledReviews.slice(0, 3);
 
                         saveToCache(randomReviews);
                         setReviews(randomReviews);
                         setLoading(false);
                     } else {
-                        console.log('Data.creekside_reviews is not an array');
+                        console.log('Data reviews are not arrays');
                     }
                 })
                 .catch((err) => {
@@ -171,7 +193,7 @@ const CompanyReviewsPage = () => {
                                     backgroundImage: `url(${profilePhotoUrl})`,
                                 }}>
                                 {!item.profile_photo_url && (
-                                    <i className='fas fa-user-circle'></i>
+                                    <i class_name='fas fa-user-circle'></i>
                                 )}
                             </div>
                             <div className='review-name-container'>
