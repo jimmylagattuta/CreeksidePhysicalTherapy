@@ -52,7 +52,7 @@ const CompanyReviewsPage = () => {
     const formatDate = (dateString) => {
         const date = new Date(dateString);
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        return new Intl.DateTimeFormat('en-US', options). format(date);
+        return new Intl.DateTimeFormat('en-US', options).format(date);
     };
 
     useEffect(() => {
@@ -61,7 +61,7 @@ const CompanyReviewsPage = () => {
         const isRelevantReview = (review) => {
             const normalizedText = review.text.toLowerCase();
             return (
-                companyAliases.some(alias => normalizedText.includes(alias)) ||
+                companyAliases.some(alias => normalizedText.includes(alias.toLowerCase())) ||
                 doctors.some(doctor => normalizedText.includes(doctor.toLowerCase().replace("dr. ", "")))
             );
         };
@@ -105,6 +105,7 @@ const CompanyReviewsPage = () => {
                     }
                 })
                 .then((data) => {
+                  console.log('data', data);
                     if (Array.isArray(data.creekside_reviews)) {
                         // Update CSRF token only if it changes
                         if (data.csrf_token && data.csrf_token !== previousCsrfToken.current) {
@@ -125,7 +126,7 @@ const CompanyReviewsPage = () => {
                         setReviews(randomReviews);
                         setLoading(false);
                     } else {
-                        throw new Error('Data.creekside_reviews is not an array');
+                        throw an Error('Data.creekside_reviews is not an array');
                     }
                 })
                 .catch((err) => {
@@ -158,7 +159,7 @@ const CompanyReviewsPage = () => {
                 let profilePhotoUrl = item.profile_photo_url || defaultProfilePhotoUrls[index % defaultProfilePhotoUrls.length];
                 // Check if the username is "CoCo DeLuxe" and replace the profile photo URL with the default if true
                 if (item.author_name === "CoCo DeLuxe") {
-                    profilePhotoUrl = defaultProfilePhotoUrls[index % defaultProfilePhotoUrls.length];
+                    profilePhotoUrl = defaultProfilePhotoUrls[index % defaultprofilePhotoUrls.length];
                 }
 
                 return (
@@ -185,7 +186,7 @@ const CompanyReviewsPage = () => {
                                 className='fa fa-quote-left'
                                 aria-hidden='true'></i>
                             <i
-                                classname='fa fa-quote-right'
+                                className='fa fa-quote-right'
                                 aria-hidden='true'></i>
                             <p className='review-paragraph'>{item.text}</p>
                         </div>
