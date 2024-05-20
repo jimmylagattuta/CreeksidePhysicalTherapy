@@ -37,8 +37,8 @@ export const physicians = [
             "Brian has developed expertise in biomechanical evaluation of common everyday activities to complex sports movements like running, throwing, and golf swing mechanics. His functional-based treatment approach for injuries involves finding the area of dysfunction and rectifying the cause through manual techniques and exercise to create optimal movement patterns.",
             "As a life-long athlete at all levels of competition, Brian knows how important activity is to both physical and mental health. In his spare time, he enjoys biking, hiking, paddle boarding, and enjoying the Pacific Northwest with his wife, two kids, and their dog."
         ],
-        image: 'https://i.imgur.com/7FwA1eX.jpg',
-        imageMedium: 'https://i.imgur.com/7FwA1eX.jpg'
+        image: '../Horak.jpeg',
+        imageMedium: '../Horak.jpeg'
     },
     {
         name: 'John Zdor, PT, DPT, CCWC, OCS',
@@ -48,8 +48,8 @@ export const physicians = [
             "John's approach to therapy is to empower patients with the tools and skills they need to reduce their pain at home through individualized and simple movement programs designed to improve mobility and strength.",
             "An avid rock climber, enduro mountain biker, backpacker, hiker, and Olympic weightlifter, John also enjoys spending time with his German Shorthair Pointer who loves to get out biking and hiking with him. During the winter, you'll likely find John in the kitchen baking or trying to perfect the best chicken noodle soup recipe."
         ],
-        image: 'https://i.imgur.com/7FwA1eX.jpg',
-        imageMedium: 'https://i.imgur.com/7FwA1eX.jpg'
+        image: '../Zdor.jpeg',
+        imageMedium: '../Zdor.jpeg'
     },
     {
         name: 'Peggy Loebner, Physical Therapist',
@@ -58,8 +58,8 @@ export const physicians = [
             "Her experience includes general outpatient physical therapy and sports medicine as well as post-operative rehabilitation. Peggy enjoys helping patients reach their goals with manual therapy, patient education, and individualized exercise programs. She is ASTYM certified.",
             "In her free time, Peggy enjoys spending time with her husband and 2 children, running, reading, and coaching her kids' sports teams."
         ],
-        image: 'https://i.imgur.com/EUSrDSg.jpg',
-        imageMedium: 'https://i.imgur.com/EUSrDSg.jpg'
+        image: '../Loebner.jpeg',
+        imageMedium: '../Loebner.jpeg'
     },
     {
         name: 'Chad Smurthwaite, PT, DPT',
@@ -69,8 +69,8 @@ export const physicians = [
             "Through hands-on experience in multiple orthopedic settings, Chad is knowledgeable in treating musculoskeletal conditions throughout the entire body. He has a special interest in working with runners and other athletes that are motivated to return to sport.",
             "As a lifelong athlete, Chad competed in both track and field and cross country at Warner Pacific University. In his spare time, he enjoys running, lifting weights, golfing, biking, and trying to keep up with his Vizsla, Luka."
         ],
-        image: 'https://i.imgur.com/7FwA1eX.jpg',
-        imageMedium: 'https://i.imgur.com/7FwA1eX.jpg'
+        image: 'Smurthwaite.jpeg',
+        imageMedium: 'Smurthwaite.jpeg'
     },
     {
         name: 'Alex McNiven, PT, DPT',
@@ -81,8 +81,8 @@ export const physicians = [
             "She appreciates that everyone has their own goals and aspirations, and her approach to physical therapy centers on the patients’ unique situations and interests. Her mission is to develop real connections, so she can provide an individualized approach to care that helps people return to what they love doing.",
             "When she’s not in the clinic, Alex enjoys spending time outdoors with her husband and dog, Koda. From hiking, running, and camping to rock climbing and snowboarding, Alex enjoys any activity that allows her to adventure throughout the beautiful state of Oregon."
         ],
-        image: 'https://i.imgur.com/EUSrDSg.jpg',
-        imageMedium: 'https://i.imgur.com/EUSrDSg.jpg'
+        image: '../McNiven.jpg',
+        imageMedium: '../McNiven.jpg'
     },
     {
         name: 'Vince Gonsalves, PT, DPT',
@@ -92,8 +92,8 @@ export const physicians = [
             "Vince has specialized in upper extremity and industrial/work-place injuries for the last 12 years, enjoying working with a variety of patients to meet their individual goals with personalized care.",
             "He is an avid cyclist, riding with the Bonk Collective bike club, and enjoys hiking and other outdoor activities. Vince is committed to assisting clients in returning to preinjury activities."
         ],
-        image: 'https://i.imgur.com/7FwA1eX.jpg',
-        imageMedium: 'https://i.imgur.com/7FwA1eX.jpg'
+        image: '../Gonsalves.jpg',
+        imageMedium: '../Gonsalves.jpg'
     },
     {
         name: 'Hal, Physical Therapy Aide',
@@ -103,8 +103,8 @@ export const physicians = [
             "At Creekside, Hal hopes to ensure that patients are not only educated on how to exercise safely and effectively during rehab, but also leave physical therapy with the knowledge and tools to maintain an active lifestyle on their own.",
             "A recent transplant to the Portland area from Atlanta, Hal enjoys exploring the outdoors and Portland's incredible restaurant scene. His interests include weight lifting, playing competitive ultimate frisbee, and taking care of his many houseplants."
         ],
-        image: 'https://i.imgur.com/7FwA1eX.jpg',
-        imageMedium: 'https://i.imgur.com/7FwA1eX.jpg'
+        image: '../Hal.jpeg',
+        imageMedium: '../Hal.jpeg'
     },
     {
         name: 'Mikayla, Physical Therapy Aide',
@@ -114,8 +114,8 @@ export const physicians = [
             "Mikayla hopes to acquire her CSCS in the future and work with athletes in a team sport setting to make them faster, stronger, and more fit to succeed in their particular sport.",
             "In her spare time, Mikayla coaches youth soccer, enjoys running, and spending time with friends and family."
         ],
-        image: 'https://i.imgur.com/EUSrDSg.jpg',
-        imageMedium: 'https://i.imgur.com/EUSrDSg.jpg'
+        image: '../Mikayla.jpeg',
+        imageMedium: '../Mikayla.jpeg'
     },
     {
         name: 'Jacqueline, Physical Therapy Aide',
@@ -125,8 +125,8 @@ export const physicians = [
             "Jacqueline enjoys travelling, walking her dog, and watching new movies. Her favorite travel destination is Kauai, where she spends a lot of time vacationing with family and friends.",
             "During the summer when it's nice in Oregon she enjoys spending time at different beaches, camping, and fishing for fun."
         ],
-        image: 'https://i.imgur.com/EUSrDSg.jpg',
-        imageMedium: 'https://i.imgur.com/EUSrDSg.jpg'
+        image: '../Jacqueline.jpg',
+        imageMedium: '../Jacqueline.jpg'
     },
     {
         name: 'Dixie',
@@ -136,8 +136,8 @@ export const physicians = [
             "For two years, Dixie worked closely with a pediatric doctor here in the Portland area before transitioning to physical therapy. Dixie hopes to provide a positive experience for all PT patients at Creekside.",
             "Outside of work, Dixie spends her time with her puppy Franklin exploring the PNW and watching horror movies."
         ],
-        image: 'https://i.imgur.com/EUSrDSg.jpg',
-        imageMedium: 'https://i.imgur.com/EUSrDSg.jpg'
+        image: '../Dixie.jpeg',
+        imageMedium: '../Dixie.jpeg'
     },
     {
         name: 'Cellina',
@@ -147,340 +147,296 @@ export const physicians = [
             "She graduated from Oregon State University with a Bachelor of Science in Kinesiology. After college, she spent a year in the Basque Country of Spain teaching English at an elementary school and travelling around the country.",
             "She speaks three languages; Spanish, Japanese, and English. In her free time, Cellina likes to spend time with her family’s dogs, go on bike rides around town, and read books."
         ],
-        image: 'https://i.imgur.com/EUSrDSg.jpg',
-        imageMedium: 'https://i.imgur.com/EUSrDSg.jpg'
+        image: '../Cellina.jpeg',
+        imageMedium: '../Cellina.jpeg'
     }
 ];
 
 export const services = [
     // Foot & Ankle Rehabilitation
     {
-        image: 'https://i.imgur.com/2Q4xrFD.webp',
-        name: 'Foot & Ankle Rehabilitation',
-        firstTitle: 'Foot & Ankle Rehabilitation',
+        image: '../FAndASurgery.jpg',
+        name: 'Foot & Ankle Rehab',
+        firstTitle: 'Foot & Ankle Rehab',
         description: [
-            "Our Portland Physical Therapists specialize in rehabilitating painful foot and ankle issues, offering individualized rehabilitation to help you kick pain to the curb and resume an active lifestyle."
+            "Our Portland Physical Therapists specialize in rehabilitating painful foot and ankle issues, offering individualized rehabilitation to help you kick pain to the curb and resume an active lifestyle. A foot or ankle issue can make you painfully aware of every minute spent on your feet. Whether you're eager to resume an active lifestyle or simply desperate to stand without suffering, Creekside Physical Therapy offers individualized rehabilitation to help you kick pain to the curb."
         ],
         secondTitle: 'Conditions We Treat',
         descriptionTwo: [
-            "We treat a range of conditions including sprains, Achilles tendonitis, plantar fasciitis, broken bones, arthritis, and more, utilizing the latest techniques to ensure effective recovery."
+            "We treat a range of conditions including sprains, Achilles tendonitis, plantar fasciitis, broken bones, arthritis, and more, utilizing the latest techniques to ensure effective recovery. Sprains: Painful strains and sprains can result from ligaments in the foot or ankle stretching or tearing. We offer physical therapy to help moderate to severe sprains recover. Achilles tendonitis: Overuse or a sudden increase in activity can cause the Achilles tendon to stretch, tear, or rupture, leading to persistent foot and ankle pain. Plantar fasciitis and plantar fasciosis: We provide successful interventions for the painful conditions caused by stretching or tearing of the plantar fascia. Broken bones and stress fractures: Trauma, repetitive impacts, or sustained stress can lead to painful breaks and fractures in the feet or ankles. Arthritis: We manage osteoarthritis, rheumatoid arthritis, and gout, which can cause chronic pain in the small joints of the feet and ankles. Tarsal tunnel syndrome: This condition causes pain, tingling, or numbness due to the posterior tibial nerve being pinched or compressed."
         ],
         thirdTitle: 'Specialized Treatments',
         descriptionThree: [
-            "Our approach includes personalized treatments such as IASTM, ASTYM, targeted exercises, and patient education to optimize recovery and prevent future injuries."
+            "Our approach includes personalized treatments such as IASTM, ASTYM, targeted exercises, and patient education to optimize recovery and prevent future injuries. We also use the latest techniques to tailor our treatments to each patient's specific condition, ensuring effective recovery and long-term relief. Our specialized treatments focus on providing comprehensive care that addresses both immediate and underlying issues."
         ],
         fourthTitle: 'Preventive Care',
         descriptionFour: [
-            "We emphasize the importance of preventive care through exercises that improve strength, flexibility, and balance, helping to mitigate the risks of future foot and ankle conditions."
+            "We emphasize the importance of preventive care through exercises that improve strength, flexibility, and balance, helping to mitigate the risks of future foot and ankle conditions. Our preventive strategies are designed to enhance overall musculoskeletal resilience, keeping you active and pain-free. By focusing on preventive care, we help our patients maintain their health and prevent future injuries."
         ],
         link: '/services',
     },
-    // Orthopedic Rehabilitation
+    // Orthopedic Rehab
     {
-        image: 'https://i.imgur.com/2Q4xrFD.webp',
-        name: 'Orthopedic Rehabilitation',
-        firstTitle: 'Orthopedic Rehabilitation',
+        image: '../Ortho.jpg',
+        name: 'Orthopedic Rehab',
+        firstTitle: 'Orthopedic Rehab',
         description: [
-            "Our team offers comprehensive physical therapy for a variety of orthopedic injuries, including low back pain, shoulder pain, knee pain, and more, providing hands-on techniques and empowering you with exercise programs."
+            "Our team offers comprehensive physical therapy for a variety of orthopedic injuries, including low back pain, shoulder pain, knee pain, and more, providing hands-on techniques and empowering you with exercise programs. We can help you with orthopedic injuries such as low back pain, shoulder pain, knee pain, and all other sorts of muscle, tendon, joint, or nerve injuries. Whether it's providing hands-on techniques to improve mobility and reduce pain or empowering you with exercise programs to build strength, our team can be your solution to getting back to pain-free movement."
         ],
         secondTitle: 'Orthopedic Conditions We Treat',
         descriptionTwo: [
-            "We treat a broad spectrum of musculoskeletal issues from acute injuries to chronic conditions, utilizing personalized therapy plans designed to relieve pain and restore function."
+            "We treat a broad spectrum of musculoskeletal issues from acute injuries to chronic conditions, utilizing personalized therapy plans designed to relieve pain and restore function. Low back pain and Sciatica: Localized low back pain as well as sciatica, or nerve pain that runs down the back of your leg, can both be improved with physical therapy. Hands-on techniques to improve spinal and muscle mobility can reduce pain in the short term, and stabilization and strengthening exercise programs can help reduce the risk of injury reoccurring. Shoulder pain: Rotator-cuff injuries, dislocations, or tight shoulders significantly affect your ability to take care of yourself, play sports, and perform normal daily activities. Manual therapy techniques to improve joint mobility and shoulder complex strengthening can get your shoulder moving well and pain-free! Knee pain: Osteoarthritis, dislocations, and sprains all affect the knee's ability to bend and straighten and can result in a loss of strength and function. Strengthening, stretching, and hands-on techniques to improve muscular and joint mobility can be effective in improving your ability to walk, run, squat, or jump. Neck pain: Car accidents, postural strains, and overuse injuries can all affect your neck's ability to move comfortably. Mobilizing the thoracic spine (upper back) and providing hands-on techniques to decrease muscle tension through the neck and shoulders can help to alleviate neck pain. Appropriate upper back and neck strengthening can also help the muscles feel looser as well as keep the pain from returning. If you're not moving as well as you'd like, we are here to help you in getting back to moving at your best!"
         ],
         thirdTitle: 'Specialized Orthopedic Treatments',
         descriptionThree: [
-            "Our treatment approaches are tailored to meet the specific needs of each patient, involving manual therapy, therapeutic exercises, and patient education to achieve the best outcomes."
+            "Our treatment approaches are tailored to meet the specific needs of each patient, involving manual therapy, therapeutic exercises, and patient education to achieve the best outcomes. We offer patient-driven physical therapy for a wide variety of orthopedic injuries. Our approach includes personalized treatments such as IASTM, ASTYM, targeted exercises, and patient education to optimize recovery and prevent future injuries. Our specialized treatments focus on providing comprehensive care that addresses both immediate and underlying issues. We use the latest techniques to tailor our treatments to each patient's specific condition, ensuring effective recovery and long-term relief. By focusing on preventive care, we help our patients maintain their health and prevent future injuries."
         ],
         fourthTitle: 'Preventive Orthopedic Care',
         descriptionFour: [
-            "We focus on injury prevention and health promotion through strengthening, flexibility, and ergonomic training to help you maintain optimal musculoskeletal health."
+            "We focus on injury prevention and health promotion through strengthening, flexibility, and ergonomic training to help you maintain optimal musculoskeletal health. Our preventive strategies are designed to enhance overall musculoskeletal resilience, keeping you active and pain-free. By focusing on preventive care, we help our patients maintain their health and prevent future injuries. Our preventive care includes exercises that improve strength, flexibility, and balance, helping to mitigate the risks of future orthopedic conditions. We also emphasize the importance of ergonomic training to support musculoskeletal health and prevent injuries in daily activities and occupational settings. Our goal is to empower patients with the knowledge and tools to maintain their health long-term."
         ],
         link: '/services',
     },
-    // Sports Injury Rehabilitation
+    // Sports Injury Rehab
     {
-        image: 'https://i.imgur.com/2Q4xrFD.webp',
-        name: 'Sports Injury Rehabilitation',
-        firstTitle: 'Sports Injury Rehabilitation',
+        image: '../Sports.jpg',
+        name: 'Sports Injury Rehab',
+        firstTitle: 'Sports Injury Rehab',
         description: [
-            "Tailored to athletes and active individuals, our services address sports-related injuries to the foot, ankle, and lower leg, ensuring a safe return to sport."
+            "Tailored to athletes and active individuals, our services address sports-related injuries to the foot, ankle, and lower leg, ensuring a safe return to sport. Whether you consider yourself a serious athlete or just enjoy an active lifestyle, you subject your feet, ankles, and lower legs to sustained pressure, jarring impacts, and repetitive motions that can make them prone to strains, sprains, and other painful sports-related injuries. At Creekside Physical Therapy, our specialists help patients with sports injuries get back on their feet and back in the game."
         ],
         secondTitle: 'Types of Sports Injuries',
         descriptionTwo: [
-            "From sprains and fractures to chronic conditions, our specialized physical therapy programs are designed to manage and recover from a wide range of sports injuries."
+            "From sprains and fractures to chronic conditions, our specialized physical therapy programs are designed to manage and recover from a wide range of sports injuries. We provide rehabilitation for a wide range of sports-related foot, ankle, and lower leg injuries. Here are just a few examples of the conditions we rehab: Strains and Sprains: Caused by stretched or torn ligaments in the foot or ankle, strains and sprains are some of the most common injuries athletes face. Plantar Fasciitis: Overuse, improper stretching, and wearing the wrong shoes can cause the thick band of tissue that runs along the bottom of the foot, the plantar fascia, to become inflamed. Achilles Tendinitis: Repetitive motion or a sudden increase in the intensity or duration of your fitness routine can lead to Achilles tendinitis, a painful inflammation of the tendon that runs from the calf muscle to the heel. Heel Pain: Pain in the heel is a frustrating symptom associated with a number of foot and ankle injuries, including stress fractures, plantar fasciitis, and heel spurs. Stress Fractures: Rigorous sports that subject the feet and ankles to high levels of impact or strain make the athletes who engage in them prone to small, incomplete bone breaks known as stress fractures. Chronic Ankle Instability: Having previously sprained an ankle increases an athlete's risk of subsequent sprains and developing chronic ankle instability, causing persistent tenderness, swelling, and pain."
         ],
         thirdTitle: 'Advanced Sports Treatments',
         descriptionThree: [
-            "Utilizing advanced therapeutic techniques including motion analysis and sport-specific training, we help athletes regain strength, function, and confidence."
+            "Utilizing advanced therapeutic techniques including motion analysis and sport-specific training, we help athletes regain strength, function, and confidence. Our treatment includes personalized interventions such as IASTM, ASTYM, targeted exercises, and patient education to optimize recovery and prevent future injuries. By focusing on preventive care, we help our patients maintain their health and prevent future injuries. Our specialized treatments focus on providing comprehensive care that addresses both immediate and underlying issues. We use the latest techniques to tailor our treatments to each patient's specific condition, ensuring effective recovery and long-term relief."
         ],
         fourthTitle: 'Sport-Specific Preventive Advice',
         descriptionFour: [
-            "We provide guidance on proper training routines, warm-up exercises, and equipment to prevent injuries and enhance athletic performance."
+            "We provide guidance on proper training routines, warm-up exercises, and equipment to prevent injuries and enhance athletic performance. Regardless of what sport you play, overexertion, warming up improperly, or wearing shoes that don't provide adequate support can make your feet, ankles, and lower legs prone to injury. Our preventive strategies are designed to enhance overall musculoskeletal resilience, keeping you active and pain-free. We also emphasize the importance of ergonomic training to support musculoskeletal health and prevent injuries in daily activities and occupational settings. Our goal is to empower patients with the knowledge and tools to maintain their health long-term."
         ],
         link: '/services',
     },
     // Running Injuries Treatment
     {
-        image: 'https://i.imgur.com/2Q4xrFD.webp',
+        image: '../FootPain.jpg',
         name: 'Running Injuries Treatment',
         firstTitle: 'Running Injuries Treatment',
         description: [
-            "Focused treatment and rehabilitation services for common running injuries, helping runners maintain performance and prevent future issues."
+            "Focused treatment and rehabilitation services for common running injuries, helping runners maintain performance and prevent future issues. Running is a high-impact activity that places significant strain on your feet and ankles and can increase your risk for a number of serious injuries, especially when done improperly or while wearing the wrong footwear. Whether you enjoy the occasional jog around the block, are an avid recreational runner, or race competitively, the knowledgeable and experienced physical therapists and exercise specialists at Creekside Physical Therapy can develop a rehab plan designed to get you—and your athletic or fitness goals—back on track."
         ],
         secondTitle: 'Effective Running Injury Management',
         descriptionTwo: [
-            "We treat conditions such as Achilles tendinitis, shin splints, and stress fractures with targeted, evidence-based approaches."
+            "We treat conditions such as Achilles tendinitis, shin splints, and stress fractures with targeted, evidence-based approaches. We offer patient-driven physical therapy for a wide variety of lower leg, foot, and ankle injuries. Here are just a few of the common running-related injuries we treat in our clinics: Strains and Sprains: Overuse, repetitive impacts, and a sudden increase in the intensity of your runs can cause ligaments in the foot or ankle to stretch or tear, leading to painful strains and sprains. Achilles Tendon Issues: The Achilles tendon runs down the back of the calf, all the way to the ankle, connecting the primary calf muscles to the bone in the heel. Broken Bones and Stress Fractures: Runners can suffer broken bones in the feet and ankles due to the stress associated with trauma or repeated impacts. Plantar Fasciitis: Characterized by heel pain in the morning that dissipates with movement, plantar fasciitis is a common runner's malady caused by the inflammation of a thick band of tissue that runs across the bottom of the foot. Heel Spurs: Caused by calcium deposits that develop on the underside of the heel bone, heel spurs can lead to a variety of different types of heel pain, from sharp, stabbing pains to persistent dull aches whenever you bear weight."
         ],
         thirdTitle: 'Specialized Running Injury Therapies',
         descriptionThree: [
-            "Our treatments include biomechanical analysis, personalized exercise programs, and manual therapy to address specific running injuries."
+            "Our treatments include biomechanical analysis, personalized exercise programs, and manual therapy to address specific running injuries. If you're like many of the runners we see, you may have made a habit of pushing through the pain after an injury. Unfortunately, when it comes to running-related foot and ankle injuries, 'no pain, no gain' isn't a winning mantra; it's a recipe for disaster. Don't risk the long-term health of your feet and ankles. If you have persistent pain or significant swelling that lasts longer than two days, your injuries may benefit from professional rehabilitation."
         ],
         fourthTitle: 'Preventive Measures for Runners',
         descriptionFour: [
-            "Educational workshops and training advice are provided to help runners optimize their training routines and reduce the risk of injuries."
+            "Educational workshops and training advice are provided to help runners optimize their training routines and reduce the risk of injuries. We take the time to thoroughly understand your injuries and your fitness goals so that we can create a custom rehabilitation plan based on best practices and your unique needs as a runner. Our physical therapists and exercise specialists will work with you to reduce and manage pain and help you return to running safely. We'll also conduct a gait analysis to identify any biomechanical abnormalities we should address as part of your individualized rehabilitation regimen."
         ],
         link: '/services',
     },
     // Neuroma and Nerve Pain Treatment
     {
-        image: 'https://i.imgur.com/2Q4xrFD.webp',
+        image: '../Neuroma.jpg',
         name: 'Neuroma and Nerve Pain Treatment',
         firstTitle: 'Neuroma and Nerve Pain Treatment',
         description: [
-            "Specializing in the treatment of Morton’s Neuroma and other nerve pain conditions, our clinic utilizes advanced techniques such as IASTM or ASTYM, complemented by customized exercise programs. These interventions are designed to relieve pressure on nerves and reduce pain."
+            "Specializing in the treatment of Morton’s Neuroma and other nerve pain conditions, our clinic utilizes advanced techniques such as IASTM or ASTYM, complemented by customized exercise programs. These interventions are designed to relieve pressure on nerves and reduce pain. We can help you with injuries to your hand & elbow. Whether it's providing hands-on techniques to improve mobility and reduce pain or empowering you with exercise programs to build strength, our team can be your solution to getting back to pain-free movement."
         ],
         secondTitle: 'Comprehensive Nerve Pain Management',
         descriptionTwo: [
-            "Our approach not only focuses on immediate pain relief but also on long-term management strategies to prevent recurrence, including patient education and lifestyle modifications."
+            "Our approach not only focuses on immediate pain relief but also on long-term management strategies to prevent recurrence, including patient education and lifestyle modifications. Here are just a few of the common injuries we diagnose and treat in our clinics: Morton’s Neuroma: This condition is characterized by numbness or nerve pain in the toes, most often in the 4th or 5th toe. It is caused by compression of the nerves between the metatarsals. A wide variety of factors can cause this compression; most commonly tight shoewear, over pronation, lateralization. Your physical therapist will help you find the cause of the compression. They will use a combination of hands-on treatment to decrease the pain & numbness and exercise to address the root cause of the compression."
         ],
         thirdTitle: 'Advanced Therapeutic Options',
         descriptionThree: [
-            "We offer ultrasound-guided interventions and other minimally invasive procedures that target the underlying causes of nerve pain, ensuring effective and lasting relief."
+            "We offer ultrasound-guided interventions and other minimally invasive procedures that target the underlying causes of nerve pain, ensuring effective and lasting relief. If you're not moving as well as you'd like, we are here to help you in getting back to moving at your best!"
         ],
         fourthTitle: 'Preventive Care and Education',
         descriptionFour: [
-            "Preventive strategies are integral to our treatment protocol, aimed at reducing the risk of further nerve damage and enhancing overall nerve health."
+            "Preventive strategies are integral to our treatment protocol, aimed at reducing the risk of further nerve damage and enhancing overall nerve health. We take the time to thoroughly understand your goals and assess your entire body to develop a customized rehabilitation plan. During your PT session, we will help you with hands-on techniques to decrease your pain and teach you how to better manage pain at home. We will also create an individualized exercise program for you to further improve your strength and range of motion and decrease pain between sessions. Schedule an Appointment"
         ],
         link: '/services',
     },
     // Neck Pain Treatment
     {
-        image: 'https://i.imgur.com/2Q4xrFD.webp',
+        image: '../Neck.jpg',
         name: 'Neck Pain Treatment',
         firstTitle: 'Neck Pain Treatment',
         description: [
-            "Our clinic addresses a variety of neck conditions, from whiplash to chronic strain. We use a combination of manual therapy, posture correction, and strength training to enhance neck mobility and alleviate pain."
+            "Our clinic specializes in holistic neck pain treatment, combining manual therapy, posture correction, and personalized exercises to enhance mobility and alleviate pain. We integrate innovative techniques like cervical traction and ergonomic adjustments for effective relief. Our approach is tailored to each patient's specific needs, ensuring a comprehensive and personalized treatment plan."
         ],
-        secondTitle: 'Targeted Therapies for Neck Pain',
+        secondTitle: 'Comprehensive Nerve Pain Management',
         descriptionTwo: [
-            "Treatments are personalized, involving techniques such as cervical traction, ergonomic adjustments, and specific exercises tailored to each patient's condition."
+            "Our approach to nerve pain management extends beyond immediate relief, focusing on long-term strategies to prevent recurrence. Patient education and lifestyle modifications are integral parts of our treatment plans. We diagnose and treat a variety of common neck injuries in our clinics. For Morton’s Neuroma, characterized by numbness or nerve pain in the toes, we use a combination of hands-on treatment and exercise to address the root cause of the compression and alleviate pain. Postural strains and overuse are common causes of neck pain. Our physical therapists teach patients how to manage their posture and provide exercises to improve postural-related pain, promoting better neck health. Nerve pain caused by disc bulges, stenosis, or arthritis can be effectively managed with strengthening, stretching, and hands-on techniques. These interventions improve muscular and joint mobility, reducing nerve pain and preventing its recurrence."
         ],
-        thirdTitle: 'Innovative Pain Management Techniques',
+        thirdTitle: 'Advanced Therapeutic Options',
         descriptionThree: [
-            "We incorporate the latest in pain management technology, including TENS and laser therapy, to provide relief from acute and chronic neck pain."
+            "Our clinic offers a range of advanced therapeutic options for managing neck pain. These include ultrasound-guided interventions and minimally invasive procedures that target the underlying causes of nerve pain, providing effective and lasting relief. We also provide regenerative medicine options such as platelet-rich plasma (PRP) therapy, which can promote healing and reduce inflammation in damaged tissues. Additionally, we offer alternative therapies like acupuncture, which can help alleviate pain and improve overall well-being. Preventive strategies are integral to our treatment protocol, aimed at reducing the risk of further nerve damage and enhancing overall nerve health."
         ],
-        fourthTitle: 'Educational Outreach and Preventive Measures',
+        fourthTitle: 'Preventive Care and Education',
         descriptionFour: [
-            "Patient education on daily habits and preventive exercises plays a crucial role in our treatment plans, helping patients manage and prevent future episodes of neck pain."
+            "We take the time to thoroughly understand your goals and assess your entire body to develop a customized rehabilitation plan. During your PT session, we will help you with hands-on techniques to decrease your pain and teach you how to better manage pain at home. We will also create an individualized exercise program for you to further improve your strength and range of motion and decrease pain between sessions."
         ],
         link: '/services',
     },
     // Low Back & Sciatica Treatment
     {
-        image: 'https://i.imgur.com/2Q4xrFD.webp',
+        image: '../Back.jpg',
         name: 'Low Back & Sciatica Treatment',
         firstTitle: 'Low Back & Sciatica Treatment',
         description: [
-            "Our approach to low back pain and sciatica involves comprehensive care that addresses both the symptoms and underlying causes. We use techniques such as spinal manipulation, core strengthening, and flexibility exercises to improve spinal health."
+            "At our clinic, we understand the debilitating effects of low back pain and sciatica. Our comprehensive treatment approach is designed to address not just the symptoms but also the underlying causes of these conditions. We utilize a combination of advanced techniques, including spinal manipulation, core strengthening exercises, and flexibility training, to improve spinal health and alleviate pain. Our goal is to provide long-lasting relief and improve your overall quality of life."
         ],
         secondTitle: 'Customized Sciatica Relief Plans',
         descriptionTwo: [
-            "Each treatment plan is customized to the individual, focusing on reducing sciatic nerve pain through targeted physical therapy and non-invasive procedures."
+            "Sciatica can be a debilitating condition, but it doesn't have to control your life. Our customized treatment plans are designed to target the root cause of your sciatic nerve pain and provide effective relief. Through a combination of physical therapy, non-invasive procedures, and lifestyle modifications, we can help you manage your symptoms and improve your quality of life. Our experienced team will work with you to develop a personalized treatment plan that meets your unique needs and goals. Don't let sciatica hold you back any longer. Contact us today to schedule a consultation and take the first step towards lasting relief."
         ],
         thirdTitle: 'State-of-the-Art Pain Relief Methods',
         descriptionThree: [
-            "Advanced treatments, including heat therapy, electrical stimulation, and acupuncture, are utilized depending on the severity and specific needs of the patient."
+            "Our clinic is proud to offer state-of-the-art pain relief methods to our patients. These include heat therapy, electrical stimulation, and acupuncture, among others. These treatments are designed to provide targeted relief from low back pain and sciatica, helping you to feel better and get back to doing the things you love. Our experienced team will work with you to determine the best treatment options for your unique needs and goals. Don't let low back pain or sciatica hold you back any longer. Contact us today to schedule a consultation and learn more about how our state-of-the-art pain relief methods can help you feel better."
         ],
         fourthTitle: 'Long-term Wellness and Prevention',
         descriptionFour: [
-            "Education on proper body mechanics and lifestyle changes is also provided to prevent future occurrences and maintain a healthy, pain-free back."
+            "At our clinic, we believe in taking a proactive approach to healthcare. That's why we emphasize long-term wellness and prevention in our treatment plans. In addition to providing immediate pain relief, we work with our patients to develop strategies for preventing future occurrences of low back pain and sciatica. This includes education on proper body mechanics, posture, and lifestyle habits. Our goal is to empower our patients to take control of their health and well-being. Contact us today to schedule a consultation and learn more about how we can help you achieve long-term relief from low back pain and sciatica."
         ],
         link: '/services',
     },
     // Heel Pain Management
     {
-        image: 'https://i.imgur.com/2Q4xrFD.webp',
+        image: '../Heel.jpg',
         name: 'Heel Pain Management',
         firstTitle: 'Heel Pain Management',
         description: [
-            "Focused on alleviating heel pain through specialized treatments and comprehensive care, our clinic provides expert management for conditions such as plantar fasciitis and heel spurs."
+            "Focused on alleviating heel pain through specialized treatments and comprehensive care, our clinic provides expert management for conditions such as plantar fasciitis and heel spurs. We can help you with your heel pain. Whether it's providing hands-on techniques to improve mobility and reduce pain or empowering you with exercise programs to build strength, our team can be your solution to getting back to pain-free movement."
         ],
         secondTitle: 'Common Causes and Treatments',
         descriptionTwo: [
-            "Our approach includes diagnosing the specific causes of heel pain, which can range from overuse injuries to biomechanical issues, and tailoring treatments accordingly. Effective therapies may include shockwave therapy, custom orthotics, and targeted physical therapy exercises."
+            "Our approach includes diagnosing the specific causes of heel pain, which can range from overuse injuries to biomechanical issues, and tailoring treatments accordingly. Effective therapies may include shockwave therapy, custom orthotics, and targeted physical therapy exercises. Here are just a few of the common injuries we diagnose and treat in our clinics: Plantar Fasciitis: Plantar fasciitis is a common cause of heel pain and arch pain. Although its name implies it's an inflammatory condition, the reality is that this condition results from chronic overuse and breakdown of the plantar fascia. Hands-on treatment with interventions such as IASTM or ASTYM in conjunction with exercising, shoewear changes, and taping can be very effective in reducing pain. Achilles Tendinopathy: The Achilles tendon can suffer breakdown at the insertion (attachment) to the heel as well as in the mid portion of the tendon. Exercise and hands-on treatment in PT is the first line treatment for this condition."
         ],
         thirdTitle: 'Advanced Heel Pain Therapies',
         descriptionThree: [
-            "We employ the latest advancements in medical treatments for heel pain, such as laser therapy, ultrasound-guided corticosteroid injections, and minimally invasive surgical options when necessary."
+            "We employ the latest advancements in medical treatments for heel pain, such as laser therapy, ultrasound-guided corticosteroid injections, and minimally invasive surgical options when necessary. If you're not moving as well as you'd like, we are here to help you in getting back to moving at your best!"
         ],
         fourthTitle: 'Preventive Strategies for Heel Health',
         descriptionFour: [
-            "To prevent the recurrence of heel pain, we provide patients with education on proper footwear, lifestyle modifications, and exercises designed to strengthen foot muscles and improve flexibility."
+            "To prevent the recurrence of heel pain, we provide patients with education on proper footwear, lifestyle modifications, and exercises designed to strengthen foot muscles and improve flexibility. We take the time to thoroughly understand your goals and assess your entire body to develop a customized rehabilitation plan. During your PT session, we will help you with hands-on techniques to decrease your pain and teach you how to better manage pain at home. We will also create an individualized exercise program for you to further improve your strength and range of motion and decrease pain between sessions."
         ],
         link: '/services',
     },
-    // Knee & Hip Rehabilitation
+    // Knee & Hip Rehab
     {
-        image: 'https://i.imgur.com/2Q4xrFD.webp',
-        name: 'Knee & Hip Rehabilitation',
-        firstTitle: 'Knee & Hip Rehabilitation',
+        image: '../KneeR.jpg',
+        name: 'Knee & Hip Rehab',
+        firstTitle: 'Knee & Hip Rehab',
         description: [
-            "Our clinic offers specialized care for knee and hip conditions, providing comprehensive treatment plans to manage pain and improve mobility."
+            "Our clinic offers specialized care for knee and hip conditions, providing comprehensive treatment plans to manage pain and improve mobility. We have a team of experienced physical therapists who are dedicated to helping you recover from your knee or hip issue and get back to your active lifestyle."
         ],
         secondTitle: 'Conditions Treated',
         descriptionTwo: [
-            "We handle everything from acute injuries like meniscus tears to chronic conditions such as osteoarthritis, using evidence-based treatments tailored to each patient's needs."
+            "We handle everything from acute injuries like meniscus tears to chronic conditions such as osteoarthritis, using evidence-based treatments tailored to each patient's needs. Our therapists work closely with you to develop a personalized treatment plan that addresses your specific condition and goals, ensuring the best possible outcome. For acute injuries, we focus on reducing inflammation and promoting healing through modalities such as ultrasound and electrical stimulation. Chronic conditions are managed with a combination of manual therapy, therapeutic exercise, and patient education to improve joint health and function over time."
         ],
         thirdTitle: 'Advanced Treatment Options',
         descriptionThree: [
-            "Our approach includes a combination of manual therapy, strength training, and cutting-edge modalities to foster recovery and functional improvement."
+            "Our approach includes a combination of manual therapy, strength training, and cutting-edge modalities to foster recovery and functional improvement. We utilize the latest techniques and equipment to provide you with the most effective and efficient care, helping you regain mobility and reduce pain. Manual therapy techniques such as joint mobilizations and soft tissue massage are used to improve joint mobility and reduce muscle tension. Strength training exercises are tailored to your specific needs and goals, focusing on improving muscle imbalances and functional movement patterns. Advanced modalities like laser therapy and ultrasound are used to further enhance healing and reduce pain."
         ],
         fourthTitle: 'Preventive Care for Knee & Hip',
         descriptionFour: [
-            "Preventive strategies including biomechanical assessments and patient education are integral to our service, helping reduce the risk of future injuries and degeneration."
+            "Preventive strategies including biomechanical assessments and patient education are integral to our service, helping reduce the risk of future injuries and degeneration. We educate you on proper body mechanics and provide exercises to improve strength and flexibility, empowering you to take control of your joint health. Biomechanical assessments are used to identify any movement dysfunctions or imbalances that may contribute to injury. Patient education includes information on posture, ergonomics, and lifestyle modifications to promote overall joint health. By addressing these factors, we can help you prevent future knee and hip issues and maintain a healthy, active lifestyle."
         ],
         link: '/services',
     },
-    // Hand & Elbow Rehabilitation
+    // Hand & Elbow Rehab
     {
-        image: 'https://i.imgur.com/2Q4xrFD.webp',
-        name: 'Hand & Elbow Rehabilitation',
-        firstTitle: 'Hand & Elbow Rehabilitation',
+        image: '../Elbow1.jpg',
+        name: 'Hand & Elbow Rehab',
+        firstTitle: 'Hand & Elbow Rehab',
         description: [
-            "Targeted rehabilitation services for hand and elbow injuries, employing a range of therapeutic techniques to restore function and reduce pain."
+            "Targeted rehabilitation services for hand and elbow injuries, employing a range of therapeutic techniques to restore function and reduce pain. Our therapists specialize in treating conditions such as tennis elbow, carpal tunnel syndrome, and various sprains and fractures, ensuring comprehensive care and support for your recovery."
         ],
         secondTitle: 'Types of Hand & Elbow Injuries',
         descriptionTwo: [
-            "We treat conditions such as tennis elbow, carpal tunnel syndrome, and various sprains and fractures, ensuring comprehensive care and support."
+            "We treat conditions such as tennis elbow, carpal tunnel syndrome, and various sprains and fractures, ensuring comprehensive care and support. Tennis elbow, or lateral epicondylitis, is a common overuse injury that causes pain and inflammation in the tendons that connect the forearm muscles to the elbow. Carpal tunnel syndrome occurs when the median nerve, which runs from the forearm into the palm of the hand, becomes pressed or squeezed at the wrist. Sprains and fractures can occur from falls or impact injuries, resulting in pain, swelling, and limited mobility."
         ],
         thirdTitle: 'Specialized Therapies',
         descriptionThree: [
-            "Our clinic utilizes manual therapies, therapeutic exercises, and modalities like ultrasound and electrical stimulation to promote healing and prevent re-injury."
+            "Our clinic utilizes manual therapies, therapeutic exercises, and modalities like ultrasound and electrical stimulation to promote healing and prevent re-injury. Manual therapies such as massage and joint mobilizations are used to improve range of motion and reduce muscle tension. Therapeutic exercises are designed to strengthen the muscles and improve flexibility and function. Modalities like ultrasound and electrical stimulation can help reduce pain and inflammation and promote tissue healing."
         ],
         fourthTitle: 'Preventive Advice',
         descriptionFour: [
-            "We also offer guidance on ergonomics and preventive exercises to help patients maintain hand and elbow health in daily activities and professional environments."
+            "We also offer guidance on ergonomics and preventive exercises to help patients maintain hand and elbow health in daily activities and professional environments. Ergonomic assessments can identify and address factors that contribute to hand and elbow injuries, such as improper workstation setup or repetitive motions. Preventive exercises can help improve strength and flexibility, reducing the risk of future injuries. By taking a proactive approach to hand and elbow health, we can help you stay pain-free and active."
         ],
         link: '/services',
     },
-    // Workplace Injury Rehabilitation
+    // Workplace Injury Rehab
     {
-        image: 'https://i.imgur.com/2Q4xrFD.webp',
-        name: 'Workplace Injury Rehabilitation',
-        firstTitle: 'Workplace Injury Rehabilitation',
+        image: '../Work.jpg',
+        name: 'Workplace Injury Rehab',
+        firstTitle: 'Workplace Injury Rehab',
         description: [
-            "Comprehensive rehabilitation services designed to assist patients in recovering from injuries sustained at work, helping them return to their professional activities safely."
-        ],
-        secondTitle: 'Common Workplace Injuries',
-        descriptionTwo: [
-            "Our program addresses a wide range of workplace injuries, from repetitive strain injuries to acute trauma, providing tailored therapies and recovery plans."
-        ],
-        thirdTitle: 'Rehabilitation Techniques',
-        descriptionThree: [
-            "We use a multidisciplinary approach, including physical therapy, occupational therapy, and functional retraining to ensure a successful return to work."
-        ],
-        fourthTitle: 'Injury Prevention at Work',
-        descriptionFour: [
-            "Our services extend to injury prevention training and ergonomic assessments to help prevent future injuries in the workplace."
-        ],
+            "Our team is dedicated to preparing you for a safe return to your profession, whether you work a physically demanding job or in an office setting. We develop individualized treatment programs tailored to your rehabilitation needs, prioritizing quality patient care. During your session, we utilize hands-on techniques to alleviate your pain and educate you on managing pain at home. We also create a personalized exercise regimen to enhance your strength and range of motion, reducing pain between sessions."
+            ],
+            secondTitle: 'Common Workplace Injuries',
+            descriptionTwo: [
+            "Our program addresses a wide range of workplace injuries, from repetitive strain injuries to acute trauma, providing tailored therapies and recovery plans. Repetitive Strain Injuries (RSI): Common in office workers, RSIs can cause pain and discomfort in the hands, wrists, elbows, and shoulders. Our treatment focuses on ergonomic adjustments, strengthening exercises, and pain management techniques to alleviate symptoms and prevent future issues. Acute Trauma: Work-related accidents can lead to acute injuries like fractures, sprains, and strains. Our rehabilitation plans include a combination of manual therapy, exercises, and modalities to promote healing and restore function, ensuring a smooth transition back to work."
+            ],
+            thirdTitle: 'Rehab Techniques',
+            descriptionThree: [
+            "Our clinic uses a multidisciplinary approach, combining physical therapy, occupational therapy, and functional retraining to ensure a successful return to work. Physical Therapy: Our therapists employ manual therapy, therapeutic exercises, and modalities like ultrasound and electrical stimulation to promote healing and improve function. Occupational Therapy: For job-specific tasks, our therapists develop custom treatment plans focusing on improving skills, adapting equipment, and modifying tasks to facilitate a safe return to work. Functional Retraining: We work with you to improve your ability to perform daily activities and job-related tasks, helping you regain confidence and function in your workplace."
+            ],
+            fourthTitle: 'Injury Prevention at Work',
+            descriptionFour: [
+            "Our services include injury prevention training and ergonomic assessments to help prevent future injuries in the workplace. Ergonomic Assessments: We evaluate your workstation and work habits to identify potential risk factors for injury, recommending adjustments and providing education on proper body mechanics. Injury Prevention Training: Through education and training, we empower you to take control of your health and safety at work, covering topics such as lifting techniques, posture awareness, and stress management."
+            ],
         link: '/services',
     },
-    // Comprehensive Sports Rehabilitation
+    // Shoulder Pain & Instability Rehab
     {
-        image: 'https://i.imgur.com/2Q4xrFD.webp',
-        name: 'Comprehensive Sports Rehabilitation',
-        firstTitle: 'Comprehensive Sports Rehabilitation',
+        image: '../Shoulder.jpg',
+        name: 'Shoulder Pain & Instability Rehab',
+        firstTitle: 'Shoulder Pain & Instability Rehab',
         description: [
-            "Dedicated to helping athletes of all levels recover from sports injuries, our clinic offers customized rehabilitation plans that focus on quick and effective recovery."
-        ],
-        secondTitle: 'Sport-Specific Treatments',
-        descriptionTwo: [
-            "We treat a variety of sports injuries, from minor strains to severe ligament tears, using specialized treatments tailored to the specific demands of different sports."
-        ],
-        thirdTitle: 'Advanced Recovery Techniques',
-        descriptionThree: [
-            "Our sports rehabilitation includes advanced techniques such as cryotherapy, laser therapy, and sport-specific training regimens."
-        ],
-        fourthTitle: 'Preventive Sports Medicine',
-        descriptionFour: [
-            "We also provide comprehensive education on injury prevention, strength training, and conditioning to keep athletes at peak performance."
-        ],
+            "Our clinic offers dedicated rehabilitation services for shoulder pain and instability, employing cutting-edge techniques to restore mobility and reduce pain. Whether you're dealing with rotator cuff injuries, dislocations, or arthritis, our personalized rehabilitation plans can help you recover and get back to pain-free movement. Shoulder injuries can be debilitating, affecting your ability to perform daily activities and impacting your quality of life. Our team of experienced physical therapists is here to provide comprehensive care to address your shoulder issues and help you regain function and mobility. From manual therapy to strength training and stability exercises, we use a variety of techniques to improve your shoulder health and prevent future injuries. Contact us today to schedule a consultation and start your journey to recovery."
+            ],
+            secondTitle: 'Treatment of Shoulder Conditions',
+            descriptionTwo: [
+            "We address a variety of shoulder issues, including rotator cuff injuries, dislocations, and arthritis with personalized rehabilitation plans. Our team of physical therapists is experienced in treating a wide range of shoulder conditions, from acute injuries to chronic conditions. We use evidence-based treatments tailored to your specific needs to ensure that you receive the best possible care. Rotator cuff injuries, in particular, can be challenging to treat, requiring a comprehensive approach to rehabilitation. Our team will work with you to develop a customized treatment plan that addresses your unique injury and helps you regain strength and mobility in your shoulder. Whether you're recovering from a shoulder injury or looking to prevent future issues, our team is here to help. Contact us today to learn more about our shoulder pain and instability rehab services."
+            ],
+            thirdTitle: 'Advanced Shoulder Treatment Options',
+            descriptionThree: [
+            "Our clinic uses advanced therapies like manual therapy, strength training, and stability exercises tailored to shoulder rehabilitation. We believe in using the latest advances in physical therapy to provide our patients with the best possible care. Our team is trained in the latest techniques and modalities to ensure that you receive the most effective treatment for your shoulder injury. Manual therapy techniques, such as soft tissue mobilization and joint mobilization, can help improve shoulder mobility and reduce pain. Strength training exercises target the muscles around the shoulder joint, helping to improve stability and prevent future injuries. Our goal is to provide you with the tools and techniques you need to recover from your shoulder injury and prevent future issues. Contact us today to schedule a consultation and start your journey to recovery."
+            ],
+            fourthTitle: 'Preventive Measures for Shoulder Health',
+            descriptionFour: [
+            "Education and exercises designed to prevent future shoulder injuries are an integral part of our treatment approach. Preventing shoulder injuries is key to maintaining shoulder health and function. Our team provides education on proper shoulder mechanics and exercises to help you prevent injuries and maintain shoulder health. By incorporating preventive measures into your daily routine, you can reduce your risk of developing shoulder issues and improve your overall shoulder health. Contact us today to learn more about our preventive shoulder health programs."
+            ],
         link: '/services',
     },
-    // General Physical Therapy
+    // Fractures & Arthritis Rehab
     {
-        image: 'https://i.imgur.com/2Q4xrFD.webp',
-        name: 'General Physical Therapy',
-        firstTitle: 'General Physical Therapy',
+        image: '../Arth.jpg',
+        name: 'Fractures & Arthritis Rehab',
+        firstTitle: 'Fractures & Arthritis Rehab',
         description: [
-            "Our clinic provides a wide array of physical therapy services to address various musculoskeletal issues, aiming to improve mobility and enhance quality of life."
-        ],
-        secondTitle: 'Broad Range of Conditions',
-        descriptionTwo: [
-            "From post-surgical recovery to chronic pain management, our experienced therapists offer personalized care tailored to each patient's unique circumstances."
-        ],
-        thirdTitle: 'Therapeutic Modalities',
-        descriptionThree: [
-            "We utilize a variety of modalities including manual therapy, heat and ice therapy, and electrical stimulation to achieve optimal results."
-        ],
-        fourthTitle: 'Lifestyle and Wellness',
-        descriptionFour: [
-            "Our approach extends beyond treatment, focusing on lifestyle changes and wellness strategies to prevent future health issues."
-        ],
-        link: '/services',
-    },
-    // Shoulder Pain & Instability Rehabilitation
-    {
-        image: 'https://i.imgur.com/2Q4xrFD.webp',
-        name: 'Shoulder Pain & Instability Rehabilitation',
-        firstTitle: 'Shoulder Pain & Instability Rehabilitation',
-        description: [
-            "Dedicated rehabilitation services for shoulder pain and instability, employing cutting-edge techniques to restore mobility and reduce pain."
-        ],
-        secondTitle: 'Treatment of Shoulder Conditions',
-        descriptionTwo: [
-            "We address a variety of shoulder issues, including rotator cuff injuries, dislocations, and arthritis with personalized rehabilitation plans."
-        ],
-        thirdTitle: 'Advanced Shoulder Treatment Options',
-        descriptionThree: [
-            "Our clinic uses advanced therapies like manual therapy, strength training, and stability exercises tailored to shoulder rehabilitation."
-        ],
-        fourthTitle: 'Preventive Measures for Shoulder Health',
-        descriptionFour: [
-            "Education and exercises designed to prevent future shoulder injuries are an integral part of our treatment approach."
-        ],
-        link: '/services',
-    },
-    // Fractures & Arthritis Rehabilitation
-    {
-        image: 'https://i.imgur.com/2Q4xrFD.webp',
-        name: 'Fractures & Arthritis Rehabilitation',
-        firstTitle: 'Fractures & Arthritis Rehabilitation',
-        description: [
-            "Our comprehensive treatment plans for fractures and arthritis aim to improve joint function and alleviate pain."
-        ],
-        secondTitle: 'Handling Fractures and Arthritis',
-        descriptionTwo: [
-            "We treat various types of fractures and arthritis through a blend of physical therapy, medication, and lifestyle modification."
-        ],
-        thirdTitle: 'Specialized Care for Fractures and Arthritis',
-        descriptionThree: [
-            "Our personalized care plans include specific exercises, joint protection techniques, and pain management strategies."
-        ],
-        fourthTitle: 'Prevention and Management',
-        descriptionFour: [
-            "We focus on strengthening and preventive care to enhance joint health and prevent the recurrence of injuries and arthritis symptoms."
-        ],
+            "Our comprehensive treatment plans for fractures and arthritis aim to improve joint function and alleviate pain. Whether you're dealing with a fracture or arthritis, our team is dedicated to providing personalized care to help you recover and regain mobility. Fractures and arthritis can be painful and limit your ability to perform daily activities. Our goal is to provide you with the tools and techniques you need to manage your condition effectively and improve your quality of life. From physical therapy to medication and lifestyle modification, we use a blend of treatments to address fractures and arthritis, ensuring that you receive the best possible care."
+            ],
+            secondTitle: 'Handling Fractures and Arthritis',
+            descriptionTwo: [
+            "We treat various types of fractures and arthritis through a blend of physical therapy, medication, and lifestyle modification. Our team is experienced in treating a wide range of fractures and arthritis, from acute injuries to chronic conditions. We use evidence-based treatments tailored to your specific needs to ensure that you receive the best possible care. Fractures and arthritis can be challenging to treat, requiring a comprehensive approach to rehabilitation. Our team will work with you to develop a customized treatment plan that addresses your unique injury or condition and helps you regain strength and mobility. Whether you're recovering from a fracture or managing arthritis symptoms, our team is here to help. Contact us today to learn more about our fractures and arthritis rehab services."
+            ],
+            thirdTitle: 'Specialized Care for Fractures and Arthritis',
+            descriptionThree: [
+            "Our personalized care plans include specific exercises, joint protection techniques, and pain management strategies. We believe in providing personalized care to each of our patients, tailoring our treatment plans to address your specific needs and goals. Whether you're recovering from a fracture or managing arthritis symptoms, our team is here to help you regain function and mobility in your joints. By incorporating specialized exercises, joint protection techniques, and pain management strategies into your treatment plan, we can help you recover from your injury or manage your arthritis symptoms more effectively. Our goal is to provide you with the tools and techniques you need to manage your condition effectively and improve your quality of life. Contact us today to schedule a consultation and start your journey to recovery."
+            ],
+            fourthTitle: 'Prevention and Management',
+            descriptionFour: [
+            "We focus on strengthening and preventive care to enhance joint health and prevent the recurrence of injuries and arthritis symptoms. Preventing future injuries and managing arthritis symptoms are key components of our treatment approach. Our team provides education on proper joint health and exercises to help you prevent injuries and manage arthritis symptoms. By focusing on strengthening exercises and preventive care, we can help you enhance joint health and prevent the recurrence of injuries and arthritis symptoms. Contact us today to learn more about our preventive care programs."
+            ],
         link: '/services',
     }
 ];
@@ -494,38 +450,53 @@ export const aboutObj = [
             "We Accept most major insurance plans."
         ],
         descriptionOneBullettedList: [
+            "Moda",
             "Aetna",
-            "Beech Street",
             "Blue Shield",
-            "Care Plan of Illinois",
             "Cigna",
-            "Coventree",
-            "Healthlink",
-            "Humana",
             "Medicare",
-            "Multiplan",
             "United Health Care",
-            "And More!"
+            "Health Net",
+            "Humana",
+            "Pacific Source",
+            "Bridgespan",
+            "Triwest (VA)",
+            "Tricare"
         ],
         link: '/about',
     }
 ];
+
 export const aboutObjOther = [
     {
-        nameOne: "Appointment Requirements",
-        descriptionOne: "All patients must bring the following to every appointment:",
-        descriptionOneBullettedList: [
-            "Photo ID",
-            "Insurance Cards",
-            "Copayment",
-            "Copies of X-Rays or MRI’s (discs are preferable)",
-            "Copies of X-Ray, MRI, EMG, Bone Scan, or other medical reports",
-            "A list of current medications and any known allergies",
-            "Attending Physician Statements or any other forms to be completed by the doctor",
+        nameOne: "Foot and Ankle Physical Therapy FAQs",
+        descriptionOne: "Finding out you need physical therapy to help resolve a painful foot or ankle condition can leave you with a lot of questions. Fortunately, you've come to the right place for answers.",
+        descriptionTwo: "How many therapy visits will I need to get better?",
+        descriptionTwoBullettedList: [
+            "The number of therapy sessions is usually dependent on the diagnosis (what is physically wrong), the doctors' recommendations, your personal healing ability, and your schedule.",
+            "Patients who are able to contribute to the therapeutic process often find themselves improving faster than planned!"
         ],
-        link: '/appointments', // Assuming you might want a link here
+        descriptionThree: "What can I expect at a typical therapy session?",
+        descriptionThreeBullettedList: [
+            "While this is highly dependent on the goals of the patient and doctor, most therapy sessions include a combination of manual work, physical modalities, and specifically directed exercise(s)."
+        ],
+        descriptionFour: "How do you communicate with my doctor?",
+        descriptionFourBullettedList: [
+            "While progress notes are regularly faxed to referring providers, Creekside therapists often enjoy direct communication with surgeons, GPs, and other health professionals."
+        ],
+        descriptionFive: "What should I wear to a therapy session?",
+        descriptionFiveBullettedList: [
+            "Patients should wear comfortable, loose clothing that allows the therapist access to injuries or areas of concern.",
+            "Shorts and tank tops are appropriate wear for knee/shoulder rehab, biomechanical assessments and bike evaluations."
+        ],
+        descriptionSix: "What insurances do you accept?",
+        descriptionSixBullettedList: [
+            "We accept most major insurance plans and offer cash and multiple payment options (see insurance section for complete list)."
+        ],
+        link: '/appointments'
     }
 ];
+
   
 export const aboutObjPortal = [
     {
@@ -729,72 +700,73 @@ export const aboutPrivacyPolicy = [
 ];
 export const expertiseBlocks = [
     {
-        image: 'https://i.imgur.com/2Q4xrFDl.webp',
+        image: '../FAndASurgery.jpg',
         width: '267px',
         height: '200px',
-        name: 'Foot & Ankle Rehabilitation',
-        firstTitle: 'Foot & Ankle Rehabilitation',
+        name: 'Foot & Ankle Rehab',
+        firstTitle: 'Foot & Ankle Rehab',
         description: [
             "Our team of experts provides comprehensive care for foot and ankle conditions, dedicated to improving your mobility and reducing pain through a variety of effective treatments.",
             "We manage a wide range of foot and ankle conditions, employing both traditional and innovative therapies to tailor a recovery plan that's right for you.",
             "Our treatments are designed to address the root causes of pain and immobility, ensuring a recovery process that not only heals but also educates on maintaining foot and ankle health.",
-            "We also focus on preventive strategies to enhance the overall resilience of your musculoskeletal system, helping you stay active and pain-free."
+            "We also focus on preventive strategies to enhance the overall resilience of your musculoskeletal system, helping you stay active and pain-free.",
+            "At Creekside Physical Therapy, we offer individualized rehabilitation to help you kick pain to the curb and resume an active lifestyle. Our skilled therapists provide personalized treatments for a variety of foot and ankle issues, ensuring that each patient receives the care they need."
         ],
-        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
+        imageTwo: '../FAndASurgery.jpg',
         component: 'Services',
         link: '/services',
-        spanString: 'Foot & Ankle Rehabilitation'
+        spanString: 'Foot & Ankle Rehab'
     },
     {
-        image: 'https://i.imgur.com/2Q4xrFDl.webp',
+        image: '../Ortho.jpg',
         width: '267px',
         height: '200px',
-        name: 'Orthopedic Rehabilitation',
-        firstTitle: 'Orthopedic Rehabilitation',
+        name: 'Orthopedic Rehab',
+        firstTitle: 'Orthopedic Rehab',
         description: [
             "Our expertise in orthopedic rehabilitation spans from treating acute injuries like fractures to managing chronic conditions such as arthritis. Our approach involves a thorough assessment and tailored treatments to enhance recovery and prevent future injuries.",
             "We employ a variety of therapeutic interventions including manual therapy, exercise prescription, and patient education to ensure optimal recovery and improve quality of life.",
             "Preventive care and ongoing support are integral to our service, ensuring patients not only recover from their current conditions but also prevent new injuries through lifestyle and activity modifications."
         ],
-        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
+        imageTwo: '../Ortho.jpg',
         component: 'Services',
         link: '/services',
-        spanString: 'Orthopedic Rehabilitation'
+        spanString: 'Orthopedic Rehab'
     },
     {
-        image: 'https://i.imgur.com/2Q4xrFDl.webp',
+        image: '../Sports.jpg',
         width: '267px',
         height: '200px',
-        name: 'Sports Injury Rehabilitation',
-        firstTitle: 'Sports Injury Rehabilitation',
+        name: 'Sports Injury Rehab',
+        firstTitle: 'Sports Injury Rehab',
         description: [
             "We specialize in treating athletes and active individuals, offering rehabilitation services that cater specifically to sports-related injuries. Our goal is to facilitate a swift and effective return to sport while minimizing the risk of re-injury.",
             "Our programs are custom-designed for each athlete, considering their specific sport and injury. This includes dynamic assessment and the integration of sport-specific movements into the recovery process.",
             "Prevention is key to our approach. We provide athletes with the tools and knowledge to strengthen and protect their bodies against the demands of their sports."
         ],
-        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
+        imageTwo: '../Sports.jpg',
         component: 'Services',
         link: '/services',
-        spanString: 'Sports Injury Rehabilitation'
+        spanString: 'Sports Injury Rehab'
     },
     {
-        image: 'https://i.imgur.com/2Q4xrFDl.webp',
+        image: '../FootPain.jpg',
         width: '267px',
         height: '200px',
-        name: 'Running Injury Treatment',
+        name: 'Running Injuries Treatment',
         firstTitle: 'Running Injury Treatment',
         description: [
             "Our team specializes in the rehabilitation of running injuries, utilizing state-of-the-art diagnostic and treatment methods to ensure a fast and safe return to running.",
             "We provide a thorough biomechanical analysis and develop a personalized rehabilitation plan that addresses the specific needs of runners.",
             "Preventive care is crucial for runners; therefore, we educate our patients on proper running mechanics, shoe selection, and training modifications to prevent injuries."
         ],
-        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
+        imageTwo: '../FootPain.jpg',
         component: 'Services',
         link: '/services',
         spanString: 'Running Injury Treatment'
     },
     {
-        image: 'https://i.imgur.com/2Q4xrFDl.webp',
+        image: '../Heel.jpg',
         width: '267px',
         height: '200px',
         name: 'Heel Pain Management',
@@ -804,13 +776,13 @@ export const expertiseBlocks = [
             "Our therapeutic approach may include manual therapies, customized orthotics, and specific exercises designed to alleviate heel pain and prevent its recurrence.",
             "Educational resources and support are provided to help patients understand their condition and take active steps towards recovery and prevention."
         ],
-        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
+        imageTwo: '../Heel.jpg',
         component: 'Services',
         link: '/services',
         spanString: 'Heel Pain Management'
     },
     {
-        image: 'https://i.imgur.com/2Q4xrFDl.webp',
+        image: '../Neuroma.jpg',
         width: '267px',
         height: '200px',
         name: 'Neuroma and Nerve Pain Treatment',
@@ -820,13 +792,13 @@ export const expertiseBlocks = [
             "Our approach includes a combination of manual therapies, patient education, and lifestyle modifications to address the specific needs of patients with nerve pain.",
             "We focus on not only treating the current symptoms but also on preventing future occurrences through comprehensive care and patient empowerment."
         ],
-        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
+        imageTwo: '../Neuroma.jpg',
         component: 'Services',
         link: '/services',
         spanString: 'Neuroma and Nerve Pain Treatment'
     },
     {
-        image: 'https://i.imgur.com/2Q4xrFDl.webp',
+        image: '../Neck.jpg',
         width: '267px',
         height: '200px',
         name: 'Neck Pain Treatment',
@@ -836,13 +808,13 @@ export const expertiseBlocks = [
             "We employ a holistic approach, combining therapeutic exercises, manual therapy, and ergonomics to offer effective relief and functional improvement.",
             "Preventive measures and patient education play a significant role in our treatment philosophy, aiming to prevent recurrence and promote long-term neck health."
         ],
-        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
+        imageTwo: '../Neck.jpg',
         component: 'Services',
         link: '/services',
         spanString: 'Neck Pain Treatment'
     },
     {
-        image: 'https://i.imgur.com/2Q4xrFDl.webp',
+        image: '../Back.jpg',
         width: '267px',
         height: '200px',
         name: 'Low Back & Sciatica Treatment',
@@ -852,122 +824,90 @@ export const expertiseBlocks = [
             "We provide a comprehensive evaluation to each patient to determine the most effective treatment strategies, which may include manual therapy, exercise, and lifestyle adjustments.",
             "Our focus is on both recovery and prevention, educating patients on how to maintain spinal health and avoid future episodes."
         ],
-        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
+        imageTwo: '../Back.jpg',
         component: 'Services',
         link: '/services',
         spanString: 'Low Back & Sciatica Treatment'
     },
     {
-        image: 'https://i.imgur.com/2Q4xrFDl.webp',
+        image: '../KneeR.jpg',
         width: '267px',
         height: '200px',
-        name: 'Knee & Hip Rehabilitation',
-        firstTitle: 'Knee & Hip Rehabilitation',
+        name: 'Knee & Hip Rehab',
+        firstTitle: 'Knee & Hip Rehab',
         description: [
             "Our clinic's approach to knee and hip rehabilitation is grounded in years of experience and success in treating both acute injuries and chronic conditions.",
             "We focus on evidence-based treatments to enhance recovery, including joint mobilization, strengthening exercises, and pain management techniques.",
             "Our preventive strategies involve patient education and lifestyle adjustments to maintain joint health and prevent future problems."
         ],
-        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
+        imageTwo: '../KneeR.jpg',
         component: 'Services',
         link: '/services',
-        spanString: 'Knee & Hip Rehabilitation'
+        spanString: 'Knee & Hip Rehab'
     },
     {
-        image: 'https://i.imgur.com/2Q4xrFDl.webp',
+        image: '../Elbow1.jpg',
         width: '267px',
         height: '200px',
-        name: 'Hand & Elbow Rehabilitation',
-        firstTitle: 'Hand & Elbow Rehabilitation',
+        name: 'Hand & Elbow Rehab',
+        firstTitle: 'Hand & Elbow Rehab',
         description: [
             "Specialized in the rehabilitation of hand and elbow conditions, our clinic provides targeted treatments to reduce pain and restore function.",
             "Our approach is comprehensive, combining advanced diagnostic tools with effective treatment modalities tailored to individual patient needs.",
             "We emphasize ergonomic and preventive measures to ensure long-term health and prevent recurrence of hand and elbow issues."
         ],
-        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
+        imageTwo: '../Elbow1.jpg',
         component: 'Services',
         link: '/services',
-        spanString: 'Hand & Elbow Rehabilitation'
+        spanString: 'Hand & Elbow Rehab'
     },
     {
-        image: 'https://i.imgur.com/2Q4xrFDl.webp',
+        image: '../Work.jpg',
         width: '267px',
         height: '200px',
-        name: 'Workplace Injury Rehabilitation',
-        firstTitle: 'Workplace Injury Rehabilitation',
+        name: 'Workplace Injury Rehab',
+        firstTitle: 'Workplace Injury Rehab',
         description: [
             "We offer specialized services in addressing and rehabilitating workplace injuries, helping patients regain functionality and return to their professional life.",
             "Our treatment plans are customized to address the specific demands of the patient's job and the nature of their injury.",
             "Preventive workshops and ergonomic advice are integral parts of our services, aimed at reducing the risk of future injuries at work."
         ],
-        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
+        imageTwo: '../Work.jpg',
         component: 'Services',
         link: '/services',
-        spanString: 'Workplace Injury Rehabilitation'
+        spanString: 'Workplace Injury Rehab'
     },
     {
-        image: 'https://i.imgur.com/2Q4xrFDl.webp',
+        image: '../Shoulder.jpg',
         width: '267px',
         height: '200px',
-        name: 'Comprehensive Sports Rehabilitation',
-        firstTitle: 'Comprehensive Sports Rehabilitation',
-        description: [
-            "Our clinic is renowned for its comprehensive sports rehabilitation services, providing cutting-edge treatment and recovery strategies for athletes recovering from injuries.",
-            "We tailor our rehabilitation programs to the specific needs of each athlete, incorporating the latest in sports medicine and rehabilitation technologies.",
-            "Preventive education and conditioning programs are also offered to enhance athletic performance and minimize the risk of injury."
-        ],
-        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
-        component: 'Services',
-        link: '/services',
-        spanString: 'Sports Rehabilitation'
-    },
-    {
-        image: 'https://i.imgur.com/2Q4xrFDl.webp',
-        width: '267px',
-        height: '200px',
-        name: 'General Physical Therapy',
-        firstTitle: 'General Physical Therapy',
-        description: [
-            "Our general physical therapy services are designed to address a wide range of conditions, offering tailored treatments to meet the diverse needs of our patients.",
-            "We utilize a holistic approach that combines manual therapy, exercise, and patient education to promote recovery and prevent future injuries.",
-            "Our focus on lifestyle and wellness integrates seamlessly with our therapeutic interventions, providing a comprehensive care plan for every patient."
-        ],
-        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
-        component: 'Services',
-        link: '/services',
-        spanString: 'General Physical Therapy'
-    },
-    {
-        image: 'https://i.imgur.com/2Q4xrFDl.webp',
-        width: '267px',
-        height: '200px',
-        name: 'Shoulder Pain & Instability Rehabilitation',
-        firstTitle: 'Shoulder Pain & Instability Rehabilitation',
+        name: 'Shoulder Pain & Instability Rehab',
+        firstTitle: 'Shoulder Pain & Instability Rehab',
         description: [
             "Our clinic excels in treating shoulder pain and instability, focusing on restoring function and reducing discomfort through personalized care plans.",
             "We employ advanced diagnostic and therapeutic techniques, including ultrasound and MRI, alongside traditional physical therapy to offer the best outcomes.",
             "Our preventive strategies are designed to strengthen shoulder muscles and joints, significantly reducing the risk of recurrence."
         ],
-        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
+        imageTwo: '../Shoulder.jpg',
         component: 'Services',
         link: '/services',
-        spanString: 'Shoulder Pain & Instability Rehabilitation'
+        spanString: 'Shoulder Pain & Instability Rehab'
     },
     {
-        image: 'https://i.imgur.com/2Q4xrFDl.webp',
+        image: '../Arth.jpg',
         width: '267px',
         height: '200px',
-        name: 'Fractures & Arthritis Rehabilitation',
-        firstTitle: 'Fractures & Arthritis Rehabilitation',
+        name: 'Fractures & Arthritis Rehab',
+        firstTitle: 'Fractures & Arthritis Rehab',
         description: [
             "Expertise in managing fractures and arthritis is a cornerstone of our clinic, with a focus on enhancing mobility and alleviating pain through comprehensive treatment plans.",
             "Our specialized care extends to both immediate post-injury treatment and long-term management strategies for arthritis.",
             "We promote joint health and functionality through innovative treatment approaches and preventative care aimed at reducing joint stress and improving life quality."
         ],
-        imageTwo: 'https://i.imgur.com/2Q4xrFD.webp',
+        imageTwo: '../Arth.jpg',
         component: 'Services',
         link: '/services',
-        spanString: 'Fractures & Arthritis Rehabilitation'
+        spanString: 'Fractures & Arthritis Rehab'
     },
 ];
 
@@ -1244,21 +1184,21 @@ export const navMenu = [
         menu: 'Services',
         link: '/services',
         subMenuItems: [
-            'Foot & Ankle Rehabilitation',
-            'Orthopedic Rehabilitation',
-            'Sports Injury Rehabilitation',
-            'Running Injury Rehabilitation',
+            'Foot & Ankle Rehab',
+            'Orthopedic Rehab',
+            'Sports Injury Rehab',
+            'Running Injury Rehab',
             'Heel Pain Management',
             'Neuroma and Nerve Pain Treatment',
             'Neck Pain Management',
             'Low Back & Sciatica Treatment',
-            'Knee & Hip Rehabilitation',
-            'Hand & Elbow Rehabilitation',
-            'Workplace Injury Rehabilitation',
-            'Comprehensive Sports Rehabilitation',
+            'Knee & Hip Rehab',
+            'Hand & Elbow Rehab',
+            'Workplace Injury Rehab',
+            'Comprehensive Sports Rehab',
             'General Physical Therapy',
-            'Shoulder Pain & Instability Rehabilitation',
-            'Fractures & Arthritis Rehabilitation'
+            'Shoulder Pain & Instability Rehab',
+            'Fractures & Arthritis Rehab'
         ],
     },
     {
@@ -1282,7 +1222,7 @@ export const officesData = [
         addressTwo: 'Portland, Oregon 97229',
         phone: '971-300-0690',
         fax: '503-245-2445',
-        image: 'https://i.imgur.com/r6Cclyu.jpg',
+        image: '../Cedar.jpg',
         coordinates: {
             lat: 45.5252959, // Update with actual coordinates
             lng: -122.8050949, // Update with actual coordinates
@@ -1296,7 +1236,7 @@ export const officesData = [
         addressTwo: 'Portland, Oregon 97223',
         phone: '971-300-0680',
         fax: '503-245-2445',
-        image: 'https://i.imgur.com/r6Cclyu.jpg',
+        image: '../Tigard.jpg',
         coordinates: {
             lat: 45.454624, // Update with actual coordinates
             lng: -122.7734863, // Update with actual coordinates
@@ -1310,7 +1250,7 @@ export const officesData = [
         addressTwo: 'Tigard, Oregon, 97223',
         phone: '503-595-8806',
         fax: '503-352-1314',
-        image: 'https://i.imgur.com/r6Cclyu.jpg',
+        image: '../Locust.jpg',
         coordinates: {
             lat: 45.4472672, // Update with actual coordinates
             lng: -122.7740161, // Update with actual coordinates

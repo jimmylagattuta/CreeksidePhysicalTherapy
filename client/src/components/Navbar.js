@@ -101,13 +101,13 @@ const Navbar = () => {
                     <Link to='/' className='logo-link-navbar' style={{ textDecorationLine: 'none' }}>
                         <div className='logo-and-title'>
                             <img
-                                src='https://i.imgur.com/QuXDpPX.webp'
+                                src='../Logo.jpg'
                                 alt='Default Company'
                                 className='navbar-logo'
                             />
-                            <div>
-                                <h2 className="animate-charcter">Creekside Physical Therapy</h2>
-                            </div>
+                            {/* <div> */}
+                                {/* <h2 className="animate-charcter">Creekside Physical Therapy</h2> */}
+                            {/* </div> */}
                         </div>
                     </Link>
                     <div className='navbar-buttons-nav'>
@@ -123,10 +123,8 @@ const Navbar = () => {
                                 </span>
                             </NavLink>
                             <div className="downloads-call-us">
-                                <div
-                                    onClick={togglePopup}
-                                    >
-                                    <span className='nav-button'>
+                                <div onClick={() => window.open('./CPTNPForm.pdf', '_blank')}>
+                                    <span className='nav-button-white'>
                                         Download Forms
                                     </span>
                                 </div>

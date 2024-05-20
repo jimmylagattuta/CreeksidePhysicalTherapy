@@ -66,8 +66,8 @@ const ContactNav = () => {
   return (
     <div className={isMenuOpen ? 'menu-open' : ''}>
       <div onClick={handleItemOpen} className="nav-phone-and-seperater">
-        <p className="words-appear">Call</p><p className="nav-seperater">{` `}Us</p><p className="nav-seperater">|{` `}</p><i id="nav-phone" className='fas fa-mobile-alt fa-2x'></i>
-        <p className="words-appear">Directions</p><i id="nav-map" className='fas fa-map-marked-alt fa-1x'></i>
+        <p className="words-appear">Call/</p><p className="nav-seperater">{` `}Us</p><p className="nav-seperater">|{` `}</p>
+        <p className="words-appear">Directions</p>
       </div>
       {isMenuOpen && (
         <div className="contact-nav-menu">

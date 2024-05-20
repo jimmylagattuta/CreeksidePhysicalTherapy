@@ -4,7 +4,7 @@ import AppointmentInfo from './AppointmentInfo';
 import './helpers/About.css';
 import './helpers/PortalSection.css';
 
-const About = () => {
+const About = (props) => {
   const [isVisible, setIsVisible] = useState(false);
   const portalSectionRef = useRef(null);
   const [isJioPhone, setIsJioPhone] = useState(false);
@@ -54,7 +54,15 @@ const About = () => {
       }
     };
   }, []);
-
+  console.log("Props:", props);
+  console.log('aboutObjOther', aboutObjOther);
+  console.log("State:", {
+    isVisible,
+    isJioPhone,
+    isPixel2,
+    isAndroid,
+    isOldiOS
+  });
   return (
     <div className="top-div-about" style={{ width: '100vw' }}>
       <div className='about-parent-div'>
@@ -118,7 +126,7 @@ const About = () => {
                   </React.Fragment>
                 )}
               </p>
-                {item.descriptionOneBullettedList.map((bulletItem, bulletIndex) => (
+                {item.descriptionOneBullettedList && item.descriptionOneBullettedList.map((bulletItem, bulletIndex) => (
                   <ul className='unordered-list-about-bring'>
                     <li key={bulletIndex}>
                       {bulletItem.startsWith('http') ? <img src={bulletItem} alt="List Item" /> : bulletItem}

@@ -29,8 +29,8 @@ const TeamComponent = () => {
                             Follow Us
                         </h2>
                         <div className='team-icon-container'>
-                            <a aria-label="Link to go to Company Default's Facebook page." style={{ color: 'white' }} href='https://www.facebook.com/defaultcompany042024' target='_blank' rel='noopener noreferrer'>
-                                <i className='fab fa-facebook fa-3x'></i>
+                            <a aria-label="Link to go to Company Default's Instagram page." href='https://www.instagram.com/creekside_physical_therapy/' target='_blank' rel='noopener noreferrer'>
+                                <i className='fab fa-instagram fa-3x' style={{ cursor: 'pointer', color: 'white' }} onClick={() => { /* Your onClick logic here */ }}></i>
                             </a>
                         </div>
                     </div>
@@ -41,11 +41,10 @@ const TeamComponent = () => {
                         <div className='team-icon-container'>
                             <a
                                 className='team-print-staff'
-                                href={process.env.PUBLIC_URL + '/PrintFriendlyStaffDefaultCompany.pdf'}
-                                target="_blank" // This opens the PDF in a new tab
+                                href="/providers"
                                 rel="noopener noreferrer" // Recommended for security when using target="_blank"
                             >
-                                Printer Friendly Staff Overview
+                                Friendly Staff Overview
                             </a>
                         </div>
                     </div>

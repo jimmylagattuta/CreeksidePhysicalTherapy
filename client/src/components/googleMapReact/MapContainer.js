@@ -99,25 +99,36 @@ const FloatingOfficeInfo = ({
                             <h2 className='map-float-title'>
                                 Hours of Operation
                             </h2>
-                            <div className='map-float-info'>
-                                Monday: 8 AM- 5PM
-                            </div>
-                            <div className='map-float-info'>
-                                Tuesday: 8 AM- 5PM
-                            </div>
-                            <div className='map-float-info'>
-                                {place.city === 'Hilltown' ? 'Wednesday: Closed' : 'Wednesday: 8 AM- 5PM'}
-                            </div>
-                            <div className='map-float-info'>
-                                {place.city === 'Rivercity' ? 'Thursday: Closed' : 'Thursday: 8 AM- 5PM'}
-                            </div>
-                            <div className='map-float-info'>
-                                Friday: 8 AM- 5PM
-                            </div>
+                            {place.city === 'Cedar Mill Clinic' && (
+                                <>
+                                    <div className='map-float-info'>Mon-Thu: 8 AM- 7PM</div>
+                                    <div className='map-float-info'>Fri: 7 AM- 12PM</div>
+                                </>
+                            )}
+                            {place.city === 'Tigard Clinic' && (
+                                <>
+                                    <div className='map-float-info'>Mon, Thu: 8 AM- 6PM</div>
+                                    <div className='map-float-info'>Tue: 8:30 AM- 4PM</div>
+                                    <div className='map-float-info'>Wed: 8:30 AM- 4:30PM</div>
+                                </>
+                            )}
+                            {place.city === 'Locust Clinic' && (
+                                <>
+                                    <div className='map-float-info'>Mon-Thu: 8 AM- 6PM</div>
+                                    <div className='map-float-info'>Fri: 8 AM- 2PM</div>
+                                </>
+                            )}
+                            {['Hilltown', 'Rivercity'].includes(place.city) && (
+                                <div className='map-float-info'>Closed on Wednesdays (Hilltown) or Thursdays (Rivercity)</div>
+                            )}
+                            {['Cedar Mill', 'Tigard', 'Locust', 'Hilltown', 'Rivercity'].includes(place.city) && (
+                                <div className='map-float-info'>Saturday-Sunday: Closed</div>
+                            )}
                         </div>
                     </div>
                 );
             })}
+
             <div className='pagination-arrows'>
                 <button
                     className='pagination-arrow'
@@ -165,9 +176,10 @@ const InfoWindow = ({ place, handleInfoWindowClose, markerSelected }) => {
                     Hours of Operation
                 </h2>
                 <div className='info-window-text'>
-                    {place.city === 'Eastwood' ? 'Mon, Tue, Thu, Fri' : (place.city === 'Rivercity' ? 'Mon, Tue, Wed, Fri' : 'Monday - Friday')}
+                    {place.city === 'Cedar Mill' ? 'Mon-Thu: 8AM-7PM, Fri: 7AM-12PM' :
+                    place.city === 'Tigard' ? 'Mon, Thu: 8AM-6PM, Tue: 8:30AM-4PM, Wed: 8:30AM-4:30PM' :
+                    'Mon-Thu: 8AM-6PM, Fri: 8AM-2PM'}
                 </div>
-                <div className='info-window-text'>8AM-5PM</div>
             </div>
             <div className='info-window-icons'>
                 <a

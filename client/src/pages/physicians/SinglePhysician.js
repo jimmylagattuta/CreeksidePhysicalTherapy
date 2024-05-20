@@ -3,13 +3,16 @@ import { physicians } from '../../data';
 import '../../components/helpers/ReviewsHelpers.css';
 const SinglePhysician = () => {
     const { physicianId } = useParams();
+    console.log('SinglePhyscian physicians', physicians);
     const physician = physicians.find((item) => {
+        console.log('item', item);
         const [firstName, ...otherNames] = item.name.split(' ');
-        const lastName = otherNames.join(' ').replace(/\s/g, '-'); // Replace spaces with hyphens
-        const fullName = `${firstName}-${lastName}`.toLowerCase();
+        const lastName = otherNames.length > 0 ? otherNames.join(' ').replace(/\s/g, '-') : ''; // Replace spaces with hyphens
+        const fullName = `${firstName}${lastName ? `-${lastName}` : ''}`.toLowerCase();
         return fullName === physicianId;
     });
-    // console.log('physician', physician);
+    
+    console.log('physician', physician);
     const doctors = [
         'Default Doctor 1',
         'Default Doctor 2',
@@ -141,7 +144,7 @@ const SinglePhysician = () => {
         }
         return null;
     };
-    
+
     return (
         <>
             <div style={{ padding: '50px', margin: '0 auto', display: 'flex' }}>
