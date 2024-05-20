@@ -127,8 +127,8 @@ const CompanyReviewsPage = () => {
                         const northwestReviews = getFilteredReviews(data.northwest_reviews);
             
                         const combinedReviews = [
-                            ...creeksideReviews,
-                            ...northwestReviews
+                            ...data.creekside_reviews,
+                            ...data.northwest_reviews
                         ];
 
                         const shuffledReviews = shuffleArray(combinedReviews);
