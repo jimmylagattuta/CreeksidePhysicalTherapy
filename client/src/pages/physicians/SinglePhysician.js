@@ -84,20 +84,24 @@ const SinglePhysician = () => {
             const { reviews, expiry } = JSON.parse(cachedDataBeforeJson);
             console.log('reviews', reviews);
             return reviews.map((review, index) => {
+                // Skip if review text is blank
+                if (!review.text.trim()) return null;
+    
                 // Check if any doctor's name is mentioned in the review text
-                console.log('review CPT', review);
-                const doctorNamesLowerCase = doctorNames.map((doctor) => doctor.toLowerCase().replace("dr. ", ""));
-                console.log('doctorNamesLowerCase', doctorNamesLowerCase);
+                const doctorNamesLowerCase = doctorNames.map((doctor) => doctor.toLowerCase());
                 const words = review.text.toLowerCase().split(/\s+/);
                 const mentionsDoctor = doctorNamesLowerCase.some((name) => words.includes(name));
-                console.log('mentionsDoctor', mentionsDoctor);
-        
-                // Exclude reviews that do not mention any doctor's name
-                if (!mentionsDoctor) return null;
-        
+    
+                // Check if the review is for the current physician
+                const physicianNameLowerCase = physician.name.toLowerCase();
+                const isForPhysician = words.includes(physicianNameLowerCase);
+    
+                // Exclude reviews that do not mention any doctor's name or are not for the current physician
+                if (!mentionsDoctor || !isForPhysician) return null;
+    
                 // Exclude reviews with certain author names
                 if (review.author_name === "Pdub ..") return null;
-        
+    
                 return (
                     <div key={index} className='single-review-container'>
                         <div className='review-top-info'>
@@ -130,6 +134,8 @@ const SinglePhysician = () => {
         }
         return null;
     };
+    
+    
     
     
 
