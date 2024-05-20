@@ -68,9 +68,15 @@ const CompanyReviewsPage = () => {
 
     const formatDate = (dateString) => {
         const date = new Date(dateString);
+        if (isNaN(date)) {
+            // Handle invalid date format
+            console.error(`Invalid date format: ${dateString}`);
+            return 'Invalid date';
+        }
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         return new Intl.DateTimeFormat('en-US', options).format(date);
     };
+    
 
     useEffect(() => {
         const cacheKey = 'cached_creekside_reviews';
