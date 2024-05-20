@@ -130,7 +130,7 @@ const CompanyReviewsPage = () => {
                         const shuffledReviews = shuffleArray(combinedReviews);
                         const randomReviews = shuffledReviews.slice(0, 3);
 
-                        // saveToCache(combinedReviews);
+                        saveToCache(randomReviews);
                         setReviews(randomReviews);
                         setKey((prevKey) => prevKey + 1); // Update the key to force re-render
                         setLoading(false);

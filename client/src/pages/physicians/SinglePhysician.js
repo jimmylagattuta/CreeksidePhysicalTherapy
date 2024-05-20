@@ -23,7 +23,7 @@ const SinglePhysician = () => {
         'Default Doctor 7'
     ];
     const { bio, image, name, practiceEmphasis, specialProcedures } = physician;
-    const cacheKey = 'cached_creekside_reviews';
+    const cacheKey = 'google_places_reviews';
     const formatDate = (dateString) => {
         const date = new Date(dateString);
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -73,7 +73,7 @@ const SinglePhysician = () => {
         const cachedDataBeforeJson = localStorage.getItem(cacheKey);
         if (cachedDataBeforeJson) {
             const { reviews, expiry } = JSON.parse(cachedDataBeforeJson);
-    
+            console.log('reviews', reviews);
             return reviews.map((review, index) => {
                 // Check if any doctor's name is mentioned in the review text
                 console.log('review CPT', review);
