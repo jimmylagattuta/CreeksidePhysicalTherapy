@@ -93,8 +93,7 @@ const SinglePhysician = () => {
     
                     // Check if the review is for the current physician
                     const physicianNameLowerCase = physician.name.toLowerCase();
-                    const commaIndex = physicianNameLowerCase.indexOf(',');
-                    const truncatedName = commaIndex !== -1 ? physicianNameLowerCase.substring(0, commaIndex) : physicianNameLowerCase;
+                    const truncatedName = physicianNameLowerCase.split(',')[0].trim();
                     const isForPhysician = words.includes(truncatedName);
     
                     // Exclude reviews that do not mention any doctor's name or are not for the current physician
