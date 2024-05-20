@@ -101,7 +101,7 @@ const SinglePhysician = () => {
                     // Check if the review is for the current physician
                     const physicianNameLowerCase = physician.name.toLowerCase();
                     const truncatedName = physicianNameLowerCase.split(',')[0].trim();
-                    const isForPhysician = words.includes(truncatedName);
+                    const isForPhysician = review.text.includes(truncatedName);
     
                     console.log('physicianNameLowerCase:', physicianNameLowerCase);
                     console.log('truncatedName:', truncatedName);
