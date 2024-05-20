@@ -129,6 +129,8 @@ const CompanyReviewsPage = () => {
 
                         const shuffledReviews = shuffleArray(combinedReviews);
                         const randomReviews = shuffledReviews.slice(0, 3);
+                        console.log('combinedReviews', combinedReviews);
+                        console.log('data', data);
 
                         saveToCache(randomReviews);
                         setReviews(randomReviews);
