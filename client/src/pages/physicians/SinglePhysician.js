@@ -7,18 +7,19 @@ const SinglePhysician = () => {
     console.log('SinglePhysician physicians', physicians);
 
     const doctorNames = [
-        'Brian Horak, PT, MPT, CSCS',
-        'John Zdor, PT, DPT, CCWC, OCS',
-        'Peggy Loebner, Physical Therapist',
-        'Chad Smurthwaite, PT, DPT',
-        'Alex McNiven, PT, DPT',
-        'Vince Gonsalves, PT, DPT',
-        'Hal, Physical Therapy Aide',
-        'Mikayla, Physical Therapy Aide',
-        'Jacqueline, Physical Therapy Aide',
-        'Dixie, Physical Therapy Aide',
-        'Cellina, Physical Therapy Aide'
+        'brian horak',
+        'john zdor',
+        'peggy loebner',
+        'chad smurthwaite',
+        'alex mcniven',
+        'vince gonsalves',
+        'hal',
+        'mikayla',
+        'jacqueline',
+        'dixie',
+        'cellina'
     ];
+    
 
     const physician = physicians.find((item) => {
         console.log('item', item);
