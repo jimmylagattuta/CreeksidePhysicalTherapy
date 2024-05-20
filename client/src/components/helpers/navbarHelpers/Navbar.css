@@ -209,20 +209,20 @@
     box-shadow: -1px 1px 0 0 rgba(192, 192, 192,1), -2px 2px 0 0 rgba(192, 192, 192,0.6), -4px 4px 0 0 rgba(192, 192, 192,0.4), -6px 6px 0 0 rgba(192, 192, 192,0.2); /* Adjusted box shadow on hover */
   }
   .submenu-two-column {
-    max-width: 100vw;
-    min-width: unset;
+    width: 100vw;
+    /* min-width: unset; */
     grid-gap: 0px 0px;
     margin: 0px;
   }
   .submenu-two-column .sub-link {
-    width: 50vw;
+    width: 100vw;
   }
   .submenu {
     width: 100vw;
     padding: 0px;
   }
   .submenu-two-column .sub-link {
-    max-width: 50vw;
+    max-width: 100vw;
     padding: 20px 0px 20px 0px;
     font-size: 1.2rem;
   }

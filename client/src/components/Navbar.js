@@ -210,18 +210,58 @@ const Navbar = () => {
                                     )}
                                     {/* ---------------------------------------------------------------------------------- */}
                                     <div className={`submenu-list ${item.subMenuItems.length > 16 ? 'submenu-multi-column' : item.subMenuItems.length > 6 ? 'submenu-two-column' : ''}`}>
-                                    {((isSubmenuOpen !== null) || (window.innerWidth >= 1000)) && item.subMenuItems.map((subItem) => (
-                                        <NavLink
-                                            onClick={resetMobileMenu}
-                                            key={subItem}
-                                            to={`${item.link}/${subItem.toLowerCase().split(' ').join('-')}`}
-                                            className={({ isActive }) =>
-                                                isActive ? 'sub-link active' : 'sub-link'
-                                            }>
-                                            {subItem}
-                                        </NavLink>
-                                    ))}
-                                    </div>
+    {((isSubmenuOpen !== null) || (window.innerWidth >= 1000)) && item.subMenuItems.map((subItem) => {
+        // Check if the subItem contains a comma
+        if (subItem.includes(',')) {
+            // Split the name by comma to separate the last name and titles
+            const parts = subItem.split(',');
+            if (parts.length >= 2) {
+                let lastName = parts[0].trim(); // Get the last name
+                let title = parts[1]?.trim(); // Get the first title if it exists
+
+                // Exclude single first-name people
+                if (lastName === title) {
+                    return null;
+                }
+
+                // If the title is "Physical Therapist", replace it with "PT"
+                title = title === 'Physical Therapist' ? 'PT' : title;
+
+                // Check if the last name is one of the special cases
+                if (['Hal', 'Mikayla', 'Jacqueline', 'Cellina', 'Dixie'].includes(lastName)) {
+                    // For the special cases, set the title to 'PT Aide'
+                    title = 'PT Aide';
+                }
+
+                return (
+                    <NavLink
+                        onClick={resetMobileMenu}
+                        key={subItem}
+                        to={`${item.link}/${subItem.toLowerCase().split(' ').join('-')}`}
+                        className={({ isActive }) =>
+                            isActive ? 'sub-link active' : 'sub-link'
+                        }>
+                        {lastName}, {title}
+                    </NavLink>
+                );
+            }
+        }
+        // Display subItem directly if it does not contain a comma or the parts are insufficient
+        return (
+            <NavLink
+                onClick={resetMobileMenu}
+                key={subItem}
+                to={`${item.link}/${subItem.toLowerCase().split(' ').join('-')}`}
+                className={({ isActive }) =>
+                    isActive ? 'sub-link active' : 'sub-link'
+                }>
+                {subItem}
+            </NavLink>
+        );
+    })}
+</div>
+
+
                                     {/* ---------------------------------------------------------------------------------- */}
                                 </div>
                             )}

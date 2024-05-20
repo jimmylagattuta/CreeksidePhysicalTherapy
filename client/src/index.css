@@ -560,7 +560,7 @@ img {
 }
 
 .submenu-two-column {
-    min-width: 480px;
+    min-width: 610px;
     display: grid;
     align-items: center;
     grid-gap: 0px 20px; /* Adjust the gap between items */
@@ -883,9 +883,9 @@ img {
 
 /* PAGES STYLES */
 .pages-header {
-    background-image: url(https://i.imgur.com/Cb9CEbY.webp);
+    background-image: url('/public/PortlandView.jpg');
     background-size: cover;
-    background-position: right;
+    background-position: top;
     background-attachment: fixed;
     border-bottom: 5px solid rgb(114 14 16 / 100%);
     color: #fff;
@@ -2010,13 +2010,24 @@ display: none;
 }
 @media (max-width: 1650px) {
     .pages-header {
-        background-image: url(https://i.imgur.com/Cb9CEbY.webp);
+        background-image: url('/public/PortlandView.jpg');
+    }
+}
+
+@media (max-width: 1350px) {
+    .submenu-two-column {
+        min-width: 320px;
+        display: grid;
+        align-items: center;
+        grid-gap: 0px 20px; /* Adjust the gap between items */
+        grid-template-columns: repeat(1, minmax(0, 1fr)); /* Initial three columns */
+    
     }
 }
 
 @media (max-width: 1295px) {
     .pages-header {
-        background-image: url(https://i.imgur.com/Cb9CEbY.webp);
+        background-image: url('/public/PortlandView.jpg');
     }
 
 }
@@ -2245,7 +2256,7 @@ display: none;
 }
 @media (max-width: 1015px) {
     .pages-header {
-        background-image: url(https://i.imgur.com/Cb9CEbY.webp);
+        background-image: url('/public/PortlandView.jpg');
         background-size: cover;
         background-position: right;
         background-attachment: fixed;
@@ -2364,7 +2375,7 @@ display: none;
         padding-right: 20px;
     }
     .pages-header {
-        background-image: url(https://i.imgur.com/Cb9CEbY.webp);
+        background-image: url('/public/PortlandView.jpg');
         background-size: cover;
         background-position: center;
     }
@@ -2552,7 +2563,7 @@ display: none;
 }
 @media screen and (max-width: 501px) {
     .pages-header {
-        background-image: url(https://i.imgur.com/Cb9CEbY.webp);
+        background-image: url('/public/PortlandView.jpg');
         background-size: cover;
         background-position: right;
         background-attachment: fixed;

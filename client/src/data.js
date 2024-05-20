@@ -129,7 +129,7 @@ export const physicians = [
         imageMedium: '../Jacqueline.jpg'
     },
     {
-        name: 'Dixie',
+        name: 'Dixie, Physical Therapy Aide',
         bio: [
             "Dixie was born and raised in Central Oregon and attended a small private school that encouraged experiential learning.",
             "Throughout her schooling, Dixie became fond of outdoor activities such as snowboarding, running, rock climbing, and kayaking. After graduating from high school, Dixie spent four years at the University of Oregon, earning a Bachelor of Science.",
@@ -140,7 +140,7 @@ export const physicians = [
         imageMedium: '../Dixie.jpeg'
     },
     {
-        name: 'Cellina',
+        name: 'Cellina, Physical Therapy Aide',
         bio: [
             "Cellina grew up in the Pacific Northwest in Portland, Oregon, and was active in sports from a young age, starting figure skating in middle school and later falling in love with climbing.",
             "She is a former competitive rock climber who has coached multiple teams in Oregon. Cellina loves to spend time outdoors rock climbing, surfing, hiking, and snowboarding.",
@@ -500,9 +500,9 @@ export const aboutObjOther = [
   
 export const aboutObjPortal = [
     {
-        nameOne: "Default Company Patient Portal",
+        nameOne: "Creekside Physical Therapy Patient Portal",
         descriptionOne: [
-            "Creekside Physical Therapy is pleased to introduce the Default Company Patient Portal! The Patient Portal is an electronic system that will allow you, our patients, to communicate your medical needs with our office staff and providers through a secure online system at your convenience.",
+            "Creekside Physical Therapy is pleased to introduce the Creekside Physical Therapy Patient Portal! The Patient Portal is an electronic system that will allow you, our patients, to communicate your medical needs with our office staff and providers through a secure online system at your convenience.",
             "To join the Patient Portal, call the office and provide our staff with your email address then click on the button link above."
         ],
         descriptionOneBullettedList: [
@@ -1209,8 +1209,8 @@ export const navMenu = [
             'Tigard Clinic',
             'Locust Clinic'
         ]
-    },
-    { menu: 'Careers', link: 'https://ats.rippling.com/default-company/jobs' }
+    }
+    // { menu: 'Careers', link: 'https://ats.rippling.com/default-company/jobs' }
 
 ];
 
