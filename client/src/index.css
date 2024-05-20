@@ -2258,7 +2258,7 @@ display: none;
     .pages-header {
         background-image: url('/public/PortlandView.jpg');
         background-size: cover;
-        background-position: right;
+        background-position: top;
         background-attachment: fixed;
         border-bottom: 5px solid rgb(114 14 16 / 100%);
         color: #fff;
@@ -2351,7 +2351,7 @@ display: none;
     }
     .pages-header {
         background-size: auto;
-        background-position: center;
+        background-position: top;
     }
     .grid-item {
         width: calc(80%/2)
@@ -2377,7 +2377,7 @@ display: none;
     .pages-header {
         background-image: url('/public/PortlandView.jpg');
         background-size: cover;
-        background-position: center;
+        background-position: top;
     }
     .about-container {
         display: flex;
@@ -2565,7 +2565,7 @@ display: none;
     .pages-header {
         background-image: url('/public/PortlandView.jpg');
         background-size: cover;
-        background-position: right;
+        background-position: top;
         background-attachment: fixed;
         border-bottom: 5px solid rgb(114 14 16 / 100%);
         color: #fff;
