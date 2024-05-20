@@ -298,7 +298,7 @@ const MapContainer = () => {
         console.log('handleMarkerClicked');
         const coordinates = showInfo(key);
         setCentered(coordinates);
-        setZoomed(16);
+        setZoomed(11);
         setMarkerSelected(+key);
     };
 

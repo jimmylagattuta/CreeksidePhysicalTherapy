@@ -38,6 +38,7 @@
 .team-icon-container a {
     display: inline-block;
     margin: 0 10px;
+    z-index: 3;
     transition: transform 0.3s ease-in-out;
 }
 .team-icon-container a:hover {

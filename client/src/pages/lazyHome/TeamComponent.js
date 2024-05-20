@@ -29,10 +29,17 @@ const TeamComponent = () => {
                             Follow Us
                         </h2>
                         <div className='team-icon-container'>
-                            <a aria-label="Link to go to Company Default's Instagram page." href='https://www.instagram.com/creekside_physical_therapy/' target='_blank' rel='noopener noreferrer'>
-                                <i className='fab fa-instagram fa-3x' style={{ cursor: 'pointer', color: 'white' }} onClick={() => { /* Your onClick logic here */ }}></i>
+                            <a
+                                aria-label="Link to go to Creekside Physical Therapy's Instagram page."
+                                href='https://www.instagram.com/creekside_physical_therapy/'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                                onClick={() => window.open('https://www.instagram.com/creekside_physical_therapy/', '_blank')}
+                            >
+                                <i className='fab fa-instagram fa-3x' style={{ cursor: 'pointer', color: 'white' }}></i>
                             </a>
                         </div>
+
                     </div>
                     <div className="team-second-inner-div">
                         <h2 className='follow-us-title'>

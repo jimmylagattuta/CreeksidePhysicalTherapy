@@ -20,10 +20,8 @@ const Locations = () => {
             <div className='page-container'>
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }} className='page-info'>
                     <h3 style={{ alignSelf: 'baseline' }}>
-                        All locations have parking and parking for individuals
-                        with disabilities available.
+                    Creekside Physical Therapy proudly serves patients throughout the Portland Metro area from conveniently located offices above the Providence Medical Group Cedar Mill Clinic and on Oleson Road. If you’re eager to get back on your feet and back to doing what you love
                     </h3>
-                    <i style={{ color: 'var(--violet)', alignSelf: 'baseline', paddingLeft: '10px', fontSize: '1.5rem' }} class="fas fa-wheelchair"></i>
                 </div>
             </div>
             <div className='location-map-section'>

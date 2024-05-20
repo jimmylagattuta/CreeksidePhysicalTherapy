@@ -198,7 +198,7 @@ const CompanyReviewsPage = () => {
                             <p className='review-paragraph'>{item.text}</p>
                         </div>
                         <div className='google-link'>
-                            <a aria-label="Link to Google for Google API reviews for Company Default." href={item.author_url} target="_blank" rel="noopener noreferrer">
+                            <a aria-label="Link to Google for Google API reviews for Creekside Physical Therapy." href={item.author_url} target="_blank" rel="noopener noreferrer">
                                 <i style={{ color: 'white' }} className="fab fa-google fa-lg"></i>
                             </a>
                         </div>
