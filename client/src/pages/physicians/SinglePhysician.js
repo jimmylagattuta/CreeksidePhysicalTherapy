@@ -76,6 +76,7 @@ const SinglePhysician = () => {
     
             return reviews.map((review, index) => {
                 // Check if any doctor's name is mentioned in the review text
+                console.log('review CPT', review);
                 const doctorNames = doctors.map((doctor) => doctor.toLowerCase().replace("dr. ", ""));
                 const mentionsDoctor = doctorNames.some((name) => review.text.toLowerCase().includes(name));
     
