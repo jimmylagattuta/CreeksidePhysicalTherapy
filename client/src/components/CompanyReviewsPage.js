@@ -173,10 +173,10 @@ const CompanyReviewsPage = () => {
 
             if (cachedReviews.length === 3) {
                 console.log('cachedReviews is 3', cachedReviews);
-                return cachedReviews;
+                setReviews(cachedReviews);
             } else {
                 console.log('cachedReviews is not 3', cachedReviews);
-                return cachedReviews.slice(0, 3);
+                setReviews(cachedReviews.slice(0, 3));
             }
             setLoading(false);
         } else {
