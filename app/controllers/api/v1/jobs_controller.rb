@@ -60,7 +60,7 @@ class GooglePlacesCached
   def self.fetch_five_star_reviews_for_companies
     # puts "Fetching five-star reviews for companies..."
     companies = {
-      "Creekside Physical Therapy" => ["ChIJT8nUWmzlBIgRnZluSKvaU7o", "ChIJy6GIldiP4okR-sQZEghTDSg", "ChIJt1CU6gxK0IkR4wEmOq3hYr4"],
+      "Creekside Physical Therapy" => ["ChIJT8nUWmzlBIgRnZluSKvaU7o", "ChIJy6GIldiP4okR-sQZEghTDSg", "ChIJt1CU6gxK0IkR4wEmOq3hYr4", "ChIJ4ehfGL8JlVQR3QwufLzN5SI", "ChIJ_U-CjPEMlVQRLymo_u5om1o", "ChIJI7hPTTYNlVQRmK-_GuttTHs"],
       "Northwest Extremity Specialists" => ["ChIJf07ARPkJlVQRJCA-9wte444", "ChIJi3RsjPEMlVQRt1cOeU3_g48", "ChIJSRSts-CglVQRfXCyBEPzHNg"]
     }
 
