@@ -82,12 +82,10 @@ const SinglePhysician = () => {
         const cachedDataBeforeJson = localStorage.getItem(cacheKey);
         if (cachedDataBeforeJson) {
             const { reviews, expiry } = JSON.parse(cachedDataBeforeJson);
-            console.log('reviews', reviews);
             return reviews
-                .filter((review) => !review.text.trim()) // Skip if review text is blank
+                .filter((review) => review.text.trim() !== '') // Skip if review text is blank
                 .map((review) => {
                     // Check if any doctor's name is mentioned in the review text
-                    console.log('review for words', review);
                     const doctorNamesLowerCase = doctorNames.map((doctor) => doctor.toLowerCase());
                     const words = review.text.toLowerCase();
                     const mentionsDoctor = doctorNamesLowerCase.some((name) => {
@@ -95,18 +93,10 @@ const SinglePhysician = () => {
                         return name.split(' ').every((part) => words.includes(part));
                     });
     
-                    console.log('doctorNamesLowerCase:', doctorNamesLowerCase);
-                    console.log('words:', words);
-                    console.log('mentionsDoctor:', mentionsDoctor);
-    
                     // Check if the review is for the current physician
                     const physicianNameLowerCase = physician.name.toLowerCase();
                     const truncatedName = physicianNameLowerCase.split(',')[0].trim();
                     const isForPhysician = words.includes(truncatedName);
-    
-                    console.log('physicianNameLowerCase:', physicianNameLowerCase);
-                    console.log('truncatedName:', truncatedName);
-                    console.log('isForPhysician:', isForPhysician);
     
                     // Exclude reviews that do not mention any doctor's name or are not for the current physician
                     if (!mentionsDoctor || !isForPhysician) return null;
@@ -146,6 +136,7 @@ const SinglePhysician = () => {
         }
         return null;
     };
+    
     
     
     
