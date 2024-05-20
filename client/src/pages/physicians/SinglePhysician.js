@@ -23,7 +23,7 @@ const SinglePhysician = () => {
         'Default Doctor 7'
     ];
     const { bio, image, name, practiceEmphasis, specialProcedures } = physician;
-    const cacheKey = 'cached_yelp_reviews';
+    const cacheKey = 'cached_creekside_reviews';
     const formatDate = (dateString) => {
         const date = new Date(dateString);
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
