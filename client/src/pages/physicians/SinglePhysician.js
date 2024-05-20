@@ -86,14 +86,17 @@ const SinglePhysician = () => {
                 // Check if any doctor's name is mentioned in the review text
                 console.log('review CPT', review);
                 const doctorNamesLowerCase = doctorNames.map((doctor) => doctor.toLowerCase().replace("dr. ", ""));
-                const mentionsDoctor = doctorNamesLowerCase.some((name) => review.text.toLowerCase().includes(name));
-    
+                console.log('doctorNamesLowerCase', doctorNamesLowerCase);
+                const words = review.text.toLowerCase().split(/\s+/);
+                const mentionsDoctor = doctorNamesLowerCase.some((name) => words.includes(name));
+                console.log('mentionsDoctor', mentionsDoctor);
+        
                 // Exclude reviews that do not mention any doctor's name
                 if (!mentionsDoctor) return null;
-    
+        
                 // Exclude reviews with certain author names
                 if (review.author_name === "Pdub ..") return null;
-    
+        
                 return (
                     <div key={index} className='single-review-container'>
                         <div className='review-top-info'>
@@ -126,6 +129,7 @@ const SinglePhysician = () => {
         }
         return null;
     };
+    
     
 
     return (
