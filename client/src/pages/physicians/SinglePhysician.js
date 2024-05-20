@@ -83,54 +83,55 @@ const SinglePhysician = () => {
         if (cachedDataBeforeJson) {
             const { reviews, expiry } = JSON.parse(cachedDataBeforeJson);
             console.log('reviews', reviews);
-            return reviews.map((review, index) => {
-                // Skip if review text is blank
-                if (!review.text.trim()) return null;
+            return reviews
+                .filter((review) => !review.text.trim()) // Skip if review text is blank
+                .map((review) => {
+                    // Check if any doctor's name is mentioned in the review text
+                    const doctorNamesLowerCase = doctorNames.map((doctor) => doctor.toLowerCase());
+                    const words = review.text.toLowerCase().split(/\s+/);
+                    const mentionsDoctor = doctorNamesLowerCase.some((name) => words.includes(name));
     
-                // Check if any doctor's name is mentioned in the review text
-                const doctorNamesLowerCase = doctorNames.map((doctor) => doctor.toLowerCase());
-                const words = review.text.toLowerCase().split(/\s+/);
-                const mentionsDoctor = doctorNamesLowerCase.some((name) => words.includes(name));
+                    // Check if the review is for the current physician
+                    const physicianNameLowerCase = physician.name.toLowerCase();
+                    const commaIndex = physicianNameLowerCase.indexOf(',');
+                    const truncatedName = commaIndex !== -1 ? physicianNameLowerCase.substring(0, commaIndex) : physicianNameLowerCase;
+                    const isForPhysician = words.includes(truncatedName);
     
-                // Check if the review is for the current physician
-                const physicianNameLowerCase = physician.name.toLowerCase();
-                const isForPhysician = words.includes(physicianNameLowerCase);
+                    // Exclude reviews that do not mention any doctor's name or are not for the current physician
+                    if (!mentionsDoctor || !isForPhysician) return null;
     
-                // Exclude reviews that do not mention any doctor's name or are not for the current physician
-                if (!mentionsDoctor || !isForPhysician) return null;
+                    // Exclude reviews with certain author names
+                    if (review.author_name === "Pdub ..") return null;
     
-                // Exclude reviews with certain author names
-                if (review.author_name === "Pdub ..") return null;
-    
-                return (
-                    <div key={index} className='single-review-container'>
-                        <div className='review-top-info'>
-                            <div
-                                className='user-icon'
-                                style={{ backgroundImage: `url(${review.profile_photo_url})` }}>
-                                {!review.profile_photo_url && (
-                                    <i className='fas fa-user-circle'></i>
-                                )}
-                            </div>
-                            <div className='review-name-container'>
-                                <div className='user-name'>
-                                    {review.author_name} <i className='fab fa-yelp'></i>
+                    return (
+                        <div key={review.id} className='single-review-container'>
+                            <div className='review-top-info'>
+                                <div
+                                    className='user-icon'
+                                    style={{ backgroundImage: `url(${review.profile_photo_url})` }}>
+                                    {!review.profile_photo_url && (
+                                        <i className='fas fa-user-circle'></i>
+                                    )}
+                                </div>
+                                <div className='review-name-container'>
+                                    <div className='user-name'>
+                                        {review.author_name} <i className='fab fa-yelp'></i>
+                                    </div>
                                 </div>
                             </div>
+                            <div className='review-info'>
+                                <i className='fa fa-quote-left' aria-hidden='true'></i>
+                                <i className='fa fa-quote-right' aria-hidden='true'></i>
+                                <p className='review-paragraph'>{review.text}</p>
+                            </div>
+                            <div className='google-link'>
+                                <a href={review.author_url} target="_blank" rel="noopener noreferrer">
+                                    <i style={{ color: 'white' }} className="fab fa-google fa-lg"></i>
+                                </a>
+                            </div>
                         </div>
-                        <div className='review-info'>
-                            <i className='fa fa-quote-left' aria-hidden='true'></i>
-                            <i className='fa fa-quote-right' aria-hidden='true'></i>
-                            <p className='review-paragraph'>{review.text}</p>
-                        </div>
-                        <div className='google-link'>
-                            <a href={review.author_url} target="_blank" rel="noopener noreferrer">
-                                <i style={{ color: 'white' }} className="fab fa-google fa-lg"></i>
-                            </a>
-                        </div>
-                    </div>
-                );
-            }).filter(Boolean); // Remove any null values from the array
+                    );
+                }).filter(Boolean); // Remove any null values from the array
         }
         return null;
     };
