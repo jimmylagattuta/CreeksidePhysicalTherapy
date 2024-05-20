@@ -160,7 +160,7 @@ const CompanyReviewsPage = () => {
         } else {
             fetchReviews();
         }
-    }, [csrfToken, setCsrfToken]);
+    }, [csrfToken, setCsrfToken, key]);
 
     return (
         <div key={key} className='reviews-container'>
