@@ -89,12 +89,23 @@ const SinglePhysician = () => {
                     // Check if any doctor's name is mentioned in the review text
                     const doctorNamesLowerCase = doctorNames.map((doctor) => doctor.toLowerCase());
                     const words = review.text.toLowerCase().split(/\s+/);
-                    const mentionsDoctor = doctorNamesLowerCase.some((name) => words.includes(name));
+                    const mentionsDoctor = doctorNamesLowerCase.some((name) => {
+                        // Match any form of the name (e.g., first name, last name, or full name)
+                        return name.split(' ').every((part) => words.includes(part));
+                    });
+    
+                    console.log('doctorNamesLowerCase:', doctorNamesLowerCase);
+                    console.log('words:', words);
+                    console.log('mentionsDoctor:', mentionsDoctor);
     
                     // Check if the review is for the current physician
                     const physicianNameLowerCase = physician.name.toLowerCase();
                     const truncatedName = physicianNameLowerCase.split(',')[0].trim();
                     const isForPhysician = words.includes(truncatedName);
+    
+                    console.log('physicianNameLowerCase:', physicianNameLowerCase);
+                    console.log('truncatedName:', truncatedName);
+                    console.log('isForPhysician:', isForPhysician);
     
                     // Exclude reviews that do not mention any doctor's name or are not for the current physician
                     if (!mentionsDoctor || !isForPhysician) return null;
