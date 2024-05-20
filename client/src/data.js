@@ -500,18 +500,16 @@ export const aboutObjOther = [
   
 export const aboutObjPortal = [
     {
-        nameOne: "Creekside Physical Therapy Patient Portal",
+        nameOne: "Our Mission",
         descriptionOne: [
-            "Creekside Physical Therapy is pleased to introduce the Creekside Physical Therapy Patient Portal! The Patient Portal is an electronic system that will allow you, our patients, to communicate your medical needs with our office staff and providers through a secure online system at your convenience.",
-            "To join the Patient Portal, call the office and provide our staff with your email address then click on the button link above."
+            "Creekside Physical Therapy is dedicated to meeting the ongoing wellness needs of our patients, always working to achieve superior outcomes by practicing the most up-to-date and individualized treatment techniques. Our staff works directly with patients to improve strength, flexibility, and function to help them on the road to recovery. We focus on long-term success and management through education, training, and self-reliance."
         ],
         descriptionOneBullettedList: [
-            "Expedite your check-in process by completing New Patient Forms online",
-            "Tired of waiting on hold? Schedule your appointments, order medical records, and request prescription refills electronically",
-            "Update your medical history and pay bills from the privacy of your home",
-            "Verify your insurance eligibility and review your benefits prior to your appointment",
+            "We want to give you the best care possible.",
+            "Each therapist is highly qualified with a range of specialties to cover whatever ails you.",
+            "Our appointments are an hour long to ensure that you get the time and attention you deserve and the treatment that is specifically tailored to your needs."
         ],
-        link: '/patient-portal', // Assuming a link to the patient portal
+        link: '/locations', // Assuming a link to the patient portal
     }
 ];
 

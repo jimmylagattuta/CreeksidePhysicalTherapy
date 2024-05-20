@@ -177,7 +177,7 @@ const About = (props) => {
                 </ul>
               ))}
             <ul className='portal-unordered-list-about'>
-              <a style={{ color: 'black' }} className="animate-grow-portal" href="https://default-company.myezyaccess.com/Patient/Main.aspx" target="_blank" rel="noopener noreferrer">Go To Portal!</a>
+              <a style={{ color: 'black' }} className="animate-grow-portal" href="/locations" rel="noopener noreferrer">Office Information</a>
             </ul>
           </div>
         ))}
