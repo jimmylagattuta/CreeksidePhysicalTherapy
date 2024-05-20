@@ -96,7 +96,7 @@ const CompanyReviewsPage = () => {
         const fetchReviews = () => {
             const url =
                 process.env.NODE_ENV === 'production'
-                    ? 'https://creekside-physical-therapy-3c43d5dad481.herokuapp.com/api/v1/pull_google_places_cache'
+                    ? 'https://www.creekside-physical-therapy-3c43d5dad481.herokuapp.com/api/v1/pull_google_places_cache'
                     : 'http://localhost:3001/api/v1/pull_google_places_cache';
 
             const headers = {

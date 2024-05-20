@@ -104,8 +104,8 @@ const About = (props) => {
                 {/* Check if item.descriptionOne is a string */}
                 {typeof item.descriptionOne === 'string' ? (
                   // If it's a string, split it to insert the link where needed
-                  item.descriptionOne.split(/(Default Company Patient Portal!)/).map((part, index) => (
-                    part === "Default Company Patient Portal!" ? (
+                  item.descriptionOne.split(/(Creekside Physical Therapy Patient Portal!)/).map((part, index) => (
+                    part === "Creekside Physical Therapy Patient Portal!" ? (
                       <a
                         key={index}
                         className="animate-grow"
@@ -113,7 +113,7 @@ const About = (props) => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Default Company Patient Portal!
+                        Creekside Physical Therapy Patient Portal!
                       </a>
                     ) : (
                       part

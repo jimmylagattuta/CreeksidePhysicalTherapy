@@ -102,7 +102,7 @@ const Navbar = () => {
                         <div className='logo-and-title'>
                             <img
                                 src='../Logo.jpg'
-                                alt='Default Company'
+                                alt='Creekside Physical Therapy'
                                 className='navbar-logo'
                             />
                             {/* <div> */}

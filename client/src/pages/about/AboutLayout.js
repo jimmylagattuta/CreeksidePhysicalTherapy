@@ -3,7 +3,7 @@ import PagesHeader from '../../components/PagesHeader';
 const Home = () => {
     return (
         <>
-            <PagesHeader  style={{ overflowX: 'hidden', maxWidth: '100%' }} title='About Default Company' />
+            <PagesHeader  style={{ overflowX: 'hidden', maxWidth: '100%' }} title='About Creekside Physical Therapy' />
             <Outlet  style={{ overflowX: 'hidden', maxWidth: '100%' }} />
         </>
     );
