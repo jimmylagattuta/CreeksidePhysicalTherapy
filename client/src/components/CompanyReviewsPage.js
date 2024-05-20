@@ -58,14 +58,18 @@ const CompanyReviewsPage = () => {
 
     useEffect(() => {
         const cacheKey = 'cached_creekside_reviews';
-
         const isRelevantReview = (review) => {
             const normalizedText = review.text.toLowerCase();
+            const doctorNamesLowerCase = doctors.map((doctor) => doctor.toLowerCase().replace("dr. ", ""));
             return (
                 companyAliases.some(alias => normalizedText.includes(alias.toLowerCase())) ||
-                doctors.some(doctor => normalizedText.includes(doctor.toLowerCase().replace("dr. ", "")))
+                doctorNamesLowerCase.some(name => {
+                    const nameParts = name.split(' ');
+                    return nameParts.some(part => normalizedText.includes(part));
+                })
             );
         };
+        
 
         const getFilteredReviews = (reviewList) => {
             return reviewList.filter(
@@ -164,6 +168,7 @@ const CompanyReviewsPage = () => {
         const cachedReviews = getCachedReviews();
         if (cachedReviews) {
             console.log('setReviews 2');
+            console.log('cachedReviews', cachedReviews);
             if (cachedReviews.length === 3) {
                 setReviews(cachedReviews);
             } else {
