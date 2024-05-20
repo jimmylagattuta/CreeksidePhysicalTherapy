@@ -186,7 +186,11 @@ const CompanyReviewsPage = () => {
 
     return (
         <div key={key} className='reviews-container'>
-            {reviews.filter((review) => !review.text.trim()).map((item, index) => {
+            {reviews.map((item, index) => {
+                if (!item.text.trim()) {
+                    return null; // Skip rendering reviews with no text
+                }
+
                 let profilePhotoUrl = item.profile_photo_url || defaultProfilePhotoUrls[index % defaultProfilePhotoUrls.length];
                 // Check if the username is "CoCo DeLuxe" and replace the profile photo URL with the default if true
                 if (item.author_name === "CoCo DeLuxe") {
@@ -229,6 +233,7 @@ const CompanyReviewsPage = () => {
                     </div>
                 );
             })}
+
             {loading && (
                 <div className='loading'>
                     <p>Loading reviews...</p>
