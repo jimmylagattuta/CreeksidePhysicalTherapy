@@ -2,29 +2,13 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useCsrfToken } from './CsrfTokenContext';
 import './helpers/ReviewsHelpers.css';
 
-const shuffleArray = (array) => {
-    let currentIndex = array.length, randomIndex;
-
-    // While there remain elements to shuffle.
-    while (currentIndex !== 0) {
-        // Pick a remaining element.
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex--;
-
-        // And swap it with the current element.
-        [array[currentIndex], array[randomIndex]] = [
-            array[randomIndex], array[currentIndex]];
-    }
-
-    return array;
-}
-
 const CompanyReviewsPage = () => {
     const [reviews, setReviews] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const { csrfToken, setCsrfToken } = useCsrfToken();
     const previousCsrfToken = useRef(csrfToken);
+    const [key, setKey] = useState(0); // Add a key state
 
     const companyAliases = [
         'creekside physical therapy',
@@ -68,15 +52,9 @@ const CompanyReviewsPage = () => {
 
     const formatDate = (dateString) => {
         const date = new Date(dateString);
-        if (isNaN(date)) {
-            // Handle invalid date format
-            console.error(`Invalid date format: ${dateString}`);
-            return 'Invalid date';
-        }
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         return new Intl.DateTimeFormat('en-US', options).format(date);
     };
-    
 
     useEffect(() => {
         const cacheKey = 'cached_creekside_reviews';
@@ -136,6 +114,7 @@ const CompanyReviewsPage = () => {
                     }
                 })
                 .then((data) => {
+                    // console.log('data', data);
                     if (Array.isArray(data.creekside_reviews) && Array.isArray(data.northwest_reviews)) {
                         // Update CSRF token only if it changes
                         if (data.csrf_token && data.csrf_token !== previousCsrfToken.current) {
@@ -143,19 +122,25 @@ const CompanyReviewsPage = () => {
                             previousCsrfToken.current = data.csrf_token;
                         }
 
+
                         const creeksideReviews = getFilteredReviews(data.creekside_reviews);
                         const northwestReviews = getFilteredReviews(data.northwest_reviews);
-
+            
                         const combinedReviews = [
-                            ...creeksideReviews,
-                            ...northwestReviews
+                            ...data.creekside_reviews,
+                            ...data.northwest_reviews
                         ];
 
                         const shuffledReviews = shuffleArray(combinedReviews);
-                        const randomReviews = shuffledReviews.slice(0, 20); // Get the first 20 reviews
-
-                        saveToCache(randomReviews); // Cache the selected reviews
-                        setReviews(randomReviews); // Set the selected reviews
+                        console.log('shuffledReviews', shuffledReviews);
+                        const randomReviews = shuffledReviews.slice(0, 3);
+                        console.log('combinedReviews', combinedReviews);
+                        console.log('data', data);
+                        console.log('randomReviews', randomReviews);
+                        saveToCache(combinedReviews);
+                        console.log('setReviews 1');
+                        setReviews(randomReviews);
+                        setKey((prevKey) => prevKey + 1); // Update the key to force re-render
                         setLoading(false);
                     } else {
                         console.log('Data reviews are not arrays');
@@ -168,52 +153,79 @@ const CompanyReviewsPage = () => {
                 });
         };
 
+        const shuffleArray = (array) => {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        };
+
         const cachedReviews = getCachedReviews();
         if (cachedReviews) {
-            setReviews(cachedReviews);
+            console.log('setReviews 2');
+            setReviews(cachedReviews.slice(0, 3));
             setLoading(false);
         } else {
             fetchReviews();
         }
-    }, [csrfToken, setCsrfToken]);
+    }, [csrfToken, setCsrfToken, key]);
 
     return (
-        <div className="company-reviews-page">
-            <div className="top-bar-reviews">
-                <h1>Company Reviews</h1>
-                <h2>Reviews from Our Customers</h2>
-            </div>
+        <div key={key} className='reviews-container'>
+            {reviews.map((item, index) => {
+                let profilePhotoUrl = item.profile_photo_url || defaultProfilePhotoUrls[index % defaultProfilePhotoUrls.length];
+                // Check if the username is "CoCo DeLuxe" and replace the profile photo URL with the default if true
+                if (item.author_name === "CoCo DeLuxe") {
+                    profilePhotoUrl = defaultProfilePhotoUrls[index % defaultProfilePhotoUrls.length];
+                }
 
-            <div className="company-reviews-container">
-                {loading ? (
-                    <div className="loading">Loading...</div>
-                ) : error ? (
-                    <div className="error">{error}</div>
-                ) : (
-                    reviews.map((review, index) => (
-                        <div className="review-card" key={index}>
-                            <div className="profile-photo">
-                                <img
-                                    src={review.profile_photo_url}
-                                    alt="Profile"
-                                    className="profile-photo"
-                                    onError={(e) => (e.target.src = 'default_profile_photo_url')}
-                                />
+                return (
+                    <div key={index} className='single-review-container'>
+                        <div class='review-top-info'>
+                            <div
+                                className='user-icon'
+                                style={{
+                                    backgroundImage: `url(${profilePhotoUrl})`,
+                                }}>
+                                {!item.profile_photo_url && (
+                                    <i class_name='fas fa-user-circle'></i>
+                                )}
                             </div>
-                            <div className="review-details">
-                                <h3>{review.author_name}</h3>
-                                <div className="rating">
-                                    {[...Array(review.rating)].map((_, i) => (
-                                        <span key={i}>&#9733;</span>
-                                    ))}
+                            <div className='review-name-container'>
+                                <div className='user-name'>
+                                    {item.author_name}{' '}
+                                    <i className='fab fa-yelp'></i>
                                 </div>
-                                <p>{formatDate(review.relative_time_description)}</p>
-                                <p>{review.text}</p>
                             </div>
                         </div>
-                    ))
-                )}
-            </div>
+                        <div className='review-info'>
+                            <i
+                                className='fa fa-quote-left'
+                                aria-hidden='true'></i>
+                            <i
+                                className='fa fa-quote-right'
+                                aria-hidden='true'></i>
+                            <p className='review-paragraph'>{item.text}</p>
+                        </div>
+                        <div className='google-link'>
+                            <a aria-label="Link to Google for Google API reviews for Creekside Physical Therapy." href={item.author_url} target="_blank" rel="noopener noreferrer">
+                                <i style={{ color: 'white' }} className="fab fa-google fa-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                );
+            })}
+            {loading && (
+                <div className='loading'>
+                    <p>Loading reviews...</p>
+                </div>
+            )}
+            {error && (
+                <div className='error'>
+                    <p>Error: {error}</p>
+                </div>
+            )}
         </div>
     );
 };
