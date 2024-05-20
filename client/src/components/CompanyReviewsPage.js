@@ -128,7 +128,7 @@ const CompanyReviewsPage = () => {
                         ];
 
                         const shuffledReviews = shuffleArray(combinedReviews);
-                        console.log('shuffledReviews');
+                        console.log('shuffledReviews', shuffledReviews);
                         const randomReviews = shuffledReviews.slice(0, 3);
                         console.log('combinedReviews', combinedReviews);
                         console.log('data', data);
