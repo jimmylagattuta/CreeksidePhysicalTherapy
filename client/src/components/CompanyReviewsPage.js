@@ -164,7 +164,10 @@ const CompanyReviewsPage = () => {
         const cachedReviews = getCachedReviews();
         if (cachedReviews) {
             console.log('setReviews 2');
-            setReviews(cachedReviews);
+            if (!reviews) {
+
+                setReviews(cachedReviews);
+            }
             setLoading(false);
         } else {
             fetchReviews();
