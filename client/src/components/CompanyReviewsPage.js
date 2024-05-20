@@ -8,6 +8,7 @@ const CompanyReviewsPage = () => {
     const [error, setError] = useState(null);
     const { csrfToken, setCsrfToken } = useCsrfToken();
     const previousCsrfToken = useRef(csrfToken);
+    const [key, setKey] = useState(0); // Add a key state
 
     const companyAliases = [
         'creekside physical therapy',
@@ -131,6 +132,7 @@ const CompanyReviewsPage = () => {
 
                         saveToCache(randomReviews);
                         setReviews(randomReviews);
+                        setKey((prevKey) => prevKey + 1); // Update the key to force re-render
                         setLoading(false);
                     } else {
                         console.log('Data reviews are not arrays');
@@ -161,7 +163,7 @@ const CompanyReviewsPage = () => {
     }, [csrfToken, setCsrfToken]);
 
     return (
-        <div className='reviews-container'>
+        <div key={key} className='reviews-container'>
             {reviews.map((item, index) => {
                 let profilePhotoUrl = item.profile_photo_url || defaultProfilePhotoUrls[index % defaultProfilePhotoUrls.length];
                 // Check if the username is "CoCo DeLuxe" and replace the profile photo URL with the default if true
