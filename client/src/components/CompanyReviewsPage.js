@@ -122,9 +122,13 @@ const CompanyReviewsPage = () => {
                             previousCsrfToken.current = data.csrf_token;
                         }
 
+
+                        const creeksideReviews = getFilteredReviews(data.creekside_reviews);
+                        const northwestReviews = getFilteredReviews(data.northwest_reviews);
+            
                         const combinedReviews = [
-                            ...getFilteredReviews(data.creekside_reviews),
-                            ...getFilteredReviews(data.northwest_reviews)
+                            ...creeksideReviews,
+                            ...northwestReviews
                         ];
 
                         const shuffledReviews = shuffleArray(combinedReviews);
