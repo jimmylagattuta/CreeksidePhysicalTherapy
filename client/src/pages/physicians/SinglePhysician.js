@@ -87,6 +87,7 @@ const SinglePhysician = () => {
                 .filter((review) => !review.text.trim()) // Skip if review text is blank
                 .map((review) => {
                     // Check if any doctor's name is mentioned in the review text
+                    console.log('review for words', review);
                     const doctorNamesLowerCase = doctorNames.map((doctor) => doctor.toLowerCase());
                     const words = review.text.toLowerCase();
                     const mentionsDoctor = doctorNamesLowerCase.some((name) => {
