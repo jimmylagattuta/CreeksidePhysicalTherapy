@@ -138,6 +138,7 @@ const CompanyReviewsPage = () => {
                         console.log('data', data);
                         console.log('randomReviews', randomReviews);
                         saveToCache(combinedReviews);
+                        console.log('setReviews 1');
                         setReviews(randomReviews);
                         setKey((prevKey) => prevKey + 1); // Update the key to force re-render
                         setLoading(false);
@@ -162,6 +163,7 @@ const CompanyReviewsPage = () => {
 
         const cachedReviews = getCachedReviews();
         if (cachedReviews) {
+            console.log('setReviews 2');
             setReviews(cachedReviews);
             setLoading(false);
         } else {
