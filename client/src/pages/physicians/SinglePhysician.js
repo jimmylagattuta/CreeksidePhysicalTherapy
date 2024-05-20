@@ -22,10 +22,13 @@ const SinglePhysician = () => {
 
     const physician = physicians.find((item) => {
         console.log('item', item);
-        const [firstName, ...otherNames] = item.name.split(' ');
-        const lastName = otherNames.length > 0 ? otherNames.join(' ').replace(/\s/g, '-') : ''; // Replace spaces with hyphens
-        const fullName = `${firstName}${lastName ? `-${lastName}` : ''}`.toLowerCase();
-        return fullName === physicianId;
+        const nameVariants = [
+            item.name,
+            item.name.toLowerCase().replace(/\s+/g, '-'),
+            item.name.toLowerCase().replace(/,/g, '').replace(/\s+/g, '-'),
+            item.name.toLowerCase().replace(/,/g, '').replace(/\s+/g, '')
+        ];
+        return nameVariants.includes(physicianId.toLowerCase());
     });
 
     console.log('physician', physician);
