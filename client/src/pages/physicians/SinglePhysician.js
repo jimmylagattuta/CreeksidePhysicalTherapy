@@ -69,82 +69,62 @@ const SinglePhysician = () => {
             );
         }
     }
-    
     const getCachedReviews = () => {
         const cachedDataBeforeJson = localStorage.getItem(cacheKey);
         if (cachedDataBeforeJson) {
-            // const cachedDataOne = JSON.parse(cachedDataBeforeJson);
-            // console.log('cachedDataOne', cachedDataOne);
             const { reviews, expiry } = JSON.parse(cachedDataBeforeJson);
-            // const cachedData = JSON.parse(cachedDataOne);
-            // console.log('cachedData', cachedData);
+    
             return reviews.map((review, index) => {
-                // console.log('review', review);
-                const filteredName = name
-                    .split(/[,.]\s*/)
-                    .filter(
-                        (word) => !word.includes('.') && !word.includes(',')
-                    )
-                    .join(' ');
-
-                const namesToSearch = filteredName.split(/\s+/);
-
-                const regexPattern = namesToSearch
-                    .map(
-                        (name) => `\\b${name.replace('.', '\\.')}(?![\\w.,])\\b`
-                    )
-                    .join('|');
-
-                const regex = new RegExp(regexPattern, 'i');
-
-                // const matchedNames = review.text.match(regex);
-                const matchedNames = review.text.match(regex)?.filter(name => name.length > 1);
-
-                if (matchedNames && matchedNames.length > 0) {
-                    if (review.author_name === "Pdub ..") {
-                    } else {          
-                        return (
-                            <div key={index} className='single-review-container'>
-                            <div className='review-top-info'>
-                                <div
-                                    className='user-icon'
-                                    style={{
-                                        backgroundImage: `url(${review.profile_photo_url})`,
-                                    }}>
-                                    {!review.profile_photo_url && (
-                                        <i className='fas fa-user-circle'></i>
-                                    )}
-                                </div>
-                                <div className='review-name-container'>
-                                    <div className='user-name'>
-                                        {review.author_name}{' '}
-                                        <i className='fab fa-yelp'></i>
-                                    </div>
-                                </div>
+                // Check if any doctor's name is mentioned in the review text
+                const doctorNames = doctors.map((doctor) => doctor.toLowerCase().replace("dr. ", ""));
+                const mentionsDoctor = doctorNames.some((name) => review.text.toLowerCase().includes(name));
+    
+                // Exclude reviews that do not mention any doctor's name
+                if (!mentionsDoctor) return null;
+    
+                // Exclude reviews with certain author names
+                if (review.author_name === "Pdub ..") return null;
+    
+                return (
+                    <div key={index} className='single-review-container'>
+                        <div className='review-top-info'>
+                            <div
+                                className='user-icon'
+                                style={{
+                                    backgroundImage: `url(${review.profile_photo_url})`,
+                                }}>
+                                {!review.profile_photo_url && (
+                                    <i className='fas fa-user-circle'></i>
+                                )}
                             </div>
-                            <div className='review-info'>
-                                <i
-                                    className='fa fa-quote-left'
-                                    aria-hidden='true'></i>
-                                <i
-                                    className='fa fa-quote-right'
-                                    aria-hidden='true'></i>
-                                <p className='review-paragraph'>{review.text}</p>
-                            </div>
-                            <div className='google-link'>
-                                <a href={review.author_url} target="_blank" rel="noopener noreferrer">
-                                    <i style={{ color: 'white' }} className="fab fa-google fa-lg"></i>
-                                </a>
+                            <div className='review-name-container'>
+                                <div className='user-name'>
+                                    {review.author_name}{' '}
+                                    <i className='fab fa-yelp'></i>
+                                </div>
                             </div>
                         </div>
-                        );
-                    }
-                }
-            });
+                        <div className='review-info'>
+                            <i
+                                className='fa fa-quote-left'
+                                aria-hidden='true'></i>
+                            <i
+                                className='fa fa-quote-right'
+                                aria-hidden='true'></i>
+                            <p className='review-paragraph'>{review.text}</p>
+                        </div>
+                        <div className='google-link'>
+                            <a href={review.author_url} target="_blank" rel="noopener noreferrer">
+                                <i style={{ color: 'white' }} className="fab fa-google fa-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                );
+            }).filter(Boolean); // Remove any null values from the array
         }
         return null;
     };
-
+    
     return (
         <>
             <div style={{ padding: '50px', margin: '0 auto', display: 'flex' }}>
