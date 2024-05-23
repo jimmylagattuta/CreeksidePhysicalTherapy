@@ -166,12 +166,12 @@
       max-height: 160px;
     }
     .nav-button {
-      padding: 0px 0px 0px 0px;
-      margin: 5px 5px 0px 5px;
+      /* padding: 0px 0px 0px 0px; */
+      /* margin: 5px 5px 0px 5px; */
       display: flex;
-      align-items: center;
-      align-self: unset;
-      justify-content: center;
+      /* align-items: center; */
+      /* align-self: unset; */
+      /* justify-content: center; */
       z-index: 8;
     }
     .nav-phone-and-seperater {
@@ -206,7 +206,7 @@
         z-index: 8;
     }
     .words-appear {
-      display: none;
+      /* display: none; */
     }
     .contact-nav-menu {
       position: absolute;
@@ -222,7 +222,11 @@
       
     }
   }
-
+  @media (max-width: 610px) {
+    .downloads-call-us {
+      flex-direction: column;
+    }
+  }
 @media (max-width: 450px) {
   .menu-open .words-appear {
     display: flex;
@@ -238,7 +242,7 @@
     min-height: 66px;
   }
   .nav-button {
-    padding: 0px 0px 0px 0px;
+    /* padding: 0px 0px 0px 0px;
     margin: 5px 5px 0px 5px;
     display: flex;
     align-items: center;
@@ -246,7 +250,8 @@
     height: fit-content;
     z-index: 8;
     min-width: max-content;
-    font-size: 0.8rem;
+    font-size: 0.8rem; */
+    display: none;
   }
   .nav-phone-and-seperater {
     display: flex;
@@ -301,11 +306,11 @@
 
 @media (max-width: 380px) {
   .navbar-container {
-    max-height: 60px;
-    min-height: 50px;
+    /* max-height: 60px; */
+    /* min-height: 50px; */
   }
   .nav-button {
-    padding: 0px 0px 0px 0px;
+    /* padding: 0px 0px 0px 0px;
     margin: 5px 5px 0px 5px;
     display: flex;
     align-items: center;
@@ -313,7 +318,7 @@
     height: fit-content;
     z-index: 8;
     min-width: max-content;
-    font-size: unset;
+    font-size: unset; */
   }
   .nav-phone-and-seperater {
     /* display: flex;
@@ -321,13 +326,16 @@
     margin: 0px 0px 0px 0px;
     padding: 2px 0px 2px 0px;
     z-index: 8; */
-    padding: 2px 0px 2px 0px;
+    /* padding: 2px 0px 2px 0px; */
   }
 }
 
 @media (max-width: 350px) {
   .navbar-container {
     min-height: 40px;
+  }
+  .navbar-logo {
+    height: 25px;
   }
   #nav-phone {
     font-size: 0.7rem;
@@ -340,6 +348,6 @@
   }
 
   .nav-button {
-    min-width: 60px;
+    /* min-width: 60px; */
   }
 }
