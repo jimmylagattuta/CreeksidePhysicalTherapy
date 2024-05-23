@@ -254,19 +254,22 @@
 }
 
 @media (max-width: 375px) {
+    .expertise-item {
+        width: 80%;
+    }
     .home-expertise {
         /* padding: 10px 0; */
     }
     .expertise-name {
-        font-size: 0.4rem;
+        font-size: 0.7rem;
     }
     .home-expertise .fa-angle-double-right {
         font-size: 0.6rem;
     }
+    .home-expertise .fa-angle-double-right {
+        font-size: 0.8rem;
+    }
 }
 
-@media (max-width: 275px) {
-    .expertise-item {
-        width: 80%;
-    }
+@media (max-width: 350px) {
 }
