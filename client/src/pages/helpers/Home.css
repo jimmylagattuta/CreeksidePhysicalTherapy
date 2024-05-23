@@ -131,9 +131,34 @@
 }
 @media (max-width: 950px) {
     .Carousel-container {
-        height: 122vh;
+        /* height: 60vh; */
+    }
+    .home-hero {
+        /* min-height: 60vh; */
+    }
+    .home-banner {
+        /* min-height: 60vh; */
+    }
+    .banner-title {
+        font-size: 3.6rem;
     }
 }
+
+@media (max-width: 950px) {
+    .Carousel-container {
+        height: 105vh;
+    }
+    .home-hero {
+        min-height: 105vh;
+    }
+    .home-banner {
+        min-height: 105vh;
+    }
+    .banner-title {
+        font-size: 3.6rem;
+    }
+}
+
 @media (max-width: 815px) {
     .home-hero {
         min-height: 60vh;
