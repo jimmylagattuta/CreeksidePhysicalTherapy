@@ -154,7 +154,7 @@
     .about-container-bottom-left {
         display: flex;
         flex: 1;
-        background-image: url(https://i.imgur.com/AzYkCf0.webp);
+        background-image: url('/public/Portland1.jpg');
         background-size: cover;
         padding: 0px 0px 0px 0px;
         height: 75vh;
@@ -217,7 +217,7 @@
     .about-container-bottom-left {
         display: flex;
         flex: 1;
-        background-image: url(https://i.imgur.com/AzYkCf0.webp);
+        background-image: url('/public/Portland1.jpg');
         background-size: cover;
         border-bottom: 4px solid rgb(74, 1, 37);
     
@@ -241,11 +241,14 @@
     .about-description-right {
         text-align: left;
         margin: 0px;
-        padding: 10px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
         font-weight: 400;
         color: white;
         font-size: 0.6rem;
         width: 95%;
+    }
+    .about-container-bottom-left {
+        
     }
 }
 @media (max-width: 815px) {
@@ -272,7 +275,8 @@
     .about-container-bottom-left {
         display: flex;
         flex: 1;
-        background-image: url(https://i.imgur.com/AzYkCf0.webp);
+        background-image: url('/public/Portland1.jpg');
+
         background-size: cover;
         padding: 0px 0px 0px 0px;
         height: 35vh;
