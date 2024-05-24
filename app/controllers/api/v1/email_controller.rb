@@ -4,7 +4,7 @@ class Api::V1::EmailController < ApplicationController
     if send_email_to_office(form_data)
       render json: { message: "Email sent successfully" }, status: :ok
     else
-      render json: { error: "Email sending failed" }, status: :unprocessable_entity
+      render json: { error: "Email sending failed CPT" }, status: :unprocessable_entity
     end
   end
 
@@ -15,7 +15,7 @@ class Api::V1::EmailController < ApplicationController
   end
 
 def send_email_to_office(form_data)
-  cc_emails = ['unitymskwebsites@gmail.com', 'jimmy.lagattuta@gmail.com'] # Use an array for multiple CCs
+  cc_emails = ['unitymskwebsites@gmail.com', 'jimmy.lagattuta@gmail.com', 'jzdor@nespecialists.com', 'mtucker@nespecialsts.com'] # Use an array for multiple CCs
 
   if form_data[:dob]
     if form_data[:agreeToTermsTexts]
@@ -29,7 +29,7 @@ def send_email_to_office(form_data)
 
   true
 rescue StandardError => e
-  Rails.logger.error("Email sending error: #{e.message}")
+  Rails.logger.error("Email sending error CPT: #{e.message}")
   false
 end
 

@@ -18,6 +18,6 @@ class OfficeMailer < ApplicationMailer
   def error_email(type, description)
     @type = type
     @description = description
-    mail(to: 'jimmy.lagattuta@gmail.com', subject: "#{type} - Error Notification", body: "#{type}: #{@description}")
+    mail(to: 'jimmy.lagattuta@gmail.com', subject: "#{type} - Error Notification CPT: ", body: "#{type}: #{@description}")
   end
 end

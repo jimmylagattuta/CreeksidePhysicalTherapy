@@ -129,20 +129,6 @@
         display: flex;
     }
 }
-@media (max-width: 950px) {
-    .Carousel-container {
-        /* height: 60vh; */
-    }
-    .home-hero {
-        /* min-height: 60vh; */
-    }
-    .home-banner {
-        /* min-height: 60vh; */
-    }
-    .banner-title {
-        font-size: 3.6rem;
-    }
-}
 
 @media (max-width: 950px) {
     .Carousel-container {
