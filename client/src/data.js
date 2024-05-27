@@ -450,19 +450,32 @@ export const aboutObj = [
             "Insurance We Accept"
         ],
         descriptionOneBullettedList: [
-            "Moda",
-            "Aetna",
-            "Blue Shield",
-            "Cigna",
-            "Medicare",
-            "United Health Care",
-            "Health Net",
+            "BCBS",
+            "BCBS FEP",
             "Humana",
-            "Pacific Source",
+            "Cigna",
+            "United Health Care",
+            "Moda",
+            "Medicare Part B",
             "Bridgespan",
-            "Triwest (VA)",
-            "Tricare"
+            "Aetna",
+            "Health Net",
+            "Health Net Medicare",
+            "Regence Group Administrators",
+            "Pacific Source",
+            "GEHA",
+            "Kaiser (only certain providers)",
+            "Triwest (VA) / Tricare",
+            "MVA",
+            "Workers Comp (Saif, Caremark, Majoris)",
+            "Out of Network",
+            "Providence (can match some plans’ benefits)",
+            "",
+            "Do Not Accept",
+            "Medicaid",
+            "CareOregon"
         ],
+        
         link: '/about',
     }
 ];
