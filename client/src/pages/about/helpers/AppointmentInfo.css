@@ -17,24 +17,24 @@
 /* Apply border effects from foresight-square and #appointment-form-article styles to appointment-info */
 .appointment-info {
     position: relative;
-    width: 70%;
+    width: 98%;
     margin: 0 auto; /* Center the appointment info */
-    padding: 20px;
-    margin-top: 50px;
-    margin-bottom: 80px;
+    padding: 20px 20px 20px 20px;
+    /* margin-top: 50px; */
+    /* margin-bottom: 80px; */
     display: grid;
     grid-gap: 1.25em;
     z-index: 1;
     grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
     border: solid 0 transparent;
-    padding: calc(1.25em + 6px) 0.5em 0.5em calc(1.25em + 6px);
-    background: rgba(114, 14, 16, 0.7) padding-box;
+    /* padding: calc(1.25em + 6px) 0.5em 0.5em calc(1.25em + 6px); */
+    background: rgba(114, 14, 16, 0.9) padding-box;
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-.appointment-info::before {
+/* .appointment-info::before {
     position: absolute;
     top: 0;
     padding: 10px 10px 10px 10px;
@@ -48,9 +48,9 @@
     mix-blend-mode: difference;
     pointer-events: none;
     content: "";
-}
+} */
 
-.appointment-info::after {
+/* .appointment-info::after {
     position: absolute;
     top: 26px;
     left: 26px;
@@ -67,7 +67,7 @@
     border: 1.5px solid rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-}
+} */
 
 #appointment-form-article section {
     color: white;
@@ -91,7 +91,7 @@
 }
 .appointment-form {
     position: relative;
-    padding: 20px 0px 20px 20px;
+    padding: 20px 20px 20px 20px;
     z-index: 10;
   }
 

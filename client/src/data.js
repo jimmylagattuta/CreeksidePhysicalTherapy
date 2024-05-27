@@ -1120,6 +1120,8 @@ export const locations = [
     }
 ];
 
+
+// navMenu.js
 export const navMenu = [
     { menu: 'Home', link: '/' },
     {
@@ -1130,7 +1132,6 @@ export const navMenu = [
         menu: 'Providers',
         link: '/providers',
         subMenuItems: physicians.map((item) => {
-            // console.log('item', item);
             return item.name;
         }),
     },
@@ -1163,10 +1164,20 @@ export const navMenu = [
             'Tigard Clinic',
             'Locust Clinic'
         ]
+    },
+    {
+        menu: 'Contact Us',
+        link: '/locations#chatbox'
+    },
+    {
+        menu: 'Download Forms',
+        onClick: () => {
+            window.open('./CPTNPForm.pdf', '_blank');
+        }
     }
-    // { menu: 'Careers', link: 'https://ats.rippling.com/default-company/jobs' }
-
 ];
+
+
 
 export const officesData = [
     {

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import { navMenu } from '../data';
+import { navMenu, officesData } from '../data';
 import RequestAppointmentForm from './helpers/RequestAppointmentForm';
 import './helpers/navbarHelpers/Navbar.css';
 import './helpers/navbarHelpers/FormDiv.css';
@@ -15,6 +15,15 @@ const Navbar = () => {
     const [showThankYouMessage, setShowThankYouMessage] = useState(false);
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const location = useLocation();
+    // const [setMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
+
+
+    const [hoveredItem, setHoveredItem] = useState(null);
+    const [hoveredDetails, setHoveredDetails] = useState('');
+    const [hoveredPhoneDetails, setHoveredPhoneDetails] = useState('');
+    const phoneRef = useRef(); // Create a ref for the phone number link
 
     const togglePopup = () => {
       setIsPopupOpen(!isPopupOpen);
@@ -93,6 +102,62 @@ const Navbar = () => {
     const closeForm = () => {
         setIsPopupOpen(false); // Close the form
     };
+
+    
+  const handleMouseEnter = (item, details, isPhone) => {
+    setHoveredItem(item);
+  
+    let lines = details.split('\n');
+    let addressLines = [];
+    let phoneNumberLines = [];
+  
+    // Iterate through each line to categorize as address or phone number
+    lines.forEach(line => {
+      // Check if the line matches a phone number pattern
+      const phoneNumberRegex = /\b\d{3}[-.]?\d{3}[-.]?\d{4}\b/g;
+      if (phoneNumberRegex.test(line)) {
+        phoneNumberLines.push(line);
+      } else {
+        addressLines.push(line);
+      }
+    });
+  
+    // Highlight the first phone number
+    if (isPhone && phoneNumberLines.length > 0) {
+      const highlightedPhoneNumber = `<p style="color: yellow;">${phoneNumberLines[0]}</p>`;
+      setHoveredDetails(details.replace(phoneNumberLines[0], highlightedPhoneNumber));
+    } else {
+      setHoveredDetails(details.replace(addressLines.join('\n'), `<p style="color: yellow;">${addressLines.join('\n')}</p>`));
+      setHoveredPhoneDetails(''); // Clear the phone details
+    }
+  };
+  
+  const handleCallDirectionsClick = () => {
+    setMenuOpen(prevState => !prevState); // Toggle the menu open/close state
+    setIsMenuOpen(prevState => !prevState); // Toggle the specific Call/Directions state
+  };
+  
+  const handleMouseLeave = () => {
+    setHoveredItem(null);
+    setHoveredDetails('');
+  };
+
+  const handleItemOpen = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
+  const getHoveredStyle = (item) => {
+    return item === hoveredItem ? { backgroundColor: 'yellow' } : {};
+  };
+
+  const getAddressHoveredStyle = () => {
+    return getHoveredStyle('address');
+  };
+
+  const getPhoneHoveredStyle = () => {
+    return getHoveredStyle('phone');
+  };
+
       
     return (
         <header className='navbar-div'>
@@ -118,20 +183,16 @@ const Navbar = () => {
                                 onClick={toggleAppointmentForm}
                                 to={{ pathname: '/locations', hash: '#chatbox' }}
                             >
-                                <span className='nav-button'>
-                                    Contact Us
+                                <span className='nav-button-new'
+                                    ref={phoneRef}
+                                    href='tel:971-300-0690'
+                                    onMouseEnter={() => handleMouseEnter('call', 'Call Us: 971-300-0690', true)}
+                                    onMouseLeave={handleMouseLeave}
+                                >
+                                    Call Us: 971-300-0690
                                 </span>
                             </NavLink>
-                            <div className="downloads-call-us">
-                                <div onClick={() => window.open('./CPTNPForm.pdf', '_blank')}>
-                                    <span className='nav-button-white'>
-                                        Download Forms
-                                    </span>
-                                </div>
-                                <span className='nav-button'>
-                                    <ContactNav />
-                                </span>
-                            </div>    
+                           
                                 
                         </div>
 
@@ -169,22 +230,36 @@ const Navbar = () => {
                 {navMenu.map((item, index) => {
                     return (
                         <div key={index} className={`nav-link-container ${item.menu}-nav`}>
-                            <div className='link-items'>
-                            <NavLink
-                                    onClick={resetMobileMenu}
-                                key={item.menu}
-                                to={item.link}
-                                className={({ isActive }) =>
-                                    isActive ? 'nav-link-nav active' : 'nav-link-nav'
-                                }>
-                                {item.menu}
-                            </NavLink>
-                            {/* ---------------------------------------------------------------------------------- */}
+                            <div className='link-items'> {/* Added div for link items */}
+                                {item.onClick ? (
+                                    <NavLink
+                                        onClick={item.onClick}
+                                        key={item.menu}
+                                        to={item.link}
+                                        className={({ isActive }) =>
+                                            isActive ? 'nav-link-nav active' : 'nav-link-nav'
+                                        }>
+                                        {item.menu}
+                                    </NavLink>
+                                ) : (
+                                    <NavLink
+                                        onClick={handleCallDirectionsClick}
+                                        key={item.menu}
+                                        to={item.link}
+                                        className={({ isActive }) =>
+                                            isActive ? 'nav-link-nav active' : 'nav-link-nav'
+                                        }>
+                                        {item.menu}
+                                        
+                                    </NavLink>
+                                    
+                                )}
+                                      
                                 {item.subMenuItems && (
                                     <button
-                                        onClick={() => submenuOpen(item.menu)} 
+                                        onClick={() => submenuOpen(item.menu)}
                                         className='mobile-toggle-submenu'
-                                        >
+                                    >
                                         {isSubmenuOpen === item.menu ? (
                                             <i className='fas fa-minus'></i>
                                         ) : (
@@ -192,8 +267,8 @@ const Navbar = () => {
                                         )}
                                     </button>
                                 )}
-                            {/* ---------------------------------------------------------------------------------- */}
                             </div>
+                            
                             {item.subMenuItems && (
                                 <div className='submenu'>
                                     {isSubmenuOpen !== null && (
@@ -210,55 +285,55 @@ const Navbar = () => {
                                     )}
                                     {/* ---------------------------------------------------------------------------------- */}
                                     <div className={`submenu-list ${item.subMenuItems.length > 16 ? 'submenu-multi-column' : item.subMenuItems.length > 6 ? 'submenu-two-column' : ''}`}>
-    {((isSubmenuOpen !== null) || (window.innerWidth >= 1000)) && item.subMenuItems.map((subItem) => {
-        // Check if the subItem contains a comma
-        if (subItem.includes(',')) {
-            // Split the name by comma to separate the last name and titles
-            const parts = subItem.split(',');
-            if (parts.length >= 2) {
-                let lastName = parts[0].trim(); // Get the last name
-                let title = parts[1]?.trim(); // Get the first title if it exists
+                                        {((isSubmenuOpen !== null) || (window.innerWidth >= 1000)) && item.subMenuItems.map((subItem) => {
+                                            // Check if the subItem contains a comma
+                                            if (subItem.includes(',')) {
+                                                // Split the name by comma to separate the last name and titles
+                                                const parts = subItem.split(',');
+                                                if (parts.length >= 2) {
+                                                    let lastName = parts[0].trim(); // Get the last name
+                                                    let title = parts[1]?.trim(); // Get the first title if it exists
 
-                // Exclude single first-name people
-                if (lastName === title) {
-                    return null;
-                }
+                                                    // Exclude single first-name people
+                                                    if (lastName === title) {
+                                                        return null;
+                                                    }
 
-                // If the title is "Physical Therapist", replace it with "PT"
-                title = title === 'Physical Therapist' ? 'PT' : title;
+                                                    // If the title is "Physical Therapist", replace it with "PT"
+                                                    title = title === 'Physical Therapist' ? 'PT' : title;
 
-                // Check if the last name is one of the special cases
-                if (['Hal', 'Mikayla', 'Jacqueline', 'Cellina', 'Dixie'].includes(lastName)) {
-                    // For the special cases, set the title to 'PT Aide'
-                    title = 'PT Aide';
-                }
+                                                    // Check if the last name is one of the special cases
+                                                    if (['Hal', 'Mikayla', 'Jacqueline', 'Cellina', 'Dixie'].includes(lastName)) {
+                                                        // For the special cases, set the title to 'PT Aide'
+                                                        title = 'PT Aide';
+                                                    }
 
-                return (
-                    <NavLink
-                        onClick={resetMobileMenu}
-                        key={subItem}
-                        to={`${item.link}/${subItem.toLowerCase().split(' ').join('-')}`}
-                        className={({ isActive }) =>
-                            isActive ? 'sub-link active' : 'sub-link'
-                        }>
-                        {lastName}, {title}
-                    </NavLink>
-                );
-            }
-        }
-        // Display subItem directly if it does not contain a comma or the parts are insufficient
-        return (
-            <NavLink
-                onClick={resetMobileMenu}
-                key={subItem}
-                to={`${item.link}/${subItem.toLowerCase().split(' ').join('-')}`}
-                className={({ isActive }) =>
-                    isActive ? 'sub-link active' : 'sub-link'
-                }>
-                {subItem}
-            </NavLink>
-        );
-    })}
+                                                    return (
+                                                        <NavLink
+                                                            onClick={resetMobileMenu}
+                                                            key={subItem}
+                                                            to={`${item.link}/${subItem.toLowerCase().split(' ').join('-')}`}
+                                                            className={({ isActive }) =>
+                                                                isActive ? 'sub-link active' : 'sub-link'
+                                                            }>
+                                                            {lastName}, {title}
+                                                        </NavLink>
+                                                    );
+                                                }
+                                            }
+                                            // Display subItem directly if it does not contain a comma or the parts are insufficient
+                                            return (
+                                                <NavLink
+                                                    onClick={resetMobileMenu}
+                                                    key={subItem}
+                                                    to={`${item.link}/${subItem.toLowerCase().split(' ').join('-')}`}
+                                                    className={({ isActive }) =>
+                                                        isActive ? 'sub-link active' : 'sub-link'
+                                                    }>
+                                                    {subItem}
+                                                </NavLink>
+                                            );
+                                        })}
 </div>
 
 
@@ -268,6 +343,7 @@ const Navbar = () => {
                         </div>
                     );
                 })}
+              
             </nav>
         </header>
     );

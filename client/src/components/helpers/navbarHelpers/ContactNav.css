@@ -7,7 +7,9 @@
     display: flex;
     flex-direction: row;
 }
-
+#nav-button-new:hover {
+  border: white solid 1px;
+}
 #nav-phone {
     margin: 0px 10px 0px 5px;
     font-size: 1.5rem;
@@ -41,7 +43,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: absolute;
+    top: 10%; /* Position the menu below the element above it */
+    left: 90%; /* Position the menu horizontally centered */
+    transform: translateX(-50%); /* Center the menu horizontally */
+    z-index: 1; /* Ensure the menu appears above other elements */
+    background-color: white;
+    padding: 10px;
 }
+
 .menu-open #nav-phone,
 .menu-open #nav-map {
   display: none;

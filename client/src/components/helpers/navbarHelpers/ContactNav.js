@@ -3,69 +3,31 @@ import { officesData } from '../../../data';
 
 import './ContactNav.css';
 
-const ContactNav = () => {
-  const [isMenuOpen, setMenuOpen] = useState(false);
-  const [hoveredItem, setHoveredItem] = useState(null);
-  const [hoveredDetails, setHoveredDetails] = useState('');
-  const [hoveredPhoneDetails, setHoveredPhoneDetails] = useState('');
+const ContactNav = ({
+  isMenuOpen,
+  setMenuOpen,
+  hoveredItem,
+  setHoveredItem,
+  hoveredDetails,
+  setHoveredDetails,
+  handleItemOpen,
+  hoveredPhoneDetails,
+  setHoveredPhoneDetails,
+  handleMouseEnter,
+  handleMouseLeave,
+  getHoveredStyle,
+  getAddressHoveredStyle,
+  getPhoneHoveredStyle,
+  setIsMenuOpen, // Include setMenuOpen from props
+  handleCallDirectionsClick
+}) => {
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  console.log('hoveredDetails', hoveredDetails);
-  console.log('hoveredPhoneDetails', hoveredPhoneDetails);
 
-  const handleMouseEnter = (item, details, isPhone) => {
-    setHoveredItem(item);
-  
-    let lines = details.split('\n');
-    let addressLines = [];
-    let phoneNumberLines = [];
-  
-    // Iterate through each line to categorize as address or phone number
-    lines.forEach(line => {
-      // Check if the line matches a phone number pattern
-      const phoneNumberRegex = /\b\d{3}[-.]?\d{3}[-.]?\d{4}\b/g;
-      if (phoneNumberRegex.test(line)) {
-        phoneNumberLines.push(line);
-      } else {
-        addressLines.push(line);
-      }
-    });
-  
-    // Highlight the first phone number
-    if (isPhone && phoneNumberLines.length > 0) {
-      const highlightedPhoneNumber = `<p style="color: yellow;">${phoneNumberLines[0]}</p>`;
-      setHoveredDetails(details.replace(phoneNumberLines[0], highlightedPhoneNumber));
-    } else {
-      setHoveredDetails(details.replace(addressLines.join('\n'), `<p style="color: yellow;">${addressLines.join('\n')}</p>`));
-      setHoveredPhoneDetails(''); // Clear the phone details
-    }
-  };
-  
-  
-  
-  const handleMouseLeave = () => {
-    setHoveredItem(null);
-    setHoveredDetails('');
-  };
-
-  const handleItemOpen = () => {
-    setMenuOpen(!isMenuOpen);
-  };
-
-  const getHoveredStyle = (item) => {
-    return item === hoveredItem ? { backgroundColor: 'yellow' } : {};
-  };
-
-  const getAddressHoveredStyle = () => {
-    return getHoveredStyle('address');
-  };
-
-  const getPhoneHoveredStyle = () => {
-    return getHoveredStyle('phone');
-  };
 
   return (
     <div className={isMenuOpen ? 'menu-open' : ''}>
-      <div onClick={handleItemOpen} className="nav-phone-and-seperater">
+      <div onClick={handleCallDirectionsClick} className="nav-phone-and-seperater">
         <p className="words-appear">Call/</p><p className="nav-seperater">{` `}Us</p><p className="nav-seperater">|{` `}</p>
         <p className="words-appear">Directions</p>
       </div>
