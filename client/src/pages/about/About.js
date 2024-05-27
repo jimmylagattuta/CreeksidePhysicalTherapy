@@ -91,7 +91,7 @@ const About = (props) => {
             return (
               <div className='about-div-two-responsive' key={index}>
                 <img
-                  src="/DocInOffice.png"
+                  src="/DocInOffice.jpeg"
                   alt={item.nameOne}
                   id='about-div-image-responsive'
                 />

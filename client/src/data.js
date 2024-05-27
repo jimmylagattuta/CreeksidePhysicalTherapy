@@ -468,12 +468,9 @@ export const aboutObj = [
             "Triwest (VA) / Tricare",
             "MVA",
             "Workers Comp (Saif, Caremark, Majoris)",
-            "Out of Network",
-            "Providence (can match some plans’ benefits)",
-            "",
-            "Do Not Accept",
-            "Medicaid",
-            "CareOregon"
+            "Do Not Accept: Medicaid, CareOregon",
+            "Out of Network: Providence",
+            "(can match some plans’ benefits)",
         ],
         
         link: '/about',
