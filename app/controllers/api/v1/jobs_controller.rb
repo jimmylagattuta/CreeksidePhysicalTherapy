@@ -2,11 +2,6 @@ class Api::V1::JobsController < ApplicationController
   rescue_from StandardError, with: :handle_unexpected_error
   rescue_from JSON::ParserError, with: :handle_json_parsing_error
 
-  def index
-    puts "Rendering index action..."
-    render json: "Creekside Physical Therapy" * 1000
-  end
-
   def pull_google_places_cache
     begin
       puts "Fetching Google Places cache..."
@@ -22,23 +17,13 @@ class Api::V1::JobsController < ApplicationController
         puts "Cached reviews found"
         reviews = JSON.parse(cached_reviews)
         puts "Reviews fetched from cache: #{reviews.inspect}"
-        if reviews.empty?
-          puts "Cached reviews are empty, fetching fresh reviews..."
-          reviews = fetch_and_cache_reviews(redis, cache_key)
-        else
-          puts "Using cached reviews"
-          puts "Cached reviews: #{reviews.inspect}"
-        end
       else
         puts "No cached reviews found, fetching fresh reviews..."
         reviews = fetch_and_cache_reviews(redis, cache_key)
       end
 
-      creekside_reviews = reviews["Creekside Physical Therapy"] || []
-      northwest_reviews = reviews["Northwest Extremity Specialists"] || []
-
       csrf_token = form_authenticity_token
-      render json: { creekside_reviews: creekside_reviews, northwest_reviews: northwest_reviews, csrf_token: csrf_token }
+      render json: { reviews: reviews, csrf_token: csrf_token }
     rescue StandardError => e
       puts "Error fetching Google Places cache: #{e.message}"
       OfficeMailer.error_email("Google Places Cache Error", e.message).deliver_later
@@ -80,68 +65,26 @@ class GooglePlacesCached
     begin
       puts "Fetching five-star reviews for companies..."
       companies = {
-        "Creekside Physical Therapy" => ["ChIJT8nUWmzlBIgRnZluSKvaU7o", "ChIJy6GIldiP4okR-sQZEghTDSg", "ChIJt1CU6gxK0IkR4wEmOq3hYr4", "ChIJ4ehfGL8JlVQR3QwufLzN5SI", "ChIJ_U-CjPEMlVQRLymo_u5om1o", "ChIJI7hPTTYNlVQRmK-_GuttTHs"],
-        "Northwest Extremity Specialists" => ["ChIJf07ARPkJlVQRJCA-9wte444", "ChIJi3RsjPEMlVQRt1cOeU3_g48", "ChIJSRSts-CglVQRfXCyBEPzHNg"]
+        "Creekside Physical Therapy" => ["ChIJT8nUWmzlBIgRnZluSKvaU7o", "ChIJy6GIldiP4okR-sQZEghTDSg"],
+        "Northwest Extremity Specialists" => ["ChIJf07ARPkJlVQRJCA-9wte444", "ChIJi3RsjPEMlVQRt1cOeU3_g48"]
       }
 
       api_key = ENV['REACT_APP_GOOGLE_PLACES_API_KEY']
-      reviews = {}
-
-      redis = Redis.new(url: ENV['REDIS_TLS_URL'], ssl: true, ssl_params: { verify_mode: OpenSSL::SSL::VERIFY_NONE })
-      cache_key = "google_places_reviews"
-
-      cached_reviews = redis.get(cache_key)
-      if cached_reviews
-        puts "Using cached reviews"
-        reviews = JSON.parse(cached_reviews)
-        puts "Reviews fetched from cache: #{reviews.inspect}"
-      else
-        puts "Fetching fresh reviews from Google Places API"
-        reviews = fetch_reviews_from_google(companies, api_key)
-        puts "Fresh reviews: #{reviews.inspect}"
-        redis.setex(cache_key, 30.days.to_i, reviews.to_json)
-        puts "Cached fresh reviews: #{reviews.inspect}"
-      end
-
-      reviews
-    rescue StandardError => e
-      puts "Error fetching five-star reviews for companies: #{e.message}"
-      {}
-    end
-  end
-
-  def self.fetch_reviews_from_google(companies, api_key)
-    begin
-      puts "Fetching reviews from Google..."
       reviews = {}
 
       companies.each do |company, place_ids|
         puts "Fetching reviews for company: #{company}"
         reviews[company] = place_ids.flat_map do |place_id|
           puts "Fetching reviews for place ID: #{place_id}"
-          review_key = "reviews:#{company}:#{place_id}"
-          review_details = redis.get(review_key)
-
-          if review_details
-            puts "Review details for place ID #{place_id}: #{review_details}"
-          else
-            puts "No reviews found for place ID #{place_id}"
-          end
-
-          fresh_reviews = fetch_five_star_reviews_for_place_id(place_id, api_key)
-          puts "Fetched reviews for place ID #{place_id}: #{fresh_reviews.inspect}"
-
-          redis.del(review_key)
-          puts "Deleted review key: #{review_key}"
-
-          fresh_reviews
+          fetch_five_star_reviews_for_place_id(place_id, api_key)
         end
-        puts "Successfully fetched and updated reviews for company: #{company}"
+        puts "Fetched reviews for company: #{company}"
       end
 
+      puts "Fetched reviews: #{reviews.inspect}"
       reviews
     rescue StandardError => e
-      puts "Error fetching reviews from Google: #{e.message}"
+      puts "Error fetching five-star reviews for companies: #{e.message}"
       {}
     end
   end
@@ -156,3 +99,4 @@ class GooglePlacesCached
     five_star_reviews.map { |review| { author_name: review["author_name"], text: review["text"], rating: review["rating"] } }
   end
 end
+
