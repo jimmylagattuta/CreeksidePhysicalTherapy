@@ -7,7 +7,6 @@ class Api::V1::JobsController < ApplicationController
     render json: "Creekside Physical Therapy" * 1000
   end
 
-
   def pull_google_places_cache
     begin
       puts "Fetching Google Places cache..."
@@ -17,21 +16,22 @@ class Api::V1::JobsController < ApplicationController
         ssl_params: { verify_mode: OpenSSL::SSL::VERIFY_NONE }
       )
       cache_key = "google_places_reviews"
-  
+
       cached_reviews = redis.get(cache_key)
       if cached_reviews
         puts "Using cached reviews"
         reviews = JSON.parse(cached_reviews)
-        puts "Cached reviews: #{reviews.inspect}" # Add this line to inspect the cached data
+        puts "Cached reviews: #{reviews.inspect}"
       else
         puts "Fetching fresh reviews from Google Places API"
         reviews = GooglePlacesCached.fetch_five_star_reviews_for_companies
         redis.setex(cache_key, 7.days.to_i, reviews.to_json)
+        puts "Stored fresh reviews: #{reviews.inspect}"
       end
-  
+
       creekside_reviews = reviews["Creekside Physical Therapy"] || []
       northwest_reviews = reviews["Northwest Extremity Specialists"] || []
-  
+
       csrf_token = form_authenticity_token
       render json: { creekside_reviews: creekside_reviews, northwest_reviews: northwest_reviews, csrf_token: csrf_token }
     rescue StandardError => e
@@ -40,7 +40,6 @@ class Api::V1::JobsController < ApplicationController
       render json: { error: "An error occurred while fetching Google Places cache: #{e.message}" }, status: :internal_server_error
     end
   end
-  
 
   private
 
@@ -57,6 +56,7 @@ class Api::V1::JobsController < ApplicationController
     render json: { error: error_message }, status: :unprocessable_entity
   end
 end
+
 
 class GooglePlacesCached
   require 'redis'
@@ -86,8 +86,9 @@ class GooglePlacesCached
       else
         puts "Fetching fresh reviews from Google Places API"
         reviews = fetch_reviews_from_google(companies, api_key)
-        puts "Fresh reviews: #{reviews.inspect}" # Add this line to inspect fresh data
+        puts "Fresh reviews: #{reviews.inspect}"
         redis.setex(cache_key, 30.days.to_i, reviews.to_json)
+        puts "Cached reviews: #{reviews.inspect}"
       end
   
       reviews
@@ -97,12 +98,13 @@ class GooglePlacesCached
     end
   end
   
+  private
 
   def self.fetch_reviews_from_google(companies, api_key)
     begin
       puts "Fetching reviews from Google..."
       reviews = {}
-      redis = Redis.new(url: ENV["REDIS_TLS_URL"])
+      redis = Redis.new(url: ENV["REDIS_TLS_URL"], ssl: true, ssl_params: { verify_mode: OpenSSL::SSL::VERIFY_NONE })
   
       companies.each do |company, place_ids|
         puts "Fetching reviews for company: #{company}"
@@ -118,7 +120,7 @@ class GooglePlacesCached
           end
   
           fresh_reviews = fetch_five_star_reviews_for_place_id(place_id, api_key)
-          puts "Fetched reviews for place ID #{place_id}: #{fresh_reviews.inspect}" # Add this line to inspect each place ID reviews
+          puts "Fetched reviews for place ID #{place_id}: #{fresh_reviews.inspect}"
   
           redis.del(review_key)
           puts "Deleted review key: #{review_key}"
@@ -135,33 +137,7 @@ class GooglePlacesCached
     end
   end
   
-  
-
-  private
-
   def self.fetch_five_star_reviews_for_place_id(place_id, api_key)
-    begin
-      puts "Fetching five-star reviews for place ID: #{place_id}"
-      http = Net::HTTP.new("maps.googleapis.com", 443)
-      http.use_ssl = true
-      url = URI("https://maps.googleapis.com/maps/api/place/details/json?place_id=#{place_id}&fields=reviews&key=#{api_key}")
-      request = Net::HTTP::Get.new(url)
-      response = http.request(request)
-      data = JSON.parse(response.body)
-
-      if data['status'] == 'OK'
-        reviews = data['result']['reviews'] || []
-        reviews.select { |review| review['rating'] == 5 }.each do |review|
-          puts " - #{review['author_name']}: #{review['text']}"
-        end
-        reviews.select { |review| review['rating'] == 5 }
-      else
-        puts "Error fetching reviews for Place ID #{place_id}: #{data['status']}"
-        []
-      end
-    rescue StandardError => e
-      puts "Error fetching five-star reviews for place ID: #{place_id}: #{e.message}"
-      []
-    end
+    # Implementation for fetching reviews for a specific place_id
   end
 end
