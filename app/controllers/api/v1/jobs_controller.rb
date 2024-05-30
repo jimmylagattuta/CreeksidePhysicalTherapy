@@ -16,7 +16,7 @@ class Api::V1::JobsController < ApplicationController
         ssl_params: { verify_mode: OpenSSL::SSL::VERIFY_NONE }
       )
       cache_key = "google_places_reviews"
-
+  
       cached_reviews = redis.get(cache_key)
       if cached_reviews
         puts "Using cached reviews"
@@ -26,16 +26,19 @@ class Api::V1::JobsController < ApplicationController
         reviews = GooglePlacesCached.fetch_five_star_reviews_for_companies
         redis.setex(cache_key, 7.days.to_i, reviews.to_json)
       end
-
+  
       creekside_reviews = reviews["Creekside Physical Therapy"] || []
       northwest_reviews = reviews["Northwest Extremity Specialists"] || []
-
+  
       csrf_token = form_authenticity_token
       render json: { creekside_reviews: creekside_reviews, northwest_reviews: northwest_reviews, csrf_token: csrf_token }
     rescue StandardError => e
-      handle_unexpected_error(e)
+      puts "Error fetching Google Places cache: #{e.message}"
+      OfficeMailer.error_email("Google Places Cache Error", e.message).deliver_later
+      render json: { error: "An error occurred while fetching Google Places cache: #{e.message}" }, status: :internal_server_error
     end
   end
+  
 
   private
 
