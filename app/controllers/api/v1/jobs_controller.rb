@@ -72,10 +72,10 @@ class GooglePlacesCached
 
     cached_reviews = redis.get(cache_key)
     if cached_reviews
-      # puts "Using cached reviews"
+      puts "Using cached reviews"
       reviews = JSON.parse(cached_reviews)
     else
-      # puts "Fetching fresh reviews from Google Places API"
+      puts "Fetching fresh reviews from Google Places API"
       reviews = fetch_reviews_from_google(companies, api_key)
       redis.setex(cache_key, 30.days.to_i, reviews.to_json)
     end
@@ -85,14 +85,31 @@ class GooglePlacesCached
 
   def self.fetch_reviews_from_google(companies, api_key)
     reviews = {}
+    redis = Redis.new(url: ENV["REDIS_URL"])
 
     companies.each do |company, place_ids|
-      # puts "Fetching reviews for company: #{company}"
+      puts "Fetching reviews for company: #{company}"
       reviews[company] = place_ids.flat_map do |place_id|
-        # puts "Fetching reviews for place ID: #{place_id}"
-        fetch_five_star_reviews_for_place_id(place_id, api_key)
+        puts "Fetching reviews for place ID: #{place_id}"
+        review_key = "reviews:#{company}:#{place_id}"
+        review_details = redis.get(review_key)
+        
+        if review_details
+          puts "Review details for place ID #{place_id}: #{review_details}"
+        else
+          puts "No reviews found for place ID #{place_id}"
+        end
+        
+        # Fetch fresh reviews
+        fresh_reviews = fetch_five_star_reviews_for_place_id(place_id, api_key)
+        
+        # Clear existing reviews in Redis
+        redis.del(review_key)
+        puts "Deleted review key: #{review_key}"
+        
+        fresh_reviews
       end
-      # puts "Successfully fetched reviews for company: #{company}"
+      puts "Successfully fetched and updated reviews for company: #{company}"
     end
 
     # puts "Finished fetching reviews for all companies"
