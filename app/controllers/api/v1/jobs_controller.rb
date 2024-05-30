@@ -21,13 +21,13 @@ class Api::V1::JobsController < ApplicationController
       if cached_reviews
         puts "Cached reviews found"
         reviews = JSON.parse(cached_reviews)
-        puts "Reviews fetched from cache: #{reviews.inspect}" # Added logging
+        puts "Reviews fetched from cache: #{reviews.inspect}"
         if reviews.empty?
           puts "Cached reviews are empty, fetching fresh reviews..."
           reviews = fetch_and_cache_reviews(redis, cache_key)
         else
           puts "Using cached reviews"
-          puts "Cached reviews: #{reviews.inspect}" # Add this line to inspect the cached data
+          puts "Cached reviews: #{reviews.inspect}"
         end
       else
         puts "No cached reviews found, fetching fresh reviews..."
@@ -51,7 +51,7 @@ class Api::V1::JobsController < ApplicationController
   def fetch_and_cache_reviews(redis, cache_key)
     reviews = GooglePlacesCached.fetch_five_star_reviews_for_companies
     redis.setex(cache_key, 30.days.to_i, reviews.to_json)
-    puts "Stored fresh reviews: #{reviews.inspect}" # Add this line to confirm data was cached
+    puts "Stored fresh reviews: #{reviews.inspect}"
     reviews
   end
 
@@ -94,13 +94,13 @@ class GooglePlacesCached
       if cached_reviews
         puts "Using cached reviews"
         reviews = JSON.parse(cached_reviews)
-        puts "Reviews fetched from cache: #{reviews.inspect}" # Added logging
+        puts "Reviews fetched from cache: #{reviews.inspect}"
       else
         puts "Fetching fresh reviews from Google Places API"
         reviews = fetch_reviews_from_google(companies, api_key)
-        puts "Fresh reviews: #{reviews.inspect}" # Add this line to inspect fresh data
+        puts "Fresh reviews: #{reviews.inspect}"
         redis.setex(cache_key, 30.days.to_i, reviews.to_json)
-        puts "Cached reviews: #{reviews.inspect}" # Add this line to confirm data was cached
+        puts "Cached fresh reviews: #{reviews.inspect}"
       end
 
       reviews
@@ -114,7 +114,6 @@ class GooglePlacesCached
     begin
       puts "Fetching reviews from Google..."
       reviews = {}
-      redis = Redis.new(url: ENV["REDIS_TLS_URL"], ssl: true, ssl_params: { verify_mode: OpenSSL::SSL::VERIFY_NONE })
 
       companies.each do |company, place_ids|
         puts "Fetching reviews for company: #{company}"
@@ -130,7 +129,7 @@ class GooglePlacesCached
           end
 
           fresh_reviews = fetch_five_star_reviews_for_place_id(place_id, api_key)
-          puts "Fetched reviews for place ID #{place_id}: #{fresh_reviews.inspect}" # Added logging to inspect each place ID reviews
+          puts "Fetched reviews for place ID #{place_id}: #{fresh_reviews.inspect}"
 
           redis.del(review_key)
           puts "Deleted review key: #{review_key}"
