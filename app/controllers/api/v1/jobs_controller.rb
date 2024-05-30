@@ -11,7 +11,7 @@ class Api::V1::JobsController < ApplicationController
     begin
       puts "Fetching Google Places cache..."
       redis = Redis.new(
-        url: ENV['REDIS_URL'],
+        url: ENV['REDIS_TLS_URL'],
         ssl: true,
         ssl_params: { verify_mode: OpenSSL::SSL::VERIFY_NONE }
       )
@@ -74,7 +74,7 @@ class GooglePlacesCached
       api_key = ENV['REACT_APP_GOOGLE_PLACES_API_KEY']
       reviews = {}
 
-      redis = Redis.new(url: ENV['REDIS_URL'], ssl: true, ssl_params: { verify_mode: OpenSSL::SSL::VERIFY_NONE })
+      redis = Redis.new(url: ENV['REDIS_TLS_URL'], ssl: true, ssl_params: { verify_mode: OpenSSL::SSL::VERIFY_NONE })
       cache_key = "google_places_reviews"
 
       cached_reviews = redis.get(cache_key)
@@ -98,7 +98,7 @@ class GooglePlacesCached
     begin
       puts "Fetching reviews from Google..."
       reviews = {}
-      redis = Redis.new(url: ENV["REDIS_URL"])
+      redis = Redis.new(url: ENV["REDIS_TLS_URL"])
 
       companies.each do |company, place_ids|
         puts "Fetching reviews for company: #{company}"
