@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { useState, useEffect } from 'react';
 import ExpertiseBlocks from '../components/ExpertiseBlocks';
 import { Link } from 'react-router-dom';
 import ReactBackgroundCarousel from '../components/Carousel';
@@ -8,11 +8,12 @@ import TeamComponent from './lazyHome/TeamComponent';
 import LocationComponent from './lazyHome/LocationComponent';
 import MapContainer from '../components/googleMapReact/MapContainer';
 import './helpers/Home.css';
-// import '../components/helpers/Carousel.css';
+import '../components/helpers/Carousel.css';
 
 const Home = () => {
     const [firstImageLoaded, setFirstImageLoaded] = useState(false);
     const [showMap, setShowMap] = useState(false);
+
     useEffect(() => {
         const firstImage = new Image();
         firstImage.src = 'https://i.imgur.com/KRQMs5L.webp';
@@ -25,7 +26,6 @@ const Home = () => {
     }, []);
 
     useEffect(() => {
-        // Simulate loading delay of 3 seconds for the map
         const mapTimeout = setTimeout(() => {
             setShowMap(true);
         }, 1500);
@@ -37,12 +37,13 @@ const Home = () => {
         if (showMap) {
             return <MapContainer />;
         }
-        // Display a loading message during the delay
         return <p>Loading map...</p>;
     };
+
     const handleRequestAppointmentClick = () => {
         window.open('https://default-company.myezyaccess.com/Patient/Main.aspx?AspxAutoDetectCookieSupport=1', '_blank');
     };
+
     return (
         <main style={{ overflowX: 'hidden', maxWidth: '100%' }} className='main-content'>
             <div className='home-hero'>
@@ -73,38 +74,50 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <ReactBackgroundCarousel>
-                    <img
-                        src='https://i.imgur.com/KRQMs5L.webp'
-                        alt='img1'
-                        className='carousel-img'
-                        loading='eager'
-                    />
-                    <img
-                        src='https://i.imgur.com/hl6j14o.webp'
-                        alt='img2'
-                        className='carousel-img'
-                        loading='lazy'
-                    />
-                    <img
-                        src='https://i.imgur.com/qeHdPfp.webp'
-                        alt='img3'
-                        className='carousel-img'
-                        loading='lazy'
-                    />
-                    <img
-                        src='https://i.imgur.com/pErxD82.webp'
-                        alt='img4'
-                        className='carousel-img'
-                        loading='lazy'
-                    />
-                    <img
-                        src='https://i.imgur.com/ECpdKat.webp'
-                        alt='img5'
-                        className='carousel-img'
-                        loading='lazy'
-                    />
-                </ReactBackgroundCarousel>
+                <div className='Carousel-container'>
+                    <ReactBackgroundCarousel>
+                        <div className='carousel-img'>
+                            <img
+                                src='https://i.imgur.com/KRQMs5L.webp'
+                                alt='img1'
+                                loading='eager'
+                                style={{ height: '100%', width: '100%' }}
+                            />
+                        </div>
+                        <div className='carousel-img'>
+                            <img
+                                src='https://i.imgur.com/hl6j14o.webp'
+                                alt='img2'
+                                loading='lazy'
+                                style={{ height: '100%', width: '100%' }}
+                            />
+                        </div>
+                        <div className='carousel-img'>
+                            <img
+                                src='https://i.imgur.com/qeHdPfp.webp'
+                                alt='img3'
+                                loading='lazy'
+                                style={{ height: '100%', width: '100%' }}
+                            />
+                        </div>
+                        <div className='carousel-img'>
+                            <img
+                                src='https://i.imgur.com/pErxD82.webp'
+                                alt='img4'
+                                loading='lazy'
+                                style={{ height: '100%', width: '100%' }}
+                            />
+                        </div>
+                        <div className='carousel-img'>
+                            <img
+                                src='https://i.imgur.com/ECpdKat.webp'
+                                alt='img5'
+                                loading='lazy'
+                                style={{ height: '100%', width: '100%' }}
+                            />
+                        </div>
+                    </ReactBackgroundCarousel>
+                </div>
             </div>
             <AboutUsComponent />
             <div className='home-expertise'>
@@ -123,4 +136,5 @@ const Home = () => {
         </main>
     );
 };
+
 export default Home;

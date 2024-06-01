@@ -3,10 +3,6 @@
     width: 100%;
 }
 
-.slide:not(.first-slide) .show {
-    animation: fade 1.5s ease-in-out;
-}
-
 .show {
     height: 100%;
     width: 100%;
@@ -14,15 +10,47 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
 }
 
 .carousel-img {
-    /* Apply the animation named 'fadeIn' */
-    animation: fadeIn 1s ease-in forwards;
-    /* Set the initial opacity to 0 to start with a fully transparent element */
-    /* opacity: 0; */
-    /* Set the dimensions to fill the parent container */
     height: 100%;
     width: 100%;
-    background-color: var(--violet);
-  }
+    position: relative;
+    animation: fadeIn 1.5s forwards, fadeOut 1.5s forwards 5s;
+
+}
+
+.carousel-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Ensure the images cover the area without distortion */
+}
+
+.carousel-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.9) 100%);
+    z-index: 1;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
