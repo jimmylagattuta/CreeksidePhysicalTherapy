@@ -16,8 +16,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 35px 35px 35px 35px;
-  max-height: 50px;
+  padding: 15px 15px 15px 15px;
+  max-height: 90px;
 }
 .navbar-container-logo {
   padding: 10px;
@@ -50,9 +50,9 @@
 }
 .navbar-logo {
   width: 100%;
-  max-width: 360px;
-  min-width: 156px;
-  height: 200%;
+  max-width: min-content;
+  /* min-width: 156px; */
+  height: auto;
 }
 .navbar-buttons-nav {
   color: white;
@@ -160,10 +160,6 @@
 }
 
 @media (max-width: 1000px) {
-  .nav-button-new {
-    right: auto;
-    top: auto;
-  }
 }
 /* Responsive styles */
 @media (max-width: 768px) {
@@ -182,6 +178,13 @@
 
 @media (max-width: 1000px) {
   
+  .nav-button-new {
+    right: auto;
+    top: unset;
+    bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 1.5rem;
+  }
   .navbar-container {
     padding: 5px 20px 5px 20px;
   }
@@ -193,7 +196,7 @@
     font-size: 4rem;
   }
   .mobile-menu-button-navbar .fa-bars:before {
-    animation: colorAnimation 3s infinite; /* Apply the color animation */
+    /* animation: colorAnimation 3s infinite; Apply the color animation */
   }
   @keyframes colorAnimation {
     0% {
@@ -266,6 +269,12 @@
   }
 }
 @media (max-width: 850px) {
+  #animate-bars {
+    font-size: 3rem;
+    padding: 0px 10px 0px 0px;
+    z-index: 3;
+    color: rgba(114 14 16 / 50%);
+  }
   .call-contact-download {
     display: flex;
     flex-direction: row;
@@ -274,7 +283,7 @@
     display: flex;
   }
   .navbar-logo {
-    height: 60%;
+    height: 85%;
   }
   .nav-button-white {
     padding: 5px 20px 5px 20px;
@@ -288,7 +297,7 @@
 }
 @media (max-width: 750px) {
   .navbar-logo {
-    max-width: -1px;
+    max-width: 230px;
     padding-left: 5px;
   }
   .mobile-menu-button-navbar {
@@ -333,12 +342,12 @@
 }
 @media (max-width: 700px) {
   .navbar-logo {
-    height: 40%;
+    /* height: 40%; */
     max-width: 200px;
   }
   .navbar-container {
-    height: 130px;
-    width: 95%;
+    /* height: 130px; */
+    /* width: 95%; */
   }
   .call-contact-download {
     flex-direction: column;
@@ -354,12 +363,9 @@
 }
 @media (max-width: 475px) {
   .navbar-logo {
-    max-width: 125px;
-    height: 50%;
-    padding-left: 5px;
-  }
-  .nav-button-new {
-    font-size: 0.6rem;
+    /* max-width: 125px; */
+    /* height: 50%; */
+    /* padding-left: 5px; */
   }
   .mobile-menu-button-navbar {
     padding-right: 10px;
@@ -412,8 +418,8 @@
     font-size: 0.6rem;
   }
   .nav-button-new {
-    font-size: 0.8rem;
-    padding: 2px 8px 2px 8px;
+    /* font-size: 0.7rem; */
+    /* padding: 2px 4px 2px 4px; */
   }
   .navbar-container {
     padding: 0px 0px 0px 5px;
@@ -448,7 +454,7 @@
     /* align-self: center; */
     /* padding: 0px; */
     /* max-width: 80px; */
-    min-width: 100px;
+    min-width: 200px;
     /* max-height: 40px; */
   }
   .submenu {
@@ -573,7 +579,7 @@
     max-height: 40px;
   }
   .nav-button-new {
-    font-size: 0.5rem;
+    font-size: 1.5rem;
     padding: 3px 5px 3px 5px;
   }
 }

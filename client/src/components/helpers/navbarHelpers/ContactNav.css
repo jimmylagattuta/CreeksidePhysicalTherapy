@@ -248,8 +248,8 @@
     margin: 0px 0px 0px 20px;
   }
   .navbar-container {
-    max-height: 60px;
-    min-height: 66px;
+    /* max-height: 60px; */
+    min-height: 80px;
   }
   .nav-button {
     /* padding: 0px 0px 0px 0px;
