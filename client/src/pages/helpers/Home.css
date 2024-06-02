@@ -319,6 +319,12 @@
         display: flex;
     }
 }
+@media (max-width: 550px) {
+    .home-banner {
+        justify-content: flex-end;
+        min-height: 60vh;
+    }
+}
 @media (max-width: 415px) {
     .home-hero {
         min-height: 70vh;
