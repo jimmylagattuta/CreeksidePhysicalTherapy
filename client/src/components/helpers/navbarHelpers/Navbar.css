@@ -138,7 +138,12 @@
   box-shadow: -2px 2px 0 0 rgba(192, 192, 192,1), -4px 4px 0 0 rgba(192, 192, 192,0.6), -6px 6px 0 0 rgba(192, 192, 192,0.4), -10px 10px rgba(192, 192, 192,0.2); /* Adjusted box shadow on hover */
 }
 
-
+#animate-bars {
+  font-size: 4rem;
+  padding: 0px 0px 0px 0px;
+  z-index: 3;
+  color: rgba(114 14 16 / 50%);
+}
 
 .nav-link-nav {
   display: block;
@@ -270,7 +275,7 @@
 }
 @media (max-width: 850px) {
   #animate-bars {
-    font-size: 3rem;
+    font-size: 4rem;
     padding: 0px 10px 0px 0px;
     z-index: 3;
     color: rgba(114 14 16 / 50%);

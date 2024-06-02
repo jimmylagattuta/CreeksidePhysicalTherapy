@@ -25,7 +25,7 @@
     -webkit-transform: skew(-19deg);
     transform: skew(-18deg);
     width: calc(64% - 148px);
-    min-width: 850px;
+    min-width: 950px;
     z-index: -1;
 }
 .banner-title {
@@ -84,7 +84,7 @@
         /* margin: 0px 0px 0px 0px; */
     }
     .home-banner:after {
-        min-width: 75vw;
+        min-width: 78vw;
         height: 70vh;
     } 
     .Carousel-container {
@@ -132,16 +132,16 @@
 
 @media (max-width: 950px) {
     .Carousel-container {
-        height: 105vh;
+        /* height: 105vh; */
     }
     .home-hero {
-        min-height: 105vh;
+        /* min-height: 105vh; */
     }
     .home-banner {
         /* min-height: 105vh; */
     }
     .banner-title {
-        /* font-size: 3.6rem; */
+        font-size: 3rem;
     }
 }
 
