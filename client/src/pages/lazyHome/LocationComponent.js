@@ -28,7 +28,7 @@ const LocationComponent = () => {
                 </div>
                 <h2 className='section-title-location-component'>
                     Offices Located Across
-                    The Greater Hilltown and Rivercity Area
+                    the Westside Portland Metro Area
                 </h2>
             </div>
         </div>

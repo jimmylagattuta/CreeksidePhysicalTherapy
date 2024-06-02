@@ -447,7 +447,7 @@ export const aboutObj = [
     {
         nameOne: "Insurance Information",
         descriptionOne: [
-            "Insurance We Accept"
+            "insurance we accept"
         ],
         descriptionOneBullettedList: [
             "BCBS",
