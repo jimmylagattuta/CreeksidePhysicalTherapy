@@ -179,10 +179,7 @@ const Navbar = () => {
 
                         <div className="call-contact-download">
 
-                            <NavLink
-                                onClick={toggleAppointmentForm}
-                                to={{ pathname: '/locations', hash: '#chatbox' }}
-                            >
+                            
                                 <span className='nav-button-new'
                                     ref={phoneRef}
                                     href='tel:971-300-0690'
@@ -191,7 +188,7 @@ const Navbar = () => {
                                 >
                                     Call Us: 971-300-0690
                                 </span>
-                            </NavLink>
+
                            
                                 
                         </div>
