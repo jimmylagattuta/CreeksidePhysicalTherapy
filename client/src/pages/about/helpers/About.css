@@ -255,14 +255,14 @@
     gap: 0px 0px;
 }
 .unordered-list-about li {
-    text-shadow: -0.5px -0.5px 0px rgba(255, 255, 255, 0.3), 0.5px 0.5px 0px rgba(0, 64, 143,0.8);
+
     padding: 5px 5px 5px 5px;
     font-size: 0.6rem;
     max-width: 160px;
     text-align: center;
 	color: #333;
 	opacity: 1;
-    font-family: math;
+    font-family: sans-serif;
 
     color: black;
    

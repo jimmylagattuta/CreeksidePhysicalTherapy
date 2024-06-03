@@ -9,7 +9,7 @@
     padding: 0px 120px 115px 120px;
     position: relative;
     /* width: 50%; */
-    z-index: 2;
+    z-index: 1;
 }
 .home-banner:after {
     background: rgb(0, 64, 143 / 20%);
