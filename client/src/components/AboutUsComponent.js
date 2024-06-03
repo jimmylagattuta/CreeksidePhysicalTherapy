@@ -25,12 +25,6 @@ const AboutUsComponent = () => {
                         Portland's Foot and Ankle Rehabilitation Experts
                     </h2>
                     <p className='about-description-right'>
-                        Focus on foot, ankle, and lower leg injuries ensures optimal care. We assess the entire kinetic chain and develop an individualized plan to help you get back to moving your best.
-                    </p>
-                    <p className='about-description-right'>
-                        We develop a custom rehabilitation plan for you. Whether you want to walk without pain or train for a triathlon, we'll create a treatment plan to get you there.
-                    </p>
-                    <p className='about-description-right'>
                         <ul>
                             <li>
                                 We put patients first, prioritizing your well-being during each visit.
