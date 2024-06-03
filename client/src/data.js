@@ -1168,12 +1168,7 @@ export const navMenu = [
     },
     {
         menu: 'Locations',
-        link: '/locations',
-        subMenuItems: [
-            'Cedar Mill Clinic',
-            'Tigard Clinic',
-            'Locust Clinic'
-        ]
+        link: '/locations'
     },
     {
         menu: 'Contact Us',
