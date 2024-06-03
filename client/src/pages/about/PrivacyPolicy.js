@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { aboutExtra, aboutTerms } from '../../data';
 
 const PrivacyPolicy = () => {
-    const documentUrl = process.env.NODE_ENV === 'production' ? 'https://www.creekside-physical-therapy-3c43d5dad481.herokuapp.com/UnityMSKPrivacyPolicy.docx' : 'http://localhost:3001/UnityMSKPrivacyPolicy.docx';
+    const documentUrl = process.env.NODE_ENV === 'production' ? 'https://www.creeksidephysicaltherapy.com/UnityMSKPrivacyPolicy.docx' : 'http://localhost:3001/UnityMSKPrivacyPolicy.docx';
 
     const tocRef = useRef(null);
     

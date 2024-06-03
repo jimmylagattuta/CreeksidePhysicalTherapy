@@ -29,7 +29,7 @@ Rails.application.configure do
     'Cache-Control' => 'public, max-age=31536000'
   }
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.asset_host = "http://creekside-physical-therapy-3c43d5dad481.herokuapp.com"
+  config.asset_host = "http://creeksidephysicaltherapy.com"
   config.assets.compile = false
 
   # Specifies the header that your server uses for sending files.
