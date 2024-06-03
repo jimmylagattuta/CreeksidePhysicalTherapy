@@ -14,13 +14,13 @@ module LaOrthos
     config.load_defaults 7.0
   
 
+
     # Ensure the middleware directory exists
     middleware_directory = Rails.root.join('app', 'middleware')
     Dir.mkdir(middleware_directory) unless Dir.exist?(middleware_directory)
 
     # Add custom middleware for forcing www
-    require_relative '../app/middleware/force_www'
-    config.middleware.use 'ForceWww'
+    config.middleware.use ForceWww
 
     # Configuration for the application, engines, and railties goes here.
     #
