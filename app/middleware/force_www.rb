@@ -1,4 +1,5 @@
-class WwwMiddleware
+# app/middleware/force_www.rb
+class ForceWww
     def initialize(app)
       @app = app
     end
@@ -14,4 +15,3 @@ class WwwMiddleware
     end
   end
   
-  Rails.application.config.middleware.use WwwMiddleware

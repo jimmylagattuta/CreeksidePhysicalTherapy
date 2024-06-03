@@ -2,6 +2,8 @@ require_relative "boot"
 
 require "rails/all"
 
+require_relative '../app/middleware/force_www'
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -11,6 +13,14 @@ module LaOrthos
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
   
+
+    # Ensure the middleware directory exists
+    middleware_directory = Rails.root.join('app', 'middleware')
+    Dir.mkdir(middleware_directory) unless Dir.exist?(middleware_directory)
+
+    # Add custom middleware for forcing www
+    require_relative '../app/middleware/force_www'
+    config.middleware.use 'ForceWww'
 
     # Configuration for the application, engines, and railties goes here.
     #
