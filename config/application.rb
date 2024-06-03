@@ -2,7 +2,8 @@ require_relative "boot"
 
 require "rails/all"
 
-require_relative '../app/middleware/force_www'
+require_relative "../app/middleware/force_www"
+
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -20,6 +21,7 @@ module LaOrthos
     Dir.mkdir(middleware_directory) unless Dir.exist?(middleware_directory)
 
     # Add custom middleware for forcing www
+    require_relative "../app/middleware/force_www"
     config.middleware.use ForceWww
 
     # Configuration for the application, engines, and railties goes here.
