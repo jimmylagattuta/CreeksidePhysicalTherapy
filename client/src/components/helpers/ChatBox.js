@@ -73,11 +73,12 @@ function ChatBox(props) {
     }
   }, []);
 
+
   const fetchReviews = () => {
     const url =
       process.env.NODE_ENV === 'production'
         ? 'https://www.creeksidephysicaltherapy.com/api/v1/pull_google_places_cache'
-        : 'localhost:3001/api/v1/pull_google_places_cache';
+        : 'http://localhost:3001/api/v1/pull_google_places_cache';
 
     const headers = {
       'Content-Type': 'application/json',
@@ -94,26 +95,16 @@ function ChatBox(props) {
       })
       .then((data) => {
         console.log('data **************', data);
-        console.log('Received CSRF Token:', data.csrf_token); // Log the CSRF token
-
-        if (Array.isArray(data.reviews)) {
-          if (data.csrf_token) {
-            setCsrfToken(data.csrf_token);
-          }
-
-          const filteredReviews = data.reviews.filter(
-            (item) => !defaultProfilePhotoUrls.includes(item.profile_photo_url)
-          );
-
-          const shuffledReviews = shuffleArray(filteredReviews);
-          const randomReviews = shuffledReviews.slice(0, 3);
-
-          saveToCache(data);
-          setReviews(randomReviews);
-          setLoading(false);
-        } else {
-          throw new Error('Data.reviews is not an array');
+        if (data.csrf_token) {
+          setCsrfToken(data.csrf_token);
         }
+
+        if (Array.isArray(data.reviews) && data.reviews.length > 0) {
+          setReviews(data.reviews);
+        } else {
+          throw new Error('No reviews available');
+        }
+        setLoading(false);
       })
       .catch((err) => {
         console.error(err);

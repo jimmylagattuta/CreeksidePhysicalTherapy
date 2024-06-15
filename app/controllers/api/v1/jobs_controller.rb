@@ -13,22 +13,16 @@ class Api::V1::JobsController < ApplicationController
       cache_key = "google_places_reviews"
 
       cached_reviews = redis.get(cache_key)
-      if cached_reviews
-        puts "Cached reviews found"
-        reviews = JSON.parse(cached_reviews)
-        if reviews.empty?
-          puts "Cached reviews are empty, fetching fresh reviews..."
-          reviews = fetch_and_cache_reviews(redis, cache_key)
-        else
-          puts "Reviews fetched from cache: #{reviews.inspect}"
-        end
-      else
-        puts "No cached reviews found, fetching fresh reviews..."
-        reviews = fetch_and_cache_reviews(redis, cache_key)
-      end
+      reviews = if cached_reviews && JSON.parse(cached_reviews).any?
+                  puts "Cached reviews found"
+                  JSON.parse(cached_reviews)
+                else
+                  puts "No cached reviews found or empty, fetching fresh reviews..."
+                  fetch_and_cache_reviews(redis, cache_key)
+                end
 
       csrf_token = form_authenticity_token
-      render json: { reviews: reviews.values.flatten, csrf_token: csrf_token } # Ensure reviews are flattened
+      render json: { reviews: reviews.values.flatten, csrf_token: csrf_token }
     rescue StandardError => e
       puts "Error fetching Google Places cache: #{e.message}"
       OfficeMailer.error_email("Google Places Cache Error", e.message).deliver_later
@@ -40,12 +34,8 @@ class Api::V1::JobsController < ApplicationController
 
   def fetch_and_cache_reviews(redis, cache_key)
     reviews = GooglePlacesCached.fetch_five_star_reviews_for_companies
-    if reviews.empty?
-      puts "No reviews fetched, not updating cache."
-    else
-      redis.setex(cache_key, 30.days.to_i, reviews.to_json)
-      puts "Stored fresh reviews: #{reviews.inspect}"
-    end
+    redis.setex(cache_key, 30.days.to_i, reviews.to_json) unless reviews.empty?
+    puts "Stored fresh reviews: #{reviews.inspect}"
     reviews
   end
 
