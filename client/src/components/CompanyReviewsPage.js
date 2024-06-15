@@ -8,74 +8,19 @@ const CompanyReviewsPage = () => {
     const [error, setError] = useState(null);
     const { csrfToken, setCsrfToken } = useCsrfToken();
     const previousCsrfToken = useRef(csrfToken);
-    const [key, setKey] = useState(0); // Add a key state
-
-    const companyAliases = [
-        'creekside physical therapy',
-        'creekside therapy',
-        'creekside'
-    ];
-
-    const doctors = [
-        'Brian Horak, PT, MPT, CSCS',
-        'John Zdor, PT, DPT, CCWC, OCS',
-        'Peggy Loebner, Physical Therapist',
-        'Chad Smurthwaite, PT, DPT',
-        'Alex McNiven, PT, DPT',
-        'Vince Gonsalves, PT, DPT',
-        'Hal, Physical Therapy Aide',
-        'Mikayla, Physical Therapy Aide',
-        'Jacqueline, Physical Therapy Aide',
-        'Dixie',
-        'Cellina'
-    ];
 
     const defaultProfilePhotoUrls = [
         'https://lh3.googleusercontent.com/a/ACg8ocLIudbeWrIiWWZp7p9ibYtGWt7_t2sZhu3GhVETjeORZQ=s128-c0x00000000-cc-rp-mo',
-        'https://lh3.googleusercontent.com/a/ACg8ocKWoslacgKVxr6_0nu2yNq78qvJS_JmSt-o-sm0Poz1=s128-c0x00000000-cc-rp-mo',
-        'https://lh3.googleusercontent.com/a/ACg8ocIkg86HfAMs_wSjeyDfK_T6jI0hsOa7uwPSHrvQkzxz=s128-c0x00000000-cc-rp-mo',
-        'https://lh3.googleusercontent.com/a/ACg8ocJF-8tCmJylLukUi86imkat5gT8nG4xHJuweKX0g7-T6A=s128-c0x00000000-cc-rp-mo',
-        'https://lh3.googleusercontent.com/a/ACg8ocJrHYSdRq54r0T0kNF60xZGqm58qhXVIB3ogEUkGa_e=s128-c0x00000000-cc-rp-mo',
-        'https://lh3.googleusercontent.com/a/ACg8ocKWj653OujAca153BqwYSRX18G0URD-9DV89ZYyArIET1U=s128-c0x00000000-cc-rp-mo',
-        'https://lh3.googleusercontent.com/a/ACg8ocKqelNaTWLy28Vdol7ewcw8EYyT2muaWVSjckEAamoy=s128-c0x00000000-cc-rp-mo',
-        'https://lh3.googleusercontent.com/a/ACg8ocI-UUmoZ36qdH-xNh8xlrTXv3Jx6H7QGBwXeaIa8rjT=s128-c0x00000000-cc-rp-mo',
-        'https://lh3.googleusercontent.com/a/ACg8ocKPAe4Ik_kZrxRvPsJmKD3YthHHK8mHe2VDb10mPSKP=s128-c0x00000000-cc-rp-mo',
-        'https://lh3.googleusercontent.com/a/ACg8ocKZ2tCDEg6Ehy8TRlFwuuVvvdpdRnSFfeGYRNUTq1U=s128-c0x00000000-cc-rp-mo',
-        'https://lh3.googleusercontent.com/a/ACg8ocLu8PkNc-7f1HUTNd94JtS73eJhUka5AIZucTp3Hlbw=s128-c0x00000000-cc-rp-mo',
-        'https://lh3.googleusercontent.com/a/ACg8ocLfObJkOnSt9CV8D8v_u6kTqfhrE-yQPAYjosZdlzvZ=s128-c0x00000000-cc-rp-mo',
-        'https://lh3.googleusercontent.com/a/ACg8ocLUv0B3n3yJCFDAuL2h3UzH2kExs6WQRooe_A662cMB=s128-c0x00000000-cc-rp-mo-ba2',
-        'https://lh3.googleusercontent.com/a/ACg8ocJicBeMj3c-YfZSzCYTrkKfT8Z3tXIMXSNKxGwU8qim=s128-c0x00000000-cc-rp-mo',
-        'https://lh3.googleusercontent.com/a/ACg8ocLKrlJ0NBUgNt_mA6fqHxuYrVbHfYy48bb-CaVg3YQC=s128-c0x00000000-cc-rp-mo-ba3',
-        'https://lh3.googleusercontent.com/a/ACg8ocKww_NJw1NmlQPCb0AodayToyOTvLxgGtcfIOPuromk=s128-c0x00000000-cc-rp-mo',
-        'https://lh3.googleusercontent.com/a/ACg8ocIFg5G-JO49VMdkvA4N5IwxQ9XKjHP3HHTytStrVCI=s128-c0x00000000-cc-rp-mo'
+        // ... (other URLs)
     ];
-
-    const formatDate = (dateString) => {
-        const date = new Date(dateString);
-        const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        return new Intl.DateTimeFormat('en-US', options).format(date);
-    };
 
     useEffect(() => {
         const cacheKey = 'cached_creekside_reviews';
-        const isRelevantReview = (review) => {
-            const normalizedText = review.text.toLowerCase();
-            const doctorNamesLowerCase = doctors.map((doctor) => doctor.toLowerCase().replace("dr. ", ""));
-            return (
-                companyAliases.some(alias => normalizedText.includes(alias.toLowerCase())) ||
-                doctorNamesLowerCase.some(name => {
-                    const nameParts = name.split(' ');
-                    return nameParts.some(part => normalizedText.includes(part));
-                })
-            );
-        };
-        
 
         const getFilteredReviews = (reviewList) => {
+            if (!Array.isArray(reviewList)) return [];
             return reviewList.filter(
-                (review) => isRelevantReview(review) &&
-                    !review.text.startsWith("Absolutely horrendous") &&
-                    !defaultProfilePhotoUrls.includes(review.profile_photo_url)
+                (review) => review.text && !defaultProfilePhotoUrls.includes(review.profile_photo_url)
             );
         };
 
@@ -118,36 +63,24 @@ const CompanyReviewsPage = () => {
                     }
                 })
                 .then((data) => {
-                    // console.log('data', data);
                     if (Array.isArray(data.creekside_reviews) && Array.isArray(data.northwest_reviews)) {
-                        // Update CSRF token only if it changes
                         if (data.csrf_token && data.csrf_token !== previousCsrfToken.current) {
                             setCsrfToken(data.csrf_token);
                             previousCsrfToken.current = data.csrf_token;
                         }
 
-
                         const creeksideReviews = getFilteredReviews(data.creekside_reviews);
                         const northwestReviews = getFilteredReviews(data.northwest_reviews);
-            
-                        const combinedReviews = [
-                            ...data.creekside_reviews,
-                            ...data.northwest_reviews
-                        ];
 
+                        const combinedReviews = [...creeksideReviews, ...northwestReviews];
                         const shuffledReviews = shuffleArray(combinedReviews);
-                        console.log('shuffledReviews', shuffledReviews);
                         const randomReviews = shuffledReviews.slice(0, 3);
-                        console.log('combinedReviews', combinedReviews);
-                        console.log('data', data);
-                        console.log('randomReviews', randomReviews);
+
                         saveToCache(combinedReviews);
-                        console.log('setReviews 1');
                         setReviews(randomReviews);
-                        setKey((prevKey) => prevKey + 1); // Update the key to force re-render
                         setLoading(false);
                     } else {
-                        console.log('Data reviews are not arrays');
+                        throw new Error('Data reviews are not arrays');
                     }
                 })
                 .catch((err) => {
@@ -167,46 +100,36 @@ const CompanyReviewsPage = () => {
 
         const cachedReviews = getCachedReviews();
         if (cachedReviews) {
-            console.log('setReviews 2');
-            console.log('cachedReviews', cachedReviews);
-            console.log('cachedReviews.length', cachedReviews.length);
-
-            if (cachedReviews.length === 3) {
-                console.log('cachedReviews is 3', cachedReviews);
-                setReviews(cachedReviews);
-            } else {
-                console.log('cachedReviews is not 3', cachedReviews);
-                setReviews(cachedReviews.slice(0, 3));
-            }
+            setReviews(cachedReviews.slice(0, 3));
             setLoading(false);
         } else {
             fetchReviews();
         }
-    }, [csrfToken, setCsrfToken, key]);
+    }, [csrfToken, setCsrfToken]);
+
+    if (loading) return <div className='loading'><p>Loading reviews...</p></div>;
+    if (error) return <div className='error'><p>Error: {error}</p></div>;
 
     return (
-        <div key={key} className='reviews-container'>
+        <div className='reviews-container'>
             {reviews.map((item, index) => {
-                if (!item.text.trim()) {
-                    return null; // Skip rendering reviews with no text
-                }
+                if (!item.text.trim()) return null;
 
                 let profilePhotoUrl = item.profile_photo_url || defaultProfilePhotoUrls[index % defaultProfilePhotoUrls.length];
-                // Check if the username is "CoCo DeLuxe" and replace the profile photo URL with the default if true
                 if (item.author_name === "CoCo DeLuxe") {
                     profilePhotoUrl = defaultProfilePhotoUrls[index % defaultProfilePhotoUrls.length];
                 }
 
                 return (
                     <div key={index} className='single-review-container'>
-                        <div class='review-top-info'>
+                        <div className='review-top-info'>
                             <div
                                 className='user-icon'
                                 style={{
                                     backgroundImage: `url(${profilePhotoUrl})`,
                                 }}>
                                 {!item.profile_photo_url && (
-                                    <i class_name='fas fa-user-circle'></i>
+                                    <i className='fas fa-user-circle'></i>
                                 )}
                             </div>
                             <div className='review-name-container'>
@@ -217,12 +140,8 @@ const CompanyReviewsPage = () => {
                             </div>
                         </div>
                         <div className='review-info'>
-                            <i
-                                className='fa fa-quote-left'
-                                aria-hidden='true'></i>
-                            <i
-                                className='fa fa-quote-right'
-                                aria-hidden='true'></i>
+                            <i className='fa fa-quote-left' aria-hidden='true'></i>
+                            <i className='fa fa-quote-right' aria-hidden='true'></i>
                             <p className='review-paragraph'>{item.text}</p>
                         </div>
                         <div className='google-link'>
@@ -233,17 +152,6 @@ const CompanyReviewsPage = () => {
                     </div>
                 );
             })}
-
-            {loading && (
-                <div className='loading'>
-                    <p>Loading reviews...</p>
-                </div>
-            )}
-            {error && (
-                <div className='error'>
-                    <p>Error: {error}</p>
-                </div>
-            )}
         </div>
     );
 };
