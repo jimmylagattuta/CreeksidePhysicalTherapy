@@ -209,7 +209,8 @@ useEffect(() => {
         },
         body: JSON.stringify(formData),
       });
-
+      console.log('Request Headers:', response.headers);
+      console.log('CSRF Token:', csrfToken);
       if (response.ok) {
         console.log('Email sent successfully');
       } else {

@@ -7,8 +7,6 @@ class ForceWww
   def call(env)
     request = Rack::Request.new(env)
 
-    Rails.logger.info("ForceWww middleware: #{request.url}")
-
     if request.host == 'creeksidephysicaltherapy.com'
       redirect_to_www(request)
     else
