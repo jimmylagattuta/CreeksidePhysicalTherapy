@@ -349,7 +349,7 @@ export const services = [
     // Low Back & Sciatica Treatment
     {
         image: '../Back.jpg',
-        name: 'Low Back & Sciatica',
+        name: 'Low Back Pain & Sciatica',
         firstTitle: 'Low Back & Sciatica Treatment',
         description: [
             "At our clinic, we understand the debilitating effects of low back pain and sciatica. Our comprehensive treatment approach is designed to address not just the symptoms but also the underlying causes of these conditions. We utilize a combination of advanced techniques, including spinal manipulation, core strengthening exercises, and flexibility training, to improve spinal health and alleviate pain. Our goal is to provide long-lasting relief and improve your overall quality of life."

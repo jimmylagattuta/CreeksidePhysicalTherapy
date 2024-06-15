@@ -31,6 +31,10 @@ const Navbar = () => {
         }, 250);
     };
 
+    const handleNavLinkClick = () => {
+        resetMobileMenu();
+    };
+
     return (
         <header className='navbar-div'>
             <div className="navbar-container">
@@ -61,7 +65,7 @@ const Navbar = () => {
                     <div key={index} className={`nav-link-container ${item.menu}-nav`}>
                         <div className='link-items'>
                             <NavLink
-                                onClick={resetMobileMenu}
+                                onClick={handleNavLinkClick}
                                 to={item.link}
                                 className={({ isActive }) =>
                                     isActive ? 'nav-link-nav active' : 'nav-link-nav'
@@ -85,7 +89,7 @@ const Navbar = () => {
                             <div className='submenu'>
                                 {isSubmenuOpen !== null && (
                                     <NavLink
-                                        onClick={resetMobileMenu}
+                                        onClick={handleNavLinkClick}
                                         to={item.link}
                                         className={({ isActive }) =>
                                             isActive ? 'sub-link mobile-nav-link active' : 'sub-link mobile-nav-link'
@@ -100,7 +104,7 @@ const Navbar = () => {
                                         console.log('Generated Path:', path);
                                         return (
                                             <NavLink
-                                                onClick={resetMobileMenu}
+                                                onClick={handleNavLinkClick}
                                                 key={subItem}
                                                 to={path}
                                                 className={({ isActive }) =>

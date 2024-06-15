@@ -2533,7 +2533,7 @@ display: none;
     }
     .header-button-yellow {
         text-decoration-line: none !important;
-        font-size: 0.3rem;
+        font-size: 1rem;
     }
     #chat-form-lines-request-apt {
         width: 91%;
