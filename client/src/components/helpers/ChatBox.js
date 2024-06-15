@@ -94,6 +94,8 @@ function ChatBox(props) {
       })
       .then((data) => {
         console.log('data **************', data);
+        console.log('Received CSRF Token:', data.csrf_token); // Log the CSRF token
+
         if (Array.isArray(data.reviews)) {
           if (data.csrf_token) {
             setCsrfToken(data.csrf_token);
@@ -155,7 +157,6 @@ useEffect(() => {
     fetchReviews();
   }
 }, []);
-
   const initializeRecaptcha = () => {
     window.grecaptcha.enterprise.ready(() => {
       window.grecaptcha.enterprise.execute(process.env.REACT_APP_RECAPTCHA, { action: 'submit_form' }).then((token) => {
@@ -163,20 +164,17 @@ useEffect(() => {
       });
     });
   };
-
   const handleSubmitRecaptcha = (values) => {
     if (values) {
       setState({ ...state, recaptchaChecked: true, errorRecaptcha: '' });
     }
   };
-
   const handleAgreeChange = () => {
     setState((prevState) => ({
       ...state,
       agreeToTerms: !prevState.agreeToTerms,
     }));
   };
-
   const formatPhoneNumber = (value) => {
     if (value) {
       const phoneNumber = value.replace(/\D/g, '');
@@ -185,14 +183,12 @@ useEffect(() => {
     }
     return '';
   };
-
   const parsePhoneNumber = (value) => {
     if (value) {
       return value.replace(/\D/g, '');
     }
     return '';
   };
-
   const onSubmit = async (values) => {
     const formData = {
       ...values,

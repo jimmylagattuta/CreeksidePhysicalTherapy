@@ -22,6 +22,7 @@ module LaOrthos
     # Include middleware for cookies and sessions if needed
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use ActionDispatch::Session::CookieStore
+    config.middleware.use ActionDispatch::Flash # This might be needed depending on your setup
     config.action_dispatch.cookies_same_site_protection = :lax
   end
 end
