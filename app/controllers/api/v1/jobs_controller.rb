@@ -53,3 +53,65 @@ class Api::V1::JobsController < ApplicationController
     render json: { error: error_message }, status: :unprocessable_entity
   end
 end
+
+class GooglePlacesCached
+  require 'redis'
+  require 'json'
+  require 'uri'
+  require 'net/http'
+  require 'openssl'
+
+  def self.fetch_five_star_reviews_for_companies
+    begin
+      puts "Fetching five-star reviews for companies..."
+      companies = {
+        "Creekside Physical Therapy" => ["ChIJT8nUWmzlBIgRnZluSKvaU7o", "ChIJy6GIldiP4okR-sQZEghTDSg"],
+        "Northwest Extremity Specialists" => ["ChIJf07ARPkJlVQRJCA-9wte444", "ChIJi3RsjPEMlVQRt1cOeU3_g48"]
+      }
+
+      api_key = ENV['REACT_APP_GOOGLE_PLACES_API_KEY']
+      reviews = {}
+
+      companies.each do |company, place_ids|
+        puts "Fetching reviews for company: #{company}"
+        company_reviews = place_ids.flat_map do |place_id|
+          puts "Fetching reviews for place ID: #{place_id}"
+          fetch_five_star_reviews_for_place_id(place_id, api_key)
+        end.compact
+
+        # Only add to the reviews hash if there are valid reviews
+        if company_reviews.any?
+          reviews[company] = company_reviews
+        end
+
+        puts "Fetched reviews for company: #{company}"
+      end
+
+      puts "Fetched reviews: #{reviews.inspect}"
+      reviews
+    rescue StandardError => e
+      puts "Error fetching five-star reviews for companies: #{e.message}"
+      {}
+    end
+  end
+
+  private
+
+  def self.fetch_five_star_reviews_for_place_id(place_id, api_key)
+    uri = URI("https://maps.googleapis.com/maps/api/place/details/json?placeid=#{place_id}&key=#{api_key}")
+    response = Net::HTTP.get(uri)
+    data = JSON.parse(response)
+
+    if data["result"] && data["result"]["reviews"]
+      data["result"]["reviews"].select { |review| review["rating"] == 5 }.map do |review|
+        { author_name: review["author_name"], text: review["text"], rating: review["rating"] }
+      end
+    else
+      puts "No reviews found for place ID: #{place_id}"
+      []
+    end
+  rescue JSON::ParserError => e
+    puts "JSON parsing error for place ID #{place_id}: #{e.message}"
+    []
+  end
+end
