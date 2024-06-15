@@ -327,7 +327,7 @@ export const services = [
     // Neck Pain Treatment
     {
         image: '../Neck.jpg',
-        name: 'Neck Pain Treatment',
+        name: 'Neck Pain',
         firstTitle: 'Neck Pain Treatment',
         description: [
             "Our clinic specializes in holistic neck pain treatment, combining manual therapy, posture correction, and personalized exercises to enhance mobility and alleviate pain. We integrate innovative techniques like cervical traction and ergonomic adjustments for effective relief. Our approach is tailored to each patient's specific needs, ensuring a comprehensive and personalized treatment plan."
@@ -349,7 +349,7 @@ export const services = [
     // Low Back & Sciatica Treatment
     {
         image: '../Back.jpg',
-        name: 'Low Back & Sciatica Treatment',
+        name: 'Low Back & Sciatica',
         firstTitle: 'Low Back & Sciatica Treatment',
         description: [
             "At our clinic, we understand the debilitating effects of low back pain and sciatica. Our comprehensive treatment approach is designed to address not just the symptoms but also the underlying causes of these conditions. We utilize a combination of advanced techniques, including spinal manipulation, core strengthening exercises, and flexibility training, to improve spinal health and alleviate pain. Our goal is to provide long-lasting relief and improve your overall quality of life."
@@ -395,8 +395,8 @@ export const services = [
     // Knee & Hip Rehab
     {
         image: '../KneeR.jpg',
-        name: 'Knee & Hip Rehab',
-        firstTitle: 'Knee & Hip Rehab',
+        name: 'Knee & Hip Pain',
+        firstTitle: 'Knee & Hip Pain',
         description: [
             "Our clinic offers specialized care for knee and hip conditions, providing comprehensive treatment plans to manage pain and improve mobility. We have a team of experienced physical therapists who are dedicated to helping you recover from your knee or hip issue and get back to your active lifestyle."
         ],
@@ -417,8 +417,8 @@ export const services = [
     // Hand & Elbow Rehab
     {
         image: '../Elbow1.jpg',
-        name: 'Hand & Elbow Rehab',
-        firstTitle: 'Hand & Elbow Rehab',
+        name: 'Elbow & Hand Pain',
+        firstTitle: 'Elbow & Hand Pain',
         description: [
             "Targeted rehabilitation services for hand and elbow injuries, employing a range of therapeutic techniques to restore function and reduce pain. Our therapists specialize in treating conditions such as tennis elbow, carpal tunnel syndrome, and various sprains and fractures, ensuring comprehensive care and support for your recovery."
         ],
@@ -439,8 +439,8 @@ export const services = [
     // Workplace Injury Rehab
     {
         image: '../Work.jpg',
-        name: 'Workplace Injury Rehab',
-        firstTitle: 'Workplace Injury Rehab',
+        name: 'On The Job Injuries',
+        firstTitle: 'On The Job Injuries',
         description: [
             "Our team is dedicated to preparing you for a safe return to your profession, whether you work a physically demanding job or in an office setting. We develop individualized treatment programs tailored to your rehabilitation needs, prioritizing quality patient care. During your session, we utilize hands-on techniques to alleviate your pain and educate you on managing pain at home. We also create a personalized exercise regimen to enhance your strength and range of motion, reducing pain between sessions."
             ],
@@ -1262,7 +1262,12 @@ export const navMenu = [
         menu: 'Orthopedic Rehab',
         link: '/services/orthopedic-rehab',
         subMenuItems: [
-            'Shoulder Pain & Instability'
+            'Shoulder Pain & Instability',
+            'Neck Pain',
+            'Low Back Pain & Sciatica',
+            'Knee & Hip Pain',
+            'Elbow & Hand Pain',
+            'On The Job Injuries'
         ],
     },
     {
