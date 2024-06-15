@@ -1292,10 +1292,11 @@ export const navMenu = [
     { menu: 'Contact Us', link: '/locations#chatbox' },
     {
         menu: 'Download Forms',
-        href: './CPTNPForm.pdf', // Path to your PDF
-        target: '_blank', // Open in a new tab
+        link: '/CPTNPForm.pdf', // Direct path to your PDF file
+        target: '_blank' // To open in a new tab
     }
 ];
+
 
 
 export const officesData = [
