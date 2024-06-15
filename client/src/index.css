@@ -434,6 +434,7 @@ img {
     border-color: var(--violet);
     border-width: 2px;
     font-size: 1.4rem;
+    padding: 0px 10px 0px 10px;
 }
 
 .header-button-yellow:hover {
