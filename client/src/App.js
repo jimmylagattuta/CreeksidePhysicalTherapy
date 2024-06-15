@@ -14,59 +14,38 @@ import Physicians from './pages/physicians/Physicians';
 import Services from './pages/services/Services';
 import ServicesLayout from './pages/services/ServicesLayout';
 import SingleService from './pages/services/SingleService';
-import { navMenu } from './data';
 
-// Helper function to generate slugs
+const physicians = [
+    "Brian Horak",
+    "John Zdor",
+    "Peggy Loebner",
+    "Chad Smurthwaite",
+    "Alex McNiven",
+    "Vince Gonsalves",
+    "Hal",
+    "Mikayla",
+    "Jacqueline",
+    "Dixie",
+    "Cellina"
+];
+
 const generateSlug = (name) => encodeURIComponent(name.toLowerCase().replace(/\s+/g, '-'));
 
-// Extract valid slugs for physicians and services
-const validPhysicianSlugs = navMenu
-    .find(item => item.menu === 'Providers')
-    .subMenuItems.map(name => generateSlug(name));
+// Convert names to URL-friendly slugs
+const validPhysicianIds = physicians.map(generateSlug);
 
-const validServiceSlugs = navMenu
-    .find(item => item.menu === 'Foot and Ankle Rehab')
-    .subMenuItems.map(name => generateSlug(name))
-    .concat(
-        navMenu.find(item => item.menu === 'Orthopedic Rehab')
-            .subMenuItems.map(name => generateSlug(name))
-    );
-
-console.log('Valid Physician Slugs:', validPhysicianSlugs);
-console.log('Valid Service Slugs:', validServiceSlugs);
-
-// Helper function to check if slug is valid
-const isValidSlug = (slug, validSlugs) => {
-    const decodedSlug = decodeURIComponent(slug);
-    console.log('Checking slug:', decodedSlug);
-    return validSlugs.includes(decodedSlug);
+const isValidPhysicianId = (physicianId) => {
+    return validPhysicianIds.includes(physicianId);
 };
 
-// Helper component to handle dynamic routing for physicians
 const PhysicianRoute = () => {
-    const { physicianSlug } = useParams();
-    const decodedSlug = decodeURIComponent(physicianSlug);
-    console.log('Physician Route Slug:', decodedSlug);
+    const { physicianId } = useParams();
+    const decodedPhysicianId = decodeURIComponent(physicianId);
 
-    if (isValidSlug(decodedSlug, validPhysicianSlugs)) {
-        return <SinglePhysician slug={decodedSlug} />;
+    if (isValidPhysicianId(decodedPhysicianId)) {
+        return <SinglePhysician physicianId={decodedPhysicianId} />;
     } else {
-        console.warn('Invalid Physician Slug:', decodedSlug);
         return <Navigate to="/providers" replace />;
-    }
-};
-
-// Helper component to handle dynamic routing for services
-const ServiceRoute = () => {
-    const { serviceSlug } = useParams();
-    const decodedSlug = decodeURIComponent(serviceSlug);
-    console.log('Service Route Slug:', decodedSlug);
-
-    if (isValidSlug(decodedSlug, validServiceSlugs)) {
-        return <SingleService slug={decodedSlug} />;
-    } else {
-        console.warn('Invalid Service Slug:', decodedSlug);
-        return <Navigate to="/services" replace />;
     }
 };
 
@@ -79,7 +58,6 @@ function App() {
             left: 0,
             behavior: 'instant',
         });
-        console.log('Navigated to:', pathname);
     }, [pathname]);
 
     return (
@@ -93,13 +71,12 @@ function App() {
                 </Route>
                 <Route path="providers/*" element={<PhysiciansLayout />}>
                     <Route index element={<Physicians />} />
-                    <Route path=":physicianSlug" element={<PhysicianRoute />} />
+                    <Route path=":physicianId" element={<PhysicianRoute />} />
                     <Route path="*" element={<Navigate to="/providers" replace />} />
                 </Route>
                 <Route path="services/*" element={<ServicesLayout />}>
                     <Route index element={<Services />} />
-                    <Route path=":serviceSlug" element={<ServiceRoute />} />
-                    <Route path="*" element={<Navigate to="/services" replace />} />
+                    <Route path=":serviceId" element={<SingleService />} />
                 </Route>
                 <Route path="locations" element={<Locations />} />
                 <Route path="*" element={<Error />} />
