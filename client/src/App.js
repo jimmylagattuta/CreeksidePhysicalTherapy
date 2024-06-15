@@ -14,7 +14,7 @@ import Physicians from './pages/physicians/Physicians';
 import Services from './pages/services/Services';
 import ServicesLayout from './pages/services/ServicesLayout';
 import SingleService from './pages/services/SingleService';
-import { navMenu } from '../data';
+import { navMenu } from './data';
 
 // Helper function to generate slugs
 const generateSlug = (name) => encodeURIComponent(name.toLowerCase().replace(/\s+/g, '-'));
