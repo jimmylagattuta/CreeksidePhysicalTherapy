@@ -14,15 +14,23 @@ import Physicians from './pages/physicians/Physicians';
 import Services from './pages/services/Services';
 import ServicesLayout from './pages/services/ServicesLayout';
 import SingleService from './pages/services/SingleService';
-import { physicians } from './data/physicians'; // Adjust path if necessary
-import { services } from './data/services'; // Adjust path if necessary
+import { navMenu } from '../data';
 
-// Generate slugs from names
+// Helper function to generate slugs
 const generateSlug = (name) => encodeURIComponent(name.toLowerCase().replace(/\s+/g, '-'));
 
-// Create slug lists
-const validPhysicianSlugs = physicians.map(({ name }) => generateSlug(name));
-const validServiceSlugs = services.map(({ name }) => generateSlug(name));
+// Extract valid slugs for physicians and services
+const validPhysicianSlugs = navMenu
+    .find(item => item.menu === 'Providers')
+    .subMenuItems.map(name => generateSlug(name));
+
+const validServiceSlugs = navMenu
+    .find(item => item.menu === 'Foot and Ankle Rehab')
+    .subMenuItems.map(name => generateSlug(name))
+    .concat(
+        navMenu.find(item => item.menu === 'Orthopedic Rehab')
+            .subMenuItems.map(name => generateSlug(name))
+    );
 
 console.log('Valid Physician Slugs:', validPhysicianSlugs);
 console.log('Valid Service Slugs:', validServiceSlugs);
