@@ -15,6 +15,7 @@ import Services from './pages/services/Services';
 import ServicesLayout from './pages/services/ServicesLayout';
 import SingleService from './pages/services/SingleService';
 
+// Valid physician names
 const validPhysicianIds = [
     "Brian Horak, PT, MPT, CSCS",
     "John Zdor, PT, DPT, CCWC, OCS",
