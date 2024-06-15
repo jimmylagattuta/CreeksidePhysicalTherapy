@@ -14,38 +14,51 @@ import Physicians from './pages/physicians/Physicians';
 import Services from './pages/services/Services';
 import ServicesLayout from './pages/services/ServicesLayout';
 import SingleService from './pages/services/SingleService';
+import { physicians } from './data/physicians'; // Adjust path if necessary
+import { services } from './data/services'; // Adjust path if necessary
 
-const physicians = [
-    "Brian Horak",
-    "John Zdor",
-    "Peggy Loebner",
-    "Chad Smurthwaite",
-    "Alex McNiven",
-    "Vince Gonsalves",
-    "Hal",
-    "Mikayla",
-    "Jacqueline",
-    "Dixie",
-    "Cellina"
-];
-
+// Generate slugs from names
 const generateSlug = (name) => encodeURIComponent(name.toLowerCase().replace(/\s+/g, '-'));
 
-// Convert names to URL-friendly slugs
-const validPhysicianIds = physicians.map(generateSlug);
+// Create slug lists
+const validPhysicianSlugs = physicians.map(({ name }) => generateSlug(name));
+const validServiceSlugs = services.map(({ name }) => generateSlug(name));
 
-const isValidPhysicianId = (physicianId) => {
-    return validPhysicianIds.includes(physicianId);
+console.log('Valid Physician Slugs:', validPhysicianSlugs);
+console.log('Valid Service Slugs:', validServiceSlugs);
+
+// Helper function to check if slug is valid
+const isValidSlug = (slug, validSlugs) => {
+    const decodedSlug = decodeURIComponent(slug);
+    console.log('Checking slug:', decodedSlug);
+    return validSlugs.includes(decodedSlug);
 };
 
+// Helper component to handle dynamic routing for physicians
 const PhysicianRoute = () => {
-    const { physicianId } = useParams();
-    const decodedPhysicianId = decodeURIComponent(physicianId);
+    const { physicianSlug } = useParams();
+    const decodedSlug = decodeURIComponent(physicianSlug);
+    console.log('Physician Route Slug:', decodedSlug);
 
-    if (isValidPhysicianId(decodedPhysicianId)) {
-        return <SinglePhysician physicianId={decodedPhysicianId} />;
+    if (isValidSlug(decodedSlug, validPhysicianSlugs)) {
+        return <SinglePhysician slug={decodedSlug} />;
     } else {
+        console.warn('Invalid Physician Slug:', decodedSlug);
         return <Navigate to="/providers" replace />;
+    }
+};
+
+// Helper component to handle dynamic routing for services
+const ServiceRoute = () => {
+    const { serviceSlug } = useParams();
+    const decodedSlug = decodeURIComponent(serviceSlug);
+    console.log('Service Route Slug:', decodedSlug);
+
+    if (isValidSlug(decodedSlug, validServiceSlugs)) {
+        return <SingleService slug={decodedSlug} />;
+    } else {
+        console.warn('Invalid Service Slug:', decodedSlug);
+        return <Navigate to="/services" replace />;
     }
 };
 
@@ -58,6 +71,7 @@ function App() {
             left: 0,
             behavior: 'instant',
         });
+        console.log('Navigated to:', pathname);
     }, [pathname]);
 
     return (
@@ -71,12 +85,13 @@ function App() {
                 </Route>
                 <Route path="providers/*" element={<PhysiciansLayout />}>
                     <Route index element={<Physicians />} />
-                    <Route path=":physicianId" element={<PhysicianRoute />} />
+                    <Route path=":physicianSlug" element={<PhysicianRoute />} />
                     <Route path="*" element={<Navigate to="/providers" replace />} />
                 </Route>
                 <Route path="services/*" element={<ServicesLayout />}>
                     <Route index element={<Services />} />
-                    <Route path=":serviceId" element={<SingleService />} />
+                    <Route path=":serviceSlug" element={<ServiceRoute />} />
+                    <Route path="*" element={<Navigate to="/services" replace />} />
                 </Route>
                 <Route path="locations" element={<Locations />} />
                 <Route path="*" element={<Error />} />
