@@ -163,14 +163,16 @@ const Navbar = () => {
                     </Link>
                     <div className='navbar-buttons-nav'>
                         <div className="call-contact-download">
-                            <span className='nav-button-new'
+                            <a // Use anchor tag instead of span
+                                className='nav-button-new'
                                 ref={phoneRef}
                                 href='tel:971-300-0690'
                                 onMouseEnter={() => handleMouseEnter('call', 'Call Us: 971-300-0690', true)}
                                 onMouseLeave={handleMouseLeave}
+                                style={{ textDecoration: 'none', color: 'inherit' }} // Ensure it looks like a button
                             >
                                 Call Us: 971-300-0690
-                            </span>
+                            </a>
                         </div>
                         {isPopupOpen && (
                             <div id="form-div">
@@ -273,7 +275,7 @@ const Navbar = () => {
                                                         <NavLink
                                                             onClick={resetMobileMenu}
                                                             key={subItem}
-                                                            to={`${item.link}/${subItem.toLowerCase().split(' ').join('-')}`}
+                                                            to={`/services/${subItem.toLowerCase().split(' ').join('-')}`}
                                                             className={({ isActive }) =>
                                                                 isActive ? 'sub-link active' : 'sub-link'
                                                             }>
@@ -286,7 +288,7 @@ const Navbar = () => {
                                                 <NavLink
                                                     onClick={resetMobileMenu}
                                                     key={subItem}
-                                                    to={`${item.link}/${subItem.toLowerCase().split(' ').join('-')}`}
+                                                    to={`/services/${subItem.toLowerCase().split(' ').join('-')}`}
                                                     className={({ isActive }) =>
                                                         isActive ? 'sub-link active' : 'sub-link'
                                                     }>
