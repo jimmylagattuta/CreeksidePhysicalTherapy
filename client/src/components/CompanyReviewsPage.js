@@ -63,7 +63,9 @@ const CompanyReviewsPage = () => {
                     }
                 })
                 .then((data) => {
+                    console.log('Fetched data:', data);
                     if (Array.isArray(data.creekside_reviews) && Array.isArray(data.northwest_reviews)) {
+                        // Update CSRF token only if it changes
                         if (data.csrf_token && data.csrf_token !== previousCsrfToken.current) {
                             setCsrfToken(data.csrf_token);
                             previousCsrfToken.current = data.csrf_token;
@@ -84,7 +86,7 @@ const CompanyReviewsPage = () => {
                     }
                 })
                 .catch((err) => {
-                    console.error(err);
+                    console.error('Error:', err);
                     setError(err.message);
                     setLoading(false);
                 });
