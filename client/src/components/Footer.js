@@ -45,6 +45,17 @@ const Footer = () => {
                             CONTACT US
                         </Link>
                     </div>
+                    <div className="footer-item">
+                        <a 
+                            href="https://www.healowpay.com/HealowPay/jsp/healow/login.jsp" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="btn header-button-yellow"
+                            style={{ backgroundColor: '#c6972d' }}
+                        >
+                            Pay Now
+                        </a>
+                    </div>
                 </div>
                 {/*----------------------------------------------------------------------------------------------*/}
                 {/*----------------------------------------------------------------------------------------------*/}
