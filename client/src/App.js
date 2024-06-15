@@ -15,7 +15,7 @@ import Services from './pages/services/Services';
 import ServicesLayout from './pages/services/ServicesLayout';
 import SingleService from './pages/services/SingleService';
 
-// Valid physician names
+// Convert names to URL-friendly slugs
 const validPhysicianIds = [
     "Brian Horak, PT, MPT, CSCS",
     "John Zdor, PT, DPT, CCWC, OCS",
@@ -28,7 +28,24 @@ const validPhysicianIds = [
     "Jacqueline, Physical Therapy Aide",
     "Dixie, Physical Therapy Aide",
     "Cellina, Physical Therapy Aide"
-];
+].map(name => encodeURIComponent(name.toLowerCase().replace(/,|\./g, '').replace(/\s+/g, '-')));
+
+// Helper function to check if physicianId is valid
+const isValidPhysicianId = (physicianId) => {
+    return validPhysicianIds.includes(physicianId);
+};
+
+// Helper component to handle dynamic routing for physicians
+const PhysicianRoute = () => {
+    const { physicianId } = useParams();
+    const decodedPhysicianId = decodeURIComponent(physicianId);
+
+    if (isValidPhysicianId(decodedPhysicianId)) {
+        return <SinglePhysician />;
+    } else {
+        return <Navigate to="/providers" replace />;
+    }
+};
 
 function App() {
     const { pathname } = useLocation();
@@ -41,23 +58,6 @@ function App() {
         });
     }, [pathname]);
 
-    // Helper function to check if physicianId is valid
-    const isValidPhysicianId = (physicianId) => {
-        return validPhysicianIds.includes(decodeURIComponent(physicianId));
-    };
-
-    // Helper component to handle dynamic routing for physicians
-    const PhysicianRoute = () => {
-        const { physicianId } = useParams();
-        const decodedPhysicianId = decodeURIComponent(physicianId);
-
-        if (isValidPhysicianId(decodedPhysicianId)) {
-            return <SinglePhysician />;
-        } else {
-            return <Navigate to="/providers" replace />;
-        }
-    };
-
     return (
         <>
             <Navbar />
@@ -67,18 +67,15 @@ function App() {
                     <Route index element={<About />} />
                     <Route path=":aboutId" element={<SingleAbout />} />
                 </Route>
-
                 <Route path="providers/*" element={<PhysiciansLayout />}>
                     <Route index element={<Physicians />} />
                     <Route path=":physicianId" element={<PhysicianRoute />} />
                     <Route path="*" element={<Navigate to="/providers" replace />} />
                 </Route>
-
                 <Route path="services/*" element={<ServicesLayout />}>
                     <Route index element={<Services />} />
                     <Route path=":serviceId" element={<SingleService />} />
                 </Route>
-
                 <Route path="locations" element={<Locations />} />
                 <Route path="*" element={<Error />} />
             </Routes>
