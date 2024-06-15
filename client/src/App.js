@@ -15,16 +15,23 @@ import Services from './pages/services/Services';
 import ServicesLayout from './pages/services/ServicesLayout';
 import SingleService from './pages/services/SingleService';
 
-
 const validPhysicianIds = [
-    "Michael J. Hejna",
-    "Scott A. Seymour",
-    "Erling Ho",
-    "Nicolas S. Anderson"
+    "Brian Horak, PT, MPT, CSCS",
+    "John Zdor, PT, DPT, CCWC, OCS",
+    "Peggy Loebner, Physical Therapist",
+    "Chad Smurthwaite, PT, DPT",
+    "Alex McNiven, PT, DPT",
+    "Vince Gonsalves, PT, DPT",
+    "Hal, Physical Therapy Aide",
+    "Mikayla, Physical Therapy Aide",
+    "Jacqueline, Physical Therapy Aide",
+    "Dixie, Physical Therapy Aide",
+    "Cellina, Physical Therapy Aide"
 ];
 
 function App() {
     const { pathname } = useLocation();
+
     useEffect(() => {
         window.scrollTo({
             top: 0,
@@ -34,8 +41,7 @@ function App() {
     }, [pathname]);
 
     const isValidPhysicianId = (physicianId) => {
-        console.log('physicianId', physicianId);
-        return validPhysicianIds.includes(physicianId);
+        return validPhysicianIds.includes(decodeURIComponent(physicianId));
     };
 
     return (
@@ -48,40 +54,38 @@ function App() {
                     <Route path=":aboutId" element={<SingleAbout />} />
                 </Route>
 
-
-
-                {/* Physician not there */}
-                <Route path="providers" element={<PhysiciansLayout />}>
+                <Route path="providers/*" element={<PhysiciansLayout />}>
                     <Route index element={<Physicians />} />
-
-                    <Route path=":physicianId" element={<SinglePhysician />} match={isValidPhysicianId} />
+                    <Route 
+                        path=":physicianId" 
+                        element={<PhysicianRoute />} 
+                    />
                     <Route path="*" element={<Navigate to="/providers" replace />} />
                 </Route>
-
-
-
-                {/* Physician there */}
-                {/* <Route path="physicians/*" element={<PhysiciansLayout />}>
-                    <Route index element={<Physicians />} />
-                    <Route path='*' element={<Navigate to="/providers" replace />} />
-
-                </Route> */}
-
-
-
 
                 <Route path="services/*" element={<ServicesLayout />}>
                     <Route index element={<Services />} />
                     <Route path=":serviceId" element={<SingleService />} />
                 </Route>
+
                 <Route path="locations" element={<Locations />} />
-                <Route path="about" element={<AboutLayout />} />
-                <Route path="providers/*" element={<Navigate to="/providers" replace />} />
-                <Route path="*" element={<Navigate to="/" replace />} />
+                <Route path="*" element={<Error />} />
             </Routes>
             <Footer />
         </>
     );
 }
+
+// Helper component to handle dynamic routing for physicians
+const PhysicianRoute = () => {
+    const { physicianId } = useParams();
+    const decodedPhysicianId = decodeURIComponent(physicianId);
+
+    if (isValidPhysicianId(decodedPhysicianId)) {
+        return <SinglePhysician />;
+    } else {
+        return <Navigate to="/providers" replace />;
+    }
+};
 
 export default App;
