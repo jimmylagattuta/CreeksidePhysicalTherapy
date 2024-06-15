@@ -29,7 +29,6 @@ const CompanyReviewsPage = () => {
         'https://lh3.googleusercontent.com/a/ACg8ocIFg5G-JO49VMdkvA4N5IwxQ9XKjHP3HHTytStrVCI=s128-c0x00000000-cc-rp-mo'
     ];
 
-
     useEffect(() => {
         const cacheKey = 'cached_creekside_reviews';
 
@@ -81,7 +80,6 @@ const CompanyReviewsPage = () => {
                 .then((data) => {
                     console.log('Fetched data:', data);
                     if (Array.isArray(data.creekside_reviews) && Array.isArray(data.northwest_reviews)) {
-                        // Update CSRF token only if it changes
                         if (data.csrf_token && data.csrf_token !== previousCsrfToken.current) {
                             setCsrfToken(data.csrf_token);
                             previousCsrfToken.current = data.csrf_token;
@@ -151,7 +149,7 @@ const CompanyReviewsPage = () => {
                                 )}
                             </div>
                             <div className='review-name-container'>
-                                <div className='user-name'>
+                                <div className='user-name' style={{ color: 'black' }}>
                                     {item.author_name}{' '}
                                     <i className='fab fa-yelp'></i>
                                 </div>
@@ -160,7 +158,7 @@ const CompanyReviewsPage = () => {
                         <div className='review-info'>
                             <i className='fa fa-quote-left' aria-hidden='true'></i>
                             <i className='fa fa-quote-right' aria-hidden='true'></i>
-                            <p className='review-paragraph'>{item.text}</p>
+                            <p className='review-paragraph' style={{ color: 'black' }}>{item.text}</p>
                         </div>
                         <div className='google-link'>
                             <a aria-label="Link to Google for Google API reviews for Creekside Physical Therapy." href={item.author_url} target="_blank" rel="noopener noreferrer">
