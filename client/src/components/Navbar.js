@@ -7,6 +7,8 @@ import './helpers/navbarHelpers/FormDiv.css';
 import ForesightSquare from './helpers/navbarHelpers/ForesightSquare';
 import ContactNav from './helpers/navbarHelpers/ContactNav';
 import './helpers/navbarHelpers/ContactNav.css';
+const generateSlug = (name) => encodeURIComponent(name.toLowerCase().replace(/\s+/g, '-'));
+
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -158,30 +160,6 @@ const Navbar = () => {
                             />
                         </div>
                     </Link>
-                    <div className='navbar-buttons-nav'>
-                        <div className="call-contact-download">
-                            <a // Use anchor tag instead of span
-                                className='nav-button-new'
-                                ref={phoneRef}
-                                href='tel:971-300-0690'
-                                onMouseEnter={() => handleMouseEnter('call', 'Call Us: 971-300-0690', true)}
-                                onMouseLeave={handleMouseLeave}
-                                style={{ textDecoration: 'none', color: 'inherit' }} // Ensure it looks like a button
-                            >
-                                Call Us: 971-300-0690
-                            </a>
-                        </div>
-                        {isPopupOpen && (
-                            <div id="form-div">
-                                <ForesightSquare togglePopup={togglePopup} />
-                            </div>
-                        )}
-                        {showThankYouMessage && (
-                            <div className="thank-you-message">
-                                Thank you for the message! We will be with you shortly.
-                            </div>
-                        )}
-                    </div>
                     <button
                         aria-label="Mobile navbar button"
                         className='mobile-menu-button-navbar'
@@ -202,27 +180,15 @@ const Navbar = () => {
                     return (
                         <div key={index} className={`nav-link-container ${item.menu}-nav`}>
                             <div className='link-items'>
-                                {item.onClick ? (
-                                    <NavLink
-                                        onClick={item.onClick}
-                                        key={item.menu}
-                                        to={item.link}
-                                        className={({ isActive }) =>
-                                            isActive ? 'nav-link-nav active' : 'nav-link-nav'
-                                        }>
-                                        {item.menu}
-                                    </NavLink>
-                                ) : (
-                                    <NavLink
-                                        onClick={resetMobileMenu}
-                                        key={item.menu}
-                                        to={item.link}
-                                        className={({ isActive }) =>
-                                            isActive ? 'nav-link-nav active' : 'nav-link-nav'
-                                        }>
-                                        {item.menu}
-                                    </NavLink>
-                                )}
+                                <NavLink
+                                    onClick={resetMobileMenu}
+                                    key={item.menu}
+                                    to={item.link}
+                                    className={({ isActive }) =>
+                                        isActive ? 'nav-link-nav active' : 'nav-link-nav'
+                                    }>
+                                    {item.menu}
+                                </NavLink>
                                 {item.subMenuItems && (
                                     <button
                                         onClick={() => submenuOpen(item.menu)}
@@ -256,7 +222,7 @@ const Navbar = () => {
                                                 <NavLink
                                                     onClick={resetMobileMenu}
                                                     key={subItem}
-                                                    to={`/providers/${subItem.toLowerCase().split(' ').join('-')}`}
+                                                    to={`/providers/${generateSlug(subItem)}`}
                                                     className={({ isActive }) =>
                                                         isActive ? 'sub-link active' : 'sub-link'
                                                     }>

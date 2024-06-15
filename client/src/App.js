@@ -15,8 +15,7 @@ import Services from './pages/services/Services';
 import ServicesLayout from './pages/services/ServicesLayout';
 import SingleService from './pages/services/SingleService';
 
-// Convert names to URL-friendly slugs without titles
-const validPhysicianIds = [
+const physicians = [
     "Brian Horak",
     "John Zdor",
     "Peggy Loebner",
@@ -28,7 +27,12 @@ const validPhysicianIds = [
     "Jacqueline",
     "Dixie",
     "Cellina"
-].map(name => encodeURIComponent(name.toLowerCase().replace(/\s+/g, '-')));
+];
+
+const generateSlug = (name) => encodeURIComponent(name.toLowerCase().replace(/\s+/g, '-'));
+
+// Convert names to URL-friendly slugs
+const validPhysicianIds = physicians.map(generateSlug);
 
 const isValidPhysicianId = (physicianId) => {
     return validPhysicianIds.includes(physicianId);
@@ -36,9 +40,10 @@ const isValidPhysicianId = (physicianId) => {
 
 const PhysicianRoute = () => {
     const { physicianId } = useParams();
+    const decodedPhysicianId = decodeURIComponent(physicianId);
 
-    if (isValidPhysicianId(physicianId)) {
-        return <SinglePhysician />;
+    if (isValidPhysicianId(decodedPhysicianId)) {
+        return <SinglePhysician physicianId={decodedPhysicianId} />;
     } else {
         return <Navigate to="/providers" replace />;
     }
