@@ -27,12 +27,10 @@ const Navbar = () => {
     };
 
     const toggleMobileMenu = () => {
-        console.log('toggleMobileMenu');
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
     const submenuOpen = (menuName) => {
-        console.log('submenuOpen');
         if (isSubmenuOpen === menuName) {
             setIsSubmenuOpen(null);
         } else {
@@ -47,7 +45,6 @@ const Navbar = () => {
     };
 
     const resetMobileMenu = () => {
-        console.log('resetMobileMenu');
         setIsMobileMenuOpen(false);
         setTimeout(() => {
             setIsSubmenuOpen(null);
@@ -255,40 +252,11 @@ const Navbar = () => {
                                     )}
                                     <div className={`submenu-list ${item.subMenuItems.length > 16 ? 'submenu-multi-column' : item.subMenuItems.length > 6 ? 'submenu-two-column' : ''}`}>
                                         {((isSubmenuOpen !== null) || (window.innerWidth >= 1000)) && item.subMenuItems.map((subItem) => {
-                                            if (subItem.includes(',')) {
-                                                const parts = subItem.split(',');
-                                                if (parts.length >= 2) {
-                                                    let lastName = parts[0].trim();
-                                                    let title = parts[1]?.trim();
-
-                                                    if (lastName === title) {
-                                                        return null;
-                                                    }
-
-                                                    title = title === 'Physical Therapist' ? 'PT' : title;
-
-                                                    if (['Hal', 'Mikayla', 'Jacqueline', 'Cellina', 'Dixie'].includes(lastName)) {
-                                                        title = 'PT Aide';
-                                                    }
-
-                                                    return (
-                                                        <NavLink
-                                                            onClick={resetMobileMenu}
-                                                            key={subItem}
-                                                            to={`/services/${subItem.toLowerCase().split(' ').join('-')}`}
-                                                            className={({ isActive }) =>
-                                                                isActive ? 'sub-link active' : 'sub-link'
-                                                            }>
-                                                            {lastName}, {title}
-                                                        </NavLink>
-                                                    );
-                                                }
-                                            }
                                             return (
                                                 <NavLink
                                                     onClick={resetMobileMenu}
                                                     key={subItem}
-                                                    to={`/services/${subItem.toLowerCase().split(' ').join('-')}`}
+                                                    to={`/providers/${subItem.toLowerCase().split(' ').join('-')}`}
                                                     className={({ isActive }) =>
                                                         isActive ? 'sub-link active' : 'sub-link'
                                                     }>

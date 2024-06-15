@@ -15,32 +15,29 @@ import Services from './pages/services/Services';
 import ServicesLayout from './pages/services/ServicesLayout';
 import SingleService from './pages/services/SingleService';
 
-// Convert names to URL-friendly slugs
+// Convert names to URL-friendly slugs without titles
 const validPhysicianIds = [
-    "Brian Horak, PT, MPT, CSCS",
-    "John Zdor, PT, DPT, CCWC, OCS",
-    "Peggy Loebner, Physical Therapist",
-    "Chad Smurthwaite, PT, DPT",
-    "Alex McNiven, PT, DPT",
-    "Vince Gonsalves, PT, DPT",
-    "Hal, Physical Therapy Aide",
-    "Mikayla, Physical Therapy Aide",
-    "Jacqueline, Physical Therapy Aide",
-    "Dixie, Physical Therapy Aide",
-    "Cellina, Physical Therapy Aide"
-].map(name => encodeURIComponent(name.toLowerCase().replace(/,|\./g, '').replace(/\s+/g, '-')));
+    "Brian Horak",
+    "John Zdor",
+    "Peggy Loebner",
+    "Chad Smurthwaite",
+    "Alex McNiven",
+    "Vince Gonsalves",
+    "Hal",
+    "Mikayla",
+    "Jacqueline",
+    "Dixie",
+    "Cellina"
+].map(name => encodeURIComponent(name.toLowerCase().replace(/\s+/g, '-')));
 
-// Helper function to check if physicianId is valid
 const isValidPhysicianId = (physicianId) => {
     return validPhysicianIds.includes(physicianId);
 };
 
-// Helper component to handle dynamic routing for physicians
 const PhysicianRoute = () => {
     const { physicianId } = useParams();
-    const decodedPhysicianId = decodeURIComponent(physicianId);
 
-    if (isValidPhysicianId(decodedPhysicianId)) {
+    if (isValidPhysicianId(physicianId)) {
         return <SinglePhysician />;
     } else {
         return <Navigate to="/providers" replace />;
