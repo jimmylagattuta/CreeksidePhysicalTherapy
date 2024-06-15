@@ -3,23 +3,23 @@ import { NavLink, Link } from 'react-router-dom';
 import { navMenu } from '../data';
 import './helpers/navbarHelpers/Navbar.css';
 
-// Helper function to generate slugs
-const generateSlug = (name) => encodeURIComponent(name.toLowerCase().replace(/\s+/g, '-'));
-
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isSubmenuOpen, setIsSubmenuOpen] = useState(null);
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
+        console.log('Mobile Menu Toggled:', isMobileMenuOpen);
     };
 
     const submenuOpen = (menuName) => {
         if (isSubmenuOpen === menuName) {
             setIsSubmenuOpen(null);
+            console.log('Submenu Closed:', menuName);
         } else {
             setTimeout(() => {
                 setIsSubmenuOpen(menuName);
+                console.log('Submenu Opened:', menuName);
             }, 250);
         }
     };
@@ -28,11 +28,13 @@ const Navbar = () => {
         setIsMobileMenuOpen(false);
         setTimeout(() => {
             setIsSubmenuOpen(null);
+            console.log('Mobile Menu and Submenu Reset');
         }, 250);
     };
 
     const handleNavLinkClick = () => {
         resetMobileMenu();
+        console.log('NavLink Clicked, Menu Reset');
     };
 
     return (
@@ -100,7 +102,7 @@ const Navbar = () => {
                                 )}
                                 <div className={`submenu-list ${item.subMenuItems.length > 16 ? 'submenu-multi-column' : item.subMenuItems.length > 6 ? 'submenu-two-column' : ''}`}>
                                     {((isSubmenuOpen !== null) || (window.innerWidth >= 1000)) && item.subMenuItems.map((subItem) => {
-                                        const path = `/${item.menu === 'Providers' ? 'providers' : 'services'}/${generateSlug(subItem)}`;
+                                        const path = `/${item.menu === 'Providers' ? 'providers' : 'services'}/${subItem.toLowerCase().replace(/\s+/g, '-')}`;
                                         console.log('Generated Path:', path);
                                         return (
                                             <NavLink

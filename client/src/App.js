@@ -29,10 +29,8 @@ const physicians = [
     "Cellina"
 ];
 
-const generateSlug = (name) => encodeURIComponent(name.toLowerCase().replace(/\s+/g, '-'));
-
-// Convert names to URL-friendly slugs
-const validPhysicianIds = physicians.map(generateSlug);
+// Convert names to URL-friendly slugs directly
+const validPhysicianIds = physicians.map(name => name.toLowerCase().replace(/\s+/g, '-'));
 
 const isValidPhysicianId = (physicianId) => {
     return validPhysicianIds.includes(physicianId);
@@ -42,9 +40,14 @@ const PhysicianRoute = () => {
     const { physicianId } = useParams();
     const decodedPhysicianId = decodeURIComponent(physicianId);
 
+    console.log('Physician ID:', physicianId);
+    console.log('Decoded Physician ID:', decodedPhysicianId);
+    console.log('Valid Physician IDs:', validPhysicianIds);
+
     if (isValidPhysicianId(decodedPhysicianId)) {
         return <SinglePhysician physicianId={decodedPhysicianId} />;
     } else {
+        console.warn('Invalid Physician ID:', decodedPhysicianId);
         return <Navigate to="/providers" replace />;
     }
 };
@@ -58,6 +61,7 @@ function App() {
             left: 0,
             behavior: 'instant',
         });
+        console.log('Current Pathname:', pathname);
     }, [pathname]);
 
     return (

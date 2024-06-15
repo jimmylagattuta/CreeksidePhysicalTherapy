@@ -328,19 +328,23 @@ export const services = [
     {
         image: '../Neck.jpg',
         name: 'Neck Pain',
-        firstTitle: 'Neck Pain Treatment',
+        firstTitle: 'Our Portland Physical Therapists Rehabilitate Painful Neck & Upper Back Injuries',
         description: [
-            "Our clinic specializes in holistic neck pain treatment, combining manual therapy, posture correction, and personalized exercises to enhance mobility and alleviate pain. We integrate innovative techniques like cervical traction and ergonomic adjustments for effective relief. Our approach is tailored to each patient's specific needs, ensuring a comprehensive and personalized treatment plan."
+            "We can help you with a wide variety of neck & upper back injuries. Whether it's providing hands-on techniques to improve mobility and reduce pain or empowering you with exercise programs to build strength, our team can be your solution to getting back to pain-free movement."
         ],
-        secondTitle: 'Comprehensive Nerve Pain Management',
         descriptionTwo: [
-            "Our approach to nerve pain management extends beyond immediate relief, focusing on long-term strategies to prevent recurrence. Patient education and lifestyle modifications are integral parts of our treatment plans. We diagnose and treat a variety of common neck injuries in our clinics. For Morton’s Neuroma, characterized by numbness or nerve pain in the toes, we use a combination of hands-on treatment and exercise to address the root cause of the compression and alleviate pain. Postural strains and overuse are common causes of neck pain. Our physical therapists teach patients how to manage their posture and provide exercises to improve postural-related pain, promoting better neck health. Nerve pain caused by disc bulges, stenosis, or arthritis can be effectively managed with strengthening, stretching, and hands-on techniques. These interventions improve muscular and joint mobility, reducing nerve pain and preventing its recurrence."
+            "Here are just a few of the common injuries we diagnose and treat in our clinics."
         ],
-        thirdTitle: 'Advanced Therapeutic Options',
+        secondTitleBulletedList: [
+            "Whiplash: The neck is often violently moved in car accidents. This over stretches & damages muscles & soft tissue on the front side of the neck. Hands-on techniques to improve spinal and muscle mobility can reduce pain in the short term, and stabilization and strengthening exercise programs can help to restore your neck to pain-free function.",
+            "Postural Strains & Overuse: Sitting in poor postures or for prolonged periods of time is a common cause for neck pain. Your physical therapist will teach how you to manage your posture. Upper back and neck stretching and strengthening exercises can greatly improve postural related pain.",
+            "Nerve Pain: The nerve roots exiting your neck can be pinched by disc bulges, stenosis or arthritis. Strengthening, stretching, and hands-on techniques to improve muscular and joint mobility can be effective in decreasing nerve pain and preventing it from returning.",
+            "Rib Pain: Upper back pain is often related to dysfunctional rib movement. Hands on treatment to improve rib mobility can be very effective at resolving this pain. Appropriate upper back and neck strengthening can also help the muscles feel looser as well as keep the pain from returning."
+        ],
         descriptionThree: [
-            "Our clinic offers a range of advanced therapeutic options for managing neck pain. These include ultrasound-guided interventions and minimally invasive procedures that target the underlying causes of nerve pain, providing effective and lasting relief. We also provide regenerative medicine options such as platelet-rich plasma (PRP) therapy, which can promote healing and reduce inflammation in damaged tissues. Additionally, we offer alternative therapies like acupuncture, which can help alleviate pain and improve overall well-being. Preventive strategies are integral to our treatment protocol, aimed at reducing the risk of further nerve damage and enhancing overall nerve health."
+            "If you're not moving as well as you'd like, we are here to help you in getting back to moving at your best!"
         ],
-        fourthTitle: 'Preventive Care and Education',
+        fourthTitle: "Individualized Rehabilitation Plans for You",
         descriptionFour: [
             "We take the time to thoroughly understand your goals and assess your entire body to develop a customized rehabilitation plan. During your PT session, we will help you with hands-on techniques to decrease your pain and teach you how to better manage pain at home. We will also create an individualized exercise program for you to further improve your strength and range of motion and decrease pain between sessions."
         ],
@@ -350,21 +354,24 @@ export const services = [
     {
         image: '../Back.jpg',
         name: 'Low Back Pain & Sciatica',
-        firstTitle: 'Low Back & Sciatica Treatment',
+        firstTitle: 'Our Portland Physical Therapists Help Low Back Pain & Sciatica',
         description: [
-            "At our clinic, we understand the debilitating effects of low back pain and sciatica. Our comprehensive treatment approach is designed to address not just the symptoms but also the underlying causes of these conditions. We utilize a combination of advanced techniques, including spinal manipulation, core strengthening exercises, and flexibility training, to improve spinal health and alleviate pain. Our goal is to provide long-lasting relief and improve your overall quality of life."
+            "We can help you with your low back pain or sciatica. Whether it's providing hands-on techniques to improve mobility and reduce pain or empowering you with exercise programs to build strength, our team can be your solution to getting back to pain-free movement."
         ],
-        secondTitle: 'Customized Sciatica Relief Plans',
         descriptionTwo: [
-            "Sciatica can be a debilitating condition, but it doesn't have to control your life. Our customized treatment plans are designed to target the root cause of your sciatic nerve pain and provide effective relief. Through a combination of physical therapy, non-invasive procedures, and lifestyle modifications, we can help you manage your symptoms and improve your quality of life. Our experienced team will work with you to develop a personalized treatment plan that meets your unique needs and goals. Don't let sciatica hold you back any longer. Contact us today to schedule a consultation and take the first step towards lasting relief."
+            "Here are just a few of the common injuries we diagnose and treat in our clinics."
         ],
-        thirdTitle: 'State-of-the-Art Pain Relief Methods',
+        secondTitleBulletedList: [
+            "Sciatica: Nerve pain that runs down the back of your leg can be improved with physical therapy. Hands-on techniques to improve spinal and muscle mobility can reduce pain in the short term, and stretching and strengthening exercise programs can help reduce the risk of injury reoccurring.",
+            "Lumbar Instability: Low back pain can result from weakness in the muscles that stabilize the low back region. Lumbopelvic strengthening and stabilization exercises can get you lifting, carrying and moving pain-free!",
+            "Non-Specific Low Back Pain: Oftentimes it is impossible to exactly diagnose what structure is triggering your low back pain. Physical Therapy is the first line treatment of choice in these situations. Hands on techniques to decrease muscle spasm and tightness and low back mobility/strengthening exercises are effective at resolving back pain in these cases."
+        ],
         descriptionThree: [
-            "Our clinic is proud to offer state-of-the-art pain relief methods to our patients. These include heat therapy, electrical stimulation, and acupuncture, among others. These treatments are designed to provide targeted relief from low back pain and sciatica, helping you to feel better and get back to doing the things you love. Our experienced team will work with you to determine the best treatment options for your unique needs and goals. Don't let low back pain or sciatica hold you back any longer. Contact us today to schedule a consultation and learn more about how our state-of-the-art pain relief methods can help you feel better."
+            "If you're not moving as well as you'd like, we are here to help you in getting back to moving at your best!"
         ],
-        fourthTitle: 'Long-term Wellness and Prevention',
+        fourthTitle: "Individualized Rehabilitation Plans for You",
         descriptionFour: [
-            "At our clinic, we believe in taking a proactive approach to healthcare. That's why we emphasize long-term wellness and prevention in our treatment plans. In addition to providing immediate pain relief, we work with our patients to develop strategies for preventing future occurrences of low back pain and sciatica. This includes education on proper body mechanics, posture, and lifestyle habits. Our goal is to empower our patients to take control of their health and well-being. Contact us today to schedule a consultation and learn more about how we can help you achieve long-term relief from low back pain and sciatica."
+            "We take the time to thoroughly understand your goals and assess your entire body to develop a customized rehabilitation plan. During your PT session, we will help you with hands-on techniques to decrease your pain and teach you how to better manage pain at home. We will also create an individualized exercise program for you to further improve your strength and range of motion and decrease pain between sessions."
         ],
         link: '/services',
     },
@@ -398,19 +405,23 @@ export const services = [
         name: 'Knee & Hip Pain',
         firstTitle: 'Knee & Hip Pain',
         description: [
-            "Our clinic offers specialized care for knee and hip conditions, providing comprehensive treatment plans to manage pain and improve mobility. We have a team of experienced physical therapists who are dedicated to helping you recover from your knee or hip issue and get back to your active lifestyle."
+            "We can help you with your knee injury. Whether it's providing hands-on techniques to improve mobility and reduce pain or empowering you with exercise programs to build strength, our team can be your solution to getting back to pain-free movement."
         ],
-        secondTitle: 'Conditions Treated',
         descriptionTwo: [
-            "We handle everything from acute injuries like meniscus tears to chronic conditions such as osteoarthritis, using evidence-based treatments tailored to each patient's needs. Our therapists work closely with you to develop a personalized treatment plan that addresses your specific condition and goals, ensuring the best possible outcome. For acute injuries, we focus on reducing inflammation and promoting healing through modalities such as ultrasound and electrical stimulation. Chronic conditions are managed with a combination of manual therapy, therapeutic exercise, and patient education to improve joint health and function over time."
+            "Here are just a few of the common injuries we diagnose and treat in our clinics."
         ],
-        thirdTitle: 'Advanced Treatment Options',
+        secondTitleBulletedList: [
+            "Meniscus Tears: The meniscus is cartilage that stabilizes the perimeter of the knee joint. Coordination and stabilization exercise to improve your hip & ankle control can decrease strain on a meniscus tear when walking or squatting. Following surgical repair or removal of a meniscus tear, your physical therapist will use hands on techniques to decrease swelling, pain and improve the joint mobility. As your pain improves, they will prescribe a progressive leg strengthening & stability program. Click HERE to read more about how Physical Therapy can help your meniscus injury.",
+            "Arthritis (Osteoarthritis): Arthritis can limit knee range of motion and cause pain with squatting, walking and standing. Physical therapy to improve joint mobility and improve leg strength is effective at decreasing osteoarthritis related pain.",
+            "Instability: Ligament tears or hypermobility syndromes can cause knee pain & instability. Coordination and stabilization exercise to improve your hip & ankle control can improve knee stability. Strengthening your thigh muscles improve your muscle’s ability to stabilize the kneecap for confident walking, jumping and squatting.",
+            "Sprains: Strains can limit your knee’s range of motion and make walking, standing and squatting painful. Your physical therapist will utilize hands on techniques to decrease pain and improve your range of motion. They will help you gradually return to exercises working your knee."
+        ],
         descriptionThree: [
-            "Our approach includes a combination of manual therapy, strength training, and cutting-edge modalities to foster recovery and functional improvement. We utilize the latest techniques and equipment to provide you with the most effective and efficient care, helping you regain mobility and reduce pain. Manual therapy techniques such as joint mobilizations and soft tissue massage are used to improve joint mobility and reduce muscle tension. Strength training exercises are tailored to your specific needs and goals, focusing on improving muscle imbalances and functional movement patterns. Advanced modalities like laser therapy and ultrasound are used to further enhance healing and reduce pain."
+            "If you're not moving as well as you'd like, we are here to help you in getting back to moving at your best!"
         ],
-        fourthTitle: 'Preventive Care for Knee & Hip',
+        fourthTitle: "Individualized Rehabilitation Plans for You",
         descriptionFour: [
-            "Preventive strategies including biomechanical assessments and patient education are integral to our service, helping reduce the risk of future injuries and degeneration. We educate you on proper body mechanics and provide exercises to improve strength and flexibility, empowering you to take control of your joint health. Biomechanical assessments are used to identify any movement dysfunctions or imbalances that may contribute to injury. Patient education includes information on posture, ergonomics, and lifestyle modifications to promote overall joint health. By addressing these factors, we can help you prevent future knee and hip issues and maintain a healthy, active lifestyle."
+            "We take the time to thoroughly understand your goals and assess your entire body to develop a customized rehabilitation plan. During your PT session, we will help you with hands-on techniques to decrease your pain and teach you how to better manage pain at home. We will also create an individualized exercise program for you to further improve your strength and range of motion and decrease pain between sessions."
         ],
         link: '/services',
     },
@@ -418,21 +429,23 @@ export const services = [
     {
         image: '../Elbow1.jpg',
         name: 'Elbow & Hand Pain',
-        firstTitle: 'Elbow & Hand Pain',
+        firstTitle: 'Recover from Your Hand & Elbow Injury with our Tigard OR Physical Therapists',
         description: [
-            "Targeted rehabilitation services for hand and elbow injuries, employing a range of therapeutic techniques to restore function and reduce pain. Our therapists specialize in treating conditions such as tennis elbow, carpal tunnel syndrome, and various sprains and fractures, ensuring comprehensive care and support for your recovery."
+            "We can help you with injuries to your hand & elbow. Whether it's providing hands-on techniques to improve mobility and reduce pain or empowering you with exercise programs to build strength, our team can be your solution to getting back to pain-free movement."
         ],
-        secondTitle: 'Types of Hand & Elbow Injuries',
         descriptionTwo: [
-            "We treat conditions such as tennis elbow, carpal tunnel syndrome, and various sprains and fractures, ensuring comprehensive care and support. Tennis elbow, or lateral epicondylitis, is a common overuse injury that causes pain and inflammation in the tendons that connect the forearm muscles to the elbow. Carpal tunnel syndrome occurs when the median nerve, which runs from the forearm into the palm of the hand, becomes pressed or squeezed at the wrist. Sprains and fractures can occur from falls or impact injuries, resulting in pain, swelling, and limited mobility."
+            "Here are just a few of the common injuries we diagnose and treat in our clinics."
         ],
-        thirdTitle: 'Specialized Therapies',
+        secondTitleBulletedList: [
+            "Tennis Elbow (Lateral Epicondylitis): This condition is characterized by pain on the outer aspect of the elbow. The cause is typically repetitive overuse of these tendons, especially with sports and tool use at work. Hands on treatment such as ASTYM or IASTM and exercise can loosen the muscles to reduce pain. Gradual strengthening exercises will help the tendon heal fully.",
+            "Sprains: Wrist and elbow sprains are often sustained during a slip or fall. Gentle mobilization of the joints with hands on treatment can improve the range of motion and decrease pain. Your physical therapist will work with you to develop a plan to build back stability & strength for return to your favorite sports, hobbies or work.",
+        ],
         descriptionThree: [
-            "Our clinic utilizes manual therapies, therapeutic exercises, and modalities like ultrasound and electrical stimulation to promote healing and prevent re-injury. Manual therapies such as massage and joint mobilizations are used to improve range of motion and reduce muscle tension. Therapeutic exercises are designed to strengthen the muscles and improve flexibility and function. Modalities like ultrasound and electrical stimulation can help reduce pain and inflammation and promote tissue healing."
+            "If you're not moving as well as you'd like, we are here to help you in getting back to moving at your best!"
         ],
-        fourthTitle: 'Preventive Advice',
+        fourthTitle: "Individualized Rehabilitation Plans for You",
         descriptionFour: [
-            "We also offer guidance on ergonomics and preventive exercises to help patients maintain hand and elbow health in daily activities and professional environments. Ergonomic assessments can identify and address factors that contribute to hand and elbow injuries, such as improper workstation setup or repetitive motions. Preventive exercises can help improve strength and flexibility, reducing the risk of future injuries. By taking a proactive approach to hand and elbow health, we can help you stay pain-free and active."
+            "We take the time to thoroughly understand your goals and assess your entire body to develop a customized rehabilitation plan. During your PT session, we will help you with hands-on techniques to decrease your pain and teach you how to better manage pain at home. We will also create an individualized exercise program for you to further improve your strength and range of motion and decrease pain between sessions."
         ],
         link: '/services',
     },
@@ -440,22 +453,20 @@ export const services = [
     {
         image: '../Work.jpg',
         name: 'On The Job Injuries',
-        firstTitle: 'On The Job Injuries',
+        firstTitle: 'Recover from Your On the Job Injury with our Tigard, OR Physical Therapists',
         description: [
-            "Our team is dedicated to preparing you for a safe return to your profession, whether you work a physically demanding job or in an office setting. We develop individualized treatment programs tailored to your rehabilitation needs, prioritizing quality patient care. During your session, we utilize hands-on techniques to alleviate your pain and educate you on managing pain at home. We also create a personalized exercise regimen to enhance your strength and range of motion, reducing pain between sessions."
-            ],
-            secondTitle: 'Common Workplace Injuries',
-            descriptionTwo: [
-            "Our program addresses a wide range of workplace injuries, from repetitive strain injuries to acute trauma, providing tailored therapies and recovery plans. Repetitive Strain Injuries (RSI): Common in office workers, RSIs can cause pain and discomfort in the hands, wrists, elbows, and shoulders. Our treatment focuses on ergonomic adjustments, strengthening exercises, and pain management techniques to alleviate symptoms and prevent future issues. Acute Trauma: Work-related accidents can lead to acute injuries like fractures, sprains, and strains. Our rehabilitation plans include a combination of manual therapy, exercises, and modalities to promote healing and restore function, ensuring a smooth transition back to work."
-            ],
-            thirdTitle: 'Rehab Techniques',
-            descriptionThree: [
-            "Our clinic uses a multidisciplinary approach, combining physical therapy, occupational therapy, and functional retraining to ensure a successful return to work. Physical Therapy: Our therapists employ manual therapy, therapeutic exercises, and modalities like ultrasound and electrical stimulation to promote healing and improve function. Occupational Therapy: For job-specific tasks, our therapists develop custom treatment plans focusing on improving skills, adapting equipment, and modifying tasks to facilitate a safe return to work. Functional Retraining: We work with you to improve your ability to perform daily activities and job-related tasks, helping you regain confidence and function in your workplace."
-            ],
-            fourthTitle: 'Injury Prevention at Work',
-            descriptionFour: [
-            "Our services include injury prevention training and ergonomic assessments to help prevent future injuries in the workplace. Ergonomic Assessments: We evaluate your workstation and work habits to identify potential risk factors for injury, recommending adjustments and providing education on proper body mechanics. Injury Prevention Training: Through education and training, we empower you to take control of your health and safety at work, covering topics such as lifting techniques, posture awareness, and stress management."
-            ],
+            "Whether you work a physically demanding job and have to rebuild your shoulder strength or work in an office setting and need to improve your posture, our team will work together with you, one on one, to assist you in preparing for return to your profession."
+        ],
+        descriptionTwo: [
+            "We will create a complete assessment, and then together develop an individual treatment program to address how you will progress through your rehabilitation process. If needed, consultation and communication are available with providers who are board-certified in sports medicine and orthopedic surgery."
+        ],
+        descriptionThree: [
+            "Our goal is for each patient to progress towards being independent and to have the necessary tools to manage their condition in an environment where quality patient care is paramount."
+        ],
+        fourthTitle: "Individualized Rehabilitation Plans for You",
+        descriptionFour: [
+            "During your PT session, we will help you with hands-on techniques to decrease your pain and teach you how to better manage pain at home. We will also create an individualized exercise program for you to further improve your strength and range of motion and decrease pain between sessions."
+        ],
         link: '/services',
     },
     // Shoulder Pain & Instability Rehab
@@ -1270,25 +1281,16 @@ export const navMenu = [
             'On The Job Injuries'
         ],
     },
-    {
-        menu: 'About Us',
-        link: '/about-us'
-    }, 
+    { menu: 'About Us', link: '/about-us' },
     {
         menu: 'Providers',
         link: '/providers',
-        subMenuItems: physicians.map((item) => {
-            return item.name;
-        }),
+        subMenuItems: physicians.map((item) =>
+            item.toLowerCase().replace(/\s+/g, '-')
+        ),
     },
-    {
-        menu: 'Locations',
-        link: '/locations'
-    },
-    {
-        menu: 'Contact Us',
-        link: '/locations#chatbox'
-    },
+    { menu: 'Locations', link: '/locations' },
+    { menu: 'Contact Us', link: '/locations#chatbox' },
     {
         menu: 'Download Forms',
         onClick: () => {
