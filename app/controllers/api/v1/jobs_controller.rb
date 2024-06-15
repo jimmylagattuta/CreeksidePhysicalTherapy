@@ -16,7 +16,12 @@ class Api::V1::JobsController < ApplicationController
       if cached_reviews
         puts "Cached reviews found"
         reviews = JSON.parse(cached_reviews)
-        puts "Reviews fetched from cache: #{reviews.inspect}"
+        if reviews.empty?
+          puts "Cached reviews are empty, fetching fresh reviews..."
+          reviews = fetch_and_cache_reviews(redis, cache_key)
+        else
+          puts "Reviews fetched from cache: #{reviews.inspect}"
+        end
       else
         puts "No cached reviews found, fetching fresh reviews..."
         reviews = fetch_and_cache_reviews(redis, cache_key)
@@ -35,24 +40,20 @@ class Api::V1::JobsController < ApplicationController
 
   def fetch_and_cache_reviews(redis, cache_key)
     reviews = GooglePlacesCached.fetch_five_star_reviews_for_companies
-    redis.setex(cache_key, 30.days.to_i, reviews.to_json)
-    puts "Stored fresh reviews: #{reviews.inspect}"
+    if reviews.empty?
+      puts "No reviews fetched, not updating cache."
+    else
+      redis.setex(cache_key, 30.days.to_i, reviews.to_json)
+      puts "Stored fresh reviews: #{reviews.inspect}"
+    end
     reviews
   end
 
   def handle_unexpected_error(error)
     puts "Handling unexpected error: #{error.message}"
     OfficeMailer.error_email("Unexpected Error", error.message).deliver_later
-    render json: { error: "An unexpected error occurred: #{error.message}" }, status: :internal_server_error
-  end
+    render json: { error: "An unexpected error occurred: #{error
 
-  def handle_json_parsing_error(error)
-    puts "Handling JSON parsing error: #{error.message}"
-    error_message = "Failed to parse JSON: #{error.message}"
-    OfficeMailer.error_email("JSON Parsing Error", error_message).deliver_later
-    render json: { error: error_message }, status: :unprocessable_entity
-  end
-end
 
 class GooglePlacesCached
   require 'redis'
@@ -74,19 +75,16 @@ class GooglePlacesCached
 
       companies.each do |company, place_ids|
         puts "Fetching reviews for company: #{company}"
-        company_reviews = place_ids.flat_map do |place_id|
+        reviews[company] = place_ids.flat_map do |place_id|
           puts "Fetching reviews for place ID: #{place_id}"
           fetch_five_star_reviews_for_place_id(place_id, api_key)
-        end.compact
-
-        # Only add to the reviews hash if there are valid reviews
-        if company_reviews.any?
-          reviews[company] = company_reviews
         end
-
         puts "Fetched reviews for company: #{company}"
       end
 
+      # Remove any empty entries
+      reviews.reject! { |_, v| v.empty? }
+      
       puts "Fetched reviews: #{reviews.inspect}"
       reviews
     rescue StandardError => e
@@ -101,17 +99,13 @@ class GooglePlacesCached
     uri = URI("https://maps.googleapis.com/maps/api/place/details/json?placeid=#{place_id}&key=#{api_key}")
     response = Net::HTTP.get(uri)
     data = JSON.parse(response)
-
+    
     if data["result"] && data["result"]["reviews"]
-      data["result"]["reviews"].select { |review| review["rating"] == 5 }.map do |review|
-        { author_name: review["author_name"], text: review["text"], rating: review["rating"] }
-      end
+      five_star_reviews = data["result"]["reviews"].select { |review| review["rating"] == 5 }
+      five_star_reviews.map { |review| { author_name: review["author_name"], text: review["text"], rating: review["rating"] } }
     else
       puts "No reviews found for place ID: #{place_id}"
       []
     end
-  rescue JSON::ParserError => e
-    puts "JSON parsing error for place ID #{place_id}: #{e.message}"
-    []
   end
 end
