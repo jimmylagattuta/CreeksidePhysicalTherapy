@@ -560,11 +560,11 @@ img {
 }
 
 .submenu-two-column {
-    min-width: 610px;
+    min-width: max-content;
     display: grid;
     align-items: center;
     grid-gap: 0px 20px; /* Adjust the gap between items */
-    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Initial three columns */
+    grid-template-columns: repeat(1, minmax(0, 1fr)); /* Initial three columns */
 
 }
 
@@ -650,7 +650,7 @@ img {
 .sub-link:hover {
     background-position: 0 0;
     font-size: 1.2rem;
-    color: white;
+
 }
 
 .sub-link:active {
@@ -2561,6 +2561,19 @@ display: none;
         /* top: 15px; */
     }
 }
+.column-list {
+  columns: 2;
+  width: 60%;
+  justify-content: flex-start;
+}
+@media (max-width: 700px) {
+    .column-list {
+        columns: 2;
+        width: 100%;
+        justify-content: space-around;
+      }
+  }
+  
 @media screen and (max-width: 501px) {
     .pages-header {
         background-image: url('/public/PortlandView.jpg');

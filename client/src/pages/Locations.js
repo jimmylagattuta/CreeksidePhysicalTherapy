@@ -20,7 +20,7 @@ const Locations = () => {
             <div className='page-container'>
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }} className='page-info'>
                     <h3 style={{ alignSelf: 'baseline' }}>
-                    Creekside Physical Therapy proudly serves patients throughout the Portland Metro area from conveniently located offices above the Providence Medical Group Cedar Mill Clinic and on Oleson Road. If you’re eager to get back on your feet and back to doing what you love
+                    Creekside Physical Therapy proudly serves patients throughout the Portland Metro area from conveniently located offices above the Providence Medical Group Cedar Mill Clinic and on Oleson Road. If you’re eager to get back on your feet and back to doing what you love, complete our contact form or call us at 971-300-0690.
                     </h3>
                 </div>
             </div>

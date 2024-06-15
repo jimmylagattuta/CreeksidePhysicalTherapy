@@ -45,6 +45,18 @@ const SingleService = () => {
                 </>
             )}
 
+            {Service.descriptionTwo && (
+                <>
+                    <div className='popout-content'>
+                        <div className='page-info'>
+                            {Service.descriptionTwo.map((item, index) => {
+                                return <p key={index} className='page-description'>{item}</p>;
+                            })}
+                        </div>
+                    </div>
+                </>
+            )}
+
             {Service.secondTitleBulletedList && (
                 <>
                     <div className='popout-content'>
@@ -87,7 +99,7 @@ const SingleService = () => {
                 <>
                     <div className='popout-content'>
                         <div className='page-info'>
-                            <ul className='bulleted-list'>
+                            <ul className='bulleted-list column-list'>
                                 {Service.thirdTitleBulletedList.map((item, index) => {
                                     return <li key={index} className='page-description'>{item}</li>;
                                 })}

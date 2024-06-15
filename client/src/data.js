@@ -1246,36 +1246,35 @@ export const locations = [
 export const navMenu = [
     { menu: 'Home', link: '/' },
     {
-        menu: 'About',
-        link: '/about-us'
+        menu: 'Foot and Ankle Rehab',
+        link: '/services/foot-&-ankle-rehab',
+        subMenuItems: [
+            'Heel Pain',
+            'Ankle & Foot Tendinitis',
+            'Ankle Sprains & Instability',
+            'Neuromas & Neuritis',
+            'Fractures & Arthritis',
+            'Sports Injuries',
+            'Running Injuries'
+        ],
     },
+    {
+        menu: 'Orthopedic Rehab',
+        link: '/services/orthopedic-rehab',
+        subMenuItems: [
+            'Shoulder Pain & Instability'
+        ],
+    },
+    {
+        menu: 'About Us',
+        link: '/about-us'
+    }, 
     {
         menu: 'Providers',
         link: '/providers',
         subMenuItems: physicians.map((item) => {
             return item.name;
         }),
-    },
-    {
-        menu: 'Services',
-        link: '/services',
-        subMenuItems: [
-            'Foot & Ankle Rehab',
-            'Orthopedic Rehab',
-            'Sports Injury Rehab',
-            'Running Injury Rehab',
-            'Heel Pain Management',
-            'Neuroma and Nerve Pain Treatment',
-            'Neck Pain Management',
-            'Low Back & Sciatica Treatment',
-            'Knee & Hip Rehab',
-            'Hand & Elbow Rehab',
-            'Workplace Injury Rehab',
-            'Comprehensive Sports Rehab',
-            'General Physical Therapy',
-            'Shoulder Pain & Instability Rehab',
-            'Fractures & Arthritis Rehab'
-        ],
     },
     {
         menu: 'Locations',
