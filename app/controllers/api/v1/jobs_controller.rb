@@ -23,7 +23,7 @@ class Api::V1::JobsController < ApplicationController
       end
 
       csrf_token = form_authenticity_token
-      render json: { reviews: reviews, csrf_token: csrf_token }
+      render json: { reviews: reviews.values.flatten, csrf_token: csrf_token } # Ensure reviews are flattened
     rescue StandardError => e
       puts "Error fetching Google Places cache: #{e.message}"
       OfficeMailer.error_email("Google Places Cache Error", e.message).deliver_later
@@ -53,50 +53,3 @@ class Api::V1::JobsController < ApplicationController
     render json: { error: error_message }, status: :unprocessable_entity
   end
 end
-
-class GooglePlacesCached
-  require 'redis'
-  require 'json'
-  require 'uri'
-  require 'net/http'
-  require 'openssl'
-
-  def self.fetch_five_star_reviews_for_companies
-    begin
-      puts "Fetching five-star reviews for companies..."
-      companies = {
-        "Creekside Physical Therapy" => ["ChIJT8nUWmzlBIgRnZluSKvaU7o", "ChIJy6GIldiP4okR-sQZEghTDSg"],
-        "Northwest Extremity Specialists" => ["ChIJf07ARPkJlVQRJCA-9wte444", "ChIJi3RsjPEMlVQRt1cOeU3_g48"]
-      }
-
-      api_key = ENV['REACT_APP_GOOGLE_PLACES_API_KEY']
-      reviews = {}
-
-      companies.each do |company, place_ids|
-        puts "Fetching reviews for company: #{company}"
-        reviews[company] = place_ids.flat_map do |place_id|
-          puts "Fetching reviews for place ID: #{place_id}"
-          fetch_five_star_reviews_for_place_id(place_id, api_key)
-        end
-        puts "Fetched reviews for company: #{company}"
-      end
-
-      puts "Fetched reviews: #{reviews.inspect}"
-      reviews
-    rescue StandardError => e
-      puts "Error fetching five-star reviews for companies: #{e.message}"
-      {}
-    end
-  end
-
-  private
-
-  def self.fetch_five_star_reviews_for_place_id(place_id, api_key)
-    uri = URI("https://maps.googleapis.com/maps/api/place/details/json?placeid=#{place_id}&key=#{api_key}")
-    response = Net::HTTP.get(uri)
-    data = JSON.parse(response)
-    five_star_reviews = data["result"]["reviews"].select { |review| review["rating"] == 5 }
-    five_star_reviews.map { |review| { author_name: review["author_name"], text: review["text"], rating: review["rating"] } }
-  end
-end
-
