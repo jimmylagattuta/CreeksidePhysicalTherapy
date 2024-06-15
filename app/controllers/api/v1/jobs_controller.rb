@@ -53,7 +53,8 @@ class Api::V1::JobsController < ApplicationController
     puts "Handling unexpected error: #{error.message}"
     OfficeMailer.error_email("Unexpected Error", error.message).deliver_later
     render json: { error: "An unexpected error occurred: #{error
-
+  end
+end
 
 class GooglePlacesCached
   require 'redis'
