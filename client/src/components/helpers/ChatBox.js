@@ -73,54 +73,45 @@ function ChatBox(props) {
     }
   }, []);
 
+
   const fetchReviews = () => {
     const url =
-        process.env.NODE_ENV === 'production'
-            ? 'https://www.creeksidephysicaltherapy.com/api/v1/pull_google_places_cache'
-            : 'http://localhost:3001/api/v1/pull_google_places_cache';
+      process.env.NODE_ENV === 'production'
+        ? 'https://www.creeksidephysicaltherapy.com/api/v1/pull_google_places_cache'
+        : 'http://localhost:3001/api/v1/pull_google_places_cache';
 
     const headers = {
-        'Content-Type': 'application/json',
-        'X-CSRF-Token': csrfToken,
+      'Content-Type': 'application/json',
+      'X-CSRF-Token': csrfToken,
     };
 
     fetch(url, { headers })
-        .then((response) => {
-            if (response.ok) {
-                return response.json();
-            } else {
-                throw new Error('Failed to fetch reviews');
-            }
-        })
-        .then((data) => {
-            console.log('Fetched data:', data);
-            if (Array.isArray(data.creekside_reviews) && Array.isArray(data.northwest_reviews)) {
-                if (data.csrf_token && data.csrf_token !== previousCsrfToken.current) {
-                    setCsrfToken(data.csrf_token);
-                    previousCsrfToken.current = data.csrf_token;
-                }
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error('Failed to fetch reviews');
+        }
+      })
+      .then((data) => {
+        console.log('data **************', data);
+        if (data.csrf_token) {
+          setCsrfToken(data.csrf_token);
+        }
 
-                const creeksideReviews = getFilteredReviews(data.creekside_reviews);
-                const northwestReviews = getFilteredReviews(data.northwest_reviews);
-
-                const combinedReviews = [...creeksideReviews, ...northwestReviews];
-                const shuffledReviews = shuffleArray(combinedReviews);
-                const randomReviews = shuffledReviews.slice(0, 3);
-
-                saveToCache(combinedReviews);
-                setReviews(randomReviews);
-                setLoading(false);
-            } else {
-                throw new Error('Data reviews are not arrays');
-            }
-        })
-        .catch((err) => {
-            console.error('Error:', err);
-            setError(err.message);
-            setLoading(false);
-        });
-};
-  
+        if (Array.isArray(data.reviews) && data.reviews.length > 0) {
+          setReviews(data.reviews);
+        } else {
+          throw new Error('No reviews available');
+        }
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error(err);
+        setError(err.message);
+        setLoading(false);
+      });
+  };
   function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
