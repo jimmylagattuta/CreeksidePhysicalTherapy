@@ -157,21 +157,31 @@ export const services = [
     {
         image: '../FAndASurgery.jpg',
         name: 'Foot & Ankle Rehab',
-        firstTitle: 'Foot & Ankle Rehab',
+        firstTitle: 'Our Portland Physical Therapists Rehabilitate Painful Foot and Ankle Issues',
         description: [
-            "Our Portland Physical Therapists specialize in rehabilitating painful foot and ankle issues, offering individualized rehabilitation to help you kick pain to the curb and resume an active lifestyle. A foot or ankle issue can make you painfully aware of every minute spent on your feet. Whether you're eager to resume an active lifestyle or simply desperate to stand without suffering, Creekside Physical Therapy offers individualized rehabilitation to help you kick pain to the curb."
+            "A foot or ankle issue can make you painfully aware of every minute spent on your feet. Before you know it, you can find yourself giving up your favorite athletic or recreational activities, parking as close as possible to every entrance, and evaluating any and all potential plans based on how long you'll have to stand. Fortunately, you don't have to let stubborn foot or ankle pain dictate your every move. Help is available.",
         ],
-        secondTitle: 'Conditions We Treat',
         descriptionTwo: [
-            "We treat a range of conditions including sprains, Achilles tendonitis, plantar fasciitis, broken bones, arthritis, and more, utilizing the latest techniques to ensure effective recovery. Sprains: Painful strains and sprains can result from ligaments in the foot or ankle stretching or tearing. We offer physical therapy to help moderate to severe sprains recover. Achilles tendonitis: Overuse or a sudden increase in activity can cause the Achilles tendon to stretch, tear, or rupture, leading to persistent foot and ankle pain. Plantar fasciitis and plantar fasciosis: We provide successful interventions for the painful conditions caused by stretching or tearing of the plantar fascia. Broken bones and stress fractures: Trauma, repetitive impacts, or sustained stress can lead to painful breaks and fractures in the feet or ankles. Arthritis: We manage osteoarthritis, rheumatoid arthritis, and gout, which can cause chronic pain in the small joints of the feet and ankles. Tarsal tunnel syndrome: This condition causes pain, tingling, or numbness due to the posterior tibial nerve being pinched or compressed."
+            "Whether you're eager to resume an active lifestyle or simply desperate to stand without suffering, Creekside Physical Therapy offers individualized rehabilitation to help you kick pain to the curb. Here's what you should know if you're considering making an appointment with one of the skilled therapists at either of our two state-of-the-art Portland physical therapy clinics."    
         ],
-        thirdTitle: 'Specialized Treatments',
+        thirdTitle: 'Foot and Ankle Conditions We Treat',
         descriptionThree: [
-            "Our approach includes personalized treatments such as IASTM, ASTYM, targeted exercises, and patient education to optimize recovery and prevent future injuries. We also use the latest techniques to tailor our treatments to each patient's specific condition, ensuring effective recovery and long-term relief. Our specialized treatments focus on providing comprehensive care that addresses both immediate and underlying issues."
+            "We provide personalized rehabilitation for a wide variety of painful foot and ankle conditions. Here are just a few of the common foot and ankle issues we treat."
         ],
-        fourthTitle: 'Preventive Care',
+        thirdTitleBulletedList: [
+            "Sprains: When ligaments in the foot or ankle stretch or tear, painful strains and sprains can result. In addition to moderate to severe pain in the affected foot or ankle, these injuries can also cause swelling and bruising. While some sprains recover with rest, others require physical therapy.",
+            "Achilles tendonitis: Problems with the Achilles tendon, which runs down the back of the leg and connects the main calf muscle to the heel bone, is a common cause of persistent foot and ankle pain. Overuse or a sudden increase in activity can cause the tendon to stretch, tear, or rupture.",
+            "Plantar fasciosis and plantar fasciitis: Deterioration of the plantar fascia, the ligament that connects the toes to the heel, can cause a painful condition known as plantar fasciosis. Stretching or tearing of the plantar fascia can cause another painful problem: plantar fasciitis. We offer a number of successful interventions for these common foot pain causes.",
+            "Broken bones and stress fractures. Broken bones in the feet or ankles are often caused by trauma, repetitive impacts, or sustained stress. Additionally, the bones in the feet can be subject to incomplete hairline breaks, known as stress fractures, which can also be quite painful.",
+            "Arthritis. This chronic inflammatory condition can affect the small joints in the feet and ankles. There are three kinds of arthritis that commonly affect the lower legs: osteoarthritis, caused by wear and tear of the joints; rheumatoid arthritis, which is an autoimmune disease; and gout, a complex form of arthritis that causes excess uric acid to crystallize and deposit in the joints.",
+            "Tarsal tunnel syndrome. This painful condition occurs when the posterior tibial nerve that goes from the ankle to the foot becomes pinched or compressed as it travels through the tarsal tunnel. Tarsal tunnel syndrome can also cause tingling or numbness."
+        ],
+        descriptionAfterThirdBulletedList: [
+            "In addition to the above conditions, foot and ankle pain can also be caused by overuse, physical trauma, weak muscles, and biomechanical abnormalities. Lifestyle factors like improper or poorly fitting footwear can also be a factor. Whatever the cause, our specialists can help you safely work toward your movement and athletic goals."
+        ],
+        fourthTitle: 'Individualized Rehabilitation for Painful Foot and Ankle Conditions',
         descriptionFour: [
-            "We emphasize the importance of preventive care through exercises that improve strength, flexibility, and balance, helping to mitigate the risks of future foot and ankle conditions. Our preventive strategies are designed to enhance overall musculoskeletal resilience, keeping you active and pain-free. By focusing on preventive care, we help our patients maintain their health and prevent future injuries."
+            "Don't let pain stand in your way a single day longer. The team at Creekside Physical Therapy is here for you. Helping you reduce pain, improve movement, and gain confidence is important to us. When you come to us for treatment, we thoroughly assess your injuries and work with you to create an individualized rehabilitation plan that's as unique as you are. As you progress, so does your plan so that you're always receiving the best practice interventions for your current stage of treatment."
         ],
         link: '/services',
     },
@@ -200,33 +210,83 @@ export const services = [
     // Sports Injury Rehab
     {
         image: '../Sports.jpg',
-        name: 'Sports Injury Rehab',
-        firstTitle: 'Sports Injury Rehab',
+        name: 'Sports Injuries',
+        firstTitle: 'Sidelined With a Sports Injury in Portland? Physical Therapy Can Help You Get Back in the Game',
         description: [
-            "Tailored to athletes and active individuals, our services address sports-related injuries to the foot, ankle, and lower leg, ensuring a safe return to sport. Whether you consider yourself a serious athlete or just enjoy an active lifestyle, you subject your feet, ankles, and lower legs to sustained pressure, jarring impacts, and repetitive motions that can make them prone to strains, sprains, and other painful sports-related injuries. At Creekside Physical Therapy, our specialists help patients with sports injuries get back on their feet and back in the game."
+            "Whether you consider yourself a serious athlete or just enjoy an active lifestyle, you subject your feet, ankles, and lower legs to sustained pressure, jarring impacts, and repetitive motions that can make them prone to strains, sprains, and other painful sports-related injuries. Fortunately, you've come to the right place. At Creekside Physical Therapy, our movement and exercise specialists help patients with sports injuries get back on their feet and get back in the game. Considering making an appointment at one of our state-of-the-art physical therapy clinics? Here's what you should know."
         ],
-        secondTitle: 'Types of Sports Injuries',
+
+
+
+        secondTitle: 'Types of Sports Injuries We Treat',
         descriptionTwo: [
-            "From sprains and fractures to chronic conditions, our specialized physical therapy programs are designed to manage and recover from a wide range of sports injuries. We provide rehabilitation for a wide range of sports-related foot, ankle, and lower leg injuries. Here are just a few examples of the conditions we rehab: Strains and Sprains: Caused by stretched or torn ligaments in the foot or ankle, strains and sprains are some of the most common injuries athletes face. Plantar Fasciitis: Overuse, improper stretching, and wearing the wrong shoes can cause the thick band of tissue that runs along the bottom of the foot, the plantar fascia, to become inflamed. Achilles Tendinitis: Repetitive motion or a sudden increase in the intensity or duration of your fitness routine can lead to Achilles tendinitis, a painful inflammation of the tendon that runs from the calf muscle to the heel. Heel Pain: Pain in the heel is a frustrating symptom associated with a number of foot and ankle injuries, including stress fractures, plantar fasciitis, and heel spurs. Stress Fractures: Rigorous sports that subject the feet and ankles to high levels of impact or strain make the athletes who engage in them prone to small, incomplete bone breaks known as stress fractures. Chronic Ankle Instability: Having previously sprained an ankle increases an athlete's risk of subsequent sprains and developing chronic ankle instability, causing persistent tenderness, swelling, and pain."
+            "We provide rehabilitation for a wide range of sports-related foot, ankle, and lower leg injuries. Here are just a few examples of the conditions we rehab."
         ],
-        thirdTitle: 'Advanced Sports Treatments',
+        secondTitleBulletedList: [
+            "Strains and Sprains. Caused by stretched or torn ligaments in the foot or ankle, strains and sprains are some of the most common injuries athletes face. Often the result of overuse, repetitive motions, or sharp movements, these injuries can cause bruising, swelling, and moderate to severe pain that makes it difficult to stand, walk, or run.",
+            "Plantar Fasciitis. Overuse, improper stretching, and wearing the wrong shoes can cause the thick band of tissue that runs along the bottom of the foot, the plantar fascia, to become inflamed. Plantar fasciitis is characterized by stabbing pains in the foot and heel that are particularly common in the first few steps after a period of rest.",
+            "Achilles Tendinitis. Repetitive motion or a sudden increase in the intensity or duration of your fitness routine can lead to Achilles tendinitis, a painful inflammation of the tendon that runs from the calf muscle to the heel. The condition can cause intense lower leg pain or a chronic, dull ache in the back of the lower leg that extends down into the heel.",
+            "Heel Pain. Pain in the heel is a frustrating symptom that's associated with a number of foot and ankle injuries, including stress fractures, plantar fasciitis, heel spurs, and other issues.",
+            "Stress Fractures. Rigorous sports that subject the feet and ankles to high levels of impact or strain make the athletes who engage in them prone to small, incomplete bone breaks known as stress fractures. These hairline fractures can cause pain and swelling in the foot and lower leg.",
+            "Chronic Ankle Instability. Having previously sprained an ankle not only increases an athlete's risk of subsequent sprains but also increases the risk of developing chronic ankle instability. In addition to making the ankle feel like it's going to give way, this condition can cause persistent tenderness, swelling, and pain."
+        ],
+        thirdTitle: 'Sports Linked to Below-the-Knee Injuries',
         descriptionThree: [
-            "Utilizing advanced therapeutic techniques including motion analysis and sport-specific training, we help athletes regain strength, function, and confidence. Our treatment includes personalized interventions such as IASTM, ASTYM, targeted exercises, and patient education to optimize recovery and prevent future injuries. By focusing on preventive care, we help our patients maintain their health and prevent future injuries. Our specialized treatments focus on providing comprehensive care that addresses both immediate and underlying issues. We use the latest techniques to tailor our treatments to each patient's specific condition, ensuring effective recovery and long-term relief."
+            "Regardless of what sport you play, overexertion, warming up improperly, or wearing shoes that don't provide adequate support can make your feet, ankles, and lower legs prone to injury. However, the following sports and activities are associated with particularly high rates of injuries:"
         ],
-        fourthTitle: 'Sport-Specific Preventive Advice',
+        thirdTitleBulletedList: [
+            "Walking or running",
+            "Circuit training",
+            "Track and field",
+            "Baseball",
+            "Basketball",
+            "Field hockey",
+            "Football",
+            "Golf",
+            "Lacrosse",
+            "Rugby",
+            "Soccer",
+            "Softball",
+            "Tennis",
+            "Volleyball"
+        ],
+        fourthTitle: "Individualized Rehabilitation That Puts You First",
         descriptionFour: [
-            "We provide guidance on proper training routines, warm-up exercises, and equipment to prevent injuries and enhance athletic performance. Regardless of what sport you play, overexertion, warming up improperly, or wearing shoes that don't provide adequate support can make your feet, ankles, and lower legs prone to injury. Our preventive strategies are designed to enhance overall musculoskeletal resilience, keeping you active and pain-free. We also emphasize the importance of ergonomic training to support musculoskeletal health and prevent injuries in daily activities and occupational settings. Our goal is to empower patients with the knowledge and tools to maintain their health long-term."
+            "After evaluating your injury and taking the time to understand your goals, we'll work with you to create an individualized rehabilitation plan to help you achieve them as quickly and as safely as possible. Typical sessions include one-on-one time with skilled physical therapists and exercise experts who specialize in interventions to reduce and manage pain and increase confidence with movement.",
+            "At Creekside Physical Therapy, we provide customized care designed to exceed your expectations. Contact us today to schedule your appointment."
         ],
         link: '/services',
     },
     // Running Injuries Treatment
     {
         image: '../FootPain.jpg',
-        name: 'Running Injuries Treatment',
-        firstTitle: 'Running Injuries Treatment',
+        name: 'Running Injuries',
+        firstTitle: 'Our Portland Physical Therapists Rehab Running Injuries to Get You Back on Track',
         description: [
-            "Focused treatment and rehabilitation services for common running injuries, helping runners maintain performance and prevent future issues. Running is a high-impact activity that places significant strain on your feet and ankles and can increase your risk for a number of serious injuries, especially when done improperly or while wearing the wrong footwear. Whether you enjoy the occasional jog around the block, are an avid recreational runner, or race competitively, the knowledgeable and experienced physical therapists and exercise specialists at Creekside Physical Therapy can develop a rehab plan designed to get you—and your athletic or fitness goals—back on track."
+            "Running is a high-impact activity that places significant strain on your feet and ankles and can increase your risk for a number of serious injuries, especially when done improperly or while wearing the wrong footwear. Whether you enjoy the occasional jog around the block, are an avid recreational runner, or race competitively, the knowledgeable and experienced physical therapists and exercise specialists at Creekside Physical Therapy can develop a rehab plan designed to get you—and your athletic or fitness goals—back on track."
         ],
+        descriptionTwo: [
+            "Considering making an appointment with our physical therapists at either of our two state-of-the-art physical therapy clinics? Here's what you should know."
+        ],
+        thirdTitle: "Running Injuries We Treat",
+        descriptionThree: [
+            "We offer patient-driven physical therapy for a wide variety of lower leg, foot, and ankle injuries. Here are just a few of the common running-related injuries we treat in our clinics."
+        ],
+        descriptionThreeBullettedList: [
+            "Strains and Sprains. Overuse, repetitive impacts, and a sudden increase in the intensity of your runs can cause ligaments in the foot or ankle to stretch or tear, leading to painful strains and sprains. These injuries can cause significant swelling and bruising, as well as moderate to severe pain that makes standing and walking—much less running—extremely uncomfortable. Sprains and strains are some of the most common conditions our teams treat.",
+            "Achilles Tendon Issues. The Achilles tendon runs down the back of the calf, all the way to the ankle, connecting the primary calf muscles to the bone in the heel. Overuse and increased activity can lead to painful inflammation and Achilles tendon issues, such as stretches, tears, or even total ruptures. These conditions account for more than ten percent of all running injuries.",
+            "Broken Bones and Stress Fractures. Runners can suffer broken bones in the feet and ankles due to the stress associated with trauma or repeated impacts. While broken bones in the ankle are often the result of trauma, the ones that occur in the feet are usually small, incomplete hairline fractures.",
+            "Plantar Fasciitis. Characterized by heel pain in the morning that dissipates with movement, plantar fasciitis is a common runner's malady caused by the inflammation of a thick band of tissue that runs across the bottom of the foot, the plantar fascia. The condition responds favorably to a number of the interventions we offer.",
+            "Heel Spurs. Caused by calcium deposits that develop on the underside of the heel bone, heel spurs can lead to a variety of different types of heel pain, from sharp, stabbing pains to persistent dull aches whenever you bear weight. People who suffer from plantar fasciitis may also suffer from heel spurs, as the condition is related to weakness or misalignment of the plantar fascia."
+        ],
+        descriptionAfterThirdBulletedList: [
+            "If you're like many of the runners we see, you may have made a habit of pushing through the pain after an injury. Unfortunately, when it comes to running-related foot and ankle injuries, 'no pain, no gain' isn't a winning mantra; it's a recipe for disaster. Don't risk the long-term health of your feet and ankles. If you have persistent pain or significant swelling that lasts longer than two days, your injuries may benefit from professional rehabilitation."
+        ],
+        fourthTitle: "Individualized Rehabilitation Plans and Other Services for Runners",
+        descriptionFour: [
+            "We take the time to thoroughly understand your injuries and your fitness goals so that we can create a custom rehabilitation plan based on best practices and your unique needs as a runner. Our physical therapists and exercise specialists will work with you to reduce and manage pain and help you return to running safely. We'll also conduct a gait analysis to identify any biomechanical abnormalities we should address as part of your individualized rehabilitation regimen."
+        ],
+
         secondTitle: 'Effective Running Injury Management',
         descriptionTwo: [
             "We treat conditions such as Achilles tendinitis, shin splints, and stress fractures with targeted, evidence-based approaches. We offer patient-driven physical therapy for a wide variety of lower leg, foot, and ankle injuries. Here are just a few of the common running-related injuries we treat in our clinics: Strains and Sprains: Overuse, repetitive impacts, and a sudden increase in the intensity of your runs can cause ligaments in the foot or ankle to stretch or tear, leading to painful strains and sprains. Achilles Tendon Issues: The Achilles tendon runs down the back of the calf, all the way to the ankle, connecting the primary calf muscles to the bone in the heel. Broken Bones and Stress Fractures: Runners can suffer broken bones in the feet and ankles due to the stress associated with trauma or repeated impacts. Plantar Fasciitis: Characterized by heel pain in the morning that dissipates with movement, plantar fasciitis is a common runner's malady caused by the inflammation of a thick band of tissue that runs across the bottom of the foot. Heel Spurs: Caused by calcium deposits that develop on the underside of the heel bone, heel spurs can lead to a variety of different types of heel pain, from sharp, stabbing pains to persistent dull aches whenever you bear weight."
@@ -244,22 +304,23 @@ export const services = [
     // Neuroma and Nerve Pain Treatment
     {
         image: '../Neuroma.jpg',
-        name: 'Neuroma and Nerve Pain Treatment',
-        firstTitle: 'Neuroma and Nerve Pain Treatment',
+        name: 'Neuromas & Neuritis',
+        firstTitle: 'Recover from Your Neuroma with our Tigard OR Physical Therapists',
         description: [
-            "Specializing in the treatment of Morton’s Neuroma and other nerve pain conditions, our clinic utilizes advanced techniques such as IASTM or ASTYM, complemented by customized exercise programs. These interventions are designed to relieve pressure on nerves and reduce pain. We can help you with injuries to your hand & elbow. Whether it's providing hands-on techniques to improve mobility and reduce pain or empowering you with exercise programs to build strength, our team can be your solution to getting back to pain-free movement."
+            "We can help you with injuries to your hand & elbow. Whether it's providing hands-on techniques to improve mobility and reduce pain or empowering you with exercise programs to build strength, our team can be your solution to getting back to pain-free movement."
         ],
-        secondTitle: 'Comprehensive Nerve Pain Management',
         descriptionTwo: [
-            "Our approach not only focuses on immediate pain relief but also on long-term management strategies to prevent recurrence, including patient education and lifestyle modifications. Here are just a few of the common injuries we diagnose and treat in our clinics: Morton’s Neuroma: This condition is characterized by numbness or nerve pain in the toes, most often in the 4th or 5th toe. It is caused by compression of the nerves between the metatarsals. A wide variety of factors can cause this compression; most commonly tight shoewear, over pronation, lateralization. Your physical therapist will help you find the cause of the compression. They will use a combination of hands-on treatment to decrease the pain & numbness and exercise to address the root cause of the compression."
+            "Here are just a few of the common injuries we diagnose and treat in our clinics."
         ],
-        thirdTitle: 'Advanced Therapeutic Options',
-        descriptionThree: [
-            "We offer ultrasound-guided interventions and other minimally invasive procedures that target the underlying causes of nerve pain, ensuring effective and lasting relief. If you're not moving as well as you'd like, we are here to help you in getting back to moving at your best!"
+        secondTitleBulletedList: [
+            "Morton’s Neuroma: This condition is characterized by numbness or nerve pain in the toes, most often in the 4th or 5th toe. It is caused by compression of the nerves between the metatarsals. A wide variety of factors can cause this compression; most commonly tight shoewear, over pronation, lateralization. Your physical therapist will help you find the cause of the compression. They will use a combination of hands on treatment to decrease the pain & numbness and exercise to address the root cause of the compression."
         ],
-        fourthTitle: 'Preventive Care and Education',
-        descriptionFour: [
-            "Preventive strategies are integral to our treatment protocol, aimed at reducing the risk of further nerve damage and enhancing overall nerve health. We take the time to thoroughly understand your goals and assess your entire body to develop a customized rehabilitation plan. During your PT session, we will help you with hands-on techniques to decrease your pain and teach you how to better manage pain at home. We will also create an individualized exercise program for you to further improve your strength and range of motion and decrease pain between sessions. Schedule an Appointment"
+        descriptionAfterSecondBulletedList: [
+            "If you're not moving as well as you'd like, we are here to help you in getting back to moving at your best!"
+        ],
+        thirdTitle: "Individualized Rehabilitation Plans for You",
+        descriptionThree: [   
+            "We take the time to thoroughly understand your goals and assess your entire body to develop a customized rehabilitation plan. During your PT session, we will help you with hands-on techniques to decrease your pain and teach you how to better manage pain at home. We will also create an individualized exercise program for you to further improve your strength and range of motion and decrease pain between sessions."
         ],
         link: '/services',
     },
@@ -310,22 +371,24 @@ export const services = [
     // Heel Pain Management
     {
         image: '../Heel.jpg',
-        name: 'Heel Pain Management',
-        firstTitle: 'Heel Pain Management',
+        name: 'Heel Pain',
+        firstTitle: 'Understanding Heel Pain',
         description: [
-            "Focused on alleviating heel pain through specialized treatments and comprehensive care, our clinic provides expert management for conditions such as plantar fasciitis and heel spurs. We can help you with your heel pain. Whether it's providing hands-on techniques to improve mobility and reduce pain or empowering you with exercise programs to build strength, our team can be your solution to getting back to pain-free movement."
+            "We can help you with your heel pain. Whether it's providing hands-on techniques to improve mobility and reduce pain or empowering you with exercise programs to build strength, our team can be your solution to getting back to pain-free movement."
         ],
-        secondTitle: 'Common Causes and Treatments',
         descriptionTwo: [
-            "Our approach includes diagnosing the specific causes of heel pain, which can range from overuse injuries to biomechanical issues, and tailoring treatments accordingly. Effective therapies may include shockwave therapy, custom orthotics, and targeted physical therapy exercises. Here are just a few of the common injuries we diagnose and treat in our clinics: Plantar Fasciitis: Plantar fasciitis is a common cause of heel pain and arch pain. Although its name implies it's an inflammatory condition, the reality is that this condition results from chronic overuse and breakdown of the plantar fascia. Hands-on treatment with interventions such as IASTM or ASTYM in conjunction with exercising, shoewear changes, and taping can be very effective in reducing pain. Achilles Tendinopathy: The Achilles tendon can suffer breakdown at the insertion (attachment) to the heel as well as in the mid portion of the tendon. Exercise and hands-on treatment in PT is the first line treatment for this condition."
+            "Here are just a few of the common injuries we diagnose and treat in our clinics."
         ],
-        thirdTitle: 'Advanced Heel Pain Therapies',
+        secondTitleBulletedList: [
+            "Plantar Fasciitis: Plantar fasciitis is a common cause of heel pain and arch pain. Although it's name implies it's an inflammatory condition, the reality is that this condition results from a chronic overuse & breakdown of the plantar fascia. Hands on treatment with interventions such as IASTM or ASTYM in conjunction with exercising, shoewear changes and taping can be very effective in reducing pain.",
+            "Achilles Tendinopathy: The achilles tendon can suffer breakdown at the insertion (attachment) to the heel as well as in the mid portion of the tendon. Exercise and hands on treatment in PT is the first line treatment for this condition."
+        ],
+        descriptionAfterSecondBulletedList: [
+            "If you're not moving as well as you'd like, we are here to help you in getting back to moving at your best!"
+        ],
+        thirdTitle: 'Individualized Rehabilitation Plans for You',
         descriptionThree: [
-            "We employ the latest advancements in medical treatments for heel pain, such as laser therapy, ultrasound-guided corticosteroid injections, and minimally invasive surgical options when necessary. If you're not moving as well as you'd like, we are here to help you in getting back to moving at your best!"
-        ],
-        fourthTitle: 'Preventive Strategies for Heel Health',
-        descriptionFour: [
-            "To prevent the recurrence of heel pain, we provide patients with education on proper footwear, lifestyle modifications, and exercises designed to strengthen foot muscles and improve flexibility. We take the time to thoroughly understand your goals and assess your entire body to develop a customized rehabilitation plan. During your PT session, we will help you with hands-on techniques to decrease your pain and teach you how to better manage pain at home. We will also create an individualized exercise program for you to further improve your strength and range of motion and decrease pain between sessions."
+            "We take the time to thoroughly understand your goals and assess your entire body to develop a customized rehabilitation plan. During your PT session, we will help you with hands-on techniques to decrease your pain and teach you how to better manage pain at home. We will also create an individualized exercise program for you to further improve your strength and range of motion and decrease pain between sessions."
         ],
         link: '/services',
     },
@@ -398,7 +461,7 @@ export const services = [
     // Shoulder Pain & Instability Rehab
     {
         image: '../Shoulder.jpg',
-        name: 'Shoulder Pain & Instability Rehab',
+        name: 'Shoulder Pain & Instability',
         firstTitle: 'Shoulder Pain & Instability Rehab',
         description: [
             "Our clinic offers dedicated rehabilitation services for shoulder pain and instability, employing cutting-edge techniques to restore mobility and reduce pain. Whether you're dealing with rotator cuff injuries, dislocations, or arthritis, our personalized rehabilitation plans can help you recover and get back to pain-free movement. Shoulder injuries can be debilitating, affecting your ability to perform daily activities and impacting your quality of life. Our team of experienced physical therapists is here to provide comprehensive care to address your shoulder issues and help you regain function and mobility. From manual therapy to strength training and stability exercises, we use a variety of techniques to improve your shoulder health and prevent future injuries. Contact us today to schedule a consultation and start your journey to recovery."
@@ -420,23 +483,71 @@ export const services = [
     // Fractures & Arthritis Rehab
     {
         image: '../Arth.jpg',
-        name: 'Fractures & Arthritis Rehab',
-        firstTitle: 'Fractures & Arthritis Rehab',
+        name: 'Fractures & Arthritis',
+        firstTitle: 'Recover from Your Ankle or Foot Fracture with our Tigard OR Physical Therapists',
         description: [
-            "Our comprehensive treatment plans for fractures and arthritis aim to improve joint function and alleviate pain. Whether you're dealing with a fracture or arthritis, our team is dedicated to providing personalized care to help you recover and regain mobility. Fractures and arthritis can be painful and limit your ability to perform daily activities. Our goal is to provide you with the tools and techniques you need to manage your condition effectively and improve your quality of life. From physical therapy to medication and lifestyle modification, we use a blend of treatments to address fractures and arthritis, ensuring that you receive the best possible care."
-            ],
-            secondTitle: 'Handling Fractures and Arthritis',
-            descriptionTwo: [
-            "We treat various types of fractures and arthritis through a blend of physical therapy, medication, and lifestyle modification. Our team is experienced in treating a wide range of fractures and arthritis, from acute injuries to chronic conditions. We use evidence-based treatments tailored to your specific needs to ensure that you receive the best possible care. Fractures and arthritis can be challenging to treat, requiring a comprehensive approach to rehabilitation. Our team will work with you to develop a customized treatment plan that addresses your unique injury or condition and helps you regain strength and mobility. Whether you're recovering from a fracture or managing arthritis symptoms, our team is here to help. Contact us today to learn more about our fractures and arthritis rehab services."
-            ],
-            thirdTitle: 'Specialized Care for Fractures and Arthritis',
-            descriptionThree: [
-            "Our personalized care plans include specific exercises, joint protection techniques, and pain management strategies. We believe in providing personalized care to each of our patients, tailoring our treatment plans to address your specific needs and goals. Whether you're recovering from a fracture or managing arthritis symptoms, our team is here to help you regain function and mobility in your joints. By incorporating specialized exercises, joint protection techniques, and pain management strategies into your treatment plan, we can help you recover from your injury or manage your arthritis symptoms more effectively. Our goal is to provide you with the tools and techniques you need to manage your condition effectively and improve your quality of life. Contact us today to schedule a consultation and start your journey to recovery."
-            ],
-            fourthTitle: 'Prevention and Management',
-            descriptionFour: [
-            "We focus on strengthening and preventive care to enhance joint health and prevent the recurrence of injuries and arthritis symptoms. Preventing future injuries and managing arthritis symptoms are key components of our treatment approach. Our team provides education on proper joint health and exercises to help you prevent injuries and manage arthritis symptoms. By focusing on strengthening exercises and preventive care, we can help you enhance joint health and prevent the recurrence of injuries and arthritis symptoms. Contact us today to learn more about our preventive care programs."
-            ],
+            "We’re here to help your feet feel strong & mobile. Whether it's providing hands-on techniques to improve mobility and reduce pain or empowering you with exercise programs to build strength, our team can be your solution to getting back to pain-free movement."
+        ],
+        descriptionTwo: [
+            "Here are just a few of the common injuries we diagnose and treat in our clinics."
+        ],
+        secondTitleBulletedList: [
+            "Stress Fracture: Stress fractures are the result of bone overuse. They are most often treated with immobilization followed by physical therapy. Your physical therapist will assist you in a graduated return to walking, running or your favorite sport."
+        ],
+        descriptionAfterSecondBulletedList: [
+            "If you're not moving as well as you'd like, we are here to help you in getting back to moving at your best!"
+        ],
+        thirdTitle: 'Individualized Rehabilitation Plans for You',
+        descriptionThree: [
+            "We take the time to thoroughly understand your goals and assess your entire body to develop a customized rehabilitation plan. During your PT session, we will help you with hands-on techniques to decrease your pain and teach you how to better manage pain at home. We will also create an individualized exercise program for you to further improve your strength and range of motion and decrease pain between sessions."
+        ],
+        link: '/services',
+    },
+    {
+        image: '../Tendonitis.jpg',
+        name: 'Ankle & Foot Tendinitis',
+        firstTitle: 'Our Portland Physical Therapists Rehabilitate Painful Foot and Ankle Issues',
+        description: [
+            "We can help you with your heel pain. Whether it's providing hands-on techniques to improve mobility and reduce pain or empowering you with exercise programs to build strength, our team can be your solution to getting back to pain-free movement."
+        ],
+        descriptionTwo: [
+            "Here are just a few of the common injuries we diagnose and treat in our clinics."
+        ],
+        secondTitleBulletedList: [
+            "Plantar Fasciitis: Plantar fasciitis is a common cause of heel pain and arch pain. Although it's name implies it's an inflammatory condition, the reality is that this condition results from a chronic overuse & breakdown of the plantar fascia. Hands on treatment with interventions such as IASTM or ASTYM in conjunction with exercising, shoewear changes and taping can be very effective in reducing pain.",
+            "Achilles Tendinopathy: The achilles tendon can suffer breakdown at the insertion (attachment) to the heel as well as in the mid portion of the tendon. Exercise and hands on treatment in PT is the first line treatment for this condition.",
+            "Peroneal (Fibular) Tendinopathy: Peroneal tendinopathy is a common cause of pain through the outer calf or ankle. It can be caused by chronic overuse leading to tendon break down or ankle instability resulting in impingement of the tendon when walking. Hands on treatment with interventions such as IASTM or ASTYM in conjunction with exercising, pronation control & ankle stability exercises  and taping can be very effective in reducing pain."
+        ],
+        descriptionAfterSecondBulletedList: [
+            "If you're not moving as well as you'd like, we are here to help you in getting back to moving at your best!"
+        ],
+        thirdTitle: 'Individualized Rehabilitation Plans for You',
+        descriptionThree: [
+            "We take the time to thoroughly understand your goals and assess your entire body to develop a customized rehabilitation plan. During your PT session, we will help you with hands-on techniques to decrease your pain and teach you how to better manage pain at home. We will also create an individualized exercise program for you to further improve your strength and range of motion and decrease pain between sessions."
+        ],
+        link: '/services',
+    },
+    
+    {
+        image: '../AnkleFoot.jpg',
+        name: 'Ankle Sprains & Instability',
+        firstTitle: "Ankle & Foot Sprains",
+        description: [
+            "We can help you in recovering from your foot or ankle sprain. Whether it's providing hands-on techniques to improve mobility and reduce pain or empowering you with exercise programs to build strength, our team can be your solution to getting back to pain-free movement."
+        ],
+        descriptionTwo: [
+            "Here are just a few of the common injuries we diagnose and treat in our clinics."
+        ],
+        secondTitleBulletedList: [
+            "Ankle Sprains: Ankle sprains are one of the most common injuries sustained to the foot & ankle. With this injury the ligaments on the inside or outside of the ankle are often damanged. Physical therapy will utilize a combination of hands on treatment to decrease the pain & swelling and exercise to restore ankle stability."
+        ],
+        descriptionAfterSecondBulletedList: [
+            "If you're not moving as well as you'd like, we are here to help you in getting back to moving at your best!"
+        ],
+        thirdTitle: "Individualized Rehabilitation Plans for You",
+        descriptionThree: [
+            "We take the time to thoroughly understand your goals and assess your entire body to develop a customized rehabilitation plan. During your PT session, we will help you with hands-on techniques to decrease your pain and teach you how to better manage pain at home. We will also create an individualized exercise program for you to further improve your strength and range of motion and decrease pain between sessions."
+        ],
         link: '/services',
     }
 ];
@@ -733,7 +844,7 @@ export const expertiseBlocks = [
         image: '../Heel.jpg',
         width: '267px',
         height: '200px',
-        name: 'Heel Pain Management',
+        name: 'Heel Pain',
         firstTitle: 'Heel Pain Management',
         description: [
             "Dedicated to managing heel pain effectively, our clinic offers comprehensive evaluations to diagnose the cause of heel pain and implement effective treatment strategies.",
@@ -845,7 +956,7 @@ export const expertiseBlocks = [
         image: '../Shoulder.jpg',
         width: '267px',
         height: '200px',
-        name: 'Shoulder Pain & Instability Rehab',
+        name: 'Shoulder Pain & Instability',
         firstTitle: 'Shoulder Pain & Instability Rehab',
         description: [
             "Our clinic excels in treating shoulder pain and instability, focusing on restoring function and reducing discomfort through personalized care plans.",
