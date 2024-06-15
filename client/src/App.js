@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { Routes, Route, useLocation, useParams, Navigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Home from './pages/Home';
 import Locations from './pages/Locations';
@@ -40,8 +40,21 @@ function App() {
         });
     }, [pathname]);
 
+    // Helper function to check if physicianId is valid
     const isValidPhysicianId = (physicianId) => {
         return validPhysicianIds.includes(decodeURIComponent(physicianId));
+    };
+
+    // Helper component to handle dynamic routing for physicians
+    const PhysicianRoute = () => {
+        const { physicianId } = useParams();
+        const decodedPhysicianId = decodeURIComponent(physicianId);
+
+        if (isValidPhysicianId(decodedPhysicianId)) {
+            return <SinglePhysician />;
+        } else {
+            return <Navigate to="/providers" replace />;
+        }
     };
 
     return (
@@ -56,10 +69,7 @@ function App() {
 
                 <Route path="providers/*" element={<PhysiciansLayout />}>
                     <Route index element={<Physicians />} />
-                    <Route 
-                        path=":physicianId" 
-                        element={<PhysicianRoute />} 
-                    />
+                    <Route path=":physicianId" element={<PhysicianRoute />} />
                     <Route path="*" element={<Navigate to="/providers" replace />} />
                 </Route>
 
@@ -75,17 +85,5 @@ function App() {
         </>
     );
 }
-
-// Helper component to handle dynamic routing for physicians
-const PhysicianRoute = () => {
-    const { physicianId } = useParams();
-    const decodedPhysicianId = decodeURIComponent(physicianId);
-
-    if (isValidPhysicianId(decodedPhysicianId)) {
-        return <SinglePhysician />;
-    } else {
-        return <Navigate to="/providers" replace />;
-    }
-};
 
 export default App;
