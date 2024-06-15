@@ -1286,16 +1286,17 @@ export const navMenu = [
         menu: 'Providers',
         link: '/providers',
         subMenuItems: physicians.map((physician) => physician.name), // Extract names
+
     },
     { menu: 'Locations', link: '/locations' },
     { menu: 'Contact Us', link: '/locations#chatbox' },
     {
         menu: 'Download Forms',
-        onClick: () => {
-            window.open('./CPTNPForm.pdf', '_blank');
-        }
+        href: './CPTNPForm.pdf', // Path to your PDF
+        target: '_blank', // Open in a new tab
     }
 ];
+
 
 export const officesData = [
     {

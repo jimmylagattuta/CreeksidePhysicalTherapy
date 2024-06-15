@@ -533,7 +533,7 @@ img {
 .submenu {
     position: absolute;
     background-color: var(--white);
-    z-index: 2;
+    z-index: 12;
     padding: 10px;
     justify-content: center;
     text-align: center;
