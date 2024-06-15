@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation, useParams, Navigate } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Home from './pages/Home';
 import Locations from './pages/Locations';
@@ -15,44 +15,7 @@ import Services from './pages/services/Services';
 import ServicesLayout from './pages/services/ServicesLayout';
 import SingleService from './pages/services/SingleService';
 
-const physicians = [
-    "Brian Horak",
-    "John Zdor",
-    "Peggy Loebner",
-    "Chad Smurthwaite",
-    "Alex McNiven",
-    "Vince Gonsalves",
-    "Hal",
-    "Mikayla",
-    "Jacqueline",
-    "Dixie",
-    "Cellina"
-];
-
-// Convert names to URL-friendly slugs directly
-const validPhysicianIds = physicians.map(name => name.toLowerCase().replace(/\s+/g, '-'));
-
-const isValidPhysicianId = (physicianId) => {
-    return validPhysicianIds.includes(physicianId);
-};
-
-const PhysicianRoute = () => {
-    const { physicianId } = useParams();
-    const decodedPhysicianId = decodeURIComponent(physicianId);
-
-    console.log('Physician ID:', physicianId);
-    console.log('Decoded Physician ID:', decodedPhysicianId);
-    console.log('Valid Physician IDs:', validPhysicianIds);
-
-    if (isValidPhysicianId(decodedPhysicianId)) {
-        return <SinglePhysician physicianId={decodedPhysicianId} />;
-    } else {
-        console.warn('Invalid Physician ID:', decodedPhysicianId);
-        return <Navigate to="/providers" replace />;
-    }
-};
-
-function App() {
+const App = () => {
     const { pathname } = useLocation();
 
     useEffect(() => {
@@ -75,7 +38,7 @@ function App() {
                 </Route>
                 <Route path="providers/*" element={<PhysiciansLayout />}>
                     <Route index element={<Physicians />} />
-                    <Route path=":physicianId" element={<PhysicianRoute />} />
+                    <Route path=":physicianId" element={<SinglePhysician />} />
                     <Route path="*" element={<Navigate to="/providers" replace />} />
                 </Route>
                 <Route path="services/*" element={<ServicesLayout />}>

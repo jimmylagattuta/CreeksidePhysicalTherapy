@@ -69,8 +69,8 @@ export const physicians = [
             "Through hands-on experience in multiple orthopedic settings, Chad is knowledgeable in treating musculoskeletal conditions throughout the entire body. He has a special interest in working with runners and other athletes that are motivated to return to sport.",
             "As a lifelong athlete, Chad competed in both track and field and cross country at Warner Pacific University. In his spare time, he enjoys running, lifting weights, golfing, biking, and trying to keep up with his Vizsla, Luka."
         ],
-        image: 'Smurthwaite.jpeg',
-        imageMedium: 'Smurthwaite.jpeg'
+        image: '../Smurthwaite.jpeg',
+        imageMedium: '../Smurthwaite.jpeg'
     },
     {
         name: 'Alex McNiven, PT, DPT',
@@ -1285,9 +1285,7 @@ export const navMenu = [
     {
         menu: 'Providers',
         link: '/providers',
-        subMenuItems: physicians.map((item) =>
-            item.toLowerCase().replace(/\s+/g, '-')
-        ),
+        subMenuItems: physicians.map((physician) => physician.name), // Extract names
     },
     { menu: 'Locations', link: '/locations' },
     { menu: 'Contact Us', link: '/locations#chatbox' },
@@ -1298,8 +1296,6 @@ export const navMenu = [
         }
     }
 ];
-
-
 
 export const officesData = [
     {

@@ -928,6 +928,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
+    justify-content: space-evenly;
 }
 .page-grid-single-physician {
     display: flex;
@@ -953,7 +954,7 @@ img {
     margin: 35px 0;
 }
 .physician-image {
-    width: 80%;
+    width: 60%;
 }
 .page-description {
     font-size: 1rem;

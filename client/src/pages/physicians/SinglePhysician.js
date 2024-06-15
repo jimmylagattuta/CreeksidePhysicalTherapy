@@ -4,37 +4,32 @@ import '../../components/helpers/ReviewsHelpers.css';
 
 const SinglePhysician = () => {
     const { physicianId } = useParams();
-    console.log('SinglePhysician physicians', physicians);
+    console.log('SinglePhysician physicianId:', physicianId);
+    console.log('SinglePhysician physicians:', physicians);
 
-    const doctorNames = [
-        'brian horak',
-        'john zdor',
-        'peggy loebner',
-        'chad smurthwaite',
-        'alex mcniven',
-        'vince gonsalves',
-        'hal',
-        'mikayla',
-        'jacqueline',
-        'dixie',
-        'cellina'
-    ];
-    
+    const formattedPhysicianId = physicianId
+        .toLowerCase()
+        .replace(/,/g, '')
+        .replace(/\s+/g, '-');
+    console.log('Formatted Physician ID:', formattedPhysicianId);
 
     const physician = physicians.find((item) => {
-        console.log('item', item);
         const nameVariants = [
-            item.name,
-            item.name.toLowerCase().replace(/\s+/g, '-'),
+            item.name.toLowerCase(),
             item.name.toLowerCase().replace(/,/g, '').replace(/\s+/g, '-'),
             item.name.toLowerCase().replace(/,/g, '').replace(/\s+/g, '')
         ];
-        return nameVariants.includes(physicianId.toLowerCase());
+        console.log('Checking against name variants:', nameVariants);
+        return nameVariants.includes(formattedPhysicianId);
     });
 
-    console.log('physician', physician);
+    console.log('Matched physician:', physician);
 
-    const { bio, image, name, practiceEmphasis, specialProcedures } = physician || {};
+    if (!physician) {
+        return <div>Physician not found</div>;
+    }
+
+    const { bio, image, name, practiceEmphasis, specialProcedures } = physician;
 
     const cacheKey = 'cached_creekside_reviews';
 
@@ -42,23 +37,6 @@ const SinglePhysician = () => {
         const date = new Date(dateString);
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         return new Intl.DateTimeFormat('en-US', options).format(date);
-    };
-
-    const renderPracticeEmphasisMobile = (practiceEmphasis) => {
-        if (practiceEmphasis && practiceEmphasis.length > 0) {
-            return (
-                <div className='specialties-item'>
-                    <h4>Practice Emphasis</h4>
-                    <ul className='specialties-list'>
-                        {practiceEmphasis.map((item, index) => (
-                            <li key={index} className='specialties-list-item'>
-                                {item}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            );
-        }
     };
 
     const renderPracticeEmphasis = (practiceEmphasis) => {
@@ -81,29 +59,23 @@ const SinglePhysician = () => {
     const getCachedReviews = () => {
         const cachedDataBeforeJson = localStorage.getItem(cacheKey);
         if (cachedDataBeforeJson) {
-            const { reviews, expiry } = JSON.parse(cachedDataBeforeJson);
+            const { reviews } = JSON.parse(cachedDataBeforeJson);
             return reviews
                 .filter((review) => review.text.trim() !== '') // Skip if review text is blank
                 .map((review) => {
-                    // Check if any doctor's name is mentioned in the review text
-                    const doctorNamesLowerCase = doctorNames.map((doctor) => doctor.toLowerCase());
-                    const words = review.text.toLowerCase();
-                    const mentionsDoctor = doctorNamesLowerCase.some((name) => {
-                        // Match any form of the name (e.g., first name, last name, or full name)
-                        return name.split(' ').every((part) => words.includes(part));
-                    });
-    
                     // Check if the review is for the current physician
                     const physicianNameLowerCase = physician.name.toLowerCase();
-                    const truncatedName = physicianNameLowerCase.split(',')[0].trim();
-                    const isForPhysician = words.includes(truncatedName);
-    
-                    // Exclude reviews that do not mention any doctor's name or are not for the current physician
-                    if (!mentionsDoctor || !isForPhysician) return null;
-    
+                    const words = review.text.toLowerCase();
+                    const isForPhysician = physicianNameLowerCase
+                        .split(' ')
+                        .every((part) => words.includes(part));
+
+                    // Exclude reviews that do not mention the current physician
+                    if (!isForPhysician) return null;
+
                     // Exclude reviews with certain author names
                     if (review.author_name === "Pdub ..") return null;
-    
+
                     return (
                         <div key={review.id} className='single-review-container'>
                             <div className='review-top-info'>
@@ -136,11 +108,6 @@ const SinglePhysician = () => {
         }
         return null;
     };
-    
-    
-    
-    
-    
 
     return (
         <>
@@ -159,6 +126,7 @@ const SinglePhysician = () => {
                                 {index === 0 && <p className='page-description'>{item}</p>}
                             </div>
                         ))}
+                        {renderPracticeEmphasis(practiceEmphasis)}
                     </div>
                 </div>
             </div>

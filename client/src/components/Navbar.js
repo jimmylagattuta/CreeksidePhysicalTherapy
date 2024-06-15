@@ -102,6 +102,10 @@ const Navbar = () => {
                                 )}
                                 <div className={`submenu-list ${item.subMenuItems.length > 16 ? 'submenu-multi-column' : item.subMenuItems.length > 6 ? 'submenu-two-column' : ''}`}>
                                     {((isSubmenuOpen !== null) || (window.innerWidth >= 1000)) && item.subMenuItems.map((subItem) => {
+                                        if (typeof subItem !== 'string') {
+                                            console.error('Expected string, but got:', typeof subItem, subItem);
+                                            return null;
+                                        }
                                         const path = `/${item.menu === 'Providers' ? 'providers' : 'services'}/${subItem.toLowerCase().replace(/\s+/g, '-')}`;
                                         console.log('Generated Path:', path);
                                         return (
