@@ -15,7 +15,7 @@ class Api::V1::EmailController < ApplicationController
   end
 
 def send_email_to_office(form_data)
-  cc_emails = ['unitymskwebsites@gmail.com', 'jimmy.lagattuta@gmail.com', 'jzdor@nespecialists.com', 'mtucker@nespecialsts.com'] # Use an array for multiple CCs
+  cc_emails = ['unitymskwebsites@gmail.com', 'jimmy.lagattuta@gmail.com', 'jzdor@nespecialists.com', 'mtucker@nespecialists.com']
 
   if form_data[:dob]
     if form_data[:agreeToTermsTexts]
