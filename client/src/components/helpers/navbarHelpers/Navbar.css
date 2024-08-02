@@ -15,7 +15,7 @@
 .navbar-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   padding: 15px 15px 15px 15px;
   max-height: 90px;
 }
@@ -179,7 +179,11 @@
   --theme-color: rgb
 }
 
-
+@media (max-width: 1150px) {
+  .navbar-buttons-nav a {
+    margin-top: 20px;
+  }
+}
 
 @media (max-width: 1000px) {
   

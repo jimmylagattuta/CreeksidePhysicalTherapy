@@ -59,6 +59,19 @@ const Navbar = () => {
                             />
                         </div>
                     </Link>
+                    <div style={{ display: 'flex' }}>
+
+                        <a 
+                            href="https://www.healowpay.com/HealowPay/jsp/healow/login.jsp" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="btn header-button-yellow"
+
+                            style={{ backgroundColor: '#c6972d', maxHeight: '30px', minWidth: '62px' }}
+                        >
+                            Pay Now
+                        </a>
+                    </div>
                     <div className='navbar-buttons-nav'>
                         <a href="tel:971-300-0690" className='nav-button-new'>
                             Call Us: 971-300-0690

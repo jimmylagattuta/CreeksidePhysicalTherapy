@@ -433,13 +433,15 @@ img {
     border-style: solid;
     border-color: var(--violet);
     border-width: 2px;
-    font-size: 1.4rem;
+    border-radius: 4px;
+    font-size: 1rem;
     padding: 0px 10px 0px 10px;
 }
 
 .header-button-yellow:hover {
     font-weight: bold;
     transform: translateY(-2px) scale(1.05);
+    color: white;
 }
 
 .header-button-yellow:active {
