@@ -59,19 +59,6 @@ const Navbar = () => {
                             />
                         </div>
                     </Link>
-                    <div style={{ display: 'flex' }}>
-
-                        <a 
-                            href="https://www.healowpay.com/HealowPay/jsp/healow/login.jsp" 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="btn header-button-yellow"
-
-                            style={{ backgroundColor: '#c6972d', maxHeight: '30px', minWidth: '62px' }}
-                        >
-                            Pay Now
-                        </a>
-                    </div>
                     <div className='navbar-buttons-nav'>
                         <a href="tel:971-300-0690" className='nav-button-new'>
                             Call Us: 971-300-0690
@@ -95,6 +82,19 @@ const Navbar = () => {
                             aria-hidden='true'></i>
                     </button>
                 </div>
+                        <div style={{ display: 'flex', justifyContent: 'flex-end', paddingRight: '20px' }}>
+
+                            <a 
+                                href="https://www.healowpay.com/HealowPay/jsp/healow/login.jsp" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="btn header-button-yellow"
+
+                                style={{ backgroundColor: '#c6972d', maxHeight: '30px', minWidth: '62px' }}
+                            >
+                                Pay Now
+                            </a>
+                        </div>
             </div>
             <nav className={`navbar ${isSubmenuOpen}-open ${isMobileMenuOpen ? 'mobile-menu-show' : ''}`}>
                 {navMenu.map((item, index) => (
